@@ -1,0 +1,209 @@
+:root {
+    --font: "Noto Sans KR", sans-serif;
+    --pinterest-red: #E60023;
+    --pinterest-gray: #DDDDD8;
+    --pinterest-black: #000000;
+    --pinterest-dark-gray: #5E5E5E;
+    --pinterest-gray-text: #8B8989;
+    --pinterest-white: #FFFFFF;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font);
+    font-size: 1.6rem;
+    color: var(--pinterest-black);
+    background-color: var(--pinterest-white);
+}
+
+#wrap {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    min-width: 360px;
+    min-height: 100dvh;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: var(--pinterest-white);
+}
+
+.status_bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    padding: 0 18px 0 21px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.status_bar::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 9px;
+    width: 93px;
+    height: 27px;
+    border-radius: 20px;
+    background-color: var(--pinterest-black);
+    transform: translateX(-50%);
+}
+
+.status_icons {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 14px;
+}
+
+.status_icons i {
+    display: block;
+    width: 3px;
+    border-radius: 2px;
+    background-color: var(--pinterest-black);
+}
+
+.status_icons i:nth-child(1) { height: 5px; }
+.status_icons i:nth-child(2) { height: 9px; }
+.status_icons i:nth-child(3) { height: 13px; }
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 67px;
+    padding: 0 14px 0 9px;
+    z-index: 2;
+}
+
+.logo {
+    display: block;
+    width: 124px;
+    height: 33px;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header_links {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.join_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 77px;
+    height: 35px;
+    border-radius: 9px;
+    color: var(--pinterest-white);
+    background-color: var(--pinterest-red);
+}
+
+.hero_image {
+    position: relative;
+    width: 460px;
+    height: 392px;
+    margin-left: -35px;
+    overflow: hidden;
+}
+
+.hero_image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero_image::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--pinterest-gray-text);
+    opacity: 0.45;
+}
+
+.login_content {
+    padding: 26px 28px 30px;
+}
+
+h1 {
+    margin: 0 0 70px;
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.224rem;
+    text-align: center;
+}
+
+.login_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.email_btn,
+.account_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 17px;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.email_btn {
+    color: var(--pinterest-white);
+    background-color: var(--pinterest-red);
+}
+
+.account_btn {
+    color: var(--pinterest-black);
+    background-color: var(--pinterest-gray);
+}
+
+.terms {
+    margin: 0;
+    color: var(--pinterest-dark-gray);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.45;
+    text-align: center;
+}
+
+.terms a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+@media (max-width: 389px) {
+    #wrap {
+        min-width: 0;
+    }
+
+    .login_content {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
