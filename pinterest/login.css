@@ -32,84 +32,18 @@ a {
 
 #wrap {
     width: 100%;
-    max-width: 327px;
+    max-width: 375px;
+    min-width: 360px;
     min-height: 100dvh;
     margin: 0 auto;
     overflow: hidden;
     background: var(--white);
 }
 
-/* 상단 휴대폰 상태바 */
-.status_bar {
-    position: relative;
-    height: 52px;
-    padding: 0 17px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.status_bar::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 11px;
-    width: 107px;
-    height: 32px;
-    transform: translateX(-50%);
-    border-radius: 20px;
-    background: var(--black);
-}
-
-.status_icons {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.signal {
-    width: 17px;
-    height: 12px;
-    background: var(--black);
-    clip-path: polygon(0 100%, 0 75%, 20% 75%, 20% 55%, 40% 55%, 40% 35%, 60% 35%, 60% 15%, 80% 15%, 80% 0, 100% 0, 100% 100%);
-}
-
-.wifi {
-    width: 16px;
-    height: 10px;
-    border: 2px solid var(--black);
-    border-top: 0;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    border-radius: 50%;
-    transform: translateY(-2px);
-}
-
-.battery {
-    position: relative;
-    width: 22px;
-    height: 11px;
-    border: 2px solid var(--black);
-    border-radius: 4px;
-}
-
-.battery::after {
-    content: "";
-    position: absolute;
-    right: -4px;
-    top: 3px;
-    width: 2px;
-    height: 4px;
-    border-radius: 0 2px 2px 0;
-    background: var(--black);
-}
-
-/* Pinterest 헤더 */
+/* 상단 Pinterest 헤더 */
 .login_header {
-    height: 60px;
-    padding: 0 14px 0 9px;
+    height: 56px;
+    padding: 0 14px 0 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -120,7 +54,7 @@ a {
 .brand {
     display: flex;
     align-items: center;
-    width: 103px;
+    width: 108px;
 }
 
 .brand img {
@@ -132,44 +66,53 @@ a {
 .header_actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 13px;
     font-size: 1.4rem;
     font-weight: 700;
 }
 
-.signup_link {
-    padding: 7px 11px;
-    border-radius: 8px;
-    color: var(--white);
-    background: var(--red);
+.login_link {
+    white-space: nowrap;
 }
 
-/* Figma의 이미지처럼 원본 비율을 유지 */
+.signup_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 9px;
+    color: var(--white);
+    background: var(--red);
+    white-space: nowrap;
+}
+
+/* Figma의 이미지 영역 */
 .hero_image {
     width: 100%;
-    line-height: 0;
     overflow: hidden;
     background: var(--white);
+    line-height: 0;
 }
 
 .hero_image img {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: contain;
 }
 
-/* 하단 문구 */
+/* 제목과 버튼 */
 .hero_content {
-    padding: 26px 23px 30px;
+    padding: 27px 24px 28px;
     text-align: center;
     background: var(--white);
 }
 
 .hero_content h1 {
-    margin: 0 0 25px;
-    font-size: 2.35rem;
-    line-height: 1.4;
+    margin: 0 0 27px;
+    font-size: 2.4rem;
+    line-height: 1.35;
     letter-spacing: -0.08em;
     font-weight: 800;
 }
@@ -186,9 +129,9 @@ a {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 43px;
+    height: 46px;
     border-radius: 15px;
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 
@@ -203,11 +146,11 @@ a {
 }
 
 .notice {
-    margin: 11px 5px 0;
+    margin: 10px 2px 0;
     color: var(--dark-gray);
     font-size: 0.9rem;
-    line-height: 1.55;
-    letter-spacing: -0.05em;
+    line-height: 1.5;
+    letter-spacing: -0.055em;
 }
 
 .notice a {
