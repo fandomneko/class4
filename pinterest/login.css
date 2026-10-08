@@ -32,26 +32,35 @@ a {
 
 #wrap {
     width: 100%;
-    max-width: 375px;
-    min-width: 360px;
+    max-width: 327px;
     min-height: 100dvh;
     margin: 0 auto;
     overflow: hidden;
     background: var(--white);
 }
 
-.mobile_header {
-    background: var(--white);
-}
-
+/* 상단 휴대폰 상태바 */
 .status_bar {
-    height: 28px;
+    position: relative;
+    height: 52px;
     padding: 0 17px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+.status_bar::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 11px;
+    width: 107px;
+    height: 32px;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    background: var(--black);
 }
 
 .status_icons {
@@ -61,10 +70,9 @@ a {
 }
 
 .signal {
-    position: relative;
     width: 17px;
     height: 12px;
-    background: linear-gradient(to top, var(--black) 0 100%);
+    background: var(--black);
     clip-path: polygon(0 100%, 0 75%, 20% 75%, 20% 55%, 40% 55%, 40% 35%, 60% 35%, 60% 15%, 80% 15%, 80% 0, 100% 0, 100% 100%);
 }
 
@@ -80,11 +88,11 @@ a {
 }
 
 .battery {
+    position: relative;
     width: 22px;
     height: 11px;
     border: 2px solid var(--black);
     border-radius: 4px;
-    position: relative;
 }
 
 .battery::after {
@@ -98,13 +106,15 @@ a {
     background: var(--black);
 }
 
+/* Pinterest 헤더 */
 .login_header {
-    height: 44px;
-    padding: 0 15px 0 18px;
+    height: 60px;
+    padding: 0 14px 0 9px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--light-gray);
+    background: var(--white);
 }
 
 .brand {
@@ -122,49 +132,45 @@ a {
 .header_actions {
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 10px;
     font-size: 1.4rem;
     font-weight: 700;
 }
 
 .signup_link {
-    padding: 7px 12px;
+    padding: 7px 11px;
     border-radius: 8px;
     color: var(--white);
     background: var(--red);
 }
 
-.hero {
-    background: var(--white);
-}
-
+/* Figma의 이미지처럼 원본 비율을 유지 */
 .hero_image {
     width: 100%;
-    height: 348px;
+    line-height: 0;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: var(--white);
 }
 
 .hero_image img {
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
+    object-fit: contain;
 }
 
+/* 하단 문구 */
 .hero_content {
-    padding: 28px 16px 31px;
+    padding: 26px 23px 30px;
     text-align: center;
+    background: var(--white);
 }
 
 .hero_content h1 {
     margin: 0 0 25px;
-    font-size: 2.5rem;
-    line-height: 1.35;
-    letter-spacing: -0.07em;
+    font-size: 2.35rem;
+    line-height: 1.4;
+    letter-spacing: -0.08em;
     font-weight: 800;
 }
 
@@ -182,7 +188,7 @@ a {
     width: 100%;
     height: 43px;
     border-radius: 15px;
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     font-weight: 700;
 }
 
@@ -197,34 +203,19 @@ a {
 }
 
 .notice {
-    margin: 12px 9px 0;
+    margin: 11px 5px 0;
     color: var(--dark-gray);
-    font-size: 0.95rem;
-    line-height: 1.5;
-    letter-spacing: -0.04em;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    letter-spacing: -0.05em;
 }
 
 .notice a {
     text-decoration: underline;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 700px) {
     #wrap {
-        max-width: 1024px;
-    }
-
-    .status_bar,
-    .login_header {
-        padding-left: 28px;
-        padding-right: 28px;
-    }
-
-    .hero_image {
-        height: 390px;
-    }
-
-    .hero_content {
-        max-width: 360px;
-        margin: 0 auto;
+        max-width: 375px;
     }
 }
