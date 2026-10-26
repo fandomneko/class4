@@ -3,66 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한국콜마리뉴얼포트폴리오</title>
+
+    <title>한국콜마 리뉴얼 포트폴리오</title>
+
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../npm/swiper-bundle.min.css">
     <link rel="stylesheet" href="../font/CSS/pretendardvariable.css">
     <link rel="stylesheet" href="css/main.css">
+
     <script src="../npm/swiper-bundle.min.js"></script>
 </head>
+
 <body>
     <div id="wrap">
-    <header>제목공간</header>    
+
+        <header>
+            제목공간
+        </header>
+
         <main>
             <div class="hero-sec">
-                <!-- Slider main container -->
+
+                <!-- Swiper 슬라이드 영역 -->
                 <div class="swiper visual">
-                    <!-- Additional required wrapper -->
+
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
-                       <div class="swiper-slide">
-                        <img src="img/hero.png" alt="콜마기니" class="pc">
-                        <img src="img/m_visual01.jpg" alt="모바일콜마기니" class="mo">
-                       </div>
-                       <div class="swiper-slide">
-                        <img src="img/hero2.png" alt="콜마의악마" class="pc">
-                        <img src="img/m_visual02.png" alt="모바일콜마의악마" class="mo">
-                       </div>
+
+                        <!-- 첫 번째 슬라이드 -->
+                        <div class="swiper-slide">
+                            <img src="img/hero.png" alt="콜마 기니" class="pc">
+                            <img src="img/m_visual01.jpg" alt="모바일 콜마 기니" class="mo">
+                        </div>
+
+                        <!-- 두 번째 슬라이드 -->
+                        <div class="swiper-slide">
+                            <img src="img/hero2.png" alt="콜마의 악마" class="pc">
+                            <img src="img/m_visual02.png" alt="모바일 콜마의 악마" class="mo">
+                        </div>
+
                     </div>
-                    <!-- If we need pagination -->
+
+                    <!-- 페이지네이션 -->
                     <div class="swiper-pagination"></div>
 
-                    <!-- If we need navigation buttons -->
+                    <!-- 좌우 이동 버튼 -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
 
-                    <!-- If we need scrollbar -->
+                    <!-- 스크롤바 -->
                     <div class="swiper-scrollbar"></div>
+
                 </div>
             </div>
         </main>
         <footer>&copy;</footer>
+
     </div>
+
     <script>
-        const swiper = new Swiper('.hero-sec > .swiper', {
-            // Optional parameters
+        const swiperHero = new Swiper('.hero-sec > .swiper', {
             direction: 'horizontal',
             loop: true,
 
-            // If we need pagination
+            // 페이지네이션
             pagination: {
                 el: '.visual .swiper-pagination',
+                clickable: true,
             },
 
-            // Navigation arrows
+            // 좌우 이동 버튼
             navigation: {
                 nextEl: '.visual .swiper-button-next',
                 prevEl: '.visual .swiper-button-prev',
             },
 
-            // And if we need scrollbar
+            // 스크롤바
             scrollbar: {
-            el: '.visual .swiper-scrollbar',
+                el: '.visual .swiper-scrollbar',
+                draggable: true,
             },
         });
     </script>
