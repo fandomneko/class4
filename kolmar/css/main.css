@@ -15,3 +15,23 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+/* Swiper 페이지 표시: Figma 디자인 반영 */
+.hero-sec .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+}
+
+.hero-sec .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+    margin: 0 !important;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.hero-sec .swiper-pagination-bullet-active {
+    background: #fff;
+}
