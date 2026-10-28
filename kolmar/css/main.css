@@ -1,5 +1,28 @@
+:root {
+    /* Brand */
+    --brand-blue: #276EF1;
+    --brand-navy: #000073;
+
+    /* Basic colors */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+    /* Blue */
+    --blue-light: #E8F0FF;
+    --blue-light-2: #3DADFF;
+    --blue-light-3: #829AE3;
+    --blue-light-4: #C2E5FF;
+    --blue-light-5: #81CAFF;
+
+    /* Gray */
+    --gray-light: #DADCE0;
+    --gray-medium: #9FA0A0;
+    --gray-background: #F7F9FC;
+    --gray-text-secondary: #5F6673;
+}
+
 body {
-    background-color: yellow;
+    background-color: var(--gray-background);
     font-family: "Pretendard Variable", sans-serif;
 }
 
