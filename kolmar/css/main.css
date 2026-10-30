@@ -13,7 +13,7 @@
 html { scroll-behavior: smooth; }
 body { background: #fff; color: var(--color-black); font-family: var(--font); }
 #wrap { width: 100%; overflow: hidden; }
-img { display: block; max-width: 100%; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; }
 .section-inner { width: min(1200px, calc(100% - 80px)); margin: 0 auto; }
@@ -62,23 +62,20 @@ button { font: inherit; cursor: pointer; }
 .rnd-tabs button.active { background: #279be9; color: #fff; }
 .rnd-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .rnd-card { min-width: 0; padding: 12px; border: 1px solid rgba(255,255,255,.24); border-radius: 13px; background: rgba(31,73,126,.38); color: #fff; }
-.rnd-visual { display: flex; align-items: center; justify-content: center; height: 130px; margin-bottom: 12px; border-radius: 8px; background: linear-gradient(135deg, rgba(255,255,255,.8), rgba(72,139,195,.35)), radial-gradient(circle at 70% 25%, #fff 0 5%, transparent 6%), linear-gradient(45deg, #9fc8e8, #e7f3ff); color: rgba(26,76,124,.5); }
-.rnd-card02 .rnd-visual { background: linear-gradient(135deg, #294b66, #b9d7e6 50%, #426b8d); }
-.rnd-card03 .rnd-visual { background: linear-gradient(135deg, #d9eef9, #8eb9d6 55%, #f5fbff); }
-.rnd-visual span { font-size: 34px; font-weight: 800; opacity: .45; }
+.rnd-visual { display: flex; align-items: center; justify-content: center; height: 130px; margin-bottom: 12px; border-radius: 8px; overflow: hidden; }
 .rnd-card h3 { margin-bottom: 7px; font-size: 16px; }
 .rnd-card p { font-size: 11px; line-height: 1.55; opacity: .9; }
 
 /* COMPANY */
 .company-section { display: grid; grid-template-columns: repeat(4, 1fr); min-height: 440px; }
 .company-card { position: relative; display: flex; align-items: center; justify-content: center; min-height: 440px; overflow: hidden; color: #fff; text-align: center; isolation: isolate; }
-.company-card::before { position: absolute; z-index: -2; inset: 0; content: ""; transition: transform .5s; }
+.company-card::before { position: absolute; z-index: -2; inset: 0; content: ""; transition: transform .5s; background-size: cover; background-position: center; }
 .company-card::after { position: absolute; z-index: -1; inset: 0; content: ""; background: linear-gradient(0deg, rgba(4,13,28,.72), rgba(4,13,28,.18)); }
 .company-card:hover::before { transform: scale(1.06); }
-.company-card01::before { background: linear-gradient(135deg, #9b7756, #435e46 55%, #1b3141); }
-.company-card02::before { background: radial-gradient(circle at 50% 30%, #3b8cb8, #102b55 65%, #091629); }
-.company-card03::before { background: linear-gradient(135deg, #d6e4e8, #67869a 45%, #243d51); }
-.company-card04::before { background: linear-gradient(135deg, #0c2939, #28637a 55%, #071b2b); }
+.company-card01::before { background-image: url('../img/company1.jpg'); }
+.company-card02::before { background-image: url('../img/company2.jpg'); }
+.company-card03::before { background-image: url('../img/company3.jpg'); }
+.company-card04::before { background-image: url('../img/company4.jpg'); }
 .company-number { position: absolute; top: 28px; left: 28px; font-size: 12px; opacity: .7; }
 .company-card h2 { margin-bottom: 10px; font-size: clamp(22px, 2.4vw, 32px); }
 .company-card p { font-size: 12px; opacity: .9; }
@@ -97,13 +94,11 @@ button { font: inherit; cursor: pointer; }
 .esg-copy h3 { margin: 8px 0 12px; font-size: 25px; }
 .esg-copy p { font-size: 12px; line-height: 1.65; }
 .esg-copy a { display: inline-flex; gap: 20px; align-items: center; margin-top: 24px; padding: 8px 13px; border-radius: 5px; background: rgba(255,255,255,.3); font-size: 11px; }
-.esg-image { width: 36%; height: 190px; margin-left: 40px; border-radius: 18px; background: linear-gradient(135deg, rgba(255,255,255,.15), rgba(15,73,112,.25)), linear-gradient(45deg, #9db9c8, #e5f1f7 50%, #7897aa); }
-.esg-social .esg-image { background: linear-gradient(135deg, #c4d5e3, #f0f4f7 45%, #7196b3); }
-.esg-green .esg-image { background: linear-gradient(135deg, #d7e7d0, #4d8a6a 55%, #1e5c55); }
+.esg-image { width: 36%; height: 190px; margin-left: 40px; border-radius: 18px; overflow: hidden; }
 
 /* NEWS */
 .news-section { position: relative; padding: 110px 0 120px; overflow: hidden; background: radial-gradient(ellipse at 70% 40%, #526b94, #14233f 60%, #091426); color: #fff; }
-.news-section::before { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(5,14,31,.3), rgba(5,14,31,.72)); }
+.news-section::before { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(5,14,31,.3), rgba(5,14,31,.72)), url('../img/rp1.jpg') center/cover no-repeat; opacity: 0.15; }
 .news-inner { position: relative; display: grid; grid-template-columns: .8fr 1.6fr; gap: 70px; }
 .news-intro { padding-top: 20px; }
 .news-intro .eyebrow { color: #7ebaff; }
@@ -247,7 +242,6 @@ button { font: inherit; cursor: pointer; }
     .rnd-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
     .rnd-card { padding: 6px; border-radius: 7px; }
     .rnd-visual { height: 53px; margin-bottom: 5px; border-radius: 5px; }
-    .rnd-visual span { font-size: 16px; }
     .rnd-card h3 { margin: 0 0 3px; font-size: 7px; line-height: 1.25; }
     .rnd-card p { font-size: 5.5px; line-height: 1.4; }
 
