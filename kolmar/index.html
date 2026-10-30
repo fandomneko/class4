@@ -3,183 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="한국콜마의 기술과 연구개발, 회사소개, ESG, 소식 및 IR 정보를 소개합니다.">
     <title>한국콜마 | Tech Confidence</title>
-    <!-- Pretendard 폰트 및 Swiper CDN -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <style>
-        :root {
-            --brand-blue: #276EF1;
-            --brand-navy: #000073;
-            --color-white: #ffffff;
-            --color-black: #000000;
-            --blue-light: #E8F0FF;
-            --blue-light2: #3DADFF;
-            --blue-light3: #82A9E3;
-            --blue-light4: #C2E5FF;
-            --blue-light5: #81CAFF;
-            --gray-light: #DADCE0;
-            --gray-medium: #9FA0A0;
-            --gray-bg: #F7F9FC;
-            --gray-text: #5F6673;
-            --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-        }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { background: #fff; color: var(--color-black); font-family: var(--font); -webkit-font-smoothing: antialiased; }
-        #wrap { width: 100%; overflow: hidden; }
-        img { display: block; max-width: 100%; width: 100%; height: 100%; object-fit: cover; }
-        a { color: inherit; text-decoration: none; }
-        button { font: inherit; cursor: pointer; border: none; background: none; }
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../font/css/pretendardvariable.css">
+    <link rel="stylesheet" href="css/main.css">
 
-        .section-inner { width: min(1200px, calc(100% - 80px)); margin: 0 auto; }
-        .eyebrow { display: block; margin-bottom: 10px; color: #398FE8; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-
-        /* HEADER */
-        .header { position: absolute; top: 0; left: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; width: 100%; height: 76px; padding: 0 4.2%; color: #fff; background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%); }
-        .logo a { color: #ffffff; font-size: 22px; font-weight: 800; letter-spacing: -.04em; }
-        .gnb { display: flex; align-items: center; gap: clamp(22px, 4vw, 64px); }
-        .gnb a { font-size: 14px; font-weight: 500; color: #fff; opacity: 0.9; transition: opacity .2s; }
-        .gnb a:hover { opacity: 1; text-shadow: 0 0 8px rgba(255,255,255,0.6); }
-        .header_util { display: flex; align-items: center; gap: 18px; }
-        .lang_btn { display: flex; align-items: center; gap: 4px; font-size: 13px; color: #fff; opacity: 0.9; }
-        .menu_btn { display: flex; flex-direction: column; gap: 5px; padding: 8px 0 8px 8px; }
-        .menu_btn span { display: block; width: 20px; height: 2px; background: #fff; border-radius: 1px; }
-
-        /* HERO */
-        .hero-sec { position: relative; background: #10172b; }
-        .hero-sec .visual { width: 100%; height: min(760px, 66vw); min-height: 520px; }
-        .hero-slide { position: relative; overflow: hidden; }
-        .hero-slide::after { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(5,12,30,.45) 0%, rgba(5,12,30,.1) 50%, transparent 100%); }
-        .hero-copy { position: absolute; z-index: 2; top: 42%; left: 6%; color: #fff; }
-        .hero-copy p { font-size: clamp(32px, 4.5vw, 64px); font-weight: 700; letter-spacing: -.04em; text-shadow: 0 4px 20px rgba(0,0,0,0.3); }
-        .hero-sec .swiper-pagination { bottom: 35px !important; display: flex; justify-content: center; gap: 10px; }
-        .hero-sec .swiper-pagination-bullet { width: 8px; height: 8px; margin: 0 !important; background: rgba(255,255,255,.5); opacity: 1; transition: all .3s; }
-        .hero-sec .swiper-pagination-bullet-active { background: #fff; width: 24px; border-radius: 4px; }
-
-        /* R&D */
-        .rnd-section { position: relative; padding: 90px 0; overflow: hidden; background: linear-gradient(115deg, #b7ddfa 0%, #8ab8f2 48%, #a8d8f5 100%); }
-        .rnd-section::before, .rnd-section::after { position: absolute; width: 650px; height: 650px; border: 1px solid rgba(255,255,255,.28); border-radius: 50%; content: ""; pointer-events: none; }
-        .rnd-section::before { top: -440px; left: -140px; box-shadow: 0 0 0 24px rgba(255,255,255,.05), 0 0 0 48px rgba(255,255,255,.05); }
-        .rnd-section::after { right: -300px; bottom: -520px; }
-        .rnd-inner { position: relative; z-index: 1; display: grid; grid-template-columns: .8fr 2fr; align-items: center; gap: 54px; }
-        .section-intro h2 { margin-bottom: 12px; font-size: clamp(36px, 4vw, 52px); font-weight: 800; line-height: 1; color: #101C3A; }
-        .section-intro .eyebrow { color: #ffffff; text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
-        .section-intro p { font-size: 14px; line-height: 1.65; color: #1e3050; font-weight: 500; }
-        .rnd-controls { display: flex; gap: 8px; margin-top: 28px; }
-        .rnd-controls button { width: 32px; height: 32px; border: 0; border-radius: 50%; background: rgba(255,255,255,.6); color: #287ac4; font-size: 18px; display: flex; align-items: center; justify-content: center; transition: all .2s; }
-        .rnd-controls button:hover { background: #fff; }
-        .rnd-controls button:last-child { background: #2f9ee9; color: #fff; }
-        .rnd-tabs { display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 24px; }
-        .rnd-tabs button { padding: 8px 18px; border: 1px solid rgba(255,255,255,.8); border-radius: 20px; background: rgba(255,255,255,.5); color: #26364d; font-size: 12px; font-weight: 600; transition: all .2s; }
-        .rnd-tabs button.active, .rnd-tabs button:hover { background: #279be9; color: #fff; border-color: #279be9; }
-        .rnd-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .rnd-card { min-width: 0; padding: 14px; border: 1px solid rgba(255,255,255,.3); border-radius: 16px; background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(10px); color: #fff; transition: transform .3s; }
-        .rnd-card:hover { transform: translateY(-4px); }
-        .rnd-visual { display: flex; align-items: center; justify-content: center; height: 140px; margin-bottom: 14px; border-radius: 10px; overflow: hidden; position: relative; background: #e0f0ff; }
-        .rnd-visual img { width: 100%; height: 100%; object-fit: cover; }
-        .rnd-card h3 { margin-bottom: 8px; font-size: 17px; color: #0a1c38; font-weight: 700; }
-        .rnd-card p { font-size: 12px; line-height: 1.6; color: #223a5e; opacity: .95; }
-
-        /* COMPANY */
-        .company-section { display: grid; grid-template-columns: repeat(4, 1fr); min-height: 480px; }
-        .company-card { position: relative; display: flex; align-items: flex-end; justify-content: flex-start; padding: 40px 30px; min-height: 480px; overflow: hidden; color: #fff; isolation: isolate; }
-        .company-card::before { position: absolute; z-index: -2; inset: 0; content: ""; transition: transform .6s ease; background-size: cover; background-position: center; }
-        .company-card::after { position: absolute; z-index: -1; inset: 0; content: ""; background: linear-gradient(0deg, rgba(4,13,28,.8) 0%, rgba(4,13,28,.2) 60%, rgba(4,13,28,.1) 100%); }
-        .company-card:hover::before { transform: scale(1.08); }
-        .company-card01::before { background-image: url('https://images.unsplash.com/photo-1531973573985-179864203111?auto=format&fit=crop&w=800&q=80'); }
-        .company-card02::before { background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80'); }
-        .company-card03::before { background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80'); }
-        .company-card04::before { background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80'); }
-        .company-number { position: absolute; top: 32px; left: 30px; font-size: 14px; font-weight: 700; opacity: .8; letter-spacing: 0.1em; }
-        .company-card h2 { margin-bottom: 8px; font-size: clamp(22px, 2.2vw, 30px); font-weight: 700; }
-        .company-card p { font-size: 13px; opacity: .85; line-height: 1.5; }
-
-        /* ESG */
-        .esg-section { padding: 90px 0 100px; background: #fff; }
-        .section-heading { margin-bottom: 36px; }
-        .section-heading h2 { color: #276EF1; font-size: clamp(38px, 4vw, 54px); font-weight: 800; line-height: 1; }
-        .esg-list { display: flex; flex-direction: column; gap: 20px; }
-        .esg-item { display: flex; align-items: center; justify-content: space-between; min-height: 260px; padding: 40px clamp(30px, 5%, 60px); border-radius: 28px; color: #10243a; overflow: hidden; }
-        .esg-human { background: #c3e4fb; }
-        .esg-social { background: #80c8f6; color: #fff; }
-        .esg-green { background: #36a8ef; color: #fff; }
-        .esg-copy { flex: 1; z-index: 1; }
-        .esg-copy > span { font-size: 11px; font-weight: 700; letter-spacing: .12em; opacity: .75; }
-        .esg-copy h3 { margin: 10px 0 14px; font-size: 28px; font-weight: 700; }
-        .esg-copy p { font-size: 14px; line-height: 1.65; opacity: 0.95; }
-        .esg-copy a { display: inline-flex; gap: 12px; align-items: center; margin-top: 28px; padding: 10px 18px; border-radius: 6px; background: rgba(255,255,255,.35); font-size: 12px; font-weight: 600; backdrop-filter: blur(4px); transition: background .2s; }
-        .esg-copy a:hover { background: rgba(255,255,255,.5); }
-        .esg-image { width: 38%; height: 210px; margin-left: 40px; border-radius: 20px; overflow: hidden; flex-shrink: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
-
-        /* NEWS */
-        .news-section { position: relative; padding: 110px 0 120px; overflow: hidden; background: radial-gradient(ellipse at 70% 40%, #2b436e, #101C3A 60%, #060d1c); color: #fff; }
-        .news-inner { position: relative; display: grid; grid-template-columns: .8fr 1.6fr; gap: 60px; }
-        .news-intro { padding-top: 10px; }
-        .news-intro .eyebrow { color: #7ebaff; }
-        .news-intro h2 { margin-bottom: 20px; font-size: clamp(40px, 4.5vw, 60px); font-weight: 800; }
-        .news-intro p { font-size: 14px; line-height: 1.7; opacity: .85; }
-        .news-intro > a { display: inline-flex; align-items: center; gap: 6px; margin-top: 32px; font-size: 13px; font-weight: 600; color: #82a9e3; }
-        .news-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-        .news-card { min-height: 220px; padding: 28px; border: 1px solid rgba(255,255,255,.15); border-radius: 22px; background: rgba(15,27,48,.5); backdrop-filter: blur(12px); transition: all .3s; }
-        .news-card:hover { border-color: rgba(255,255,255,.35); transform: translateY(-3px); }
-        .news-card span { color: #71b5ff; font-size: 11px; font-weight: 700; letter-spacing: .1em; }
-        .news-card h3 { margin: 14px 0 10px; font-size: 18px; font-weight: 700; line-height: 1.45; }
-        .news-card p { color: rgba(255,255,255,.7); font-size: 12px; line-height: 1.65; }
-        .news-feature { background: rgba(39, 110, 241, 0.35); border-color: rgba(255,255,255,.25); }
-
-        /* IR + FOOTER */
-        .ir-section { padding: 90px 0 80px; background: #fff; }
-        .ir-heading h2 { margin-bottom: 12px; font-size: 48px; font-weight: 800; color: #101C3A; line-height: 1; }
-        .ir-heading p { color: var(--gray-text); font-size: 15px; line-height: 1.6; }
-        .ir-list { margin-top: 36px; border-top: 2px solid #101C3A; }
-        .ir-list li { list-style: none; border-bottom: 1px solid #e0e6ed; }
-        .ir-list a { display: flex; align-items: center; justify-content: space-between; min-height: 70px; font-size: 17px; font-weight: 600; color: #1e293b; transition: color .2s; }
-        .ir-list a:hover { color: #276EF1; }
-        .ir-list a span { color: #276EF1; font-weight: 700; }
-
-        .footer { border-top: 1px solid #e2e5e9; background: #fafafa; }
-        .footer-inner { display: flex; align-items: center; gap: 40px; padding-top: 36px; padding-bottom: 40px; }
-        .footer-logo { white-space: nowrap; color: #276EF1; font-size: 22px; font-weight: 800; }
-        .footer-info { color: #64748b; font-size: 12px; line-height: 1.8; }
-        .footer-sns { display: flex; gap: 12px; margin-left: auto; }
-        .footer-sns a { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border: 1px solid #cbd5e1; border-radius: 50%; font-size: 13px; color: #475569; transition: all .2s; }
-        .footer-sns a:hover { background: #276EF1; color: #fff; border-color: #276EF1; }
-
-        /* RESPONSIVE DESIGN (CSS 피그마 모바일 대응 유지) */
-        @media (max-width: 900px) {
-            .section-inner { width: min(100% - 48px, 720px); }
-            .header { height: 64px; }
-            .rnd-inner { grid-template-columns: 1fr; gap: 32px; }
-            .company-section { grid-template-columns: repeat(2, 1fr); min-height: auto; }
-            .company-card { min-height: 320px; }
-            .news-inner { grid-template-columns: 1fr; gap: 32px; }
-        }
-
-        @media (max-width: 640px) {
-            .section-inner { width: calc(100% - 32px); }
-            .header { height: 60px; padding: 0 16px; }
-            .gnb { position: absolute; top: 60px; right: 0; left: 0; display: none; flex-direction: column; align-items: flex-start; gap: 0; padding: 15px 20px; background: rgba(16,28,58,.98); backdrop-filter: blur(10px); }
-            .gnb.is-open { display: flex; }
-            .gnb a { width: 100%; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
-            .rnd-cards { grid-template-columns: 1fr; }
-            .company-section { grid-template-columns: 1fr; }
-            .company-card { min-height: 220px; }
-            .esg-item { flex-direction: column; align-items: flex-start; padding: 30px 20px; }
-            .esg-image { width: 100%; height: 180px; margin: 24px 0 0; }
-            .news-grid { grid-template-columns: 1fr; }
-            .footer-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
-            .footer-sns { margin-left: 0; }
-        }
-    </style>
+    <script src="../npm/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div id="wrap">
-        <!-- HEADER -->
         <header class="header">
-            <h1 class="logo"><a href="#home">HK Kolmar</a></h1>
-            <nav class="gnb" id="gnb">
+            <h1 class="logo"><a href="#home" aria-label="한국콜마 홈">HK Kolmar</a></h1>
+
+            <nav class="gnb" id="gnb" aria-label="주 메뉴">
                 <a href="#rnd">사업</a>
                 <a href="#rnd">R&amp;D</a>
                 <a href="#company">회사소개</a>
@@ -187,25 +26,25 @@
                 <a href="#news">소식</a>
                 <a href="#ir">IR</a>
             </nav>
+
             <div class="header_util">
-                <button type="button" class="lang_btn"><span>KR</span> ▾</button>
-                <button type="button" class="menu_btn" id="menuBtn">
+                <button type="button" class="lang_btn" aria-label="언어 선택">◎ <span>KR</span></button>
+                <button type="button" class="menu_btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="gnb">
                     <span></span><span></span>
                 </button>
             </div>
         </header>
 
         <main>
-            <!-- HERO -->
-            <section class="hero-sec" id="home">
+            <section class="hero-sec" id="home" aria-label="한국콜마 소개">
                 <div class="swiper visual">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide hero-slide">
-                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80" alt="Tech Confidence 메인 비주얼">
+                        <div class="swiper-slide hero-slide hero-slide01">
+                            <img src="img/hero.png" alt="밤하늘을 가로지르는 빛을 담은 한국콜마 메인 비주얼">
                             <div class="hero-copy"><p>Tech Confidence</p></div>
                         </div>
-                        <div class="swiper-slide hero-slide">
-                            <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1600&q=80" alt="Technology for Better Life 비주얼">
+                        <div class="swiper-slide hero-slide hero-slide02">
+                            <img src="img/hero2.png" alt="한국콜마의 기술과 혁신을 표현한 메인 비주얼">
                             <div class="hero-copy"><p>Technology for Better Life</p></div>
                         </div>
                     </div>
@@ -213,37 +52,36 @@
                 </div>
             </section>
 
-            <!-- R&D -->
             <section class="rnd-section" id="rnd">
                 <div class="section-inner rnd-inner">
                     <div class="section-intro">
                         <span class="eyebrow">RESEARCH &amp; DEVELOPMENT</span>
                         <h2>R&amp;D</h2>
                         <p>World-first-class R&amp;D 제조 전문 기업으로<br>도약하기 위해 끊임없이 신기술 개발에 도전합니다.</p>
-                        <div class="rnd-controls">
-                            <button type="button" id="rndPrev">‹</button>
-                            <button type="button" id="rndNext">›</button>
+                        <div class="rnd-controls" aria-label="연구 분야 카드 이동">
+                            <button type="button" class="rnd-prev" aria-label="이전 카드">‹</button>
+                            <button type="button" class="rnd-next" aria-label="다음 카드">›</button>
                         </div>
                     </div>
                     <div class="rnd-content">
-                        <div class="rnd-tabs" id="rndTabs">
+                        <div class="rnd-tabs" role="group" aria-label="연구 분야">
                             <button type="button" class="active">화장품</button>
                             <button type="button">제약·바이오</button>
                             <button type="button">건강기능식품</button>
                         </div>
-                        <div class="rnd-cards" id="rndCardList">
-                            <article class="rnd-card">
-                                <div class="rnd-visual"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=500&q=80" alt="스킨케어 연구소"></div>
+                        <div class="rnd-cards">
+                            <article class="rnd-card rnd-card01">
+                                <div class="rnd-visual"><img src="img/rnd.gif" alt="스킨케어 연구소"></div>
                                 <h3>스킨케어 연구소</h3>
                                 <p>피부 과학을 바탕으로 새로운 소재와 제형을 연구하며 더 나은 아름다움을 제안합니다.</p>
                             </article>
-                            <article class="rnd-card">
-                                <div class="rnd-visual"><img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=500&q=80" alt="항균 품질 연구"></div>
+                            <article class="rnd-card rnd-card02">
+                                <div class="rnd-visual"><img src="img/rnd1.gif" alt="항균·품질 연구"></div>
                                 <h3>항균·품질 연구</h3>
                                 <p>엄격한 품질 기준과 전문 연구 역량으로 제품의 안전성과 신뢰도를 높입니다.</p>
                             </article>
-                            <article class="rnd-card">
-                                <div class="rnd-visual"><img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=500&q=80" alt="Ur Lab"></div>
+                            <article class="rnd-card rnd-card03">
+                                <div class="rnd-visual"><img src="img/rnd2.jpg" alt="Ur Lab"></div>
                                 <h3>Ur Lab</h3>
                                 <p>다양한 연구 분야의 협업을 통해 고객의 아이디어를 혁신적인 제품으로 완성합니다.</p>
                             </article>
@@ -252,104 +90,57 @@
                 </div>
             </section>
 
-            <!-- COMPANY -->
-            <section class="company-section" id="company">
+            <section class="company-section" id="company" aria-label="회사소개">
                 <a class="company-card company-card01" href="#company">
-                    <span class="company-number">01</span>
-                    <div><h2>인사말</h2><p>더 나은 내일을 만드는 한국콜마의 약속</p></div>
+                    <span class="company-number">01</span><div><h2>인사말</h2><p>더 나은 내일을 만드는 한국콜마의 약속</p></div>
                 </a>
                 <a class="company-card company-card02" href="#company">
-                    <span class="company-number">02</span>
-                    <div><h2>경영철학</h2><p>기술과 사람을 생각하는 지속 가능한 성장</p></div>
+                    <span class="company-number">02</span><div><h2>경영철학</h2><p>기술과 사람을 생각하는 지속 가능한 성장</p></div>
                 </a>
                 <a class="company-card company-card03" href="#company">
-                    <span class="company-number">03</span>
-                    <div><h2>연혁</h2><p>혁신으로 이어온 한국콜마의 발자취</p></div>
+                    <span class="company-number">03</span><div><h2>연혁</h2><p>혁신으로 이어온 한국콜마의 발자취</p></div>
                 </a>
                 <a class="company-card company-card04" href="#company">
-                    <span class="company-number">04</span>
-                    <div><h2>회사개요</h2><p>글로벌 종합 뷰티·헬스케어 기업</p></div>
+                    <span class="company-number">04</span><div><h2>회사개요</h2><p>글로벌 종합 뷰티·헬스케어 기업</p></div>
                 </a>
             </section>
 
-            <!-- ESG -->
             <section class="esg-section" id="esg">
                 <div class="section-inner">
                     <div class="section-heading"><span class="eyebrow">SUSTAINABILITY</span><h2>ESG</h2></div>
                     <div class="esg-list">
                         <article class="esg-item esg-human">
-                            <div class="esg-copy">
-                                <span>01 / PEOPLE</span>
-                                <h3>인권경영</h3>
-                                <p>한국콜마는 경영활동 전반에서 인권을 존중하고<br>모든 구성원이 존중받는 조직문화를 만들어갑니다.</p>
-                                <a href="#esg">자세히 보기 <span>→</span></a>
-                            </div>
-                            <div class="esg-image"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="인권경영"></div>
+                            <div class="esg-copy"><span>01 / PEOPLE</span><h3>인권경영</h3><p>한국콜마는 경영활동 전반에서 인권을 존중하고<br>모든 구성원이 존중받는 조직문화를 만들어갑니다.</p><a href="#esg">자세히 보기 <span>→</span></a></div>
+                            <div class="esg-image"><img src="img/esg1.png" alt="인권경영"></div>
                         </article>
                         <article class="esg-item esg-social">
-                            <div class="esg-copy">
-                                <span>02 / SOCIETY</span>
-                                <h3>사회공헌</h3>
-                                <p>지역사회와 함께 성장하며 나눔과 상생의 가치를<br>실천하고 지속 가능한 사회를 만들어갑니다.</p>
-                                <a href="#esg">자세히 보기 <span>→</span></a>
-                            </div>
-                            <div class="esg-image"><img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=600&q=80" alt="사회공헌"></div>
+                            <div class="esg-copy"><span>02 / SOCIETY</span><h3>사회공헌</h3><p>지역사회와 함께 성장하며 나눔과 상생의 가치를<br>실천하고 지속 가능한 사회를 만들어갑니다.</p><a href="#esg">자세히 보기 <span>→</span></a></div>
+                            <div class="esg-image"><img src="img/esg2.jpg" alt="사회공헌"></div>
                         </article>
                         <article class="esg-item esg-green">
-                            <div class="esg-copy">
-                                <span>03 / ENVIRONMENT</span>
-                                <h3>환경경영</h3>
-                                <p>환경 영향을 줄이기 위한 책임 있는 경영으로<br>지속 가능한 미래를 위한 변화를 이어갑니다.</p>
-                                <a href="#esg">자세히 보기 <span>→</span></a>
-                            </div>
-                            <div class="esg-image"><img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="환경경영"></div>
+                            <div class="esg-copy"><span>03 / ENVIRONMENT</span><h3>환경경영</h3><p>환경 영향을 줄이기 위한 책임 있는 경영으로<br>지속 가능한 미래를 위한 변화를 이어갑니다.</p><a href="#esg">자세히 보기 <span>→</span></a></div>
+                            <div class="esg-image"><img src="img/esg3.gif" alt="환경경영"></div>
                         </article>
                     </div>
                 </div>
             </section>
 
-            <!-- NEWS -->
             <section class="news-section" id="news">
+                <div class="news-shade"></div>
                 <div class="section-inner news-inner">
-                    <div class="news-intro">
-                        <span class="eyebrow">KOLMAR NEWS</span>
-                        <h2>소식</h2>
-                        <p>한국콜마의 새로운 소식과<br>다양한 이야기를 만나보세요.</p>
-                        <a href="#news">전체 소식 보기 ↗</a>
-                    </div>
+                    <div class="news-intro"><span class="eyebrow">KOLMAR NEWS</span><h2>소식</h2><p>한국콜마의 새로운 소식과<br>다양한 이야기를 만나보세요.</p><a href="#news">전체 소식 보기 ↗</a></div>
                     <div class="news-grid">
-                        <article class="news-card news-feature">
-                            <span>STORY</span>
-                            <h3>한국콜마, 국내 화장품 업계 최초<br>혁신 기술과 연구 성과 소개</h3>
-                            <p>끊임없는 연구개발과 기술 혁신을 통해 뷰티 산업의 새로운 가능성을 만들어갑니다.</p>
-                        </article>
-                        <article class="news-card">
-                            <span>NEWS</span>
-                            <h3>한국콜마의 새로운 도전과<br>글로벌 성장 이야기</h3>
-                            <p>한국콜마의 주요 소식과 다양한 활동을 확인해보세요.</p>
-                        </article>
-                        <article class="news-card">
-                            <span>STORY</span>
-                            <h3>고객과 함께 만드는<br>지속 가능한 미래</h3>
-                            <p>기술과 협력을 바탕으로 더 나은 내일을 만들어갑니다.</p>
-                        </article>
-                        <article class="news-card">
-                            <span>NEWS</span>
-                            <h3>연구개발 역량 강화로<br>글로벌 경쟁력 확대</h3>
-                            <p>새로운 시장과 고객을 위한 혁신을 이어갑니다.</p>
-                        </article>
+                        <article class="news-card news-feature"><span>STORY</span><h3>한국콜마, 국내 화장품 업계 최초<br>혁신 기술과 연구 성과 소개</h3><p>끊임없는 연구개발과 기술 혁신을 통해 뷰티 산업의 새로운 가능성을 만들어갑니다.</p></article>
+                        <article class="news-card"><span>NEWS</span><h3>한국콜마의 새로운 도전과<br>글로벌 성장 이야기</h3><p>한국콜마의 주요 소식과 다양한 활동을 확인해보세요.</p></article>
+                        <article class="news-card"><span>STORY</span><h3>고객과 함께 만드는<br>지속 가능한 미래</h3><p>기술과 협력을 바탕으로 더 나은 내일을 만들어갑니다.</p></article>
+                        <article class="news-card"><span>NEWS</span><h3>연구개발 역량 강화로<br>글로벌 경쟁력 확대</h3><p>새로운 시장과 고객을 위한 혁신을 이어갑니다.</p></article>
                     </div>
                 </div>
             </section>
 
-            <!-- IR -->
             <section class="ir-section" id="ir">
                 <div class="section-inner">
-                    <div class="ir-heading">
-                        <span class="eyebrow">INVESTOR RELATIONS</span>
-                        <h2>IR</h2>
-                        <p>한국콜마는 투명한 경영정보 제공으로<br>기업 가치를 높이는 데 최선을 다하고 있습니다.</p>
-                    </div>
+                    <div class="ir-heading"><span class="eyebrow">INVESTOR RELATIONS</span><h2>IR</h2><p>한국콜마는 투명한 경영정보 제공으로<br>기업 가치를 높이는 데 최선을 다하고 있습니다.</p></div>
                     <ul class="ir-list">
                         <li><a href="#ir">IR 문의 담당 부서 안내 <span>↗</span></a></li>
                         <li><a href="#ir">2026년 2분기 한국콜마 경영실적 <span>↗</span></a></li>
@@ -359,26 +150,16 @@
             </section>
         </main>
 
-        <!-- FOOTER -->
         <footer class="footer">
             <div class="section-inner footer-inner">
                 <a href="#home" class="footer-logo">HK Kolmar</a>
-                <div class="footer-info">
-                    <p>서울특별시 서초구 헌릉로 8길 61 | 대표전화 : 02-515-0150</p>
-                    <p>Copyright © 2026 KOLMAR KOREA. All rights reserved.</p>
-                </div>
-                <div class="footer-sns">
-                    <a href="#footer" aria-label="인스타그램">IG</a>
-                    <a href="#footer" aria-label="유튜브">YT</a>
-                </div>
+                <div class="footer-info"><p>서울특별시 서초구 헌릉로 8길 61</p><p>대표전화 : 02-515-0150</p><p>Copyright © 2026 KOLMAR KOREA. All rights reserved.</p></div>
+                <div class="footer-sns"><a href="#footer" aria-label="인스타그램">◎</a><a href="#footer" aria-label="유튜브">▷</a></div>
             </div>
         </footer>
     </div>
 
-    <!-- Swiper JS & Custom Script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Swiper Hero Slider
         const swiperHero = new Swiper('.hero-sec .visual', {
             direction: 'horizontal',
             loop: true,
@@ -386,58 +167,21 @@
             pagination: { el: '.visual .swiper-pagination', clickable: true }
         });
 
-        // Mobile Nav Toggle
-        const menuButton = document.getElementById('menuBtn');
-        const gnb = document.getElementById('gnb');
+        const menuButton = document.querySelector('.menu_btn');
+        const gnb = document.querySelector('.gnb');
 
         menuButton.addEventListener('click', function () {
-            gnb.classList.toggle('is-open');
+            const isOpen = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!isOpen));
+            this.setAttribute('aria-label', isOpen ? '메뉴 열기' : '메뉴 닫기');
+            gnb.classList.toggle('is-open', !isOpen);
         });
 
         gnb.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 gnb.classList.remove('is-open');
-            });
-        });
-
-        // Dynamic Tab Switching for R&D Cards
-        const rndData = {
-            "화장품": [
-                { img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=500&q=80", title: "스킨케어 연구소", desc: "피부 과학을 바탕으로 새로운 소재와 제형을 연구하며 더 나은 아름다움을 제안합니다." },
-                { img: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=500&q=80", title: "항균·품질 연구", desc: "엄격한 품질 기준과 전문 연구 역량으로 제품의 안전성과 신뢰도를 높입니다." },
-                { img: "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=500&q=80", title: "Ur Lab", desc: "다양한 연구 분야의 협업을 통해 고객의 아이디어를 혁신적인 제품으로 완성합니다." }
-            ],
-            "제약·바이오": [
-                { img: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80", title: "의약품 제형 연구", desc: "환자의 복약 편의성을 향상시키는 고도화된 제제 기술을 연구합니다." },
-                { img: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=500&q=80", title: "바이오 신약 R&D", desc: "차세대 바이오 의약품 연구로 질병 치료의 새로운 패러다임을 제시합니다." },
-                { img: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=500&q=80", title: "임상 분석 센터", desc: "체계적이고 과학적인 분석 데이터를 기반으로 의약품 효능을 검증합니다." }
-            ],
-            "건강기능식품": [
-                { img: "https://images.unsplash.com/photo-1577401239170-897942555fb3?auto=format&fit=crop&w=500&q=80", title: "천연물 소재 연구", desc: "자연에서 찾은 안전하고 뛰어난 기능성 원료를 발굴 및 개발합니다." },
-                { img: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=500&q=80", title: "맞춤형 제제화 기술", desc: "영양 성분의 체내 흡수율을 극대화하는 스마트 딜리버리 기술을 적용합니다." },
-                { img: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=500&q=80", title: "기능성 평가 Center", desc: "인체적용시험과 세밀한 모니터링을 통해 건기식의 가치를 극대화합니다." }
-            ]
-        };
-
-        const tabs = document.querySelectorAll('#rndTabs button');
-        const cardList = document.getElementById('rndCardList');
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                
-                const category = tab.textContent;
-                const items = rndData[category];
-                if (items) {
-                    cardList.innerHTML = items.map(item => `
-                        <article class="rnd-card">
-                            <div class="rnd-visual"><img src="${item.img}" alt="${item.title}"></div>
-                            <h3>${item.title}</h3>
-                            <p>${item.desc}</p>
-                        </article>
-                    `).join('');
-                }
+                menuButton.setAttribute('aria-expanded', 'false');
+                menuButton.setAttribute('aria-label', '메뉴 열기');
             });
         });
     </script>
