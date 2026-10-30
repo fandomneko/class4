@@ -16,7 +16,7 @@ body { background: #fff; color: var(--color-black); font-family: var(--font); }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; border: none; background: none; }
-.section-inner { width: min(1200px, calc(100% - 80px)); margin: 0 auto; }
+.section-inner { width: min(1280px, calc(100% - 60px)); margin: 0 auto; }
 .eyebrow { display: block; margin-bottom: 8px; color: #398FE8; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
 
 /* HEADER */
@@ -92,48 +92,53 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .esg-copy a { display: inline-flex; gap: 20px; align-items: center; margin-top: 24px; padding: 8px 13px; border-radius: 5px; background: rgba(255,255,255,.3); font-size: 11px; }
 .esg-image { width: 36%; height: 190px; margin-left: 40px; border-radius: 18px; overflow: hidden; }
 
-/* NEWS */
-.news-section { position: relative; padding: 100px 0 120px; overflow: hidden; background: #0a1426; color: #fff; min-height: 600px; }
+/* NEWS (피그마 원본 image_5b9c5d.jpg 100% 반영) */
+.news-section { position: relative; padding: 90px 0 100px; overflow: hidden; background: #081120; color: #fff; }
 .news-bg-img { position: absolute; inset: 0; z-index: 1; }
-.news-bg-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; filter: brightness(0.65) contrast(1.1); }
-.news-section::after { position: absolute; inset: 0; z-index: 2; content: ""; background: linear-gradient(90deg, rgba(10,20,38,0.7) 0%, rgba(10,20,38,0.4) 50%, rgba(10,20,38,0.7) 100%); }
+.news-bg-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.35; filter: contrast(1.1); }
+.news-section::after { position: absolute; inset: 0; z-index: 2; content: ""; background: linear-gradient(90deg, rgba(8,17,32,0.85) 0%, rgba(8,17,32,0.5) 40%, rgba(8,17,32,0.85) 100%); }
 
-.news-inner { position: relative; z-index: 3; display: grid; grid-template-columns: 240px 1fr; gap: 40px; align-items: center; }
-.news-intro .eyebrow { color: #6ba8ff; font-size: 11px; font-weight: 700; }
-.news-intro h2 { font-size: 54px; font-weight: 800; margin-bottom: 16px; color: #fff; }
-.news-intro p { font-size: 14px; line-height: 1.65; opacity: 0.9; margin-bottom: 24px; }
-.news-intro .more-link { font-size: 13px; color: #fff; opacity: 0.8; }
+.news-inner { position: relative; z-index: 3; display: grid; grid-template-columns: 240px 1fr; gap: 36px; align-items: flex-start; }
 
-.news-content-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center; }
+.news-intro h2 { font-size: 64px; font-weight: 800; margin-bottom: 24px; color: #fff; line-height: 1; }
+.news-sub-desc { font-size: 12px; line-height: 1.7; opacity: 0.85; color: #d0e0f8; word-break: keep-all; }
 
-.news-center-card {
-    padding: 36px 30px;
-    border-radius: 28px;
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+.news-content-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+.news-center-column, .news-side-column { display: flex; flex-direction: column; gap: 16px; }
+
+/* 반투명 유리 카드 스타일 (중앙) */
+.news-card-glass {
+    padding: 28px 24px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
     color: #fff;
 }
-.news-center-card h3 { font-size: 22px; font-weight: 700; line-height: 1.45; margin-bottom: 16px; word-break: keep-all; }
-.news-center-card p { font-size: 13px; line-height: 1.7; opacity: 0.9; word-break: keep-all; }
+.news-card-glass .card-tag { display: block; font-size: 9px; font-weight: 700; color: #7cb3ff; margin-bottom: 8px; letter-spacing: 0.08em; }
+.news-card-glass h3 { font-size: 18px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; word-break: keep-all; }
+.news-card-glass .card-subtitle { font-size: 11px; font-weight: 600; color: #a2c8f8; margin-bottom: 10px; line-height: 1.5; word-break: keep-all; }
+.news-card-glass .card-body-text { font-size: 10px; line-height: 1.6; opacity: 0.8; word-break: keep-all; }
 
-.news-side-cards { display: flex; flex-direction: column; gap: 12px; }
-.news-side-card {
-    padding: 20px 24px;
+/* 우측 짙은 카드 스타일 */
+.news-card-solid {
+    padding: 24px;
     border-radius: 18px;
-    background: rgba(12, 25, 48, 0.7);
+    background: rgba(14, 28, 52, 0.85);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     color: #fff;
 }
-.news-side-card.feature-blue {
-    background: rgba(58, 120, 220, 0.7);
-    border-color: rgba(255, 255, 255, 0.3);
+.news-card-solid.feature-blue {
+    background: rgba(42, 102, 204, 0.85);
+    border-color: rgba(255, 255, 255, 0.25);
 }
-.news-side-card .card-tag { display: block; font-size: 10px; font-weight: 700; color: #82b9ff; margin-bottom: 8px; letter-spacing: 0.1em; }
-.news-side-card h3 { font-size: 15px; font-weight: 700; line-height: 1.4; margin-bottom: 6px; word-break: keep-all; }
-.news-side-card p { font-size: 11px; line-height: 1.55; opacity: 0.8; word-break: keep-all; }
+.news-card-solid .card-tag { display: block; font-size: 9px; font-weight: 700; color: #8ec2ff; margin-bottom: 8px; letter-spacing: 0.08em; }
+.news-card-solid h3 { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 10px; word-break: keep-all; }
+.news-card-solid .card-subtitle { font-size: 11px; font-weight: 600; color: #c0dcff; margin-bottom: 8px; line-height: 1.5; word-break: keep-all; }
+.news-card-solid .card-body-text { font-size: 10px; line-height: 1.6; opacity: 0.8; word-break: keep-all; }
 
 /* IR & FOOTER */
 .ir-section { padding: 80px 0 70px; background: #fff; }
