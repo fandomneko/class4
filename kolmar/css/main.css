@@ -162,6 +162,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .company-card { position: relative; display: flex; align-items: center; justify-content: center; min-height: 924px; overflow: hidden; color: var(--color-white); text-align: center; isolation: isolate; padding: 0 15px; }
 .company-card::before { position: absolute; z-index: -2; inset: 0; content: ""; transition: transform .5s; background-size: cover; background-position: center; }
 .company-card::after { position: absolute; z-index: -1; inset: 0; content: ""; background: linear-gradient(0deg, rgba(4,13,28,.72), rgba(4,13,28,.18)); }
+.company-card:hover::before { transform: scale(1.06); }
+.company-card01::before { background-image: url('../img/company1.jpg'); }
+.company-card02::before { background-image: url('../img/company2.jpg'); }
+.company-card03::before { background-image: url('../img/company3.jpg'); }
+.company-card04::before { background-image: url('../img/company4.jpg'); }
 /* 경영철학을 제외한 카드: 이미지 위에 검정색 60%를 직접 합성 (텍스트는 영향 없음) */
 .company-card01::before {
     background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('../img/company1.jpg');
@@ -172,11 +177,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .company-card04::before {
     background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('../img/company4.jpg');
 }
-.company-card:hover::before { transform: scale(1.06); }
-.company-card01::before { background-image: url('../img/company1.jpg'); }
-.company-card02::before { background-image: url('../img/company2.jpg'); }
-.company-card03::before { background-image: url('../img/company3.jpg'); }
-.company-card04::before { background-image: url('../img/company4.jpg'); }
 .company-card h2 { margin-bottom: 10px; font-size: clamp(22px, 2.4vw, 32px); font-weight: 700; }
 .company-card p { font-size: 18px; font-weight: 500; opacity: .9; line-height: 1.5; word-break: keep-all; }
 
