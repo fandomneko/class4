@@ -60,7 +60,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 /* MEGA MENU */
 .header { transition: background-color .25s ease, box-shadow .25s ease; }
 .header.is-menu-open {
-    background: rgba(8, 16, 35, .94);
+    background: rgba(8, 16, 35, .84);
     box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
 }
 .gnb a { position: relative; padding: 30px 0; }
@@ -73,7 +73,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .mega-menu {
     position: absolute; top: 100%; left: 0; width: 100%;
     padding: 0 4.2% 30px;
-    background: rgba(8, 16, 35, .94);
+    background: rgba(8, 16, 35, .84);
     color: var(--color-white);
     opacity: 0; visibility: hidden; transform: translateY(-8px);
     transition: opacity .25s ease, transform .25s ease, visibility .25s;
