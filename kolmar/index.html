@@ -16,10 +16,10 @@
 <body>
     <div id="wrap">
         <!-- HEADER -->
-        <header class="header">
+        <header class="header" id="siteHeader">
             <h1 class="logo"><a href="#home">HK Kolmar</a></h1>
 
-            <nav class="gnb" id="gnb">
+            <nav class="gnb" id="gnb" aria-label="주 메뉴">
                 <a href="#rnd">사업</a>
                 <a href="#rnd">R&amp;D</a>
                 <a href="#company">회사소개</a>
@@ -30,9 +30,20 @@
 
             <div class="header_util">
                 <button type="button" class="lang_btn"><span>KR</span></button>
-                <button type="button" class="menu_btn" id="menuBtn">
+                <button type="button" class="menu_btn" id="menuBtn" aria-label="전체 메뉴 열기" aria-expanded="false">
                     <span></span><span></span>
                 </button>
+            </div>
+
+            <div class="mega-menu" id="megaMenu" aria-hidden="true">
+                <div class="mega-menu-inner">
+                    <div class="mega-menu-column"><strong>사업</strong><a href="#rnd">화장품</a><a href="#rnd">제약·바이오</a><a href="#rnd">건강기능식품</a></div>
+                    <div class="mega-menu-column"><strong>R&amp;D</strong><a href="#rnd">연구소 소개</a><a href="#rnd">연구 분야</a><a href="#rnd">기술 경쟁력</a></div>
+                    <div class="mega-menu-column"><strong>회사소개</strong><a href="#company">인사말</a><a href="#company">경영철학</a><a href="#company">연혁</a><a href="#company">회사개요</a></div>
+                    <div class="mega-menu-column"><strong>ESG</strong><a href="#esg">인권경영</a><a href="#esg">사회공헌</a><a href="#esg">환경경영</a></div>
+                    <div class="mega-menu-column"><strong>소식</strong><a href="#news">콜마 소식</a><a href="#news">보도자료</a></div>
+                    <div class="mega-menu-column"><strong>IR</strong><a href="#ir">IR 자료</a><a href="#ir">재무정보</a><a href="#ir">공시정보</a></div>
+                </div>
             </div>
         </header>
 
@@ -267,11 +278,34 @@
             pagination: { el: '.visual .swiper-pagination', clickable: true }
         });
 
+        const siteHeader = document.getElementById('siteHeader');
         const menuButton = document.getElementById('menuBtn');
         const gnb = document.getElementById('gnb');
+        const megaMenu = document.getElementById('megaMenu');
+
+        function openMegaMenu() {
+            siteHeader.classList.add('is-menu-open');
+            megaMenu.setAttribute('aria-hidden', 'false');
+            menuButton.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMegaMenu() {
+            siteHeader.classList.remove('is-menu-open');
+            megaMenu.setAttribute('aria-hidden', 'true');
+            menuButton.setAttribute('aria-expanded', 'false');
+        }
+
+        gnb.addEventListener('mouseenter', openMegaMenu);
+        siteHeader.addEventListener('mouseleave', closeMegaMenu);
+
+        siteHeader.addEventListener('focusin', openMegaMenu);
+        siteHeader.addEventListener('focusout', function (event) {
+            if (!siteHeader.contains(event.relatedTarget)) closeMegaMenu();
+        });
 
         menuButton.addEventListener('click', function () {
-            gnb.classList.toggle('is-open');
+            if (siteHeader.classList.contains('is-menu-open')) closeMegaMenu();
+            else openMegaMenu();
         });
     </script>
 </body>
