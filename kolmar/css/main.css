@@ -216,3 +216,111 @@ button { font: inherit; cursor: pointer; }
     html { scroll-behavior: auto; }
     *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+
+/* FIGMA MOBILE REFERENCE (552px screenshot 기준) */
+@media (max-width: 640px) {
+    .section-inner { width: calc(100% - 52px); }
+
+    /* 상단 비주얼: 화면의 약 12.6% 높이 */
+    .header { height: 28px; padding: 0 14px; }
+    .logo a { font-size: 9px; }
+    .gnb { top: 28px; }
+    .header_util { gap: 7px; }
+    .lang_btn { font-size: 8px; }
+    .menu_btn { gap: 3px; padding: 4px 0 4px 4px; }
+    .menu_btn span { width: 9px; }
+    .hero-sec .visual { height: 258px; min-height: 0; max-height: none; }
+    .hero-copy { top: 41%; left: 22px; }
+    .hero-copy p { font-size: 21px; }
+    .hero-sec .swiper-pagination { bottom: 10px !important; gap: 5px; }
+    .hero-sec .swiper-pagination-bullet { width: 4px; height: 4px; }
+
+    /* R&D: 모바일에서도 소개 문구와 3개 연구 카드를 한 줄로 배치 */
+    .rnd-section { padding: 27px 0 25px; }
+    .rnd-inner { display: grid; grid-template-columns: 1fr; gap: 9px; }
+    .section-intro { display: block; }
+    .section-intro .eyebrow { display: none; }
+    .section-intro h2 { margin: 0 0 3px; font-size: 20px; }
+    .section-intro p { max-width: 130px; font-size: 7px; line-height: 1.45; }
+    .rnd-controls { display: none; }
+    .rnd-content { min-width: 0; }
+    .rnd-tabs { justify-content: center; gap: 5px; margin: 0 0 8px; }
+    .rnd-tabs button { padding: 3px 8px; font-size: 6px; }
+    .rnd-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .rnd-card { padding: 6px; border-radius: 7px; }
+    .rnd-visual { height: 53px; margin-bottom: 5px; border-radius: 5px; }
+    .rnd-visual span { font-size: 16px; }
+    .rnd-card h3 { margin: 0 0 3px; font-size: 7px; line-height: 1.25; }
+    .rnd-card p { font-size: 5.5px; line-height: 1.4; }
+
+    /* 회사소개: 네 개의 세로 이미지 패널 */
+    .company-section { grid-template-columns: repeat(4, minmax(0, 1fr)); min-height: 258px; }
+    .company-card { min-height: 258px; }
+    .company-number { top: 12px; left: 8px; font-size: 6px; }
+    .company-card h2 { margin: 0 0 4px; font-size: 13px; }
+    .company-card p { padding: 0 5px; font-size: 5px; line-height: 1.4; }
+
+    /* ESG: 이미지가 오른쪽에 오는 가로형 카드, 카드 사이를 살짝 겹치게 */
+    .esg-section { padding: 31px 0 34px; }
+    .section-heading { margin: 0 0 19px 7px; }
+    .section-heading .eyebrow { display: none; }
+    .section-heading h2 { font-size: 27px; }
+    .esg-list { gap: 0; }
+    .esg-item {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        min-height: 125px;
+        padding: 16px 9.5%;
+        border-radius: 19px;
+    }
+    .esg-item + .esg-item { margin-top: -1px; }
+    .esg-copy { min-width: 0; }
+    .esg-copy > span { display: none; }
+    .esg-copy h3 { margin: 0 0 7px; font-size: 15px; }
+    .esg-copy p { max-width: 190px; font-size: 5.5px; line-height: 1.55; }
+    .esg-copy a { gap: 8px; margin-top: 15px; padding: 4px 7px; border-radius: 4px; font-size: 5px; }
+    .esg-image { flex: 0 0 40%; width: 40%; height: 102px; margin: 0 0 0 12px; border-radius: 9px; }
+
+    /* 소식: 왼쪽 소개 + 오른쪽 세로형 뉴스 카드 */
+    .news-section { padding: 53px 0 0; }
+    .news-inner { display: grid; grid-template-columns: .9fr 1.1fr; gap: 13px; width: calc(100% - 52px); }
+    .news-intro { padding: 8px 0 0; }
+    .news-intro .eyebrow { display: none; }
+    .news-intro h2 { margin: 0 0 9px; font-size: 27px; }
+    .news-intro p { font-size: 6px; line-height: 1.55; }
+    .news-intro > a { margin-top: 12px; font-size: 6px; }
+    .news-grid { grid-template-columns: 1fr 1fr; gap: 7px; align-items: start; }
+    .news-card { min-height: 0; padding: 13px 10px; border-radius: 15px; }
+    .news-card span { font-size: 5px; }
+    .news-card h3 { margin: 8px 0; font-size: 7px; line-height: 1.45; }
+    .news-card p { font-size: 5px; line-height: 1.5; }
+    .news-feature { grid-column: 1; grid-row: 1 / span 2; margin-top: 86px; }
+    .news-card:nth-child(2) { grid-column: 2; grid-row: 1; }
+    .news-card:nth-child(3) { grid-column: 2; grid-row: 2; }
+    .news-card:nth-child(4) { grid-column: 2; grid-row: 3; }
+
+    /* IR 및 푸터 */
+    .ir-section { padding: 23px 0 16px; }
+    .ir-heading .eyebrow { display: none; }
+    .ir-heading h2 { margin: 0 0 8px; font-size: 25px; }
+    .ir-heading p { font-size: 7px; line-height: 1.5; }
+    .ir-list { margin-top: 13px; }
+    .ir-list a { min-height: 42px; font-size: 9px; }
+    .ir-list a span { font-size: 8px; }
+    .footer-inner { align-items: flex-start; gap: 12px; padding-top: 13px; padding-bottom: 15px; }
+    .footer-logo { font-size: 13px; }
+    .footer-info { flex: 1 1 calc(100% - 90px); font-size: 5px; line-height: 1.5; }
+    .footer-sns { gap: 5px; margin-left: auto; }
+    .footer-sns a { width: 13px; height: 13px; font-size: 7px; }
+}
+
+/* R&D 텍스트 영역과 카드 영역을 나란히 두는 좁은 화면 보정 */
+@media (max-width: 640px) and (min-width: 420px) {
+    .rnd-inner { grid-template-columns: 115px minmax(0, 1fr); align-items: center; gap: 13px; }
+    .rnd-section { padding-top: 27px; padding-bottom: 27px; }
+    .rnd-tabs { justify-content: center; }
+    .news-section { min-height: 505px; }
+    .news-inner { min-height: 430px; }
+}
