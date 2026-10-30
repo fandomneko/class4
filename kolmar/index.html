@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="한국콜마의 기술과 연구개발, 회사소개, ESG, 소식 및 IR 정보를 소개합니다.">
     <title>한국콜마 | Tech Confidence</title>
 
     <link rel="stylesheet" href="../css/default.css">
@@ -17,9 +16,9 @@
     <div id="wrap">
         <!-- HEADER -->
         <header class="header">
-            <h1 class="logo"><a href="#home" aria-label="한국콜마 홈">HK Kolmar</a></h1>
+            <h1 class="logo"><a href="#home">HK Kolmar</a></h1>
 
-            <nav class="gnb" id="gnb" aria-label="주 메뉴">
+            <nav class="gnb" id="gnb">
                 <a href="#rnd">사업</a>
                 <a href="#rnd">R&amp;D</a>
                 <a href="#company">회사소개</a>
@@ -29,8 +28,8 @@
             </nav>
 
             <div class="header_util">
-                <button type="button" class="lang_btn" aria-label="언어 선택">◎ <span>KR</span></button>
-                <button type="button" class="menu_btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="gnb">
+                <button type="button" class="lang_btn"><span>KR</span></button>
+                <button type="button" class="menu_btn" id="menuBtn">
                     <span></span><span></span>
                 </button>
             </div>
@@ -38,15 +37,15 @@
 
         <main>
             <!-- HERO -->
-            <section class="hero-sec" id="home" aria-label="한국콜마 소개">
+            <section class="hero-sec" id="home">
                 <div class="swiper visual">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide hero-slide hero-slide01">
-                            <img src="img/hero.png" alt="밤하늘을 가로지르는 빛을 담은 한국콜마 메인 비주얼">
+                            <img src="img/hero.png" alt="Tech Confidence">
                             <div class="hero-copy"><p>Tech Confidence</p></div>
                         </div>
                         <div class="swiper-slide hero-slide hero-slide02">
-                            <img src="img/hero2.png" alt="한국콜마의 기술과 혁신을 표현한 메인 비주얼">
+                            <img src="img/hero2.png" alt="Technology for Better Life">
                             <div class="hero-copy"><p>Technology for Better Life</p></div>
                         </div>
                     </div>
@@ -61,13 +60,13 @@
                         <span class="eyebrow">RESEARCH &amp; DEVELOPMENT</span>
                         <h2>R&amp;D</h2>
                         <p>World-first-class R&amp;D 제조 전문 기업으로<br>도약하기 위해 끊임없이 신기술 개발에 도전합니다.</p>
-                        <div class="rnd-controls" aria-label="연구 분야 카드 이동">
-                            <button type="button" class="rnd-prev" aria-label="이전 카드">‹</button>
-                            <button type="button" class="rnd-next" aria-label="다음 카드">›</button>
+                        <div class="rnd-controls">
+                            <button type="button" class="rnd-prev">‹</button>
+                            <button type="button" class="rnd-next">›</button>
                         </div>
                     </div>
                     <div class="rnd-content">
-                        <div class="rnd-tabs" role="group" aria-label="연구 분야">
+                        <div class="rnd-tabs">
                             <button type="button" class="active">화장품</button>
                             <button type="button">제약·바이오</button>
                             <button type="button">건강기능식품</button>
@@ -93,19 +92,31 @@
                 </div>
             </section>
 
-            <!-- COMPANY -->
-            <section class="company-section" id="company" aria-label="회사소개">
+            <!-- COMPANY (피그마 원본 100% 매칭: 숫자 제거 및 원본 텍스트 적용) -->
+            <section class="company-section" id="company">
                 <a class="company-card company-card01" href="#company">
-                    <span class="company-number">01</span><div><h2>인사말</h2><p>더 나은 내일을 만드는 한국콜마의 약속</p></div>
+                    <div>
+                        <h2>인사말</h2>
+                        <p>Delivering happiness with healthy beauty<br>"건강한 아름다움으로 행복을 전달합니다."</p>
+                    </div>
                 </a>
                 <a class="company-card company-card02" href="#company">
-                    <span class="company-number">02</span><div><h2>경영철학</h2><p>기술과 사람을 생각하는 지속 가능한 성장</p></div>
+                    <div>
+                        <h2>경영철학</h2>
+                        <p>사람이 중심인 한국콜마는<br>신기술을 선도하는 R&amp;D 전문기업으로<br>인류 건강과 아름다움을 책임지며, 궁극적으로 가치있는 삶에<br>공헌하는 기업이 되고자 노력하고 있습니다.</p>
+                    </div>
                 </a>
                 <a class="company-card company-card03" href="#company">
-                    <span class="company-number">03</span><div><h2>연혁</h2><p>혁신으로 이어온 한국콜마의 발자취</p></div>
+                    <div>
+                        <h2>연혁</h2>
+                        <p>한국콜마의 30년 역사는 도전의 연속이었습니다.<br>국내 화장품 업계 첫 ODM 서비스, 성역 없는 연구개발 투자,<br>중국과 북미 시장 진출 등 진화에 대한 열망으로 가득합니다.<br>고객에게 새로운 가치를 제공하며 지속성장하고 있습니다.</p>
+                    </div>
                 </a>
                 <a class="company-card company-card04" href="#company">
-                    <span class="company-number">04</span><div><h2>회사개요</h2><p>글로벌 종합 뷰티·헬스케어 기업</p></div>
+                    <div>
+                        <h2>회사개요</h2>
+                        <p>한국콜마는 국내 화장품 업계 최초의<br>화장품 ODM 기업입니다.</p>
+                    </div>
                 </a>
             </section>
 
@@ -115,15 +126,30 @@
                     <div class="section-heading"><span class="eyebrow">SUSTAINABILITY</span><h2>ESG</h2></div>
                     <div class="esg-list">
                         <article class="esg-item esg-human">
-                            <div class="esg-copy"><span>01 / PEOPLE</span><h3>인권경영</h3><p>한국콜마는 경영활동 전반에서 인권을 존중하고<br>모든 구성원이 존중받는 조직문화를 만들어갑니다.</p><a href="#esg">자세히 보기 <span>→</span></a></div>
+                            <div class="esg-copy">
+                                <span>01 / PEOPLE</span>
+                                <h3>인권경영</h3>
+                                <p>한국콜마는 경영활동 전반에서 인권을 존중하고<br>모든 구성원이 존중받는 조직문화를 만들어갑니다.</p>
+                                <a href="#esg">자세히 보기 <span>→</span></a>
+                            </div>
                             <div class="esg-image"><img src="img/esg1.png" alt="인권경영"></div>
                         </article>
                         <article class="esg-item esg-social">
-                            <div class="esg-copy"><span>02 / SOCIETY</span><h3>사회공헌</h3><p>지역사회와 함께 성장하며 나눔과 상생의 가치를<br>실천하고 지속 가능한 사회를 만들어갑니다.</p><a href="#esg">자세히 보기 <span>→</span></a></div>
+                            <div class="esg-copy">
+                                <span>02 / SOCIETY</span>
+                                <h3>사회공헌</h3>
+                                <p>지역사회와 함께 성장하며 나눔과 상생의 가치를<br>실천하고 지속 가능한 사회를 만들어갑니다.</p>
+                                <a href="#esg">자세히 보기 <span>→</span></a>
+                            </div>
                             <div class="esg-image"><img src="img/esg2.jpg" alt="사회공헌"></div>
                         </article>
                         <article class="esg-item esg-green">
-                            <div class="esg-copy"><span>03 / ENVIRONMENT</span><h3>환경경영</h3><p>환경 영향을 줄이기 위한 책임 있는 경영으로<br>지속 가능한 미래를 위한 변화를 이어갑니다.</p><a href="#esg">자세히 보기 <span>→</span></a></div>
+                            <div class="esg-copy">
+                                <span>03 / ENVIRONMENT</span>
+                                <h3>환경경영</h3>
+                                <p>환경 영향을 줄이기 위한 책임 있는 경영으로<br>지속 가능한 미래를 위한 변화를 이어갑니다.</p>
+                                <a href="#esg">자세히 보기 <span>→</span></a>
+                            </div>
                             <div class="esg-image"><img src="img/esg3.gif" alt="환경경영"></div>
                         </article>
                     </div>
@@ -132,14 +158,38 @@
 
             <!-- NEWS -->
             <section class="news-section" id="news">
-                <div class="news-shade"></div>
+                <div class="news-bg-img"><img src="img/rp1.jpg" alt="소식 배경"></div>
                 <div class="section-inner news-inner">
-                    <div class="news-intro"><span class="eyebrow">KOLMAR NEWS</span><h2>소식</h2><p>한국콜마의 새로운 소식과<br>다양한 이야기를 만나보세요.</p><a href="#news">전체 소식 보기 ↗</a></div>
-                    <div class="news-grid">
-                        <article class="news-card news-feature"><span>STORY</span><h3>한국콜마, 국내 화장품 업계 최초<br>혁신 기술과 연구 성과 소개</h3><p>끊임없는 연구개발과 기술 혁신을 통해 뷰티 산업의 새로운 가능성을 만들어갑니다.</p></article>
-                        <article class="news-card"><span>NEWS</span><h3>한국콜마의 새로운 도전과<br>글로벌 성장 이야기</h3><p>한국콜마의 주요 소식과 다양한 활동을 확인해보세요.</p></article>
-                        <article class="news-card"><span>STORY</span><h3>고객과 함께 만드는<br>지속 가능한 미래</h3><p>기술과 협력을 바탕으로 더 나은 내일을 만들어갑니다.</p></article>
-                        <article class="news-card"><span>NEWS</span><h3>연구개발 역량 강화로<br>글로벌 경쟁력 확대</h3><p>새로운 시장과 고객을 위한 혁신을 이어갑니다.</p></article>
+                    <div class="news-intro">
+                        <span class="eyebrow">KOLMAR NEWS</span>
+                        <h2>소식</h2>
+                        <p>한국콜마의 새로운 소식과<br>다양한 이야기를 만나보세요.</p>
+                        <a href="#news" class="more-link">전체 소식 보기 ↗</a>
+                    </div>
+                    
+                    <div class="news-content-layout">
+                        <article class="news-center-card">
+                            <h3>지속가능, 패키징으로 듣는 스마트기능성 화장품 용기 개발</h3>
+                            <p>한국콜마가 친환경 용기 기술을 바탕으로 혁신적인 스마트 기능성 패키징을 선보입니다. 환경을 생각하는 기술력과 디자인의 만남을 확인해보세요.</p>
+                        </article>
+
+                        <div class="news-side-cards">
+                            <article class="news-side-card feature-blue">
+                                <span class="card-tag">STORY</span>
+                                <h3>한국콜마, 국내 화장품 업계 최초 기술력 인정</h3>
+                                <p>세계적인 화장품 학술대회에서 우수한 연구 성과와 독자적인 제형 기술력을 입증하였습니다.</p>
+                            </article>
+                            <article class="news-side-card">
+                                <span class="card-tag">NEWS</span>
+                                <h3>한국콜마, 세계적 권위 학술지 표지 논문 선정</h3>
+                                <p>지속적인 R&amp;D 투자를 통해 개발한 기술이 국제 학술지에 게재되어 뛰어난 가치를 인정받았습니다.</p>
+                            </article>
+                            <article class="news-side-card">
+                                <span class="card-tag">NEWS</span>
+                                <h3>한국콜마, 친환경 플라스틱 소재 적용 화장품 용기 출시</h3>
+                                <p>친환경 패키징 기술을 개발하여 플라스틱 사용량을 줄이고 지속 가능한 뷰티 생태계를 만듭니다.</p>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -147,7 +197,11 @@
             <!-- IR -->
             <section class="ir-section" id="ir">
                 <div class="section-inner">
-                    <div class="ir-heading"><span class="eyebrow">INVESTOR RELATIONS</span><h2>IR</h2><p>한국콜마는 투명한 경영정보 제공으로<br>기업 가치를 높이는 데 최선을 다하고 있습니다.</p></div>
+                    <div class="ir-heading">
+                        <span class="eyebrow">INVESTOR RELATIONS</span>
+                        <h2>IR</h2>
+                        <p>한국콜마는 투명한 경영정보 제공으로<br>기업 가치를 높이는 데 최선을 다하고 있습니다.</p>
+                    </div>
                     <ul class="ir-list">
                         <li><a href="#ir">IR 문의 담당 부서 안내 <span>↗</span></a></li>
                         <li><a href="#ir">2026년 2분기 한국콜마 경영실적 <span>↗</span></a></li>
@@ -161,8 +215,14 @@
         <footer class="footer">
             <div class="section-inner footer-inner">
                 <a href="#home" class="footer-logo">HK Kolmar</a>
-                <div class="footer-info"><p>서울특별시 서초구 헌릉로 8길 61</p><p>대표전화 : 02-515-0150</p><p>Copyright © 2026 KOLMAR KOREA. All rights reserved.</p></div>
-                <div class="footer-sns"><a href="#footer" aria-label="인스타그램">◎</a><a href="#footer" aria-label="유튜브">▷</a></div>
+                <div class="footer-info">
+                    <p>서울특별시 서초구 헌릉로 8길 61 | 대표전화 : 02-515-0150</p>
+                    <p>Copyright © 2026 KOLMAR KOREA. All rights reserved.</p>
+                </div>
+                <div class="footer-sns">
+                    <a href="#footer" aria-label="인스타그램">IG</a>
+                    <a href="#footer" aria-label="유튜브">YT</a>
+                </div>
             </div>
         </footer>
     </div>
@@ -175,22 +235,11 @@
             pagination: { el: '.visual .swiper-pagination', clickable: true }
         });
 
-        const menuButton = document.querySelector('.menu_btn');
-        const gnb = document.querySelector('.gnb');
+        const menuButton = document.getElementById('menuBtn');
+        const gnb = document.getElementById('gnb');
 
         menuButton.addEventListener('click', function () {
-            const isOpen = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', String(!isOpen));
-            this.setAttribute('aria-label', isOpen ? '메뉴 열기' : '메뉴 닫기');
-            gnb.classList.toggle('is-open', !isOpen);
-        });
-
-        gnb.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-                gnb.classList.remove('is-open');
-                menuButton.setAttribute('aria-expanded', 'false');
-                menuButton.setAttribute('aria-label', '메뉴 열기');
-            });
+            gnb.classList.toggle('is-open');
         });
     </script>
 </body>
