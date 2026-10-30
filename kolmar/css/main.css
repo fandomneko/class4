@@ -158,15 +158,15 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .rnd-card p { font-size: 16px; line-height: 1.55; opacity: .9; }
 
 /* COMPANY */
-.company-section { display: grid; grid-template-columns: repeat(4, 1fr); min-height: 1320px; }
-.company-card { position: relative; display: flex; align-items: center; justify-content: center; min-height: 1320px; overflow: hidden; color: var(--color-white); text-align: center; isolation: isolate; padding: 0 15px; }
+.company-section { display: grid; grid-template-columns: repeat(4, 1fr); min-height: 924px; }
+.company-card { position: relative; display: flex; align-items: center; justify-content: center; min-height: 924px; overflow: hidden; color: var(--color-white); text-align: center; isolation: isolate; padding: 0 15px; }
 .company-card::before { position: absolute; z-index: -2; inset: 0; content: ""; transition: transform .5s; background-size: cover; background-position: center; }
 .company-card::after { position: absolute; z-index: -1; inset: 0; content: ""; background: linear-gradient(0deg, rgba(4,13,28,.72), rgba(4,13,28,.18)); }
-/* 경영철학을 제외한 카드에 검정 오버레이 60% 적용 */
-.company-card01::after,
-.company-card03::after,
-.company-card04::after {
-    background: rgba(0, 0, 0, .6);
+/* 경영철학을 제외한 카드: 이미지에만 60% 어둡기 적용 (텍스트 영향 없음) */
+.company-card01::before,
+.company-card03::before,
+.company-card04::before {
+    opacity: .4;
 }
 .company-card:hover::before { transform: scale(1.06); }
 .company-card01::before { background-image: url('../img/company1.jpg'); }
@@ -258,8 +258,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 /* 반응형 */
 @media (max-width: 900px) {
-    .company-section { min-height: 990px; grid-template-columns: repeat(2, 1fr); }
-    .company-card { min-height: 990px; }
+    .company-section { min-height: 693px; grid-template-columns: repeat(2, 1fr); }
+    .company-card { min-height: 693px; }
     .news-inner { grid-template-columns: 1fr; }
     .news-content-layout { grid-template-columns: 1fr; }
 }
