@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest 로그인 | 디자인 테마 모아보기</title>
+    <link rel="stylesheet" href="../font/css/notosanskrvariable.css">
+    <link rel="stylesheet" href="login.css">
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 28px 16px 48px; background: #f2f3f7; font-family: "Noto Sans KR", sans-serif; }
+        .theme-toolbar { width: min(100%, 760px); margin: 0 auto 24px; padding: 22px; background: #fff; border: 1px solid #e4e5eb; border-radius: 18px; box-shadow: 0 8px 28px rgba(20,25,45,.07); }
+        .theme-toolbar h1 { margin: 0 0 7px; font-size: 2.2rem; letter-spacing: -.06em; }
+        .theme-toolbar p { margin: 0 0 16px; color: #737789; font-size: 1.3rem; line-height: 1.5; }
+        .theme-select-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .theme-select-row label { font-size: 1.3rem; font-weight: 700; }
+        #theme-select { flex: 1; min-width: 190px; height: 44px; padding: 0 14px; border: 1px solid #cfd2dc; border-radius: 10px; background: #fff; color: #202333; font: inherit; font-size: 1.4rem; }
+        #theme-description { margin: 13px 0 0; min-height: 20px; color: #53596c; font-size: 1.2rem; }
+        .preview-label { width: min(100%, 760px); margin: 0 auto 12px; color: #737789; font-size: 1.2rem; font-weight: 700; }
+        #wrap { margin: 0 auto; }
+        @media (max-width: 480px) { body { padding: 14px 10px 32px; } .theme-toolbar { padding: 17px; } }
+    </style>
+    <link id="theme-style" rel="stylesheet" href="maximalism.css">
+</head>
+<body>
+    <section class="theme-toolbar" aria-label="디자인 테마 선택">
+        <h1>Pinterest Theme Studio</h1>
+        <p>테마를 선택하면 아래 로그인 화면에 즉시 적용됩니다. 여러 디자인 스타일을 한 화면에서 비교해 보세요.</p>
+        <div class="theme-select-row">
+            <label for="theme-select">DESIGN THEME</label>
+            <select id="theme-select">
+                <option value="maximalism" selected>08 · Maximalism</option>
+                <option value="neo-brutalism">01 · Brutalism</option>
+                <option value="cyberpunk">02 · Cyberpunk</option>
+                <option value="isometric">03 · Isometric</option>
+                <option value="y2k-chrome">04 · Y2K Chrome</option>
+                <option value="glassmorphism">05 · Glassmorphism</option>
+            </select>
+        </div>
+        <p id="theme-description" aria-live="polite">강렬한 컬러와 패턴, 겹쳐진 레이어로 개성을 강조하는 스타일</p>
+    </section>
+    <p class="preview-label">LIVE PREVIEW · 선택한 테마가 아래 화면에 적용됩니다.</p>
+    <div id="wrap" class="maximalism">
+        <header class="login_header">
+            <a class="brand" href="#" aria-label="Pinterest 홈">
+                <img src="img/Pinterest.png" alt="Pinterest">
+            </a>
+            <nav class="header_actions" aria-label="로그인 메뉴">
+                <a href="#" class="login_link">로그인</a>
+                <a href="#" class="signup_link">가입하기</a>
+            </nav>
+        </header>
+        <main>
+            <section class="hero" aria-label="Pinterest 소개">
+                <div class="hero_image"><img src="img/pinimg" alt=""></div>
+                <div class="hero_content">
+                    <h1>Pinterest와 함께 원하는 삶<br>을 그려보세요</h1>
+                    <div class="action_area">
+                        <a href="#" class="primary_button">이메일로 계속하기</a>
+                        <a href="#" class="secondary_button">이미 계정이 있습니다</a>
+                    </div>
+                    <p class="notice">
+                        계속하면 Pinterest의 서비스 약관에 동의하고 개인정보 보호 정책을<br>
+                        읽었음을 인정한 것으로 간주합니다. <a href="#">자세히 알기</a>
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        const themeSelect = document.querySelector("#theme-select");
+        const themeStyle = document.querySelector("#theme-style");
+        const preview = document.querySelector("#wrap");
+        const description = document.querySelector("#theme-description");
+
+        const themes = {
+            "maximalism": {
+                file: "maximalism.css",
+                description: "강렬한 컬러와 패턴, 겹쳐진 레이어로 개성을 강조하는 스타일"
+            },
+            "neo-brutalism": {
+                file: "brutalism.css",
+                description: "굵은 테두리와 단순한 도형, 강한 색 대비가 특징인 스타일"
+            },
+            "cyberpunk": {
+                file: "cyberpunk.css",
+                description: "네온 컬러와 어두운 배경으로 미래적인 분위기를 표현하는 스타일"
+            },
+            "isometric": {
+                file: "isometric.css",
+                description: "입체적인 도형과 기하학적 구성을 활용하는 스타일"
+            },
+            "y2k-chrome": {
+                file: "y2k-chrome.css",
+                description: "실버 광택과 홀로그램 컬러로 2000년대 감성을 표현하는 스타일"
+            },
+            "glassmorphism": {
+                file: "glassmorphism.css",
+                description: "반투명한 유리 패널과 블러, 부드러운 그라데이션을 활용하는 스타일"
+            }
+        };
+
+        themeSelect.addEventListener("change", function () {
+            const selectedTheme = this.value;
+            const theme = themes[selectedTheme];
+
+            preview.className = selectedTheme;
+            themeStyle.href = theme.file;
+            description.textContent = theme.description;
+        });
+    </script>
+</body>
+</html>
