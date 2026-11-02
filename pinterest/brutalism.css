@@ -109,3 +109,29 @@
         border-right-width: 2px;
     }
 }
+
+/* 버튼 인터랙션: 테마의 굵은 외곽선과 그림자 유지 */
+.neo-brutalism .login_link,
+.neo-brutalism .signup_link,
+.neo-brutalism .primary_button,
+.neo-brutalism .secondary_button {
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+.neo-brutalism .login_link:hover,
+.neo-brutalism .signup_link:hover,
+.neo-brutalism .primary_button:hover,
+.neo-brutalism .secondary_button:hover {
+    transform: translate(-2px, -2px);
+    filter: brightness(1.06);
+}
+.neo-brutalism .login_link:active,
+.neo-brutalism .signup_link:active,
+.neo-brutalism .primary_button:active,
+.neo-brutalism .secondary_button:active {
+    transform: translate(3px, 3px);
+}
+.neo-brutalism a:focus-visible {
+    outline: 3px dashed var(--brutal-black);
+    outline-offset: 4px;
+}
