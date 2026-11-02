@@ -1,0 +1,100 @@
+/* Glassmorphism — 반투명 유리 패널과 부드러운 배경 */
+body {
+    background: linear-gradient(135deg, #c9dfff, #e8d5f5 48%, #ffdce8);
+}
+#wrap.glassmorphism {
+    --glass-ink: #26324a;
+    position: relative;
+    isolation: isolate;
+    color: var(--glass-ink);
+    background: linear-gradient(135deg, rgba(255,255,255,.68), rgba(255,255,255,.28));
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 28px;
+    box-shadow: 0 20px 55px rgba(58,77,120,.2), inset 0 1px 0 rgba(255,255,255,.9);
+    backdrop-filter: blur(18px);
+}
+#wrap.glassmorphism::before,
+#wrap.glassmorphism::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: .65;
+}
+#wrap.glassmorphism::before {
+    width: 190px;
+    height: 190px;
+    top: 135px;
+    left: -75px;
+    background: linear-gradient(135deg, #9edcff, #b9a5ff);
+}
+#wrap.glassmorphism::after {
+    width: 155px;
+    height: 155px;
+    right: -55px;
+    bottom: 90px;
+    background: linear-gradient(135deg, #ffc4dc, #ffdfaa);
+}
+.glassmorphism .login_header,
+.glassmorphism header {
+    background: rgba(255,255,255,.42);
+    border-bottom: 1px solid rgba(255,255,255,.8);
+    backdrop-filter: blur(14px);
+}
+.glassmorphism .brand,
+.glassmorphism .logo {
+    padding: 5px;
+    border-radius: 12px;
+    background: rgba(255,255,255,.55);
+    box-shadow: 0 5px 18px rgba(75,92,130,.12);
+}
+.glassmorphism .login_link,
+.glassmorphism .header_links > a:first-child {
+    padding: 8px 11px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.48);
+}
+.glassmorphism .signup_link,
+.glassmorphism .join_btn,
+.glassmorphism .primary_button,
+.glassmorphism .email_btn {
+    color: #fff;
+    background: linear-gradient(120deg, #7b83e8, #b27bdc);
+    border: 1px solid rgba(255,255,255,.7);
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(119,112,205,.28);
+}
+.glassmorphism .hero_image {
+    border: 8px solid rgba(255,255,255,.48);
+    border-radius: 24px;
+    box-shadow: 0 12px 28px rgba(67,83,126,.16);
+}
+.glassmorphism .hero_content,
+.glassmorphism .login_content {
+    background: transparent;
+}
+.glassmorphism .hero_content h1,
+.glassmorphism .login_content h1 {
+    color: #34415f;
+    text-shadow: 0 2px 12px rgba(255,255,255,.7);
+}
+.glassmorphism .secondary_button,
+.glassmorphism .account_btn {
+    color: #46516c;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 999px;
+    box-shadow: 0 7px 18px rgba(75,92,130,.1);
+}
+.glassmorphism .notice,
+.glassmorphism .terms {
+    color: #64708a;
+}
+.glassmorphism .notice a,
+.glassmorphism .terms a {
+    color: #7466bd;
+}
+@media (max-width: 389px) {
+    #wrap.glassmorphism { border-radius: 0; }
+}
