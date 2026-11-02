@@ -161,3 +161,31 @@
         box-shadow: 7px 7px 0 #ff3cac;
     }
 }
+
+/* 버튼 인터랙션: 맥시멀리즘의 컬러와 강한 그림자를 강조 */
+#wrap .login_link,
+#wrap .signup_link,
+#wrap .primary_button,
+#wrap .secondary_button {
+    cursor: pointer;
+    transition: transform .16s ease, box-shadow .16s ease, filter .16s ease;
+}
+#wrap .login_link:hover,
+#wrap .signup_link:hover,
+#wrap .primary_button:hover,
+#wrap .secondary_button:hover {
+    transform: translate(-2px, -2px) rotate(-1deg);
+    filter: saturate(1.15) brightness(1.04);
+    box-shadow: 8px 8px 0 #21103d;
+}
+#wrap .login_link:active,
+#wrap .signup_link:active,
+#wrap .primary_button:active,
+#wrap .secondary_button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0 #21103d;
+}
+#wrap a:focus-visible {
+    outline: 3px dashed #21103d;
+    outline-offset: 4px;
+}
