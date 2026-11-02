@@ -176,3 +176,30 @@
         transition: none;
     }
 }
+
+/* 모든 주요 링크 버튼에 입체적인 눌림 효과 적용 */
+.isometric .login_link,
+.isometric .signup_link,
+.isometric .primary_button,
+.isometric .secondary_button {
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.isometric .login_link:hover,
+.isometric .signup_link:hover,
+.isometric .primary_button:hover,
+.isometric .secondary_button:hover {
+    transform: translate(-2px, -2px);
+    filter: brightness(1.05);
+}
+.isometric .login_link:active,
+.isometric .signup_link:active,
+.isometric .primary_button:active,
+.isometric .secondary_button:active {
+    transform: translate(4px, 5px);
+    box-shadow: 1px 1px 0 var(--iso-ink);
+}
+.isometric a:focus-visible {
+    outline: 3px solid var(--iso-purple);
+    outline-offset: 4px;
+}
