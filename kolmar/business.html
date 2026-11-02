@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사업 | HK Kolmar</title>
+
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../font/css/pretendardvariable.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/business.css">
+
+    <script src="../npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/business.js" defer></script>
+</head>
+<body>
+<div id="wrap">
+    <header class="header" id="siteHeader">
+        <h1 class="logo"><a href="index.html">HK Kolmar</a></h1>
+
+        <nav class="gnb" id="gnb" aria-label="주 메뉴">
+            <a class="is-current" href="business.html">사업</a>
+            <a href="index.html#rnd">R&amp;D</a>
+            <a href="index.html#company">회사소개</a>
+            <a href="index.html#esg">ESG</a>
+            <a href="index.html#news">소식</a>
+            <a href="index.html#ir">IR</a>
+        </nav>
+
+        <div class="header_util">
+            <button type="button" class="lang_btn"><span>KR</span></button>
+            <button type="button" class="menu_btn" id="menuBtn" aria-label="전체 메뉴 열기" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+        </div>
+
+        <div class="mega-menu" id="megaMenu" aria-hidden="true">
+            <div class="mega-menu-inner">
+                <h2 class="mega-menu-title" id="megaMenuTitle">사업 서비스</h2>
+                <nav class="mega-menu-links" id="megaMenuLinks" aria-label="사업 하위 메뉴">
+                    <a href="#omd">OMD</a>
+                    <a href="#business-intro">사업소개</a>
+                    <a href="#locations">사업장</a>
+                    <a href="#contact">사업문의</a>
+                    <a href="#quote">견적문의</a>
+                </nav>
+                <div class="mega-menu-visual">
+                    <div class="business-image-placeholder menu-placeholder">BUSINESS IMAGE</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="business-hero" aria-labelledby="business-title">
+            <div class="business-hero-image business-image-placeholder">
+                <span>HERO IMAGE AREA</span>
+                <small>추후 사업 관련 이미지 삽입</small>
+            </div>
+            <div class="business-hero-shade"></div>
+            <div class="section-inner business-hero-copy">
+                <p class="business-kicker">BUSINESS</p>
+                <h2 id="business-title">사업</h2>
+                <p>아이디어에서 제품의 완성까지,<br>고객의 가능성을 함께 실현합니다.</p>
+            </div>
+            <a class="hero-scroll" href="#omd" aria-label="OMD 영역으로 이동"><span></span>SCROLL</a>
+        </section>
+
+        <section class="omd-section" id="omd">
+            <div class="section-inner">
+                <div class="business-section-heading">
+                    <div>
+                        <p class="section-eyebrow">ONE-STOP DEVELOPMENT</p>
+                        <h2>OMD</h2>
+                    </div>
+                    <p class="heading-description">고객의 아이디어를 구체적인 제품으로 연결하는<br>한국콜마의 사업 방향을 소개합니다.</p>
+                </div>
+
+                <div class="omd-feature">
+                    <div class="omd-visual business-image-placeholder">
+                        <span>OMD IMAGE AREA</span>
+                        <small>제품 개발·생산 관련 이미지 삽입</small>
+                    </div>
+                    <div class="omd-copy">
+                        <span class="omd-number">01 / OMD</span>
+                        <h3>기획부터 생산까지<br>하나의 흐름으로</h3>
+                        <p>고객의 아이디어와 시장의 요구를 바탕으로 제품 개발 과정을 연결합니다. 기획 의도와 제품 방향을 충분히 이해하고, 각 단계가 유기적으로 이어지도록 협력하는 과정을 보여주는 영역입니다.</p>
+                        <a class="text-link" href="#business-intro">사업소개 보기 <span>→</span></a>
+                    </div>
+                </div>
+
+                <div class="omd-process swiper" aria-label="OMD 진행 과정">
+                    <div class="swiper-wrapper">
+                        <article class="swiper-slide process-card">
+                            <span>STEP 01</span><h3>상담 및 기획</h3><p>고객의 요구와 제품 방향을 확인합니다.</p>
+                        </article>
+                        <article class="swiper-slide process-card">
+                            <span>STEP 02</span><h3>연구 및 개발</h3><p>제품 콘셉트에 맞는 개발 방향을 구체화합니다.</p>
+                        </article>
+                        <article class="swiper-slide process-card">
+                            <span>STEP 03</span><h3>생산 및 품질</h3><p>제품 생산과 품질 관리 과정을 연결합니다.</p>
+                        </article>
+                        <article class="swiper-slide process-card">
+                            <span>STEP 04</span><h3>제품 완성</h3><p>고객이 원하는 제품의 완성을 함께합니다.</p>
+                        </article>
+                    </div>
+                    <div class="process-controls">
+                        <button class="process-prev" type="button" aria-label="이전 단계"><span class="material-symbols-outlined">chevron_left</span></button>
+                        <div class="process-pagination"></div>
+                        <button class="process-next" type="button" aria-label="다음 단계"><span class="material-symbols-outlined">chevron_right</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="business-intro-section" id="business-intro">
+            <div class="section-inner">
+                <div class="business-section-heading">
+                    <div>
+                        <p class="section-eyebrow">BUSINESS INTRODUCTION</p>
+                        <h2>사업소개</h2>
+                    </div>
+                    <p class="heading-description">다양한 고객의 목표와 제품 특성에 맞춰<br>사업 영역과 서비스를 살펴볼 수 있습니다.</p>
+                </div>
+                <div class="intro-grid">
+                    <div class="intro-image business-image-placeholder">
+                        <span>BUSINESS INTRO IMAGE</span>
+                        <small>사업 분야를 보여주는 이미지 삽입</small>
+                    </div>
+                    <div class="intro-content">
+                        <span class="intro-index">BUSINESS / 01</span>
+                        <h3>고객의 브랜드와<br>함께 만드는 제품</h3>
+                        <p>제품을 기획하는 단계부터 개발과 생산에 이르기까지, 사업에 대한 이해와 전문성을 바탕으로 고객과 협력합니다. 이 영역에는 실제 사업 분야별 설명과 대표 제품·서비스 정보를 추가할 수 있습니다.</p>
+                        <div class="intro-keywords">
+                            <span>PRODUCT</span><span>DEVELOPMENT</span><span>PARTNERSHIP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="locations-section" id="locations">
+            <div class="section-inner">
+                <div class="business-section-heading">
+                    <div>
+                        <p class="section-eyebrow">OUR LOCATIONS</p>
+                        <h2>사업장</h2>
+                    </div>
+                    <p class="heading-description">사업장 정보를 확인하고<br>관련 위치와 시설을 살펴보세요.</p>
+                </div>
+                <div class="location-grid">
+                    <article class="location-card">
+                        <div class="location-image business-image-placeholder"><span>LOCATION IMAGE 01</span><small>사업장 이미지 삽입</small></div>
+                        <div class="location-info"><span>LOCATION 01</span><h3>사업장 안내</h3><p>사업장별 명칭과 주소, 주요 역할을 입력해 주세요.</p><a href="#contact" class="text-link">관련 문의 <span>→</span></a></div>
+                    </article>
+                    <article class="location-card">
+                        <div class="location-image business-image-placeholder"><span>LOCATION IMAGE 02</span><small>사업장 이미지 삽입</small></div>
+                        <div class="location-info"><span>LOCATION 02</span><h3>사업장 안내</h3><p>사업장별 명칭과 주소, 주요 역할을 입력해 주세요.</p><a href="#contact" class="text-link">관련 문의 <span>→</span></a></div>
+                    </article>
+                    <article class="location-card">
+                        <div class="location-image business-image-placeholder"><span>LOCATION IMAGE 03</span><small>사업장 이미지 삽입</small></div>
+                        <div class="location-info"><span>LOCATION 03</span><h3>사업장 안내</h3><p>사업장별 명칭과 주소, 주요 역할을 입력해 주세요.</p><a href="#contact" class="text-link">관련 문의 <span>→</span></a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="section-inner contact-inner">
+                <div class="contact-copy">
+                    <p class="section-eyebrow">CONTACT</p>
+                    <h2>사업문의</h2>
+                    <p>사업 및 협업과 관련해 궁금한 점이 있으신가요?<br>문의 내용을 남길 수 있는 채널을 안내합니다.</p>
+                </div>
+                <div class="contact-panel">
+                    <div><span>BUSINESS INQUIRY</span><h3>사업 관련 문의</h3><p>문의 담당 부서 및 연락처 정보를 이곳에 입력해 주세요.</p></div>
+                    <a href="#quote" class="contact-arrow" aria-label="견적문의로 이동">↗</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section" id="quote">
+            <div class="section-inner quote-inner">
+                <div class="quote-heading">
+                    <p class="section-eyebrow">REQUEST A QUOTE</p>
+                    <h2>견적문의</h2>
+                    <p>제품 개발 및 견적 상담에 필요한 내용을 정리해 주세요.</p>
+                </div>
+                <div class="quote-guide">
+                    <div><span>01</span><p>문의 분야와 제품 정보를 정리합니다.</p></div>
+                    <div><span>02</span><p>필요한 일정과 요청사항을 확인합니다.</p></div>
+                    <div><span>03</span><p>담당 문의 채널을 통해 상담을 진행합니다.</p></div>
+                </div>
+                <div class="quote-action">
+                    <p>견적 문의 접수 채널과 신청 양식은<br>확정된 담당 정보에 맞춰 연결해 주세요.</p>
+                    <a href="#contact" class="quote-button">문의 안내 확인 <span>→</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="section-inner footer-inner">
+            <a href="index.html" class="footer-logo">HK Kolmar</a>
+            <div class="footer-info">
+                <p>서울특별시 서초구 헌릉로 8길 61 | 대표전화 : 02-515-0150</p>
+                <p>Copyright © 2026 KOLMAR KOREA. All rights reserved.</p>
+            </div>
+            <div class="footer-sns">
+                <a href="#footer" aria-label="인스타그램">IG</a>
+                <a href="#footer" aria-label="유튜브">YT</a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
