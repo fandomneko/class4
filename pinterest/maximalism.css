@@ -1,0 +1,163 @@
+/* 08 MAXIMALISM — 과감한 색상, 패턴, 레이어를 활용한 맥시멀리즘 테마 */
+#wrap {
+    --max-pink: #ff3cac;
+    --max-orange: #ff6b35;
+    --max-yellow: #ffe600;
+    --max-blue: #3b36ff;
+    --max-purple: #8b2cff;
+    --max-green: #b7f000;
+    position: relative;
+    isolation: isolate;
+    color: #21103d;
+    background-color: #ffe600;
+    background-image:
+        radial-gradient(circle at 12px 12px, #ff3cac 2px, transparent 2.8px),
+        radial-gradient(circle at 12px 12px, #3b36ff 2px, transparent 2.8px);
+    background-size: 28px 28px, 28px 28px;
+    border: 5px solid #21103d;
+    box-shadow: 12px 12px 0 #ff3cac;
+}
+
+/* 헤더: 강한 컬러 블록과 두꺼운 구분선 */
+#wrap .login_header,
+#wrap > header {
+    position: relative;
+    z-index: 3;
+    background: #ff3cac;
+    border-bottom: 5px solid #21103d;
+    box-shadow: 0 7px 0 #3b36ff;
+}
+
+#wrap .brand,
+#wrap .logo {
+    background: #fff;
+    border: 3px solid #21103d;
+    border-radius: 14px;
+    padding: 5px;
+    box-shadow: 4px 4px 0 #21103d;
+}
+
+#wrap .header_actions,
+#wrap .header_links {
+    gap: 9px;
+    font-weight: 900;
+}
+
+#wrap .login_link,
+#wrap .header_links > a:first-child {
+    padding: 8px 11px;
+    background: #ffe600;
+    border: 2px solid #21103d;
+    border-radius: 999px;
+}
+
+#wrap .signup_link,
+#wrap .join_btn {
+    color: #fff;
+    background: #3b36ff;
+    border: 3px solid #21103d;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 #21103d;
+}
+
+/* 이미지: 비스듬한 프레임과 컬러 포인트 */
+#wrap .hero_image {
+    position: relative;
+    z-index: 1;
+    background: #b7f000;
+    border: 5px solid #21103d;
+    box-shadow: 9px 9px 0 #ff3cac;
+}
+
+#wrap .hero_image img {
+    filter: saturate(1.3) contrast(1.06);
+}
+
+#wrap .hero_image::before {
+    content: "IDEA! ✦ INSPIRE! ✦";
+    position: absolute;
+    z-index: 2;
+    top: 13px;
+    left: 12px;
+    padding: 7px 12px;
+    color: #fff;
+    background: #8b2cff;
+    border: 3px solid #21103d;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: .08em;
+    transform: rotate(-6deg);
+}
+
+/* 메인 카피: 크고 강렬한 타이포그래피 */
+#wrap .hero_content,
+#wrap .login_content {
+    position: relative;
+    z-index: 2;
+    background: #ffe600;
+}
+
+#wrap .hero_content h1,
+#wrap .login_content h1 {
+    color: #21103d;
+    font-weight: 1000;
+    line-height: 1.18;
+    letter-spacing: -.09em;
+    text-shadow: 3px 3px 0 #fff, 6px 6px 0 #ff3cac;
+}
+
+/* CTA: 버튼마다 다른 컬러와 입체 그림자 */
+#wrap .primary_button,
+#wrap .email_btn {
+    color: #fff;
+    background: #ff3cac;
+    border: 3px solid #21103d;
+    border-radius: 9px;
+    box-shadow: 6px 6px 0 #21103d;
+    font-weight: 900;
+}
+
+#wrap .secondary_button,
+#wrap .account_btn {
+    color: #21103d;
+    background: #b7f000;
+    border: 3px solid #21103d;
+    border-radius: 9px;
+    box-shadow: 6px 6px 0 #3b36ff;
+    font-weight: 900;
+}
+
+#wrap .notice,
+#wrap .terms {
+    color: #21103d;
+    font-weight: 700;
+}
+
+#wrap .notice a,
+#wrap .terms a {
+    color: #3b36ff;
+    font-weight: 900;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+#wrap .status_bar {
+    color: #21103d;
+    background: #ffe600;
+    border-bottom: 3px solid #21103d;
+}
+
+#wrap .status_bar::after {
+    background: #21103d;
+}
+
+#wrap .status_icons i {
+    background: #21103d;
+}
+
+@media (max-width: 389px) {
+    #wrap {
+        box-shadow: 7px 7px 0 #ff3cac;
+    }
+}
