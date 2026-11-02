@@ -1,0 +1,111 @@
+/* Neo Brutalism - Pinterest 로그인 페이지 추가 스타일 */
+#wrap.neo-brutalism {
+    --brutal-red: #E60023;
+    --brutal-yellow: #FFE600;
+    --brutal-blue: #4CC9F0;
+    --brutal-black: #111111;
+    background: var(--brutal-yellow);
+    border-left: 3px solid var(--brutal-black);
+    border-right: 3px solid var(--brutal-black);
+}
+
+/* 상단 영역: 굵은 선과 강한 대비 */
+.neo-brutalism .login_header,
+.neo-brutalism header {
+    border-bottom: 3px solid var(--brutal-black);
+    background: var(--brutal-blue);
+}
+
+.neo-brutalism .brand,
+.neo-brutalism .logo {
+    background: var(--brutal-yellow);
+    border: 2px solid var(--brutal-black);
+    padding: 3px;
+}
+
+.neo-brutalism .signup_link,
+.neo-brutalism .join_btn {
+    color: var(--brutal-black);
+    background: var(--brutal-red);
+    border: 3px solid var(--brutal-black);
+    border-radius: 0;
+    box-shadow: 4px 4px 0 var(--brutal-black);
+    font-weight: 900;
+}
+
+.neo-brutalism .hero_image {
+    border-bottom: 3px solid var(--brutal-black);
+    background: var(--brutal-blue);
+}
+
+.neo-brutalism .hero_content,
+.neo-brutalism .login_content {
+    background: var(--brutal-yellow);
+}
+
+.neo-brutalism .hero_content h1,
+.neo-brutalism h1 {
+    color: var(--brutal-black);
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    text-shadow: 2px 2px 0 var(--brutal-blue);
+}
+
+.neo-brutalism .primary_button,
+.neo-brutalism .email_btn {
+    color: var(--brutal-black);
+    background: var(--brutal-red);
+    border: 3px solid var(--brutal-black);
+    border-radius: 0;
+    box-shadow: 5px 5px 0 var(--brutal-black);
+    font-weight: 900;
+}
+
+.neo-brutalism .secondary_button,
+.neo-brutalism .account_btn {
+    color: var(--brutal-black);
+    background: var(--brutal-blue);
+    border: 3px solid var(--brutal-black);
+    border-radius: 0;
+    box-shadow: 5px 5px 0 var(--brutal-black);
+    font-weight: 900;
+}
+
+.neo-brutalism .notice,
+.neo-brutalism .terms {
+    color: var(--brutal-black);
+    font-weight: 700;
+}
+
+.neo-brutalism .notice a,
+.neo-brutalism .terms a {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.neo-brutalism .primary_button:hover,
+.neo-brutalism .secondary_button:hover,
+.neo-brutalism .email_btn:hover,
+.neo-brutalism .account_btn:hover,
+.neo-brutalism .signup_link:hover,
+.neo-brutalism .join_btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 var(--brutal-black);
+}
+
+.neo-brutalism .primary_button:active,
+.neo-brutalism .secondary_button:active,
+.neo-brutalism .email_btn:active,
+.neo-brutalism .account_btn:active,
+.neo-brutalism .signup_link:active,
+.neo-brutalism .join_btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 var(--brutal-black);
+}
+
+@media (max-width: 389px) {
+    #wrap.neo-brutalism {
+        border-left-width: 2px;
+        border-right-width: 2px;
+    }
+}
