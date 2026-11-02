@@ -1,0 +1,178 @@
+/* Isometric - Pinterest 로그인 페이지 테마 */
+#wrap.isometric {
+    --iso-bg: #F3F0E8;
+    --iso-ink: #24213A;
+    --iso-purple: #7663D8;
+    --iso-orange: #FF9B55;
+    --iso-teal: #55BDB0;
+    --iso-paper: #FFFDF8;
+    position: relative;
+    isolation: isolate;
+    color: var(--iso-ink);
+    background:
+        linear-gradient(150deg, transparent 0 72%, rgba(118, 99, 216, .08) 72% 100%),
+        var(--iso-bg);
+}
+
+/* 등각 투영 느낌의 기하학적 배경 면 */
+.isometric::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 118px;
+    right: -74px;
+    width: 210px;
+    height: 210px;
+    background: var(--iso-teal);
+    opacity: .18;
+    transform: rotate(30deg) skewY(-30deg) scaleY(.86);
+    pointer-events: none;
+}
+
+.isometric::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -85px;
+    bottom: 90px;
+    width: 190px;
+    height: 190px;
+    background: var(--iso-orange);
+    opacity: .17;
+    transform: rotate(30deg) skewY(-30deg) scaleY(.86);
+    pointer-events: none;
+}
+
+.isometric .login_header,
+.isometric header {
+    color: var(--iso-ink);
+    background: var(--iso-paper);
+    border-bottom: 2px solid var(--iso-ink);
+}
+
+.isometric .brand,
+.isometric .logo {
+    filter: drop-shadow(3px 3px 0 rgba(118, 99, 216, .22));
+}
+
+.isometric .header_actions,
+.isometric .header_links {
+    color: var(--iso-ink);
+}
+
+.isometric .signup_link,
+.isometric .join_btn {
+    color: #fff;
+    background: var(--iso-purple);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 4px 5px 0 var(--iso-ink);
+    font-weight: 800;
+}
+
+.isometric .hero_image {
+    position: relative;
+    background: transparent;
+    overflow: visible;
+}
+
+.isometric .hero_image img {
+    position: relative;
+    z-index: 1;
+    transform: perspective(900px) rotateY(-5deg) rotateX(3deg) scale(.94);
+    transform-origin: center;
+    border: 3px solid var(--iso-ink);
+    border-radius: 3px;
+    box-shadow: 9px 10px 0 var(--iso-purple), 15px 16px 0 rgba(36, 33, 58, .16);
+}
+
+.isometric .hero_image::after {
+    background: var(--iso-orange);
+    opacity: 1;
+    height: 5px;
+}
+
+.isometric .hero_content,
+.isometric .login_content {
+    color: var(--iso-ink);
+    background: transparent;
+}
+
+.isometric .hero_content h1,
+.isometric h1 {
+    color: var(--iso-ink);
+    font-weight: 900;
+    letter-spacing: -.07em;
+}
+
+.isometric .primary_button,
+.isometric .email_btn {
+    color: #fff;
+    background: var(--iso-orange);
+    border: 2px solid var(--iso-ink);
+    border-radius: 8px;
+    box-shadow: 5px 6px 0 var(--iso-ink);
+    font-weight: 900;
+}
+
+.isometric .secondary_button,
+.isometric .account_btn {
+    color: var(--iso-ink);
+    background: var(--iso-paper);
+    border: 2px solid var(--iso-ink);
+    border-radius: 8px;
+    box-shadow: 5px 6px 0 var(--iso-teal);
+    font-weight: 800;
+}
+
+.isometric .notice,
+.isometric .terms {
+    color: #5E5A6C;
+    line-height: 1.6;
+}
+
+.isometric .notice a,
+.isometric .terms a {
+    color: var(--iso-purple);
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.isometric .primary_button,
+.isometric .secondary_button,
+.isometric .email_btn,
+.isometric .account_btn,
+.isometric .signup_link,
+.isometric .join_btn {
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.isometric .primary_button:hover,
+.isometric .secondary_button:hover,
+.isometric .email_btn:hover,
+.isometric .account_btn:hover,
+.isometric .signup_link:hover,
+.isometric .join_btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 8px 0 var(--iso-ink);
+}
+
+.isometric .status_bar::after {
+    background-color: var(--iso-ink);
+}
+
+.isometric .status_icons i {
+    background-color: var(--iso-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .isometric .primary_button,
+    .isometric .secondary_button,
+    .isometric .email_btn,
+    .isometric .account_btn,
+    .isometric .signup_link,
+    .isometric .join_btn {
+        transition: none;
+    }
+}
