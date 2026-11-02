@@ -144,3 +144,31 @@
         transition: none;
     }
 }
+
+/* 모든 주요 링크 버튼에 네온 인터랙션 적용 */
+.cyberpunk .login_link,
+.cyberpunk .signup_link,
+.cyberpunk .primary_button,
+.cyberpunk .secondary_button {
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.cyberpunk .login_link:hover,
+.cyberpunk .signup_link:hover,
+.cyberpunk .primary_button:hover,
+.cyberpunk .secondary_button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.16);
+    box-shadow: 0 0 10px var(--cyber-cyan), 0 0 20px rgba(255, 43, 214, .4);
+}
+.cyberpunk .login_link:active,
+.cyberpunk .signup_link:active,
+.cyberpunk .primary_button:active,
+.cyberpunk .secondary_button:active {
+    transform: translateY(1px);
+    filter: brightness(.94);
+}
+.cyberpunk a:focus-visible {
+    outline: 2px solid var(--cyber-yellow);
+    outline-offset: 4px;
+}
