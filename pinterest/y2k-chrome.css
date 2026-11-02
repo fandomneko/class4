@@ -171,3 +171,30 @@
         transition: none;
     }
 }
+
+/* 모든 주요 링크 버튼에 크롬 광택 인터랙션 적용 */
+.y2k-chrome .login_link,
+.y2k-chrome .signup_link,
+.y2k-chrome .primary_button,
+.y2k-chrome .secondary_button {
+    cursor: pointer;
+    transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+.y2k-chrome .login_link:hover,
+.y2k-chrome .signup_link:hover,
+.y2k-chrome .primary_button:hover,
+.y2k-chrome .secondary_button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08) saturate(1.12);
+}
+.y2k-chrome .login_link:active,
+.y2k-chrome .signup_link:active,
+.y2k-chrome .primary_button:active,
+.y2k-chrome .secondary_button:active {
+    transform: translateY(2px);
+    filter: brightness(.97);
+}
+.y2k-chrome a:focus-visible {
+    outline: 2px solid var(--chrome-purple);
+    outline-offset: 4px;
+}
