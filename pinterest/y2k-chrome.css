@@ -1,0 +1,173 @@
+/* Y2K Chrome - Pinterest 로그인 페이지 테마 */
+#wrap.y2k-chrome {
+    --chrome-ink: #25283A;
+    --chrome-silver: #E9EDF5;
+    --chrome-light: #FFFFFF;
+    --chrome-blue: #8EDCFF;
+    --chrome-pink: #F6B8E5;
+    --chrome-purple: #B9A7FF;
+    color: var(--chrome-ink);
+    background:
+        radial-gradient(ellipse at 12% 18%, rgba(255,255,255,.95) 0 3%, transparent 18%),
+        radial-gradient(ellipse at 92% 72%, rgba(142,220,255,.35), transparent 28%),
+        linear-gradient(145deg, #F7F4FC, #DDE7F4 48%, #FCEAF6);
+    position: relative;
+    isolation: isolate;
+}
+
+/* 은은한 광택과 홀로그램 느낌의 배경 장식 */
+.y2k-chrome::before,
+.y2k-chrome::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.y2k-chrome::before {
+    width: 170px;
+    height: 170px;
+    top: 135px;
+    right: -76px;
+    background: linear-gradient(135deg, rgba(255,255,255,.9), rgba(142,220,255,.25) 45%, rgba(246,184,229,.5));
+    border: 1px solid rgba(255,255,255,.9);
+    box-shadow: inset -9px -12px 20px rgba(120,135,190,.18), 0 12px 28px rgba(120,135,190,.12);
+}
+
+.y2k-chrome::after {
+    width: 110px;
+    height: 110px;
+    bottom: 105px;
+    left: -55px;
+    background: linear-gradient(145deg, #fff, #F6B8E5 55%, #A8DFFF);
+    border: 1px solid rgba(255,255,255,.95);
+    box-shadow: inset -7px -8px 14px rgba(120,135,190,.18), 0 10px 24px rgba(120,135,190,.12);
+}
+
+.y2k-chrome .login_header,
+.y2k-chrome header {
+    color: var(--chrome-ink);
+    background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(226,233,246,.88));
+    border-bottom: 1px solid rgba(255,255,255,.95);
+    box-shadow: 0 4px 16px rgba(111,128,169,.13);
+}
+
+.y2k-chrome .brand,
+.y2k-chrome .logo {
+    filter: drop-shadow(0 2px 2px rgba(120,130,170,.2));
+}
+
+.y2k-chrome .header_actions,
+.y2k-chrome .header_links {
+    color: var(--chrome-ink);
+}
+
+.y2k-chrome .signup_link,
+.y2k-chrome .join_btn {
+    color: #30344A;
+    background: linear-gradient(135deg, #FFFFFF 0%, #D8E5F7 28%, #FFFFFF 48%, #E8CFF0 72%, #BDEBFF 100%);
+    border: 1px solid rgba(255,255,255,.95);
+    border-radius: 999px;
+    box-shadow: 0 3px 0 #AAB8D0, 0 5px 12px rgba(100,116,160,.2), inset 0 1px 2px #fff;
+    font-weight: 800;
+}
+
+.y2k-chrome .hero_image {
+    background: transparent;
+}
+
+.y2k-chrome .hero_image img {
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(83,99,143,.2), inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+.y2k-chrome .hero_content,
+.y2k-chrome .login_content {
+    color: var(--chrome-ink);
+    background: transparent;
+}
+
+.y2k-chrome .hero_content h1,
+.y2k-chrome h1 {
+    color: var(--chrome-ink);
+    font-weight: 900;
+    letter-spacing: -.07em;
+    text-shadow: 0 1px 0 #fff, 0 2px 5px rgba(125,139,179,.18);
+}
+
+.y2k-chrome .primary_button,
+.y2k-chrome .email_btn {
+    color: #30344A;
+    background: linear-gradient(120deg, #FFFFFF 0%, #BDEBFF 24%, #F5D7F0 52%, #D8D0FF 76%, #FFFFFF 100%);
+    border: 1px solid rgba(255,255,255,.98);
+    border-radius: 999px;
+    box-shadow: 0 4px 0 #9AA9C6, 0 7px 15px rgba(101,119,166,.2), inset 0 2px 3px #fff;
+    font-weight: 900;
+}
+
+.y2k-chrome .secondary_button,
+.y2k-chrome .account_btn {
+    color: #41445A;
+    background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(221,229,243,.92));
+    border: 1px solid #fff;
+    border-radius: 999px;
+    box-shadow: 0 3px 0 #B7C2D7, 0 5px 12px rgba(101,119,166,.13), inset 0 1px 2px #fff;
+    font-weight: 800;
+}
+
+.y2k-chrome .notice,
+.y2k-chrome .terms {
+    color: #646B82;
+    line-height: 1.6;
+}
+
+.y2k-chrome .notice a,
+.y2k-chrome .terms a {
+    color: #7460B8;
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-color: #C18DCE;
+    text-underline-offset: 3px;
+}
+
+.y2k-chrome .primary_button,
+.y2k-chrome .secondary_button,
+.y2k-chrome .email_btn,
+.y2k-chrome .account_btn,
+.y2k-chrome .signup_link,
+.y2k-chrome .join_btn {
+    transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+
+.y2k-chrome .primary_button:hover,
+.y2k-chrome .secondary_button:hover,
+.y2k-chrome .email_btn:hover,
+.y2k-chrome .account_btn:hover,
+.y2k-chrome .signup_link:hover,
+.y2k-chrome .join_btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.04) saturate(1.08);
+    box-shadow: 0 5px 0 #9AA9C6, 0 10px 18px rgba(101,119,166,.24), inset 0 2px 3px #fff;
+}
+
+.y2k-chrome .status_bar::after {
+    background: linear-gradient(180deg, #35394D, #111522);
+    box-shadow: inset 0 1px 2px rgba(255,255,255,.3);
+}
+
+.y2k-chrome .status_icons i {
+    background-color: var(--chrome-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .y2k-chrome .primary_button,
+    .y2k-chrome .secondary_button,
+    .y2k-chrome .email_btn,
+    .y2k-chrome .account_btn,
+    .y2k-chrome .signup_link,
+    .y2k-chrome .join_btn {
+        transition: none;
+    }
+}
