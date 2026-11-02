@@ -98,3 +98,29 @@ body {
 @media (max-width: 389px) {
     #wrap.glassmorphism { border-radius: 0; }
 }
+
+/* 모든 주요 링크 버튼에 유리처럼 부드러운 반응 적용 */
+.glassmorphism .login_link,
+.glassmorphism .signup_link,
+.glassmorphism .primary_button,
+.glassmorphism .secondary_button {
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.glassmorphism .login_link:hover,
+.glassmorphism .signup_link:hover,
+.glassmorphism .primary_button:hover,
+.glassmorphism .secondary_button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 11px 25px rgba(95,103,180,.3), inset 0 1px 2px rgba(255,255,255,.8);
+}
+.glassmorphism .login_link:active,
+.glassmorphism .signup_link:active,
+.glassmorphism .primary_button:active,
+.glassmorphism .secondary_button:active {
+    transform: translateY(1px) scale(.99);
+}
+.glassmorphism a:focus-visible {
+    outline: 2px solid #7466bd;
+    outline-offset: 4px;
+}
