@@ -62,8 +62,8 @@
 .technology-point p{color:var(--news-desc);font-size:13px;line-height:1.5;word-break:keep-all}
 .technology-point>b{color:var(--blue-strong);font-size:18px;font-weight:400}
 
-.current-page{opacity:1!important}
-.current-page:after{transform:scaleX(1)!important}
+.gnb a[aria-current="page"]{opacity:1}
+.gnb a[aria-current="page"]::after{transform:scaleX(1)}
 
 @media(max-width:900px){
     .rnd-hero{min-height:560px}
