@@ -82,3 +82,190 @@
     .ir-category-inner a, .ir-list a { transition: none; }
     html { scroll-behavior: auto; }
 }
+
+/* IR DASHBOARD - card layout inspired by the supplied reference */
+.ir-dashboard {
+    padding-top: 150px;
+    padding-bottom: 92px;
+}
+.ir-dashboard-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 34px;
+}
+.ir-dashboard-heading h2 {
+    color: #171717;
+    font-size: clamp(38px, 3.4vw, 48px);
+    font-weight: 750;
+    letter-spacing: -.045em;
+    line-height: 1.1;
+}
+.ir-dashboard-heading p {
+    max-width: 560px;
+    color: #343a43;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.ir-dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.55fr 1.05fr 1.05fr;
+    grid-template-rows: repeat(2, minmax(260px, 1fr));
+    gap: 16px;
+}
+.ir-dashboard-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-width: 0;
+    min-height: 260px;
+    padding: 34px 32px;
+    overflow: hidden;
+    border-radius: 20px;
+    color: #17202d;
+    background: #eff3f6;
+    isolation: isolate;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.ir-dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 34px rgba(16, 38, 68, .13);
+}
+.ir-dashboard-card:focus-visible {
+    outline: 3px solid var(--brand-blue);
+    outline-offset: 4px;
+}
+.ir-card-title {
+    position: relative;
+    z-index: 2;
+    font-size: 25px;
+    font-weight: 750;
+    letter-spacing: -.04em;
+}
+.ir-card-description {
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    line-height: 1.65;
+    letter-spacing: -.02em;
+}
+.ir-card-arrow {
+    position: absolute;
+    right: 28px;
+    bottom: 26px;
+    z-index: 2;
+    font-size: 24px;
+    opacity: 0;
+    transform: translate(-5px, 5px);
+    transition: opacity .2s ease, transform .2s ease;
+}
+.ir-dashboard-card:hover .ir-card-arrow,
+.ir-dashboard-card:focus-visible .ir-card-arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.ir-card-financial {
+    grid-column: 1;
+    grid-row: 1;
+    color: #fff;
+    background:
+      linear-gradient(0deg, rgba(5, 25, 54, .72), rgba(5, 25, 54, .04) 76%),
+      linear-gradient(125deg, #2d9bd8 0%, #1768a9 48%, #9dbbd4 100%);
+}
+.ir-card-financial::before {
+    content: "FINANCIAL";
+    position: absolute;
+    right: -8px;
+    top: 28px;
+    z-index: -1;
+    color: rgba(255,255,255,.13);
+    font-size: clamp(48px, 6vw, 92px);
+    font-weight: 800;
+    letter-spacing: -.07em;
+}
+.ir-card-investors {
+    grid-column: 2;
+    grid-row: 1;
+    background: #eff3f6;
+}
+.ir-investor-copy {
+    color: #17202d;
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 800;
+    letter-spacing: -.045em;
+}
+.ir-card-investors .ir-card-description { color: #68717c; }
+.ir-card-disclosure {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    min-height: 536px;
+    color: #fff;
+    background:
+      linear-gradient(0deg, rgba(3, 15, 34, .62), transparent 55%),
+      linear-gradient(145deg, #286dc0 0%, #15509b 46%, #0c1b34 47%, #050b16 100%);
+}
+.ir-card-disclosure::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 44%;
+    z-index: -1;
+    background: linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.02));
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+}
+.ir-card-library {
+    grid-column: 1;
+    grid-row: 2;
+}
+.ir-card-governance {
+    grid-column: 2;
+    grid-row: 2;
+}
+.ir-investor-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 180px;
+    justify-content: center;
+    padding: 32px;
+    border-radius: 16px;
+    background: #eff3f6;
+}
+.ir-investor-panel strong { font-size: 22px; }
+.ir-investor-panel p { color: var(--gray-text); line-height: 1.6; }
+.ir-investor-panel span { color: var(--blue-arrow-ir); font-size: 14px; font-weight: 600; }
+.governance-section { background: #f6f9fd; }
+@media (max-width: 900px) {
+    .ir-dashboard { padding-top: 125px; padding-bottom: 70px; }
+    .ir-dashboard-grid {
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-rows: repeat(3, minmax(230px, auto));
+    }
+    .ir-card-financial { grid-column: 1; grid-row: 1; }
+    .ir-card-investors { grid-column: 2; grid-row: 1; }
+    .ir-card-disclosure { grid-column: 1; grid-row: 2; min-height: 230px; }
+    .ir-card-library { grid-column: 2; grid-row: 2; }
+    .ir-card-governance { grid-column: 1 / span 2; grid-row: 3; }
+}
+@media (max-width: 600px) {
+    .ir-dashboard { width: calc(100% - 40px); padding-top: 112px; padding-bottom: 58px; }
+    .ir-dashboard-heading { display: block; margin-bottom: 24px; }
+    .ir-dashboard-heading h2 { font-size: 36px; }
+    .ir-dashboard-heading p { margin-top: 14px; font-size: 14px; }
+    .ir-dashboard-grid { grid-template-columns: 1fr; grid-template-rows: none; gap: 12px; }
+    .ir-dashboard-card {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        min-height: 190px;
+        padding: 24px;
+        border-radius: 16px;
+    }
+    .ir-card-disclosure { min-height: 230px; }
+    .ir-card-title { font-size: 22px; }
+    .ir-card-description { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ir-dashboard-card, .ir-card-arrow { transition: none; }
+}
