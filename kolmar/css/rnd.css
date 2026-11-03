@@ -1,0 +1,84 @@
+/* R&D SUB PAGE — Design.md 및 메인 페이지 디자인 시스템을 확장 */
+.rnd-hero{position:relative;display:flex;align-items:center;min-height:620px;height:min(760px,66vw);overflow:hidden;background:var(--navy-hero);color:var(--color-white)}
+.rnd-hero-image{position:absolute;inset:0;border:0!important}
+.rnd-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,12,30,.58),rgba(5,12,30,.12) 75%)}
+.rnd-hero-copy{position:relative;z-index:1;padding-top:76px}
+.rnd-eyebrow,.section-eyebrow{color:var(--blue-light);font-size:13px;font-weight:700;letter-spacing:.12em}
+.rnd-hero h2{margin:16px 0 22px;font-size:clamp(48px,6vw,82px);line-height:1;font-weight:700;letter-spacing:-.04em}
+.rnd-hero-copy>p:last-child{font-size:clamp(18px,2vw,24px);line-height:1.65;word-break:keep-all}
+.hero-scroll{position:absolute;z-index:2;right:4.2%;bottom:38px;display:flex;align-items:center;gap:12px;color:#fff;font-size:11px;letter-spacing:.14em}
+.hero-scroll span{width:34px;height:1px;background:#fff}
+.image-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-width:0;overflow:hidden;border:1px dashed rgba(39,110,241,.55);background:linear-gradient(135deg,rgba(194,229,255,.58),rgba(129,202,255,.22));color:var(--brand-navy);text-align:center}
+.image-placeholder>span{font-size:13px;font-weight:700;letter-spacing:.12em}
+.image-placeholder>small{font-size:12px;color:var(--gray-text)}
+.rnd-menu-placeholder{display:grid;place-items:center;height:220px;border:1px dashed rgba(255,255,255,.4);border-radius:12px;background:rgba(255,255,255,.1);color:#fff;font-size:12px;letter-spacing:.12em}
+.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:38px}
+.section-heading h2,.tech-heading h2{margin-top:10px;color:var(--brand-navy);font-size:clamp(38px,4vw,56px);line-height:1;font-weight:700;letter-spacing:-.04em}
+.section-heading .section-eyebrow{color:var(--brand-blue)}
+.heading-desc{color:var(--navy-esg-text);font-size:16px;line-height:1.65;word-break:keep-all}
+.lab-section{padding:90px 0;background:linear-gradient(115deg,var(--sky-start),var(--sky-mid) 48%,var(--sky-end))}
+.lab-layout{display:grid;grid-template-columns:1.15fr .85fr;align-items:stretch;gap:42px}
+.lab-image{min-height:420px;border:1px solid rgba(255,255,255,.55);border-radius:18px}
+.lab-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:28px 0;color:var(--navy-esg-text)}
+.content-index{color:var(--brand-blue);font-size:12px;font-weight:700;letter-spacing:.1em}
+.lab-copy h3{margin:18px 0;font-size:clamp(30px,3.2vw,44px);line-height:1.25;font-weight:700;letter-spacing:-.04em}
+.lab-copy h3 em{color:var(--brand-blue);font-style:normal}
+.lab-copy>p{max-width:540px;color:#26364d;font-size:16px;line-height:1.7;word-break:keep-all}
+.rnd-text-link{display:inline-flex;align-items:center;gap:24px;margin-top:26px;padding:10px 14px;border-radius:5px;background:rgba(255,255,255,.48);color:var(--navy-esg-text);font-size:14px;font-weight:600;transition:background .2s,color .2s}
+.rnd-text-link:hover{background:var(--brand-blue);color:#fff}
+.rnd-text-link span{color:var(--blue-arrow-ir)}
+.rnd-text-link:hover span{color:#fff}
+.fields-section{padding:90px 0;background:#fff}
+.field-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.field-card{overflow:hidden;border:1px solid #dce8f5;border-radius:13px;background:#fff}
+.field-image{height:250px;border:0;border-radius:0}
+.field-copy{padding:24px}
+.field-copy>span{color:var(--brand-blue);font-size:12px;font-weight:700;letter-spacing:.1em}
+.field-copy h3{margin:12px 0 8px;color:var(--brand-navy);font-size:22px;font-weight:700}
+.field-copy p{color:var(--gray-text);font-size:16px;line-height:1.6;word-break:keep-all}
+.tech-section{padding:90px 0 100px;background:var(--navy-news);color:#fff}
+.tech-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:38px}
+.tech-heading .section-eyebrow{color:var(--blue-light)}
+.tech-heading h2{color:#fff}
+.tech-heading>p{color:var(--news-desc);font-size:16px;line-height:1.65;word-break:keep-all}
+.tech-feature{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:42px}
+.tech-feature-image{min-height:340px;border-color:rgba(255,255,255,.35);background:linear-gradient(135deg,rgba(194,229,255,.2),rgba(129,202,255,.08));color:#fff}
+.tech-feature-image small{color:rgba(255,255,255,.72)}
+.tech-feature-copy>span{color:var(--news-tag-glass);font-size:12px;font-weight:700;letter-spacing:.1em}
+.tech-feature-copy h3{margin:18px 0;font-size:clamp(30px,3vw,42px);line-height:1.25;letter-spacing:-.04em}
+.tech-feature-copy p{color:var(--news-desc);font-size:16px;line-height:1.7;word-break:keep-all}
+.tech-swiper{margin-top:52px;overflow:hidden}
+.tech-card{min-height:190px;padding:26px 24px;border:1px solid rgba(255,255,255,.22);border-radius:18px;background:rgba(255,255,255,.1);backdrop-filter:blur(12px)}
+.tech-card>span{color:var(--news-tag-glass);font-size:12px;font-weight:700;letter-spacing:.1em}
+.tech-card h3{margin:20px 0 10px;font-size:22px;font-weight:700}
+.tech-card p{color:var(--news-desc);font-size:16px;line-height:1.6;word-break:keep-all}
+.tech-controls{display:flex;align-items:center;justify-content:space-between;margin-top:22px}
+.tech-pagination{width:auto!important;color:var(--news-desc);font-size:12px}
+.tech-buttons{display:flex;gap:10px}
+.tech-buttons button{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff}
+.tech-buttons .tech-next{background:var(--blue-arrow-active)}
+.current-page{opacity:1!important}
+.current-page::after{transform:scaleX(1)!important}
+@media(max-width:900px){
+ .rnd-hero{min-height:560px}
+ .lab-layout,.tech-feature{grid-template-columns:1fr 1fr;gap:28px}
+ .field-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .field-card:last-child{grid-column:1/-1}
+}
+@media(max-width:600px){
+ .rnd-hero{min-height:500px;height:78vh}
+ .rnd-hero-copy{padding-top:60px}
+ .section-heading,.tech-heading{display:block;margin-bottom:28px}
+ .heading-desc,.tech-heading>p{margin-top:18px}
+ .lab-section,.fields-section,.tech-section{padding:68px 0}
+ .lab-layout,.tech-feature{grid-template-columns:1fr;gap:24px}
+ .lab-image{min-height:260px}
+ .field-grid{grid-template-columns:1fr}
+ .field-card:last-child{grid-column:auto}
+ .field-image{height:220px}
+ .lab-copy{padding:8px 0}
+ .tech-feature-image{min-height:250px}
+ .tech-swiper{margin-top:36px}
+ .hero-scroll{right:30px;bottom:28px}
+}
+@media(prefers-reduced-motion:reduce){.rnd-text-link{transition:none}}
