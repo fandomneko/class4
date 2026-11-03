@@ -138,29 +138,56 @@
     html { scroll-behavior: auto; }
 }
 
-/* IR QUICK LINK CARDS — 기존 시스템 컬러만 사용한 단색 구성 */
+/* IR QUICK LINK CARDS — 참고 레이아웃을 콜마 디자인 시스템에 맞게 재구성 */
 .ir-dashboard { padding-top: 82px; padding-bottom: 86px; }
 .ir-dashboard-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; margin-bottom: 30px; }
 .ir-dashboard-heading h2 { color: var(--navy-esg-text); font-size: clamp(32px, 3.4vw, 46px); font-weight: 700; letter-spacing: -.04em; }
 .ir-dashboard-heading p { color: var(--gray-text); font-size: 16px; line-height: 1.6; }
-.ir-dashboard-grid { display: grid; grid-template-columns: 1.45fr 1fr 1fr; grid-template-rows: repeat(2, minmax(210px, 1fr)); gap: 14px; }
-.ir-dashboard-card { position: relative; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; min-width: 0; min-height: 210px; padding: 28px; overflow: hidden; border-radius: 0; color: var(--navy-esg-text); transition: opacity .2s ease; }
-.ir-dashboard-card:hover { opacity: .88; }
-.ir-dashboard-card:focus-visible { outline: 3px solid var(--brand-navy); outline-offset: 3px; }
-.ir-card-title { font-size: 24px; font-weight: 700; letter-spacing: -.035em; }
-.ir-card-description { max-width: 300px; font-size: 15px; line-height: 1.6; }
-.ir-card-arrow { position: absolute; right: 24px; bottom: 22px; font-size: 22px; }
-.ir-card-financial { grid-column: 1; grid-row: 1; background: var(--brand-blue); color: var(--color-white); }
-.ir-card-investors { grid-column: 2; grid-row: 1; background: var(--blue-light); }
-.ir-card-disclosure { grid-column: 3; grid-row: 1 / span 2; min-height: 434px; background: var(--brand-navy); color: var(--color-white); }
-.ir-card-library { grid-column: 1; grid-row: 2; background: var(--blue-mid); }
-.ir-card-governance { grid-column: 2; grid-row: 2; background: var(--blue-strong); }
+.ir-dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.45fr 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(220px, 1fr));
+    gap: 14px;
+}
+.ir-dashboard-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-width: 0;
+    min-height: 220px;
+    padding: 28px;
+    overflow: hidden;
+    border-radius: 0;
+    background: #eef3f7;
+    color: var(--navy-esg-text);
+    transition: opacity .2s ease;
+}
+.ir-dashboard-card:hover { opacity: .9; }
+.ir-dashboard-card:focus-visible { outline: 3px solid var(--brand-blue); outline-offset: 3px; }
+.ir-card-title { position: relative; z-index: 2; font-size: 24px; font-weight: 700; letter-spacing: -.035em; }
+.ir-card-description { position: relative; z-index: 2; max-width: 300px; font-size: 15px; line-height: 1.6; }
+.ir-card-arrow { position: absolute; z-index: 2; right: 24px; bottom: 22px; font-size: 22px; }
+.ir-card-financial { grid-column: 1; grid-row: 1; min-height: 280px; }
+.ir-card-investors { grid-column: 2; grid-row: 1; background: #eef3f7; }
+.ir-investor-number { margin: 20px 0; font-size: clamp(25px, 2.4vw, 36px); font-weight: 750; line-height: 1.15; letter-spacing: -.04em; }
+.ir-card-disclosure { grid-column: 3; grid-row: 1 / span 2; min-height: 454px; }
+.ir-card-library { grid-column: 1; grid-row: 2; background: #eef3f7; }
+.ir-card-governance { grid-column: 2; grid-row: 2; background: #eef3f7; }
+
+/* 이미지 카드: 아래 경로에 이미지를 넣거나 background-image 경로를 변경하면 됩니다.
+   예: background-image: linear-gradient(rgba(8,17,32,.12), rgba(8,17,32,.55)), url("../images/ir-financial.jpg"); */
+.ir-card-image { isolation: isolate; background-color: var(--brand-navy); background-position: center; background-size: cover; color: var(--color-white); }
+.ir-card-financial.ir-card-image { background-image: linear-gradient(0deg, rgba(8,17,32,.62), rgba(8,17,32,.05) 72%), url("../images/ir-financial.jpg"); }
+.ir-card-disclosure.ir-card-image { background-image: linear-gradient(0deg, rgba(8,17,32,.62), rgba(8,17,32,.08) 72%), url("../images/ir-disclosure.jpg"); }
+
 @media (max-width: 900px) {
     .ir-dashboard { padding-top: 66px; padding-bottom: 68px; }
     .ir-dashboard-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, minmax(190px, auto)); }
-    .ir-card-financial { grid-column: 1; grid-row: 1; }
+    .ir-card-financial { grid-column: 1; grid-row: 1; min-height: 220px; }
     .ir-card-investors { grid-column: 2; grid-row: 1; }
-    .ir-card-disclosure { grid-column: 1; grid-row: 2; min-height: 190px; }
+    .ir-card-disclosure { grid-column: 1; grid-row: 2; min-height: 220px; }
     .ir-card-library { grid-column: 2; grid-row: 2; }
     .ir-card-governance { grid-column: 1 / span 2; grid-row: 3; }
 }
@@ -169,10 +196,11 @@
     .ir-dashboard-heading { display: block; margin-bottom: 22px; }
     .ir-dashboard-heading p { margin-top: 12px; }
     .ir-dashboard-grid { grid-template-columns: 1fr; grid-template-rows: none; gap: 10px; }
-    .ir-dashboard-card { grid-column: auto !important; grid-row: auto !important; min-height: 160px; padding: 22px; }
-    .ir-card-disclosure { min-height: 160px; }
+    .ir-dashboard-card { grid-column: auto !important; grid-row: auto !important; min-height: 170px; padding: 22px; }
+    .ir-card-financial, .ir-card-disclosure { min-height: 230px; }
     .ir-card-title { font-size: 21px; }
     .ir-card-description { font-size: 14px; padding-right: 24px; }
+    .ir-investor-number { font-size: 28px; }
 }
 @media (prefers-reduced-motion: reduce) {
     .ir-dashboard-card { transition: none; }
