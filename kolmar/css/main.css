@@ -48,11 +48,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .header { position: absolute; top: 0; left: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; width: 100%; height: 76px; padding: 0 4.2%; color: var(--color-white); }
 .logo a, .footer-logo { color: var(--blue-logo); font-size: 20px; font-weight: 800; letter-spacing: -.06em; }
 .gnb { display: flex; align-items: center; gap: clamp(22px, 4vw, 64px); }
-.gnb a { font-size: 13px; font-weight: 500; transition: opacity .2s; }
+.gnb a { font-size: 18px; font-weight: 500; transition: opacity .2s; }
 .gnb a:hover { opacity: .65; }
 .header_util { display: flex; align-items: center; gap: 18px; }
 .lang_btn, .menu_btn { border: 0; background: transparent; color: var(--color-white); }
-.lang_btn { font-size: 13px; }
+.lang_btn { font-size: 16px; }
 .menu_btn { display: flex; flex-direction: column; gap: 5px; padding: 8px 0 8px 8px; }
 .menu_btn span { display: block; width: 19px; height: 1px; background: var(--color-white); }
 
