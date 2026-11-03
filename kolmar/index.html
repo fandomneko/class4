@@ -297,14 +297,14 @@
             { title: '회사소개', links: ['회사개요', 'CEO 인사말', '연혁', '경영철학'], href: '#company', image: 'img/company2.jpg', alt: '한국콜마 회사 소개' },
             { title: 'ESG', links: ['ESG 경영', '환경경영', '사회공헌', '윤리경영'], href: '#esg', image: 'img/esg1.png', alt: '한국콜마 ESG' },
             { title: '소식', links: ['콜마소식', '보도자료', '공지사항'], href: 'news.html', image: 'img/company3.jpg', alt: '한국콜마 소식' },
-            { title: 'IR', links: ['IR 자료', '재무정보', '공시정보'], href: '#ir', image: 'img/company4.jpg', alt: '한국콜마 IR' }
+            { title: 'IR', links: ['IR 자료', '재무정보', '공시정보'], href: 'ir.html', image: 'img/company4.jpg', alt: '한국콜마 IR' }
         ];
 
         function renderMegaMenu(index) {
             const item = menuContents[index];
             megaMenuTitle.textContent = item.title;
             megaMenuLinks.innerHTML = item.links.map((label, linkIndex) => {
-                const href = index === 1 ? ['rnd.html#lab', 'rnd.html#fields', 'rnd.html#technology'][linkIndex] : item.href;
+                const href = index === 1 ? ['rnd.html#lab', 'rnd.html#fields', 'rnd.html#technology'][linkIndex] : (index === 5 ? ['ir.html#ir-data', 'ir.html#financial', 'ir.html#disclosure'][linkIndex] : item.href);
                 return '<a href="' + href + '">' + label + '</a>';
             }).join('');
             megaMenuLinks.setAttribute('aria-label', item.title + ' 하위 메뉴');
