@@ -48,15 +48,4 @@ document.addEventListener('DOMContentLoaded', () => {
         else openMenu(1);
     });
     links.addEventListener('click', closeMenu);
-
-    // 연구분야 목록은 native details/summary를 사용해 별도 슬라이더 없이 열고 닫습니다.
-    const fieldItems = [...document.querySelectorAll('.field-item')];
-    fieldItems.forEach(item => {
-        item.addEventListener('toggle', () => {
-            if (!item.open) return;
-            fieldItems.forEach(other => {
-                if (other !== item) other.open = false;
-            });
-        });
-    });
 });
