@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: '회사소개', links: ['회사개요', 'CEO 인사말', '연혁', '경영철학'], href: 'index.html#company' },
         { title: 'ESG', links: ['ESG 경영', '환경경영', '사회공헌', '윤리경영'], href: 'index.html#esg' },
         { title: '소식', links: ['콜마소식', '보도자료', '공지사항'], href: 'news.html' },
-        { title: 'IR', links: ['IR 자료', '재무정보', '공시정보'], href: 'index.html#ir' }
+        { title: 'IR', links: ['IR자료', '재무정보', '공시정보'], href: 'ir.html' }
     ];
 
     function renderMegaMenu(index) {
