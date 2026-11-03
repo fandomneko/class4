@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             title: '소식',
-            links: [['콜마 소식', 'index.html#news'], ['보도자료', 'index.html#news'], ['공지사항', 'index.html#news']]
+            links: [['콜마소식', 'news.html#kolmar-news'], ['보도자료', 'news.html#press'], ['공지사항', 'news.html#notice']]
         },
         {
             title: 'IR',
