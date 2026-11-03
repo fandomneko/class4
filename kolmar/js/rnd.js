@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         megaMenuTitle.textContent = item.title;
         megaMenuLinks.innerHTML = item.links.map((label, linkIndex) => {
             const rndAnchors = ['#lab', '#fields', '#technology'];
-            const href = index === 1 ? rndAnchors[linkIndex] : item.href;
+            const irAnchors = ['ir.html#ir-data', 'ir.html#financial', 'ir.html#disclosure'];
+            const href = index === 1 ? rndAnchors[linkIndex] : (index === 5 ? irAnchors[linkIndex] : item.href);
             return '<a href="' + href + '">' + label + '</a>';
         }).join('');
         megaMenuLinks.setAttribute('aria-label', item.title + ' 하위 메뉴');
