@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             title: 'IR',
-            links: [['IR 자료', 'index.html#ir'], ['재무정보', 'index.html#ir'], ['공시정보', 'index.html#ir']]
+            links: [['IR자료', 'ir.html#ir-data'], ['재무정보', 'ir.html#financial'], ['공시정보', 'ir.html#disclosure']]
         }
     ];
 
