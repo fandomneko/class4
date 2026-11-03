@@ -283,7 +283,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .footer { border-top: 1px solid var(--gray-line); background: var(--color-white); }
 .footer-inner { display: flex; align-items: flex-start; gap: 40px; padding-top: 28px; padding-bottom: 32px; }
 .footer-logo { white-space: nowrap; color: var(--blue-logo); font-size: 20px; font-weight: 800; }
-.footer-info { color: var(--gray-info); font-size: 10px; line-height: 1.7; }
+.footer-info { color: var(--gray-info); font-size: 14px; line-height: 1.7; }
 .footer-sns { display: flex; gap: 10px; margin-left: auto; }
 .footer-sns a { display: flex; align-items: center; justify-content: center; width: 25px; height: 25px; border: 1px solid var(--gray-sns); border-radius: 50%; font-size: 12px; }
 
