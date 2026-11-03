@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { title: '회사소개', links: [['회사개요','company.html#overview'],['CEO 인사말','company.html#greeting'],['연혁','company.html#history'],['경영철학','company.html#philosophy']] },
         { title: 'ESG', links: [['ESG 경영','#esg-management'],['환경경영','#environment'],['윤리경영','#ethics'],['사회공헌','#social']] },
         { title: '소식', links: [['콜마소식','news.html#kolmar-news'],['보도자료','news.html#press'],['공지사항','news.html#notice']] },
-        { title: 'IR', links: [['IR 자료','index.html#ir'],['재무정보','index.html#ir'],['공시정보','index.html#ir']] }
+        { title: 'IR', links: [['IR자료','ir.html#ir-data'],['재무정보','ir.html#financial'],['공시정보','ir.html#disclosure']] }
     ];
 
     function renderMegaMenu(index) {
