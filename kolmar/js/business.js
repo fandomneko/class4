@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             links: [['연구소 소개', 'index.html#rnd'], ['연구 분야', 'index.html#rnd'], ['기술 경쟁력', 'index.html#rnd']]
         },
         {
-            title: '회사소개',
+            title: '회사',
             links: [['회사개요', 'index.html#company'], ['CEO 인사말', 'index.html#company'], ['연혁', 'index.html#company'], ['경영철학', 'index.html#company']]
         },
         {
