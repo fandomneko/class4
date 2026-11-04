@@ -57,4 +57,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     megaMenuLinks.addEventListener('click', closeMegaMenu);
+
+    // 현재 화면에 보이는 ESG 섹션에 맞춰 바로가기 메뉴 상태를 갱신합니다.
+    const categoryLinks = [...document.querySelectorAll('.esg-category-inner a')];
+    const categorySections = categoryLinks
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+    function updateActiveCategory() {
+        const marker = window.scrollY + 150;
+        let activeIndex = 0;
+        categorySections.forEach((section, index) => {
+            if (section.offsetTop <= marker) activeIndex = index;
+        });
+        categoryLinks.forEach((link, index) => {
+            const active = index === activeIndex;
+            link.classList.toggle('is-current', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveCategory, { passive: true });
+    window.addEventListener('resize', updateActiveCategory);
+    updateActiveCategory();
 });
