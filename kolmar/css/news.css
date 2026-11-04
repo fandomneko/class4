@@ -317,9 +317,8 @@
 }
 
 .news-hero-image {
-    top: auto;
-    bottom: 60px;
-    transform: none;
+    top: calc(50% + 335px);
+    transform: translateY(-50%);
 }
 
 .news-category-nav {
@@ -354,9 +353,7 @@
     }
 
     .news-hero-image {
-        top: auto;
-        bottom: 45px;
-        transform: none;
+        top: calc(50% + 285px);
     }
 }
 
