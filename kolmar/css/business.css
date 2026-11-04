@@ -29,7 +29,7 @@
 }
 .business-kicker, .section-eyebrow {
     color: var(--brand-blue);
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: .12em;
 }
@@ -55,7 +55,7 @@
     align-items: center;
     gap: 12px;
     color: var(--color-white);
-    font-size: 11px;
+    font-size: 16px;
     letter-spacing: .14em;
 }
 .hero-scroll span { width: 34px; height: 1px; background: var(--color-white); }
@@ -74,12 +74,12 @@
     text-align: center;
 }
 .business-image-placeholder > span {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: .12em;
 }
 .business-image-placeholder > small {
-    font-size: 12px;
+    font-size: 16px;
     color: var(--gray-text);
 }
 .menu-placeholder { height: 220px; border-color: rgba(255,255,255,.4); background: rgba(255,255,255,.1); color: white; }
@@ -127,7 +127,7 @@
 }
 .omd-number, .intro-index {
     color: var(--brand-blue);
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: .1em;
 }
@@ -154,7 +154,7 @@
     border-radius: 5px;
     background: rgba(255,255,255,.48);
     color: var(--navy-esg-text);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     transition: background .2s ease, color .2s ease;
 }
@@ -172,9 +172,9 @@
     background: rgba(255,255,255,.55);
     color: var(--navy-esg-text);
 }
-.process-card > span { color: var(--brand-blue); font-size: 12px; font-weight: 700; letter-spacing: .1em; }
+.process-card > span { color: var(--brand-blue); font-size: 16px; font-weight: 700; letter-spacing: .1em; }
 .process-card h3 { margin: 18px 0 8px; font-size: 20px; font-weight: 700; }
-.process-card p { color: var(--gray-text); font-size: 14px; line-height: 1.6; word-break: keep-all; }
+.process-card p { color: var(--gray-text); font-size: 16px; line-height: 1.6; word-break: keep-all; }
 .process-controls { display: flex; align-items: center; justify-content: flex-end; gap: 12px; margin-top: 22px; }
 
 /* PC에서는 전체 단계가 한 화면에 보여 화살표 버튼을 숨기고, 모바일에서는 유지합니다. */
@@ -191,7 +191,7 @@
     color: var(--blue-arrow);
 }
 .process-controls button:last-child { background: var(--blue-arrow-active); color: var(--color-white); }
-.process-pagination { width: auto !important; color: var(--navy-tab-text); font-size: 12px; }
+.process-pagination { width: auto !important; color: var(--navy-tab-text); font-size: 16px; }
 
 .business-intro-section { padding: 90px 0; background: var(--color-white); }
 .intro-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; }
@@ -205,7 +205,7 @@
     border: 1px solid rgba(39,110,241,.28);
     border-radius: 28px;
     color: var(--brand-blue);
-    font-size: 11px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: .06em;
 }
@@ -220,9 +220,9 @@
 }
 .location-image { height: 230px; border: 0; border-radius: 0; }
 .location-info { padding: 24px; }
-.location-info > span { color: var(--brand-blue); font-size: 11px; font-weight: 700; letter-spacing: .1em; }
+.location-info > span { color: var(--brand-blue); font-size: 16px; font-weight: 700; letter-spacing: .1em; }
 .location-info h3 { margin: 12px 0 8px; color: var(--brand-navy); font-size: 22px; font-weight: 700; }
-.location-info p { color: var(--gray-text); font-size: 14px; line-height: 1.6; word-break: keep-all; }
+.location-info p { color: var(--gray-text); font-size: 16px; line-height: 1.6; word-break: keep-all; }
 .location-info .text-link { margin-top: 18px; }
 
 .contact-section { padding: 84px 0; background: var(--navy-news); color: var(--color-white); }
@@ -246,9 +246,9 @@
     background: rgba(255,255,255,.12);
     backdrop-filter: blur(16px);
 }
-.contact-panel > div > span { color: var(--news-tag-glass); font-size: 11px; font-weight: 700; letter-spacing: .1em; }
+.contact-panel > div > span { color: var(--news-tag-glass); font-size: 16px; font-weight: 700; letter-spacing: .1em; }
 .contact-panel h3 { margin: 12px 0 8px; font-size: 24px; font-weight: 700; }
-.contact-panel p { color: var(--news-desc); font-size: 14px; line-height: 1.6; }
+.contact-panel p { color: var(--news-desc); font-size: 16px; line-height: 1.6; }
 .contact-arrow {
     display: grid;
     flex: 0 0 44px;
@@ -270,10 +270,10 @@
 .quote-heading > p:last-child { color: var(--gray-text); font-size: 16px; line-height: 1.65; }
 .quote-guide { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--blue-line); }
 .quote-guide > div { display: flex; align-items: center; gap: 18px; min-height: 62px; border-bottom: 1px solid var(--blue-line); }
-.quote-guide span { color: var(--blue-arrow-ir); font-size: 13px; font-weight: 700; }
-.quote-guide p { color: var(--navy-esg-text); font-size: 14px; line-height: 1.5; }
+.quote-guide span { color: var(--blue-arrow-ir); font-size: 16px; font-weight: 700; }
+.quote-guide p { color: var(--navy-esg-text); font-size: 16px; line-height: 1.5; }
 .quote-action { padding: 24px; border-radius: 18px; background: linear-gradient(135deg, var(--sky-start), var(--sky-end)); }
-.quote-action p { color: var(--navy-esg-text); font-size: 14px; line-height: 1.65; word-break: keep-all; }
+.quote-action p { color: var(--navy-esg-text); font-size: 16px; line-height: 1.65; word-break: keep-all; }
 .quote-button {
     display: inline-flex;
     align-items: center;
@@ -283,7 +283,7 @@
     border-radius: 5px;
     background: var(--blue-arrow-active);
     color: var(--color-white);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     transition: opacity .2s ease;
 }
