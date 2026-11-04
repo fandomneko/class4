@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="한국콜마의 새로운 소식, 보도자료와 공지사항을 확인하세요.">
     <title>소식 | HK Kolmar</title>
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/news.css?v=20261104-2">
-    <script src="js/news.js?v=20261104-1" defer></script>
+    <link rel="stylesheet" href="css/news.css?v=20261104-3">
+    <script src="js/news.js?v=20261104-2" defer></script>
 </head>
 <body>
 <div id="wrap">
@@ -20,12 +21,14 @@
             <a href="rnd.html">R&amp;D</a>
             <a href="company.html">회사소개</a>
             <a href="esg.html">ESG</a>
-            <a href="news.html" aria-current="page">소식</a>
+            <a href="news.html" aria-current="page" class="is-active">소식</a>
             <a href="ir.html">IR</a>
         </nav>
         <div class="header_util">
             <button type="button" class="lang_btn"><span>KR</span></button>
-            <button type="button" class="menu_btn" id="menuBtn" aria-label="전체 메뉴 열기" aria-expanded="false"><span></span><span></span></button>
+            <button type="button" class="menu_btn" id="menuBtn" aria-label="전체 메뉴 열기" aria-expanded="false" aria-controls="megaMenu">
+                <span></span><span></span>
+            </button>
         </div>
         <div class="mega-menu" id="megaMenu" aria-hidden="true">
             <div class="mega-menu-inner">
@@ -36,7 +39,9 @@
                     <a href="#notice">공지사항</a>
                 </nav>
                 <div class="mega-menu-visual">
-                    <div class="news-image-placeholder menu-placeholder"><span>NEWS IMAGE</span><small>소식 관련 이미지 삽입</small></div>
+                    <div class="news-image-placeholder menu-placeholder">
+                        <span>NEWS IMAGE</span><small>소식 관련 이미지 삽입</small>
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,96 +49,112 @@
 
     <main>
         <section class="news-hero" aria-labelledby="news-title">
-            <div class="news-hero-backdrop"></div>
+            <div class="news-hero-backdrop" aria-hidden="true"></div>
             <div class="section-inner news-hero-inner">
                 <p class="news-eyebrow">NEWS &amp; MEDIA</p>
                 <h2 id="news-title">소식</h2>
-                <p>한국콜마의 새로운 소식과<br>다양한 이야기를 전합니다.</p>
-                <a class="news-hero-link" href="#kolmar-news">소식 확인하기 <span>↓</span></a>
+                <p class="news-hero-description">한국콜마의 새로운 소식과<br>다양한 이야기를 전합니다.</p>
+                <a class="news-hero-link" href="#kolmar-news">소식 확인하기 <span aria-hidden="true">↓</span></a>
             </div>
-            <div class="news-hero-image news-image-placeholder">
+            <div class="news-hero-image news-image-placeholder" role="img" aria-label="한국콜마 소식 대표 이미지가 들어갈 영역">
                 <span>NEWS HERO IMAGE</span><small>연구·행사·기업 활동 이미지 삽입</small>
             </div>
         </section>
 
         <nav class="news-category-nav" aria-label="소식 카테고리">
             <div class="section-inner news-category-inner">
-                <a href="#kolmar-news" class="is-current">콜마소식 <span>→</span></a>
-                <a href="#press">보도자료 <span>→</span></a>
-                <a href="#notice">공지사항 <span>→</span></a>
+                <a href="#kolmar-news" class="is-current" aria-current="location">콜마소식 <span aria-hidden="true">↗</span></a>
+                <a href="#press">보도자료 <span aria-hidden="true">↗</span></a>
+                <a href="#notice">공지사항 <span aria-hidden="true">↗</span></a>
             </div>
         </nav>
 
-        <section class="kolmar-news-section" id="kolmar-news">
+        <section class="kolmar-news-section" id="kolmar-news" aria-labelledby="kolmar-news-title">
             <div class="section-inner">
                 <div class="news-section-heading">
-                    <div><p class="news-section-eyebrow">KOLMAR STORY</p><h2>콜마소식</h2></div>
+                    <div>
+                        <p class="news-section-eyebrow">KOLMAR STORY</p>
+                        <h2 id="kolmar-news-title">콜마소식</h2>
+                    </div>
+                    <p>한국콜마의 기술과 사람, 새로운 도전을<br>다양한 이야기로 소개합니다.</p>
                 </div>
+
                 <div class="kolmar-news-grid">
-                    <a class="kolmar-feature-card news-image-placeholder" href="#press">
+                    <a class="kolmar-feature-card news-image-placeholder" href="#press" aria-label="한국콜마 대표 소식 더보기">
                         <span class="placeholder-label">FEATURE IMAGE</span>
                         <small>대표 소식 이미지 삽입</small>
-                        <span class="feature-card-shade"></span>
+                        <span class="feature-card-shade" aria-hidden="true"></span>
                         <span class="feature-card-copy">
                             <span class="news-card-tag">KOLMAR STORY</span>
                             <strong>한국콜마의 새로운 소식을<br>만나보세요.</strong>
-                            <span class="feature-card-more">소식 더보기 <b>↗</b></span>
+                            <span class="feature-card-more">소식 더보기 <b aria-hidden="true">↗</b></span>
                         </span>
                     </a>
+
                     <div class="kolmar-story-list">
                         <article class="news-card-glass">
                             <span class="news-card-tag">KOLMAR STORY</span>
-                            <h3>한국콜마, 海 산호초 보호 자외선 차단제 글로벌 인증 체계 구축</h3>
-                            <p class="news-card-description">국내 첫 산호 이용 독성시험 체계 확보 관련 소식</p>
-                            <span class="news-card-meta">게시일 정보 입력 <b>↗</b></span>
+                            <h3>한국콜마, 산호초 보호 자외선 차단제 글로벌 인증 체계 구축</h3>
+                            <p class="news-card-description">산호 이용 독성시험 체계 확보 관련 소식</p>
+                            <p class="news-card-meta"><span>게시일 정보 입력</span><span aria-hidden="true">↗</span></p>
                         </article>
                         <article class="news-card-solid feature-blue">
                             <span class="news-card-tag">KOLMAR STORY</span>
                             <h3>구윤철 부총리, 'K뷰티 R&amp;D 성지' 한국콜마 종합기술원 방문</h3>
                             <p class="news-card-description">종합기술원 방문 및 현장 간담회 관련 소식</p>
-                            <span class="news-card-meta">게시일 정보 입력 <b>↗</b></span>
+                            <p class="news-card-meta"><span>게시일 정보 입력</span><span aria-hidden="true">↗</span></p>
                         </article>
                     </div>
+                </div>
+                <p class="news-content-note">※ 실제 게시물 제목과 게시일은 최종 콘텐츠 확인 후 입력해 주세요.</p>
             </div>
         </section>
 
-        <section class="press-section" id="press">
+        <section class="press-section" id="press" aria-labelledby="press-title">
             <div class="section-inner">
                 <div class="news-section-heading">
-                    <div><p class="news-section-eyebrow">PRESS RELEASE</p><h2>보도자료</h2></div>
-                    <p>한국콜마의 주요 발표와 언론에 소개된<br>보도자료를 확인할 수 있습니다.</p>
+                    <div>
+                        <p class="news-section-eyebrow">PRESS RELEASE</p>
+                        <h2 id="press-title">보도자료</h2>
+                    </div>
+                    <p>한국콜마의 주요 발표와<br>언론에 소개된 소식을 확인할 수 있습니다.</p>
                 </div>
-                <div class="press-feature">
-                    <div class="press-feature-image news-image-placeholder">
+
+                <article class="press-feature">
+                    <div class="press-feature-image news-image-placeholder" role="img" aria-label="대표 보도자료 이미지가 들어갈 영역">
                         <span>PRESS IMAGE</span><small>보도자료 대표 이미지 삽입</small>
                     </div>
                     <div class="press-feature-copy">
                         <span class="news-card-tag">PRESS RELEASE</span>
-                        <h3>보도자료 제목을 입력해 주세요.</h3>
-                        <p>대표 보도자료의 핵심 내용을 간략하게 소개하는 영역입니다. 공식 발표 내용과 게시일을 확인한 뒤 실제 콘텐츠로 교체해 주세요.</p>
-                        <span class="news-card-meta">게시일 정보 입력 <b>↗</b></span>
+                        <h3>대표 보도자료 제목을 입력해 주세요.</h3>
+                        <p>대표 보도자료의 핵심 내용을 간략하게 소개하는 영역입니다. 실제 발표 내용과 게시일을 확인한 뒤 콘텐츠를 교체해 주세요.</p>
+                        <p class="news-card-meta"><span>게시일 정보 입력</span><span aria-hidden="true">↗</span></p>
                     </div>
-                </div>
-                <div class="press-list">
-                    <a href="#press"><span class="press-list-category">PRESS</span><strong>보도자료 제목을 입력해 주세요.</strong><span class="press-list-date">게시일 입력</span><b>↗</b></a>
-                    <a href="#press"><span class="press-list-category">PRESS</span><strong>보도자료 제목을 입력해 주세요.</strong><span class="press-list-date">게시일 입력</span><b>↗</b></a>
-                    <a href="#press"><span class="press-list-category">PRESS</span><strong>보도자료 제목을 입력해 주세요.</strong><span class="press-list-date">게시일 입력</span><b>↗</b></a>
+                </article>
+
+                <div class="press-list" aria-label="보도자료 목록">
+                    <a href="#press"><span class="press-list-category">PRESS</span><strong>보도자료 제목을 입력해 주세요.</strong><time datetime="">게시일 입력</time><b aria-hidden="true">↗</b></a>
+                    <a href="#press"><span class="press-list-category">PRESS</span><strong>보도자료 제목을 입력해 주세요.</strong><time datetime="">게시일 입력</time><b aria-hidden="true">↗</b></a>
+                    <a href="#press"><span class="press-list-category">PRESS</span><strong>보도자료 제목을 입력해 주세요.</strong><time datetime="">게시일 입력</time><b aria-hidden="true">↗</b></a>
                 </div>
             </div>
         </section>
 
-        <section class="notice-section" id="notice">
+        <section class="notice-section" id="notice" aria-labelledby="notice-title">
             <div class="section-inner notice-inner">
                 <div class="news-section-heading">
-                    <div><p class="news-section-eyebrow">NOTICE</p><h2>공지사항</h2></div>
-                    <p>서비스 및 기업 관련 주요 안내를<br>확인할 수 있는 공간입니다.</p>
+                    <div>
+                        <p class="news-section-eyebrow">NOTICE</p>
+                        <h2 id="notice-title">공지사항</h2>
+                    </div>
+                    <p>한국콜마의 주요 안내와<br>공지 내용을 확인할 수 있습니다.</p>
                 </div>
                 <div class="notice-panel">
                     <div class="notice-panel-heading"><span>NOTICE</span><span>게시일</span></div>
-                    <a href="#notice"><strong>공지사항 제목을 입력해 주세요.</strong><span>게시일 입력</span><b>↗</b></a>
-                    <a href="#notice"><strong>공지사항 제목을 입력해 주세요.</strong><span>게시일 입력</span><b>↗</b></a>
-                    <a href="#notice"><strong>공지사항 제목을 입력해 주세요.</strong><span>게시일 입력</span><b>↗</b></a>
-                    <a href="#notice"><strong>공지사항 제목을 입력해 주세요.</strong><span>게시일 입력</span><b>↗</b></a>
+                    <a href="#notice"><strong>공지사항 제목을 입력해 주세요.</strong><time datetime="">게시일 입력</time><b aria-hidden="true">↗</b></a>
+                    <a href="#notice"><strong>공지사항 제목을 입력해 주세요.</strong><time datetime="">게시일 입력</time><b aria-hidden="true">↗</b></a>
+                    <a href="#notice"><strong>공지사항 제목을 입력해 주세요.</strong><time datetime="">게시일 입력</time><b aria-hidden="true">↗</b></a>
+                    <a href="#notice"><strong>공지사항 제목을 입력해 주세요.</strong><time datetime="">게시일 입력</time><b aria-hidden="true">↗</b></a>
                 </div>
             </div>
         </section>
