@@ -311,14 +311,15 @@
     }
 }
 
-/* NEWS PAGE: place the hero image box physically lower in the hero area. */
+/* NEWS PAGE: anchor the image box near the bottom of the taller hero. */
 .news-hero {
     min-height: 1000px;
 }
 
 .news-hero-image {
-    top: calc(50% + 335px);
-    transform: translateY(-50%);
+    top: auto;
+    bottom: 60px;
+    transform: none;
 }
 
 .news-category-nav {
@@ -353,7 +354,9 @@
     }
 
     .news-hero-image {
-        top: calc(50% + 285px);
+        top: auto;
+        bottom: 45px;
+        transform: none;
     }
 }
 
