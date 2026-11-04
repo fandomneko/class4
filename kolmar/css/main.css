@@ -322,47 +322,46 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     .mega-menu-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-/* 메인 페이지 각 섹션의 세로 길이를 기존보다 20px씩 확장 */
+/* 메인 페이지 각 섹션의 세로 길이를 기존보다 50px씩 확장 */
 .hero-sec .visual {
-    height: calc(min(760px, 66vw) + 20px);
-    min-height: 520px;
+    height: calc(min(760px, 66vw) + 50px);
+    min-height: 550px;
 }
 
 .rnd-section {
-    padding-top: 86px;
-    padding-bottom: 86px;
+    padding-top: 101px;
+    padding-bottom: 101px;
 }
 
 .company-section {
-    min-height: 944px;
+    min-height: 974px;
 }
 
 .company-card {
-    min-height: 944px;
+    min-height: 974px;
 }
 
 .esg-section {
-    padding-top: 88px;
-    padding-bottom: 100px;
+    padding-top: 103px;
+    padding-bottom: 115px;
 }
 
 .news-section {
-    padding-top: 100px;
-    padding-bottom: 110px;
+    padding-top: 115px;
+    padding-bottom: 125px;
 }
 
 .ir-section {
-    padding-top: 90px;
-    padding-bottom: 80px;
+    padding-top: 105px;
+    padding-bottom: 95px;
 }
 
 @media (max-width: 900px) {
     .company-section {
-        min-height: 713px;
+        min-height: 743px;
     }
 
     .company-card {
-        min-height: 713px;
+        min-height: 743px;
     }
 }
-
