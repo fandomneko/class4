@@ -239,3 +239,57 @@
 @media (prefers-reduced-motion: reduce) {
     .esg-pillars a, .esg-detail-link { transition: none; }
 }
+
+/* ESG CATEGORY NAV — 메인 페이지의 블루 계열과 서브페이지 탐색 패턴 */
+.esg-category-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #dce8f5;
+    background: #f4f8fd;
+    box-shadow: 0 5px 18px rgba(16, 28, 58, .06);
+}
+.esg-category-inner {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.esg-category-inner a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 68px;
+    padding: 0 22px;
+    border-right: 1px solid #dce8f5;
+    color: var(--navy-esg-text);
+    font-size: 16px;
+    font-weight: 600;
+    transition: color .2s ease, background .2s ease;
+}
+.esg-category-inner a:first-child { border-left: 1px solid #dce8f5; }
+.esg-category-inner a span { color: var(--blue-arrow-ir); }
+.esg-category-inner a:hover,
+.esg-category-inner a.is-current {
+    color: var(--brand-blue);
+    background: #e5f1ff;
+}
+.esg-category-inner a:focus-visible {
+    outline: 2px solid var(--blue-strong);
+    outline-offset: -4px;
+}
+#esg-management, #environment, #ethics, #social { scroll-margin-top: 82px; }
+@media (max-width: 900px) {
+    .esg-category-inner a { padding: 0 14px; font-size: 15px; }
+}
+@media (max-width: 600px) {
+    .esg-category-inner a {
+        justify-content: center;
+        min-height: 58px;
+        padding: 0 6px;
+        font-size: 13px;
+        text-align: center;
+    }
+    .esg-category-inner a span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .esg-category-inner a { transition: none; }
+}
