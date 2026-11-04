@@ -507,7 +507,7 @@
 }
 
 .news-hero-image {
-    top: calc(50% + 48px);
+    top: calc(50% - 22px);
     transform: translateY(-50%);
 }
 
@@ -550,7 +550,7 @@
     }
 
     .news-hero-image {
-        top: calc(50% + 32px);
+        top: calc(50% - 38px);
         right: 30px;
         width: 36%;
         max-height: 250px;
