@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             links: [['연구소 소개', 'rnd.html#lab'], ['연구분야', 'rnd.html#fields'], ['기술 경쟁력', 'rnd.html#technology']]
         },
         {
-            title: '회사소개',
+            title: '회사',
             links: [['회사개요', '#overview'], ['CEO 인사말', '#greeting'], ['연혁', '#history'], ['경영철학', '#philosophy']]
         },
         {
@@ -76,4 +76,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     megaMenuLinks.addEventListener('click', closeMegaMenu);
+
+    const categoryLinks = [...document.querySelectorAll('.company-category-inner a')];
+    const categorySections = ['overview', 'greeting', 'history', 'philosophy']
+        .map(id => document.getElementById(id));
+
+    function updateCurrentCategory() {
+        let currentIndex = 0;
+        categorySections.forEach((section, index) => {
+            if (section && section.getBoundingClientRect().top <= 180) currentIndex = index;
+        });
+        categoryLinks.forEach((link, index) => {
+            const isCurrent = index === currentIndex;
+            link.classList.toggle('is-current', isCurrent);
+            if (isCurrent) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+    }
+
+    window.addEventListener('scroll', updateCurrentCategory, { passive: true });
+    window.addEventListener('resize', updateCurrentCategory);
+    updateCurrentCategory();
 });
