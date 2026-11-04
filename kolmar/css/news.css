@@ -311,9 +311,13 @@
     }
 }
 
-/* NEWS PAGE: lower the hero image and blend the category bar into the navy palette. */
+/* NEWS PAGE: move the hero image clearly lower and blend the category bar into the navy palette. */
+.news-hero {
+    min-height: 700px;
+}
+
 .news-hero-image {
-    top: calc(50% + 54px);
+    top: calc(50% + 105px);
     transform: translateY(-50%);
 }
 
@@ -344,8 +348,12 @@
 }
 
 @media (max-width: 900px) {
+    .news-hero {
+        min-height: 620px;
+    }
+
     .news-hero-image {
-        top: calc(50% + 34px);
+        top: calc(50% + 70px);
     }
 }
 
