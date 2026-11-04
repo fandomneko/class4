@@ -34,6 +34,7 @@
 .news-hero-link span { color: var(--blue-mid); }
 .news-hero-image {
     position: absolute; top: 50%; right: max(30px, calc((100vw - 1540px) / 2));
+    top: 70px;
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     width: min(39%, 560px); height: 310px; transform: translateY(-42%);
     border: 1px solid rgba(255,255,255,.2); border-radius: 18px;
