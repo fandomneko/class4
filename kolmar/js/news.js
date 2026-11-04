@@ -32,12 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
         siteHeader.classList.add('is-menu-open');
         megaMenu.setAttribute('aria-hidden', 'false');
         menuButton.setAttribute('aria-expanded', 'true');
+        menuButton.setAttribute('aria-label', '전체 메뉴 닫기');
     }
 
     function closeMegaMenu() {
         siteHeader.classList.remove('is-menu-open');
         megaMenu.setAttribute('aria-hidden', 'true');
         menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', '전체 메뉴 열기');
         gnb.querySelectorAll('a').forEach(link => link.classList.remove('is-active'));
     }
 
@@ -46,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('focus', () => openMegaMenu(index));
     });
 
-    siteHeader.addEventListener('mouseleave', closeMegaMenu);
+    siteHeader.addEventListener('mouseleave', () => {
+        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) closeMegaMenu();
+    });
     siteHeader.addEventListener('focusout', event => {
         if (!siteHeader.contains(event.relatedTarget)) closeMegaMenu();
     });
@@ -55,32 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (siteHeader.classList.contains('is-menu-open')) closeMegaMenu();
         else openMegaMenu(4);
     });
-
     megaMenuLinks.addEventListener('click', closeMegaMenu);
 
-    // 현재 보고 있는 소식 섹션을 카테고리 메뉴와 스크린리더에 함께 전달합니다.
     const categoryLinks = [...document.querySelectorAll('.news-category-inner a')];
-    const sections = ['kolmar-news', 'press', 'notice']
-        .map(id => document.getElementById(id));
+    const sections = ['kolmar-news', 'press', 'notice'].map(id => document.getElementById(id));
 
     function updateCurrentCategory() {
         let currentIndex = 0;
-
         sections.forEach((section, index) => {
-            if (section && section.getBoundingClientRect().top <= 180) {
-                currentIndex = index;
-            }
+            if (section && section.getBoundingClientRect().top <= 180) currentIndex = index;
         });
-
         categoryLinks.forEach((link, index) => {
             const isCurrent = index === currentIndex;
             link.classList.toggle('is-current', isCurrent);
-
-            if (isCurrent) {
-                link.setAttribute('aria-current', 'location');
-            } else {
-                link.removeAttribute('aria-current');
-            }
+            if (isCurrent) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
         });
     }
 
