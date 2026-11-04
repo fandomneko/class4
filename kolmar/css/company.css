@@ -325,3 +325,30 @@
 @media (prefers-reduced-motion: reduce) {
     .company-scroll { scroll-behavior: auto; }
 }
+
+/* COMPANY CATEGORY NAV — matches the subpage quick navigation pattern */
+.company-category-nav {
+    position: sticky; top: 0; z-index: 10;
+    border-bottom: 1px solid #dce8f5; background: #f4f8fd;
+    box-shadow: 0 5px 18px rgba(16,28,58,.06);
+}
+.company-category-inner { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.company-category-inner a {
+    display: flex; align-items: center; justify-content: space-between;
+    min-height: 68px; padding: 0 22px; border-right: 1px solid #dce8f5;
+    color: var(--navy-esg-text); font-size: 16px; font-weight: 600;
+    transition: color .2s ease, background .2s ease;
+}
+.company-category-inner a:first-child { border-left: 1px solid #dce8f5; }
+.company-category-inner a span { color: var(--blue-arrow-ir); }
+.company-category-inner a:hover, .company-category-inner a.is-current {
+    color: var(--brand-blue); background: #e5f1ff;
+}
+.company-category-inner a:focus-visible { outline: 2px solid var(--blue-strong); outline-offset: -4px; }
+#overview, #greeting, #history, #philosophy { scroll-margin-top: 82px; }
+@media (max-width: 900px) { .company-category-inner a { padding: 0 14px; font-size: 15px; } }
+@media (max-width: 600px) {
+    .company-category-inner a { justify-content: center; min-height: 58px; padding: 0 6px; font-size: 13px; text-align: center; }
+    .company-category-inner a span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .company-category-inner a { transition: none; } }
