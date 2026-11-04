@@ -318,7 +318,7 @@
 
 .news-hero-image {
     /* Move the image box down by roughly one headline line. */
-    top: calc(50% + 185px);
+    top: calc(50% + 335px);
     transform: translateY(-50%);
 }
 
@@ -354,7 +354,7 @@
     }
 
     .news-hero-image {
-        top: calc(50% + 135px);
+        top: calc(50% + 285px);
     }
 }
 
