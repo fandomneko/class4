@@ -311,13 +311,12 @@
     }
 }
 
-/* NEWS PAGE: move the hero image clearly lower and blend the category bar into the navy palette. */
+/* NEWS PAGE: place the hero image box physically lower in the hero area. */
 .news-hero {
-    min-height: 700px;
+    min-height: 1000px;
 }
 
 .news-hero-image {
-    /* Move the image box down by roughly one headline line. */
     top: calc(50% + 335px);
     transform: translateY(-50%);
 }
@@ -350,7 +349,7 @@
 
 @media (max-width: 900px) {
     .news-hero {
-        min-height: 620px;
+        min-height: 850px;
     }
 
     .news-hero-image {
