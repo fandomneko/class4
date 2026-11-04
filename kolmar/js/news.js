@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const megaMenuLinks = document.getElementById('megaMenuLinks');
 
     const menuContents = [
-        { title: '사업 서비스', links: [['사업소개','business.html'],['ODM','business.html'],['사업장','business.html'],['사업문의','business.html'],['견적문의','business.html']] },
-        { title: 'R&D', links: [['연구소 소개','rnd.html#lab'],['연구분야','rnd.html#fields'],['기술 경쟁력','rnd.html#technology']] },
-        { title: '회사소개', links: [['회사개요','company.html#overview'],['CEO 인사말','company.html#greeting'],['연혁','company.html#history'],['경영철학','company.html#philosophy']] },
-        { title: 'ESG', links: [['ESG 경영','esg.html#esg-management'],['환경경영','esg.html#environment'],['윤리경영','esg.html#ethics'],['사회공헌','esg.html#social']] },
-        { title: '소식', links: [['콜마소식','#kolmar-news'],['보도자료','#press'],['공지사항','#notice']] },
-        { title: 'IR', links: [['IR자료','ir.html#ir-data'],['재무정보','ir.html#financial'],['공시정보','ir.html#disclosure']] }
+        { title: '사업 서비스', links: [['사업소개', 'business.html'], ['ODM', 'business.html'], ['사업장', 'business.html'], ['사업문의', 'business.html'], ['견적문의', 'business.html']] },
+        { title: 'R&D', links: [['연구소 소개', 'rnd.html#lab'], ['연구분야', 'rnd.html#fields'], ['기술 경쟁력', 'rnd.html#technology']] },
+        { title: '회사소개', links: [['회사개요', 'company.html#overview'], ['CEO 인사말', 'company.html#greeting'], ['연혁', 'company.html#history'], ['경영철학', 'company.html#philosophy']] },
+        { title: 'ESG', links: [['ESG 경영', 'esg.html#esg-management'], ['환경경영', 'esg.html#environment'], ['윤리경영', 'esg.html#ethics'], ['사회공헌', 'esg.html#social']] },
+        { title: '소식', links: [['콜마소식', '#kolmar-news'], ['보도자료', '#press'], ['공지사항', '#notice']] },
+        { title: 'IR', links: [['IR자료', 'ir.html#ir-data'], ['재무정보', 'ir.html#financial'], ['공시정보', 'ir.html#disclosure']] }
     ];
 
     function renderMegaMenu(index) {
@@ -22,7 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
             '<a href="' + href + '">' + label + '</a>'
         ).join('');
         megaMenuLinks.setAttribute('aria-label', item.title + ' 하위 메뉴');
-        gnb.querySelectorAll('a').forEach((link, i) => link.classList.toggle('is-active', i === index));
+        gnb.querySelectorAll('a').forEach((link, i) => {
+            link.classList.toggle('is-active', i === index);
+        });
     }
 
     function openMegaMenu(index = 4) {
@@ -56,15 +58,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     megaMenuLinks.addEventListener('click', closeMegaMenu);
 
-    const categoryLinks = document.querySelectorAll('.news-category-inner a');
-    const sections = ['kolmar-news', 'press', 'notice'].map(id => document.getElementById(id));
-    const updateCurrentCategory = () => {
+    // 현재 보고 있는 소식 섹션을 카테고리 메뉴와 스크린리더에 함께 전달합니다.
+    const categoryLinks = [...document.querySelectorAll('.news-category-inner a')];
+    const sections = ['kolmar-news', 'press', 'notice']
+        .map(id => document.getElementById(id));
+
+    function updateCurrentCategory() {
         let currentIndex = 0;
+
         sections.forEach((section, index) => {
-            if (section && section.getBoundingClientRect().top <= 180) currentIndex = index;
+            if (section && section.getBoundingClientRect().top <= 180) {
+                currentIndex = index;
+            }
         });
-        categoryLinks.forEach((link, index) => link.classList.toggle('is-current', index === currentIndex));
-    };
+
+        categoryLinks.forEach((link, index) => {
+            const isCurrent = index === currentIndex;
+            link.classList.toggle('is-current', isCurrent);
+
+            if (isCurrent) {
+                link.setAttribute('aria-current', 'location');
+            } else {
+                link.removeAttribute('aria-current');
+            }
+        });
+    }
+
     window.addEventListener('scroll', updateCurrentCategory, { passive: true });
+    window.addEventListener('resize', updateCurrentCategory);
     updateCurrentCategory();
 });
