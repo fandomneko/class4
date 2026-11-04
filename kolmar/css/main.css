@@ -321,3 +321,47 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 @media (max-width: 600px) {
     .mega-menu-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* 메인 페이지 각 섹션의 세로 길이를 기존보다 20px씩 확장 */
+.hero-sec .visual {
+    height: calc(min(760px, 66vw) + 20px);
+}
+
+.rnd-section {
+    padding-top: 86px;
+    padding-bottom: 86px;
+}
+
+.company-section {
+    min-height: 944px;
+}
+
+.company-card {
+    min-height: 944px;
+}
+
+.esg-section {
+    padding-top: 88px;
+    padding-bottom: 100px;
+}
+
+.news-section {
+    padding-top: 100px;
+    padding-bottom: 110px;
+}
+
+.ir-section {
+    padding-top: 90px;
+    padding-bottom: 80px;
+}
+
+@media (max-width: 900px) {
+    .company-section {
+        min-height: 713px;
+    }
+
+    .company-card {
+        min-height: 713px;
+    }
+}
+
