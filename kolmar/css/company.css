@@ -22,7 +22,7 @@
 .company-kicker {
     margin-bottom: 18px;
     color: var(--blue-light);
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: .12em;
 }
@@ -47,7 +47,7 @@
     align-items: center;
     gap: 12px;
     color: var(--color-white);
-    font-size: 11px;
+    font-size: 16px;
     letter-spacing: .14em;
 }
 .company-scroll span { width: 34px; height: 1px; background: var(--color-white); }
@@ -65,8 +65,8 @@
     color: var(--brand-navy);
     text-align: center;
 }
-.company-image-placeholder > span { font-size: 13px; font-weight: 700; letter-spacing: .12em; }
-.company-image-placeholder > small { color: var(--gray-text); font-size: 12px; }
+.company-image-placeholder > span { font-size: 16px; font-weight: 700; letter-spacing: .12em; }
+.company-image-placeholder > small { color: var(--gray-text); font-size: 16px; }
 .menu-placeholder {
     height: 220px;
     border-color: rgba(255,255,255,.4);
@@ -84,7 +84,7 @@
 }
 .company-eyebrow {
     color: var(--brand-blue);
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: .12em;
 }
@@ -115,7 +115,7 @@
 .overview-copy { padding: 20px 0; }
 .overview-label {
     color: var(--brand-blue);
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: .12em;
 }
@@ -146,7 +146,7 @@
     gap: 20px;
     padding: 15px 4px;
     border-bottom: 1px solid var(--blue-line);
-    font-size: 14px;
+    font-size: 16px;
 }
 .overview-data span { color: var(--gray-text); }
 .overview-data strong { color: var(--navy-esg-text); font-weight: 600; text-align: right; }
@@ -198,7 +198,7 @@
     padding-top: 22px;
     border-top: 1px solid rgba(16,36,58,.2);
     color: var(--navy-esg-text);
-    font-size: 14px;
+    font-size: 16px;
 }
 .ceo-signature strong { font-weight: 500; }
 .ceo-signature b { margin-left: 8px; font-size: 18px; font-weight: 700; }
@@ -212,7 +212,7 @@
     margin: 0 0 30px;
 }
 .history-intro h3 { color: var(--brand-navy); font-size: 24px; font-weight: 700; }
-.history-intro p { color: var(--gray-text); font-size: 14px; }
+.history-intro p { color: var(--gray-text); font-size: 16px; }
 .history-timeline {
     position: relative;
     display: grid;
@@ -244,12 +244,12 @@
     display: block;
     margin-bottom: 14px;
     color: var(--brand-blue);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: .04em;
 }
 .history-item h3 { margin-bottom: 9px; color: var(--brand-navy); font-size: 18px; font-weight: 700; }
-.history-item p { color: var(--gray-text); font-size: 14px; line-height: 1.65; word-break: keep-all; }
+.history-item p { color: var(--gray-text); font-size: 16px; line-height: 1.65; word-break: keep-all; }
 
 .philosophy-section { padding: 90px 0 100px; background: var(--navy-news); color: var(--color-white); }
 .philosophy-heading { margin-bottom: 34px; }
@@ -282,12 +282,12 @@
 }
 .philosophy-card > span {
     color: var(--news-tag-glass);
-    font-size: 11px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: .1em;
 }
 .philosophy-card h3 { margin: 18px 0 10px; font-size: 22px; font-weight: 700; }
-.philosophy-card p { color: var(--news-desc); font-size: 14px; line-height: 1.65; word-break: keep-all; }
+.philosophy-card p { color: var(--news-desc); font-size: 16px; line-height: 1.65; word-break: keep-all; }
 
 .gnb a[aria-current="page"] { opacity: 1; }
 .gnb a[aria-current="page"]::after { transform: scaleX(1); }
@@ -346,9 +346,9 @@
 }
 .company-category-inner a:focus-visible { outline: 2px solid var(--blue-strong); outline-offset: -4px; }
 #overview, #greeting, #history, #philosophy { scroll-margin-top: 82px; }
-@media (max-width: 900px) { .company-category-inner a { padding: 0 14px; font-size: 15px; } }
+@media (max-width: 900px) { .company-category-inner a { padding: 0 14px; font-size: 16px; } }
 @media (max-width: 600px) {
-    .company-category-inner a { justify-content: center; min-height: 58px; padding: 0 6px; font-size: 13px; text-align: center; }
+    .company-category-inner a { justify-content: center; min-height: 58px; padding: 0 6px; font-size: 16px; text-align: center; }
     .company-category-inner a span { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .company-category-inner a { transition: none; } }
