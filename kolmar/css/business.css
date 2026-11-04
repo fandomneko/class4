@@ -176,6 +176,11 @@
 .process-card h3 { margin: 18px 0 8px; font-size: 20px; font-weight: 700; }
 .process-card p { color: var(--gray-text); font-size: 14px; line-height: 1.6; word-break: keep-all; }
 .process-controls { display: flex; align-items: center; justify-content: flex-end; gap: 12px; margin-top: 22px; }
+
+/* PC에서는 전체 단계가 한 화면에 보여 화살표 버튼을 숨기고, 모바일에서는 유지합니다. */
+@media (min-width: 901px) {
+    .process-controls button { display: none; }
+}
 .process-controls button {
     display: grid;
     place-items: center;
