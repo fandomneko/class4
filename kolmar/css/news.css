@@ -452,3 +452,44 @@
         background: #eaf3fb;
     }
 }
+
+/* NEWS PAGE FINISHING: navigation, responsive header and shared footer */
+#kolmar-news,
+#press,
+#notice {
+    scroll-margin-top: 84px;
+}
+
+@media (max-width: 900px) {
+    .header {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    .gnb {
+        display: none;
+    }
+
+    .header_util {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-inner {
+        flex-wrap: wrap;
+        gap: 18px 24px;
+        padding-top: 24px;
+        padding-bottom: 26px;
+    }
+
+    .footer-info {
+        order: 3;
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .footer-sns {
+        margin-left: auto;
+    }
+}
