@@ -325,6 +325,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 /* 메인 페이지 각 섹션의 세로 길이를 기존보다 20px씩 확장 */
 .hero-sec .visual {
     height: calc(min(760px, 66vw) + 20px);
+    min-height: 520px;
 }
 
 .rnd-section {
