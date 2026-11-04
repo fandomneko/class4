@@ -155,7 +155,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 .rnd-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .rnd-card { min-width: 0; padding: 20px; border: 1px solid rgba(255,255,255,.24); border-radius: 13px; background: rgba(255, 255, 255, .24); color: var(--color-white); }
-.rnd-visual { height: 200px; margin-bottom: 12px; border-radius: 8px; overflow: hidden; }
+.rnd-visual { height: 400px; margin-bottom: 12px; border-radius: 8px; overflow: hidden; }
 .rnd-card h3 { margin-bottom: 7px; font-size: 18px; }
 .rnd-card p { font-size: 16px; line-height: 1.55; opacity: .9; }
 
@@ -329,8 +329,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 
 .rnd-section {
-    padding-top: 401px;
-    padding-bottom: 401px;
+    padding-top: 301px;
+    padding-bottom: 301px;
 }
 
 .company-section {
