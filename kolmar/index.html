@@ -10,12 +10,6 @@
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/business.css">
-    <link rel="stylesheet" href="css/ir.css?v=20261103-4">
-    <link rel="stylesheet" href="css/esg.css?v=20261103-1">
-    <link rel="stylesheet" href="css/company.css?v=20261103-1">
-    <link rel="stylesheet" href="css/news.css?v=20261104-2">
-    <link rel="stylesheet" href="css/rnd.css?v=20261103-4">
 
     <script src="../npm/swiper/swiper-bundle.min.js"></script>
 </head>
@@ -26,12 +20,12 @@
             <h1 class="logo"><a href="#home">HK Kolmar</a></h1>
 
             <nav class="gnb" id="gnb" aria-label="주 메뉴">
-                <a href="#business-page">사업</a>
-                <a href="#rnd-page">R&amp;D</a>
-                <a href="#company-page">회사소개</a>
-                <a href="#esg-page">ESG</a>
-                <a href="#news-page">소식</a>
-                <a href="#ir-page">IR</a>
+                <a href="business.html">사업</a>
+                <a href="rnd.html">R&amp;D</a>
+                <a href="#company">회사소개</a>
+                <a href="#esg">ESG</a>
+                <a href="news.html">소식</a>
+                <a href="ir.html">IR</a>
             </nav>
 
             <div class="header_util">
@@ -45,11 +39,11 @@
                 <div class="mega-menu-inner">
                     <h2 class="mega-menu-title" id="megaMenuTitle">사업 서비스</h2>
                     <nav class="mega-menu-links" id="megaMenuLinks" aria-label="사업 하위 메뉴">
-                        <a href="#rnd-page">사업소개</a>
-                        <a href="#rnd-page">ODM</a>
-                        <a href="#rnd-page">사업장</a>
-                        <a href="#rnd-page">사업문의</a>
-                        <a href="#rnd-page">견적문의</a>
+                        <a href="#rnd">사업소개</a>
+                        <a href="#rnd">ODM</a>
+                        <a href="#rnd">사업장</a>
+                        <a href="#rnd">사업문의</a>
+                        <a href="#rnd">견적문의</a>
                     </nav>
                     <div class="mega-menu-visual">
                         <img id="megaMenuImage" src="img/company1.jpg" alt="한국콜마 사업 소개">
@@ -59,7 +53,8 @@
         </header>
 
         <main>
-        <section class="hero-sec" id="home">
+            <!-- HERO -->
+            <section class="hero-sec" id="home">
                 <div class="swiper visual">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide hero-slide hero-slide01">
@@ -74,760 +69,198 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </section>
-        
-        <!-- BUSINESS PAGE CONTENT -->
-        <section id="business-page" class="business-hero" aria-labelledby="business-title">
-            <div class="business-hero-image business-image-placeholder">
-                <span>HERO IMAGE AREA</span>
-                <small>추후 사업 관련 이미지 삽입</small>
-            </div>
-            <div class="business-hero-shade"></div>
-            <div class="section-inner business-hero-copy">
-                <p class="business-kicker">BUSINESS</p>
-                <h2 id="business-title">사업</h2>
-                <p>아이디어에서 제품의 완성까지,<br>고객의 가능성을 함께 실현합니다.</p>
-            </div>
-            <a class="hero-scroll" href="#omd" aria-label="OMD 영역으로 이동"><span></span>SCROLL</a>
-        </section>
 
-        <section class="omd-section" id="omd">
-            <div class="section-inner">
-                <div class="business-section-heading">
-                    <div>
-                        <p class="section-eyebrow">ONE-STOP DEVELOPMENT</p>
-                        <h2>OMD</h2>
+            <!-- R&D -->
+            <section class="rnd-section" id="rnd">
+                <div class="section-inner rnd-inner">
+                    <div class="section-intro">
+                        <h2>R&amp;D</h2>
+                        <p>World-first-class R&amp;D 제조 전문 기업으로<br>도약하기 위해 끊임없이 신기술 개발에 도전합니다.</p>
+                        <div class="rnd-controls">
+                            <button type="button" class="rnd-prev" aria-label="이전"><span class="material-symbols-outlined">chevron_left</span></button>
+                            <button type="button" class="rnd-next" aria-label="다음"><span class="material-symbols-outlined">chevron_right</span></button>
+                        </div>
                     </div>
-                    <p class="heading-description">고객의 아이디어를 구체적인 제품으로 연결하는<br>한국콜마의 사업 방향을 소개합니다.</p>
-                </div>
-
-                <div class="omd-feature">
-                    <div class="omd-visual business-image-placeholder">
-                        <span>OMD IMAGE AREA</span>
-                        <small>제품 개발·생산 관련 이미지 삽입</small>
-                    </div>
-                    <div class="omd-copy">
-                        <span class="omd-number">01 / OMD</span>
-                        <h3>기획부터 생산까지<br>하나의 흐름으로</h3>
-                        <p>고객의 아이디어와 시장의 요구를 바탕으로 제품 개발 과정을 연결합니다. 기획 의도와 제품 방향을 충분히 이해하고, 각 단계가 유기적으로 이어지도록 협력하는 과정을 보여주는 영역입니다.</p>
-                        <a class="text-link" href="#business-intro">사업소개 보기 <span>→</span></a>
-                    </div>
-                </div>
-
-                <div class="omd-process swiper" aria-label="OMD 진행 과정">
-                    <div class="swiper-wrapper">
-                        <article class="swiper-slide process-card">
-                            <span>STEP 01</span><h3>상담 및 기획</h3><p>고객의 요구와 제품 방향을 확인합니다.</p>
-                        </article>
-                        <article class="swiper-slide process-card">
-                            <span>STEP 02</span><h3>연구 및 개발</h3><p>제품 콘셉트에 맞는 개발 방향을 구체화합니다.</p>
-                        </article>
-                        <article class="swiper-slide process-card">
-                            <span>STEP 03</span><h3>생산 및 품질</h3><p>제품 생산과 품질 관리 과정을 연결합니다.</p>
-                        </article>
-                        <article class="swiper-slide process-card">
-                            <span>STEP 04</span><h3>제품 완성</h3><p>고객이 원하는 제품의 완성을 함께합니다.</p>
-                        </article>
-                    </div>
-                    <div class="process-controls">
-                        <button class="process-prev" type="button" aria-label="이전 단계"><span class="material-symbols-outlined">chevron_left</span></button>
-                        <div class="process-pagination"></div>
-                        <button class="process-next" type="button" aria-label="다음 단계"><span class="material-symbols-outlined">chevron_right</span></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="business-intro-section" id="business-intro">
-            <div class="section-inner">
-                <div class="business-section-heading">
-                    <div>
-                        <p class="section-eyebrow">BUSINESS INTRODUCTION</p>
-                        <h2>사업소개</h2>
-                    </div>
-                    <p class="heading-description">다양한 고객의 목표와 제품 특성에 맞춰<br>사업 영역과 서비스를 살펴볼 수 있습니다.</p>
-                </div>
-                <div class="intro-grid">
-                    <div class="intro-image business-image-placeholder">
-                        <span>BUSINESS INTRO IMAGE</span>
-                        <small>사업 분야를 보여주는 이미지 삽입</small>
-                    </div>
-                    <div class="intro-content">
-                        <span class="intro-index">BUSINESS / 01</span>
-                        <h3>고객의 브랜드와<br>함께 만드는 제품</h3>
-                        <p>제품을 기획하는 단계부터 개발과 생산에 이르기까지, 사업에 대한 이해와 전문성을 바탕으로 고객과 협력합니다. 이 영역에는 실제 사업 분야별 설명과 대표 제품·서비스 정보를 추가할 수 있습니다.</p>
-                        <div class="intro-keywords">
-                            <span>PRODUCT</span><span>DEVELOPMENT</span><span>PARTNERSHIP</span>
+                    <div class="rnd-content">
+                        <div class="rnd-tabs-wrap">
+                            <div class="rnd-tabs">
+                                <button type="button" class="active">화장품</button>
+                                <button type="button">제약·바이오</button>
+                                <button type="button">건강기능식품</button>
+                            </div>
+                        </div>
+                        <div class="rnd-cards">
+                            <article class="rnd-card rnd-card01">
+                                <div class="rnd-visual"><img src="img/rnd.gif" alt="스킨케어 연구소"></div>
+                                <h3>스킨케어 연구소</h3>
+                                <p>피부 과학을 바탕으로 새로운 소재와 제형을 연구하며 더 나은 아름다움을 제안합니다.</p>
+                            </article>
+                            <article class="rnd-card rnd-card02">
+                                <div class="rnd-visual"><img src="img/rnd1.gif" alt="항균·품질 연구"></div>
+                                <h3>항균·품질 연구</h3>
+                                <p>엄격한 품질 기준과 전문 연구 역량으로 제품의 안전성과 신뢰도를 높입니다.</p>
+                            </article>
+                            <article class="rnd-card rnd-card03">
+                                <div class="rnd-visual"><img src="img/rnd2.jpg" alt="Ur Lab"></div>
+                                <h3>Ur Lab</h3>
+                                <p>다양한 연구 분야의 협업을 통해 고객의 아이디어를 혁신적인 제품으로 완성합니다.</p>
+                            </article>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="locations-section" id="locations">
-            <div class="section-inner">
-                <div class="business-section-heading">
+            <!-- COMPANY -->
+            <section class="company-section" id="company">
+                <a class="company-card company-card01" href="#company">
                     <div>
-                        <p class="section-eyebrow">OUR LOCATIONS</p>
-                        <h2>사업장</h2>
+                        <h2>인사말</h2>
+                        <p>더 나은 내일을 만드는 한국콜마의 약속</p>
                     </div>
-                    <p class="heading-description">사업장 정보를 확인하고<br>관련 위치와 시설을 살펴보세요.</p>
-                </div>
-                <div class="location-grid">
-                    <article class="location-card">
-                        <div class="location-image business-image-placeholder"><span>LOCATION IMAGE 01</span><small>사업장 이미지 삽입</small></div>
-                        <div class="location-info"><span>LOCATION 01</span><h3>사업장 안내</h3><p>사업장별 명칭과 주소, 주요 역할을 입력해 주세요.</p><a href="#contact" class="text-link">관련 문의 <span>→</span></a></div>
-                    </article>
-                    <article class="location-card">
-                        <div class="location-image business-image-placeholder"><span>LOCATION IMAGE 02</span><small>사업장 이미지 삽입</small></div>
-                        <div class="location-info"><span>LOCATION 02</span><h3>사업장 안내</h3><p>사업장별 명칭과 주소, 주요 역할을 입력해 주세요.</p><a href="#contact" class="text-link">관련 문의 <span>→</span></a></div>
-                    </article>
-                    <article class="location-card">
-                        <div class="location-image business-image-placeholder"><span>LOCATION IMAGE 03</span><small>사업장 이미지 삽입</small></div>
-                        <div class="location-info"><span>LOCATION 03</span><h3>사업장 안내</h3><p>사업장별 명칭과 주소, 주요 역할을 입력해 주세요.</p><a href="#contact" class="text-link">관련 문의 <span>→</span></a></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-section" id="contact">
-            <div class="section-inner contact-inner">
-                <div class="contact-copy">
-                    <p class="section-eyebrow">CONTACT</p>
-                    <h2>사업문의</h2>
-                    <p>사업 및 협업과 관련해 궁금한 점이 있으신가요?<br>문의 내용을 남길 수 있는 채널을 안내합니다.</p>
-                </div>
-                <div class="contact-panel">
-                    <div><span>BUSINESS INQUIRY</span><h3>사업 관련 문의</h3><p>문의 담당 부서 및 연락처 정보를 이곳에 입력해 주세요.</p></div>
-                    <a href="#quote" class="contact-arrow" aria-label="견적문의로 이동">↗</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="quote-section" id="quote">
-            <div class="section-inner quote-inner">
-                <div class="quote-heading">
-                    <p class="section-eyebrow">REQUEST A QUOTE</p>
-                    <h2>견적문의</h2>
-                    <p>제품 개발 및 견적 상담에 필요한 내용을 정리해 주세요.</p>
-                </div>
-                <div class="quote-guide">
-                    <div><span>01</span><p>문의 분야와 제품 정보를 정리합니다.</p></div>
-                    <div><span>02</span><p>필요한 일정과 요청사항을 확인합니다.</p></div>
-                    <div><span>03</span><p>담당 문의 채널을 통해 상담을 진행합니다.</p></div>
-                </div>
-                <div class="quote-action">
-                    <p>견적 문의 접수 채널과 신청 양식은<br>확정된 담당 정보에 맞춰 연결해 주세요.</p>
-                    <a href="#contact" class="quote-button">문의 안내 확인 <span>→</span></a>
-                </div>
-            </div>
-        </section>
-
-        <!-- IR PAGE CONTENT -->
-        <section id="ir-page" class="ir-hero" aria-labelledby="ir-title">
-            <div class="section-inner ir-hero-inner">
-                <div class="ir-hero-copy">
-                    <p class="ir-eyebrow">KOLMAR KOREA · INVESTOR RELATIONS</p>
-                    <h2 id="ir-title">투자정보</h2>
-                    <p>한국콜마의 경영 정보와 주요 자료를<br>투명하고 명확하게 전달합니다.</p>
-                </div>
-                <div class="ir-hero-art" aria-hidden="true">
-                    <span class="ir-art-word">IR</span>
-                    <span class="ir-art-line"></span>
-                    <span class="ir-art-caption">INFORMATION<br>FOR INVESTORS</span>
-                </div>
-                <a class="ir-scroll-link" href="#ir-data"><span>SCROLL TO EXPLORE</span><b>↓</b></a>
-            </div>
-        </section>
-
-        <section class="ir-dashboard section-inner" aria-labelledby="ir-dashboard-title">
-            <div class="ir-dashboard-heading">
-                <h2 id="ir-dashboard-title">투자정보 바로가기</h2>
-                <p>한국콜마의 주요 투자정보를 원하는 항목별로 확인할 수 있습니다.</p>
-            </div>
-            <div class="ir-dashboard-grid">
-                <a class="ir-dashboard-card ir-card-financial ir-card-image" href="#financial" aria-label="재무정보 확인하기">
-                    <span class="ir-card-title">재무정보</span>
-                    <span class="ir-card-description">투자자와 이해관계자를 위한 주요 재무자료를 확인할 수 있습니다.</span>
-                    <span class="ir-card-arrow" aria-hidden="true">↗</span>
                 </a>
-                <a class="ir-dashboard-card ir-card-investors" href="#investor-info">
-                    <span class="ir-card-title">투자자 정보</span>
-                    <span class="ir-investor-number">Investor<br>Information</span>
-                    <span class="ir-card-description">주가 및 투자 관련 정보를 확인하세요.</span>
-                    <span class="ir-card-arrow" aria-hidden="true">↗</span>
+                <a class="company-card company-card02" href="#company">
+                    <div>
+                        <h2>경영철학</h2>
+                        <p>기술과 사람을 생각하는 지속 가능한 성장</p>
+                    </div>
                 </a>
-                <a class="ir-dashboard-card ir-card-disclosure ir-card-image" href="#disclosure" aria-label="공시 및 공고 확인하기">
-                    <span class="ir-card-title">공시·공고</span>
-                    <span class="ir-card-description">기업 경영과 관련된 주요 공시를 확인할 수 있습니다.</span>
-                    <span class="ir-card-arrow" aria-hidden="true">↗</span>
-                </a>
-                <a class="ir-dashboard-card ir-card-library" href="#ir-data">
-                    <span class="ir-card-title">IR 자료실</span>
-                    <span class="ir-card-description">기업의 경영현황과 재무성과를 담은 IR 자료를 확인할 수 있습니다.</span>
-                    <span class="ir-card-arrow" aria-hidden="true">↗</span>
-                </a>
-                <a class="ir-dashboard-card ir-card-governance" href="#governance">
-                    <span class="ir-card-title">지배구조평가</span>
-                    <span class="ir-card-description">지배구조평가, 이사회, 정관 등의 정보를 확인할 수 있습니다.</span>
-                    <span class="ir-card-arrow" aria-hidden="true">↗</span>
-                </a>
-            </div>
-        </section>
-
-        <nav class="ir-category-nav" aria-label="투자정보 바로가기">
-            <div class="section-inner ir-category-inner">
-                <a href="#ir-data">IR 자료실 <span>↗</span></a>
-                <a href="#financial">재무정보 <span>↗</span></a>
-                <a href="#disclosure">공시·공고 <span>↗</span></a>
-            </div>
-        </nav>
-
-        <section class="ir-content-section ir-data-section" id="ir-data">
-            <div class="section-inner">
-                <div class="ir-section-heading">
-                    <div><p class="ir-section-eyebrow">01 / IR MATERIALS</p><h2>IR 자료실</h2></div>
-                    <p>경영 현황과 투자 관련 자료를<br>한곳에서 확인할 수 있습니다.</p>
-                </div>
-                <div class="ir-list-panel">
-                    <div class="ir-list-heading"><span>자료명</span><span>바로가기</span></div>
-                    <ul class="ir-list">
-                        <li><a href="#ir-data"><span>IR 문의 담당 부서 안내</span><b>↗</b></a></li>
-                        <li><a href="#ir-data"><span>한국콜마 경영실적 자료</span><b>↗</b></a></li>
-                        <li><a href="#ir-data"><span>기업설명회 및 IR 발표자료</span><b>↗</b></a></li>
-                    </ul>
-                </div>
-                <p class="ir-content-note">※ 실제 자료 파일과 상세 링크는 확인 후 연결해 주세요.</p>
-            </div>
-        </section>
-
-        <section class="ir-content-section financial-section" id="financial">
-            <div class="section-inner">
-                <div class="ir-section-heading">
-                    <div><p class="ir-section-eyebrow">02 / FINANCIAL INFORMATION</p><h2>재무정보</h2></div>
-                    <p>기업의 재무 현황을 구성하는<br>주요 항목별 자료를 제공합니다.</p>
-                </div>
-                <div class="financial-layout">
-                    <div class="financial-intro"><span class="financial-symbol">₩</span><h3>Financial<br>Highlights</h3><p>재무 관련 공식 자료를<br>항목별로 확인해 보세요.</p></div>
-                    <div class="ir-list-panel">
-                        <div class="ir-list-heading"><span>재무 항목</span><span>자료 확인</span></div>
-                        <ul class="ir-list">
-                            <li><a href="#financial"><span>재무상태표</span><b>자료 확인 ↗</b></a></li>
-                            <li><a href="#financial"><span>손익계산서</span><b>자료 확인 ↗</b></a></li>
-                            <li><a href="#financial"><span>현금흐름표</span><b>자료 확인 ↗</b></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="ir-content-note">※ 실제 재무 수치와 보고서 파일을 확인한 뒤 각 항목의 링크를 연결해 주세요.</p>
-            </div>
-        </section>
-
-        <section class="ir-content-section investor-section" id="investor-info">
-            <div class="section-inner investor-inner">
-                <div class="ir-section-heading">
-                    <div><p class="ir-section-eyebrow">03 / INVESTOR INFORMATION</p><h2>투자자 정보</h2></div>
-                    <p>투자 판단에 필요한 정보는<br>공식 자료를 통해 확인할 수 있습니다.</p>
-                </div>
-                <div class="investor-message">
-                    <div><span>INVESTOR GUIDE</span><h3>투자에 필요한 정보를<br>정확하게 확인하세요.</h3></div>
-                    <p>최신 주가와 거래 정보는 공식 공시 및 거래소 자료를 통해 확인해 주세요.</p>
-                    <b>실시간 시세 데이터 연결 준비 중</b>
-                </div>
-            </div>
-        </section>
-
-        <section class="ir-content-section disclosure-section" id="disclosure">
-            <div class="section-inner">
-                <div class="ir-section-heading">
-                    <div><p class="ir-section-eyebrow">04 / DISCLOSURE</p><h2>공시·공고</h2></div>
-                    <p>기업 경영과 관련된 주요 내용을<br>공식 공시 자료를 통해 안내합니다.</p>
-                </div>
-                <div class="disclosure-content">
-                    <div class="disclosure-copy">
-                        <span class="ir-document-label">OFFICIAL INFORMATION</span>
-                        <h3>투명한 정보 공개</h3>
-                        <p>주요 경영 공시와 정기 보고서 등 기업의 공식 정보를 확인할 수 있습니다.</p>
-                    </div>
-                    <div class="disclosure-graphic" aria-hidden="true"><span>DISCLOSURE</span><i></i><i></i><i></i></div>
-                </div>
-                <div class="ir-list-panel disclosure-list">
-                    <div class="ir-list-heading"><span>공시 항목</span><span>바로가기</span></div>
-                    <ul class="ir-list">
-                        <li><a href="#disclosure"><span>주요 경영 공시</span><b>링크 준비 중</b></a></li>
-                        <li><a href="#disclosure"><span>정기 보고서</span><b>링크 준비 중</b></a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="ir-content-section governance-section" id="governance">
-            <div class="section-inner">
-                <div class="ir-section-heading">
-                    <div><p class="ir-section-eyebrow">05 / CORPORATE GOVERNANCE</p><h2>지배구조평가</h2></div>
-                    <p>책임 있는 경영을 위한<br>이사회 및 지배구조 정보를 제공합니다.</p>
-                </div>
-                <div class="governance-layout">
-                    <p>기업의 의사결정 구조와<br><strong>지배구조 관련 자료</strong>를 확인할 수 있습니다.</p>
-                    <div class="ir-list-panel">
-                        <ul class="ir-list">
-                            <li><a href="#governance"><span>이사회 구성 및 운영</span><b>자료 링크 준비 중</b></a></li>
-                            <li><a href="#governance"><span>기업지배구조 관련 자료</span><b>자료 링크 준비 중</b></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="ir-content-note">※ 실제 평가 결과와 공식 자료를 확인한 뒤 링크를 연결해 주세요.</p>
-            </div>
-        </section>
-
-        <!-- ESG PAGE CONTENT -->
-        <section id="esg-page" class="esg-hero">
-            <div class="esg-hero-image esg-image-placeholder">
-                <span>HERO IMAGE AREA</span>
-                <small>자연·사람·지속가능성을 표현하는 이미지 삽입</small>
-            </div>
-            <div class="esg-hero-overlay"></div>
-            <div class="section-inner esg-hero-copy">
-                <p class="esg-kicker">ENVIRONMENT · SOCIAL · GOVERNANCE</p>
-                <h2>ESG</h2>
-                <p>더 나은 내일을 위한 책임 있는 실천,<br>지속 가능한 미래를 만들어갑니다.</p>
-            </div>
-            <a class="esg-scroll" href="#esg-management"><span></span>SCROLL DOWN</a>
-        </section>
-
-        <section class="esg-management-section" id="esg-management">
-            <div class="section-inner">
-                <div class="esg-section-heading">
+                <a class="company-card company-card03" href="#company">
                     <div>
-                        <p class="esg-eyebrow">SUSTAINABILITY MANAGEMENT</p>
-                        <h2>ESG 경영</h2>
-                    </div>
-                    <p>환경과 사회, 투명한 경영을 고려한<br>지속가능경영의 방향을 소개합니다.</p>
-                </div>
-                <div class="esg-management-feature">
-                    <div class="esg-management-image esg-image-placeholder">
-                        <span>SUSTAINABILITY IMAGE</span>
-                        <small>지속가능경영 활동 또는 기업 이미지 삽입</small>
-                    </div>
-                    <div class="esg-management-copy">
-                        <span class="esg-label">OUR COMMITMENT</span>
-                        <h3>지속 가능한 성장을 위한<br><em>책임 있는 경영</em></h3>
-                        <p>이 영역에는 한국콜마의 공식 ESG 경영 방침과 추진 방향을 입력해 주세요. 환경 보호, 사회적 책임, 투명한 지배구조 등 기업이 실제로 실천하는 내용을 중심으로 소개합니다.</p>
-                        <div class="esg-pillars">
-                            <a href="#environment"><span>ENVIRONMENT</span><strong>환경경영</strong><b>↗</b></a>
-                            <a href="#ethics"><span>GOVERNANCE</span><strong>윤리경영</strong><b>↗</b></a>
-                            <a href="#social"><span>SOCIETY</span><strong>사회공헌</strong><b>↗</b></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="environment-section" id="environment">
-            <div class="section-inner">
-                <div class="esg-section-heading">
-                    <div>
-                        <p class="esg-eyebrow">ENVIRONMENT</p>
-                        <h2>환경경영</h2>
-                    </div>
-                    <p>환경에 미치는 영향을 줄이기 위한<br>한국콜마의 활동과 실천 방향을 소개합니다.</p>
-                </div>
-                <div class="environment-feature">
-                    <div class="environment-copy">
-                        <span class="esg-label">FOR A BETTER PLANET</span>
-                        <h3>환경을 생각하는<br>지속 가능한 변화</h3>
-                        <p>메인 페이지에서는 환경 영향을 줄이기 위한 책임 있는 경영과 지속 가능한 미래를 위한 변화를 소개하고 있습니다. 이 영역에는 공식 환경경영 정책과 실제 활동 사례를 추가해 주세요.</p>
-                        <a class="esg-detail-link" href="#environment">환경경영 활동 보기 <span>→</span></a>
-                    </div>
-                    <div class="environment-image esg-image-placeholder">
-                        <span>ENVIRONMENT IMAGE</span>
-                        <small>친환경 활동·자연·자원순환 이미지 삽입</small>
-                    </div>
-                </div>
-                <div class="environment-topics">
-                    <article>
-                        <span>ENVIRONMENTAL ACTION</span>
-                        <h3>환경 실천 활동</h3>
-                        <p>실제 운영 중인 환경 보호 활동과 추진 내용을 입력해 주세요.</p>
-                    </article>
-                    <article>
-                        <span>RESOURCE MANAGEMENT</span>
-                        <h3>자원 관리</h3>
-                        <p>에너지·용수·자원 사용과 관련한 공식 관리 내용을 입력해 주세요.</p>
-                    </article>
-                    <article>
-                        <span>CLIMATE RESPONSE</span>
-                        <h3>기후변화 대응</h3>
-                        <p>기후변화 대응 목표와 실천 성과를 확인된 자료에 맞춰 작성해 주세요.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="ethics-section" id="ethics">
-            <div class="section-inner">
-                <div class="ethics-heading">
-                    <div>
-                        <p class="esg-eyebrow">ETHICAL MANAGEMENT</p>
-                        <h2>윤리경영</h2>
-                    </div>
-                    <p>원칙과 책임을 바탕으로<br>신뢰받는 기업 문화를 만들어갑니다.</p>
-                </div>
-                <div class="ethics-feature">
-                    <div class="ethics-visual esg-image-placeholder">
-                        <span>ETHICS IMAGE</span>
-                        <small>윤리·준법·투명경영 관련 이미지 삽입</small>
-                    </div>
-                    <div class="ethics-copy">
-                        <span class="esg-label">TRUST &amp; RESPONSIBILITY</span>
-                        <h3>신뢰를 만드는<br>바른 경영의 원칙</h3>
-                        <p>이 영역에는 한국콜마의 공식 윤리경영 방침, 윤리강령, 준법경영 및 내부 신고 제도 등 확인된 정보를 입력해 주세요. 운영 여부가 확인되지 않은 제도나 정책은 임의로 추가하지 않습니다.</p>
-                        <a class="esg-detail-link" href="#ethics">윤리경영 원칙 보기 <span>→</span></a>
-                    </div>
-                </div>
-                <div class="ethics-principles">
-                    <article><span>01</span><div><h3>윤리 기준</h3><p>공식 윤리강령 및 행동 기준 입력</p></div></article>
-                    <article><span>02</span><div><h3>준법 실천</h3><p>준법경영 정책과 실천 활동 입력</p></div></article>
-                    <article><span>03</span><div><h3>투명한 소통</h3><p>신고·상담 등 공식 소통 체계 입력</p></div></article>
-                </div>
-            </div>
-        </section>
-
-        <section class="social-section" id="social">
-            <div class="section-inner">
-                <div class="esg-section-heading">
-                    <div>
-                        <p class="esg-eyebrow">SOCIAL CONTRIBUTION</p>
-                        <h2>사회공헌</h2>
-                    </div>
-                    <p>지역사회와 함께 성장하며<br>나눔과 상생의 가치를 실천합니다.</p>
-                </div>
-                <div class="social-feature">
-                    <div class="social-copy">
-                        <span class="esg-label">TOGETHER WITH SOCIETY</span>
-                        <h3>사람과 지역사회를 위한<br><em>따뜻한 동행</em></h3>
-                        <p>메인 페이지에서는 지역사회와 함께 성장하고 나눔과 상생의 가치를 실천하는 방향을 소개하고 있습니다. 이 영역에는 한국콜마의 실제 사회공헌 프로그램과 참여 사례를 추가해 주세요.</p>
-                        <a class="esg-detail-link" href="#social">사회공헌 활동 보기 <span>→</span></a>
-                    </div>
-                    <div class="social-image esg-image-placeholder">
-                        <span>SOCIAL CONTRIBUTION IMAGE</span>
-                        <small>나눔·봉사·지역사회 활동 이미지 삽입</small>
-                    </div>
-                </div>
-                <div class="social-bottom">
-                    <div><strong>함께하는 가치</strong><span>지역사회와 함께하는 활동 내용</span></div>
-                    <div><strong>나눔의 실천</strong><span>기부·봉사 등 공식 활동 내용</span></div>
-                    <div><strong>상생의 성장</strong><span>사회적 가치 창출 사례</span></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- COMPANY PAGE CONTENT -->
-        <section id="company-page" class="company-hero" aria-labelledby="company-title">
-            <div class="company-hero-image company-image-placeholder">
-                <span>HERO IMAGE AREA</span>
-                <small>기업 전경 또는 구성원 이미지 삽입</small>
-            </div>
-            <div class="company-hero-shade"></div>
-            <div class="section-inner company-hero-copy">
-                <p class="company-kicker">ABOUT KOLMAR</p>
-                <h2 id="company-title">회사소개</h2>
-                <p>한국콜마가 걸어온 길과<br>앞으로 만들어갈 가치를 소개합니다.</p>
-            </div>
-            <a class="company-scroll" href="#overview"><span></span>SCROLL DOWN</a>
-        </section>
-
-        <section class="overview-section" id="overview">
-            <div class="section-inner">
-                <div class="company-section-heading">
-                    <div>
-                        <p class="company-eyebrow">CORPORATE OVERVIEW</p>
-                        <h2>회사개요</h2>
-                    </div>
-                    <p>한국콜마의 기업 정보와 사업 방향을<br>한눈에 이해할 수 있도록 소개합니다.</p>
-                </div>
-                <div class="overview-feature">
-                    <div class="overview-image company-image-placeholder">
-                        <span>COMPANY OVERVIEW IMAGE</span>
-                        <small>본사·사업장 또는 기업을 상징하는 이미지 삽입</small>
-                    </div>
-                    <div class="overview-copy">
-                        <p class="overview-label">WHO WE ARE</p>
-                        <h3>기업의 정체성과<br><em>핵심 사업을 소개하는 공간</em></h3>
-                        <p>이 영역에는 한국콜마의 공식 회사 소개 문구를 입력해 주세요. 기업이 어떤 일을 하는지, 어떤 사업 영역을 중심으로 성장해 왔는지 핵심 내용을 간결하게 전달하는 것이 좋습니다.</p>
-                        <div class="overview-data">
-                            <div><span>회사명</span><strong>공식 회사명 입력</strong></div>
-                            <div><span>설립일</span><strong>설립일 정보 입력</strong></div>
-                            <div><span>주요 사업</span><strong>주요 사업 정보 입력</strong></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="greeting-section" id="greeting">
-            <div class="section-inner">
-                <div class="company-section-heading light-heading">
-                    <div>
-                        <p class="company-eyebrow">CEO MESSAGE</p>
-                        <h2>CEO 인사말</h2>
-                    </div>
-                    <p>기업이 추구하는 방향과 미래에 대한<br>경영진의 메시지를 전달합니다.</p>
-                </div>
-                <div class="greeting-layout">
-                    <div class="ceo-image company-image-placeholder">
-                        <span>CEO PORTRAIT</span>
-                        <small>대표이사 프로필 이미지 삽입</small>
-                    </div>
-                    <div class="greeting-copy">
-                        <p class="greeting-quote-mark">“</p>
-                        <h3>고객과 함께 성장하며<br>더 나은 미래를 만들어갑니다.</h3>
-                        <p>이곳에는 대표이사의 공식 인사말을 배치해 주세요. 기업의 경영 방향과 고객·파트너·구성원에게 전하고 싶은 메시지를 중심으로 구성하면 방문자가 회사의 생각과 태도를 이해하는 데 도움이 됩니다.</p>
-                        <div class="ceo-signature"><span>한국콜마</span><strong>대표이사 <b>성명 입력</b></strong></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="history-section" id="history">
-            <div class="section-inner">
-                <div class="company-section-heading">
-                    <div>
-                        <p class="company-eyebrow">HISTORY</p>
                         <h2>연혁</h2>
+                        <p>혁신으로 이어온 한국콜마의 발자취</p>
                     </div>
-                    <p>한국콜마의 주요 발자취와<br>성장 과정을 시간의 흐름에 따라 살펴봅니다.</p>
-                </div>
-                <div class="history-intro">
-                    <h3>도전과 성장의 기록</h3>
-                    <p>연도별 주요 사건과 성과를 공식 연혁 자료에 맞춰 입력해 주세요.</p>
-                </div>
-                <div class="history-timeline">
-                    <article class="history-item">
-                        <span class="history-year">연도 입력</span>
-                        <div><h3>주요 연혁 제목 입력</h3><p>해당 연도에 있었던 주요 사건이나 성과를 간결하게 작성해 주세요.</p></div>
-                    </article>
-                    <article class="history-item">
-                        <span class="history-year">연도 입력</span>
-                        <div><h3>주요 연혁 제목 입력</h3><p>사업 확장, 연구개발, 주요 성과 등 확인된 내용을 입력해 주세요.</p></div>
-                    </article>
-                    <article class="history-item">
-                        <span class="history-year">연도 입력</span>
-                        <div><h3>주요 연혁 제목 입력</h3><p>기업의 성장 과정에서 의미 있는 사건을 시간순으로 정리해 주세요.</p></div>
-                    </article>
-                    <article class="history-item">
-                        <span class="history-year">연도 입력</span>
-                        <div><h3>주요 연혁 제목 입력</h3><p>최근의 주요 변화와 향후 방향을 보여주는 내용을 입력해 주세요.</p></div>
-                    </article>
-                </div>
-            </div>
-        </section>
+                </a>
+                <a class="company-card company-card04" href="#company">
+                    <div>
+                        <h2>회사개요</h2>
+                        <p>글로벌 종합 뷰티·헬스케어 기업</p>
+                    </div>
+                </a>
+            </section>
 
-        <section class="philosophy-section" id="philosophy">
-            <div class="section-inner">
-                <div class="philosophy-heading">
-                    <p class="company-eyebrow">MANAGEMENT PHILOSOPHY</p>
-                    <h2>경영철학</h2>
-                    <p>한국콜마가 중요하게 생각하는 가치와 원칙을<br>명확하게 전달하는 마지막 콘텐츠 영역입니다.</p>
-                </div>
-                <div class="philosophy-visual company-image-placeholder">
-                    <span>PHILOSOPHY IMAGE AREA</span>
-                    <small>기업의 가치와 철학을 표현하는 이미지 삽입</small>
-                </div>
-                <div class="philosophy-values">
-                    <article class="philosophy-card">
-                        <span>CORE VALUE</span>
-                        <h3>핵심 가치 입력</h3>
-                        <p>공식 경영철학에서 강조하는 첫 번째 가치와 그 의미를 작성해 주세요.</p>
-                    </article>
-                    <article class="philosophy-card">
-                        <span>CORE VALUE</span>
-                        <h3>핵심 가치 입력</h3>
-                        <p>공식 경영철학에서 강조하는 두 번째 가치와 실천 방향을 작성해 주세요.</p>
-                    </article>
-                    <article class="philosophy-card">
-                        <span>CORE VALUE</span>
-                        <h3>핵심 가치 입력</h3>
-                        <p>공식 경영철학에서 강조하는 세 번째 가치와 실천 방향을 작성해 주세요.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- NEWS PAGE CONTENT -->
-        <section id="news-page" class="news-hero" aria-labelledby="news-title">
-            <div class="news-hero-backdrop"></div>
-            <div class="section-inner news-hero-inner">
-                <p class="news-eyebrow">NEWS &amp; MEDIA</p>
-                <h2 id="news-title">소식</h2>
-                <p>한국콜마의 새로운 소식과<br>다양한 이야기를 전합니다.</p>
-                <a class="news-hero-link" href="#kolmar-news">소식 확인하기 <span>↓</span></a>
-            </div>
-            <div class="news-hero-image news-image-placeholder">
-                <span>NEWS HERO IMAGE</span><small>연구·행사·기업 활동 이미지 삽입</small>
-            </div>
-        </section>
-
-        <nav class="news-category-nav" aria-label="소식 카테고리">
-            <div class="section-inner news-category-inner">
-                <a href="#kolmar-news" class="is-current">콜마소식 <span>→</span></a>
-                <a href="#press">보도자료 <span>→</span></a>
-                <a href="#notice">공지사항 <span>→</span></a>
-            </div>
-        </nav>
-
-        <section class="kolmar-news-section" id="kolmar-news">
-            <div class="section-inner">
-                <div class="news-section-heading">
-                    <div><p class="news-section-eyebrow">KOLMAR STORY</p><h2>콜마소식</h2></div>
-                    <p>한국콜마의 주요 활동과 현장 이야기를<br>카드형 콘텐츠로 살펴볼 수 있습니다.</p>
-                </div>
-                <div class="kolmar-news-grid">
-                    <a class="kolmar-feature-card news-image-placeholder" href="#press">
-                        <span class="placeholder-label">FEATURE IMAGE</span>
-                        <small>대표 소식 이미지 삽입</small>
-                        <span class="feature-card-shade"></span>
-                        <span class="feature-card-copy">
-                            <span class="news-card-tag">KOLMAR STORY</span>
-                            <strong>한국콜마의 새로운 소식을<br>만나보세요.</strong>
-                            <span class="feature-card-more">소식 더보기 <b>↗</b></span>
-                        </span>
-                    </a>
-                    <div class="kolmar-story-list">
-                        <article class="news-card-glass">
-                            <span class="news-card-tag">KOLMAR STORY</span>
-                            <h3>한국콜마, 海 산호초 보호 자외선 차단제 글로벌 인증 체계 구축</h3>
-                            <p class="news-card-description">국내 첫 산호 이용 독성시험 체계 확보 관련 소식</p>
-                            <span class="news-card-meta">게시일 정보 입력 <b>↗</b></span>
+            <!-- ESG -->
+            <section class="esg-section" id="esg">
+                <div class="section-inner">
+                    <div class="section-heading"><h2>ESG</h2></div>
+                    <div class="esg-list">
+                        <article class="esg-item esg-human">
+                            <div class="esg-copy">
+                                <span>PEOPLE</span>
+                                <h3>인권경영</h3>
+                                <p>한국콜마는 경영활동 전반에서 인권을 존중하고<br>모든 구성원이 존중받는 조직문화를 만들어갑니다.</p>
+                                <a href="#esg">자세히 보기 <span>→</span></a>
+                            </div>
+                            <div class="esg-image"><img src="img/esg1.png" alt="인권경영"></div>
                         </article>
-                        <article class="news-card-solid feature-blue">
-                            <span class="news-card-tag">KOLMAR STORY</span>
-                            <h3>구윤철 부총리, 'K뷰티 R&amp;D 성지' 한국콜마 종합기술원 방문</h3>
-                            <p class="news-card-description">종합기술원 방문 및 현장 간담회 관련 소식</p>
-                            <span class="news-card-meta">게시일 정보 입력 <b>↗</b></span>
+                        <article class="esg-item esg-social">
+                            <div class="esg-copy">
+                                <span>SOCIETY</span>
+                                <h3>사회공헌</h3>
+                                <p>지역사회와 함께 성장하며 나눔과 상생의 가치를<br>실천하고 지속 가능한 사회를 만들어갑니다.</p>
+                                <a href="#esg">자세히 보기 <span>→</span></a>
+                            </div>
+                            <div class="esg-image"><img src="img/esg2.jpg" alt="사회공헌"></div>
+                        </article>
+                        <article class="esg-item esg-green">
+                            <div class="esg-copy">
+                                <span>ENVIRONMENT</span>
+                                <h3>환경경영</h3>
+                                <p>환경 영향을 줄이기 위한 책임 있는 경영으로<br>지속 가능한 미래를 위한 변화를 이어갑니다.</p>
+                                <a href="#esg">자세히 보기 <span>→</span></a>
+                            </div>
+                            <div class="esg-image"><img src="img/esg3.gif" alt="환경경영"></div>
                         </article>
                     </div>
                 </div>
-                <p class="news-content-note">※ 위 제목은 메인 페이지에 기재된 소식 콘텐츠를 옮긴 예시입니다. 실제 게시일과 상세 페이지 링크는 확인 후 연결해 주세요.</p>
-            </div>
-        </section>
+            </section>
 
-        <section class="press-section" id="press">
-            <div class="section-inner">
-                <div class="news-section-heading">
-                    <div><p class="news-section-eyebrow">PRESS RELEASE</p><h2>보도자료</h2></div>
-                    <p>한국콜마의 주요 발표와 언론에 소개된<br>보도자료를 확인할 수 있습니다.</p>
-                </div>
-                <div class="press-feature">
-                    <div class="press-feature-image news-image-placeholder">
-                        <span>PRESS IMAGE</span><small>보도자료 대표 이미지 삽입</small>
+            <!-- NEWS (피그마 원본 image_5b9c5d.jpg 100% 매칭) -->
+            <section class="news-section" id="news">
+                <div class="news-bg-img"><img src="img/rp1.jpg" alt="소식 배경"></div>
+                <div class="section-inner news-inner">
+                    <!-- 좌측 소개 영역 -->
+                    <div class="news-intro">
+                        <h2>소식</h2>
+                        <p class="news-sub-desc">
+                            완벽한 토털 서비스를 제공하는<br>
+                            국내 최초 OMD 전문기업입니다.<br>
+                            고객중심 기술중심 가치에<br>
+                            기업의 모든 역량을 집중하고 있습니다.
+                        </p>
                     </div>
-                    <div class="press-feature-copy">
-                        <span class="news-card-tag">PRESS RELEASE</span>
-                        <h3>보도자료 제목을 입력해 주세요.</h3>
-                        <p>대표 보도자료의 핵심 내용을 간략하게 소개하는 영역입니다. 공식 발표 내용과 게시일을 확인한 뒤 실제 콘텐츠로 교체해 주세요.</p>
-                        <span class="news-card-meta">게시일 정보 입력 <b>↗</b></span>
-                    </div>
-                </div>
-                <div class="press-list">
-                    <a href="#press"><span class="press-list-category">PRESS</span><strong>보도자료 제목을 입력해 주세요.</strong><span class="press-list-date">게시일 입력</span><b>↗</b></a>
-                    <a href="#press"><span class="press-list-category">PRESS</span><strong>보도자료 제목을 입력해 주세요.</strong><span class="press-list-date">게시일 입력</span><b>↗</b></a>
-                    <a href="#press"><span class="press-list-category">PRESS</span><strong>보도자료 제목을 입력해 주세요.</strong><span class="press-list-date">게시일 입력</span><b>↗</b></a>
-                </div>
-            </div>
-        </section>
+                    
+                    <div class="news-content-layout">
+                        <!-- 중앙 카드 2개 (위/아래) -->
+                        <div class="news-center-column">
+                            <article class="news-card-glass">
+                                <h3>한국콜마, 海 산호초 보호 자외선 차단제 글로벌 인증 체계 구축</h3>
+                                <p class="card-subtitle">국내 첫 산호 이용 독성시험 체계 확보...고객사 '리프 프렌들리' 선케어 경쟁력 강화</p>
+                                <p class="card-body-text">
+                                    한국콜마가 국내 최초로 자외선차단제의 바닷속 산호 안전성을 과학적으로 검증하는 체계를 구축했다. 미국과 유럽, 호주 등 주요 시장에서 해양 환경 규제가 강화되는 가운데, 고객사 자외선차단제의 산호 안전성을 객관적으로 입증하고 글로벌 시장 경쟁력을 높일 수 있는 기반을 마련했다.<br>
+                                    한국콜마는 최근 프랑스 환경독성 평가기관 리프톡스(ReefTox)의 환경독성 시험을 통과했다고 밝혔다. 리프톡스는 산호를 이용해 화장품이 해양 생태계에 미치는 영향을 시험·평가하는 전문기관이다. 글로벌 인증 전문기관 SGS의 공식 파트너로...
+                                </p>
+                            </article>
 
-        <section class="notice-section" id="notice">
-            <div class="section-inner notice-inner">
-                <div class="news-section-heading">
-                    <div><p class="news-section-eyebrow">NOTICE</p><h2>공지사항</h2></div>
-                    <p>서비스 및 기업 관련 주요 안내를<br>확인할 수 있는 공간입니다.</p>
-                </div>
-                <div class="notice-panel">
-                    <div class="notice-panel-heading"><span>NOTICE</span><span>게시일</span></div>
-                    <a href="#notice"><strong>공지사항 제목을 입력해 주세요.</strong><span>게시일 입력</span><b>↗</b></a>
-                    <a href="#notice"><strong>공지사항 제목을 입력해 주세요.</strong><span>게시일 입력</span><b>↗</b></a>
-                    <a href="#notice"><strong>공지사항 제목을 입력해 주세요.</strong><span>게시일 입력</span><b>↗</b></a>
-                    <a href="#notice"><strong>공지사항 제목을 입력해 주세요.</strong><span>게시일 입력</span><b>↗</b></a>
-                </div>
-            </div>
-        </section>
+                            <article class="news-card-glass">
+                                <span class="card-tag">STORY</span>
+                                <h3>구윤철 부총리, 'K뷰티 R&amp;D 성지' 한국콜마 종합기술원 방문</h3>
+                                <p class="card-subtitle">업계 최초 'CES 최고혁신상' 한국콜마 찾아... 간담회서 애로사항 청취</p>
+                                <p class="card-body-text">
+                                    한국콜마는 지난 28일 구윤철 경제부총리 겸 재정경제부 장관이 서울 서초구 소재 한국콜마 종합기술원을 방문했다고 밝혔다. 뷰티테크 선도 기업인 한국콜마를 찾아 현장을 둘러보고, 업계의 애로사항을 청취하기 위해서다.<br>
+                                    이날 부총리 방문에는 모경종 식품의약품안전처장과 재정경제부, 보건복지부, 중소벤처기업부, 식품의약품안전처 등 정부 부처 관계자들이 함께 했다. 이들은 연구소를 둘러보며 화장품 기술력을 직접 확인한 후 뷰티업계 관계자들과 현장 간담회를 진행했다...
+                                </p>
+                            </article>
+                        </div>
 
-        <!-- RND PAGE CONTENT -->
-        <section id="rnd-page" class="rnd-hero">
-            <div class="rnd-hero-image rnd-image-placeholder"><span>HERO IMAGE AREA</span><small>연구원·연구소·실험 장면 이미지 삽입</small></div>
-            <div class="rnd-hero-shade"></div>
-            <div class="section-inner rnd-hero-copy">
-                <p class="rnd-kicker">RESEARCH &amp; DEVELOPMENT</p>
-                <h2>R&amp;D</h2>
-                <p>끊임없는 연구와 기술 혁신으로<br>새로운 가능성을 만들어갑니다.</p>
-            </div>
-            <a class="hero-scroll" href="#lab"><span></span> SCROLL DOWN</a>
-        </section>
+                        <!-- 우측 카드 3개 -->
+                        <div class="news-side-column">
+                            <article class="news-card-solid feature-blue">
+                                <span class="card-tag">STORY</span>
+                                <h3>한국콜마, 국내 화장품 업계 최초 '프리미에르 비죵 파리' 초청</h3>
+                                <p class="card-subtitle">세계 최대 패션·섬유 소재 전시회서 R&amp;D·색조 역량 입증</p>
+                                <p class="card-body-text">
+                                    한국콜마가 세계적인 패션·섬유 소재 전시회 '프리미에르 비죵 파리(Premiere Vision Paris)'에 국내 화장품 업계 최초로 초청받아 참가했다. 전 세계 트렌드를 선도하는 가장 대표적인 가공으로 인정받아 국내 뷰티기업 중 유일하게 초대됐다는 점에서 의미가 크다.<br>
+                                    프리미에르 비죵 파리는 세계 최대 규모의 섬유 소재 전시회다. 패션업계의 최신 트렌드와 색상·소재 정보를 한눈에 확인할 수 있는 행사다. 지난 1~3일(현지시간) 프랑스 파리에서 열린 이번 행사에는 전 세계 9000여 개 기업이 참가했으며, 원사·원단·디자인·액세서리·가죽·스마트 크리에이션 등 8개 전문관이 운영됐다...
+                                </p>
+                            </article>
 
-        <section class="lab-section" id="lab">
-            <div class="section-inner">
-                <div class="rnd-section-heading">
-                    <div><p class="rnd-eyebrow">RESEARCH CENTER</p><h2>연구소 소개</h2></div>
-                    <p>연구와 기술을 연결해 더 나은 제품과<br>새로운 가치를 만들어가는 연구개발 환경을 소개합니다.</p>
-                </div>
-                <div class="lab-feature">
-                    <div class="lab-visual rnd-image-placeholder"><span>RESEARCH CENTER IMAGE</span><small>연구소 전경 또는 연구원 이미지 삽입</small></div>
-                    <div class="lab-copy">
-                        <span class="rnd-number">RESEARCH &amp; INNOVATION</span>
-                        <h3>연구의 깊이를 더하고<br><em>가능성의 범위를 넓히다</em></h3>
-                        <p>한국콜마의 연구개발 방향과 연구소의 역할을 소개하는 영역입니다. 실제 연구 환경과 연구 조직의 특징을 확인된 자료에 맞춰 작성해 주세요.</p>
-                        <a class="rnd-text-link" href="#fields">연구분야 보기 <span>→</span></a>
+                            <article class="news-card-solid">
+                                <span class="card-tag">STORY</span>
+                                <h3>한국콜마 "세계인 일상 속 K뷰티"...서울뷰티위크 5년 연속 함께한다</h3>
+                                <p class="card-subtitle">아침 스킨케어부터 밤 클렌징까지 '24시간 뷰티 루틴' 구현...최신 K뷰티 총출동</p>
+                                <p class="card-body-text">
+                                    한국콜마가 대한민국을 대표하는 뷰티 축제인 서울뷰티위크에 5년 연속 공식 파트너 기업으로 참가한다. 아침부터 밤까지 이어지는 일상의 뷰티 루틴을 통해 세계인의 일상 속에 자리 잡은 K뷰티와 이를 뒷받침하는 한국콜마의 기술력을 선보인다.<br>
+                                    한국콜마는 8월 23일부터 25일까지 서울 동대문디자인플라자(DDP)에서 열리는 '2026 서울뷰티위크'에 참가한다고 밝혔다...
+                                </p>
+                            </article>
+
+                            <article class="news-card-solid">
+                                <span class="card-tag">STORY</span>
+                                <h3>한국콜마, 제약기술 융합...'표적 항노화 화장품' 시대 연다</h3>
+                            </article>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="fields-section" id="fields">
-            <div class="section-inner">
-                <div class="rnd-section-heading">
-                    <div><p class="rnd-eyebrow">RESEARCH FIELDS</p><h2>연구분야</h2></div>
-                    <p>다양한 전문 분야의 연구를 통해<br>제품 개발의 새로운 가능성을 탐색합니다.</p>
-                </div>
-                <div class="field-grid">
-                    <article class="field-card">
-                        <div class="field-visual rnd-image-placeholder"><span>FIELD IMAGE</span><small>화장품 연구 이미지 삽입</small></div>
-                        <div class="field-content"><span>COSMETICS RESEARCH</span><h3>화장품 연구</h3><p>소재와 제형, 피부 과학 등 화장품 개발에 필요한 연구 분야를 소개합니다.</p></div>
-                    </article>
-                    <article class="field-card">
-                        <div class="field-visual rnd-image-placeholder"><span>FIELD IMAGE</span><small>제약·바이오 연구 이미지 삽입</small></div>
-                        <div class="field-content"><span>PHARMA &amp; BIO RESEARCH</span><h3>제약·바이오 연구</h3><p>의약품과 바이오 분야의 전문 연구 및 제품 개발 역량을 소개합니다.</p></div>
-                    </article>
-                    <article class="field-card">
-                        <div class="field-visual rnd-image-placeholder"><span>FIELD IMAGE</span><small>건강기능식품 연구 이미지 삽입</small></div>
-                        <div class="field-content"><span>HEALTH FOOD RESEARCH</span><h3>건강기능식품 연구</h3><p>건강한 생활을 위한 원료와 제형, 제품 연구 분야를 소개합니다.</p></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="technology-section" id="technology">
-            <div class="section-inner">
-                <div class="technology-inner">
-                    <div class="technology-heading">
-                        <p class="rnd-eyebrow">TECHNOLOGY</p>
-                        <h2>기술 경쟁력</h2>
-                        <p>축적된 연구 역량과 전문 기술을 바탕으로<br>고객의 아이디어를 실현 가능한 가치로 연결합니다.</p>
+            <!-- IR -->
+            <section class="ir-section" id="ir">
+                <div class="section-inner">
+                    <div class="ir-heading">
+                        <h2>IR</h2>
+                        <p>한국콜마는 투명한 경영정보 제공으로<br>기업 가치를 높이는 데 최선을 다하고 있습니다.</p>
                     </div>
-                    <div class="technology-panel">
-                        <div class="technology-panel-copy"><span>TECHNOLOGY ADVANTAGE</span><h3>연구에서 시작되는<br>차별화된 기술 경쟁력</h3><p>연구 인프라, 기술 전문성, 품질 검증 등 실제 보유 역량과 성과를 확인된 자료를 바탕으로 소개해 주세요.</p></div>
-                        <div class="technology-visual rnd-image-placeholder"><span>TECHNOLOGY IMAGE</span><small>연구 장비 또는 기술 이미지 삽입</small></div>
-                    </div>
-                    <div class="technology-points">
-                        <article class="technology-point"><div><h3>연구 인프라</h3><p>전문 연구 환경과 연구 기반</p></div><b>↗</b></article>
-                        <article class="technology-point"><div><h3>기술 전문성</h3><p>분야별 기술과 연구 노하우</p></div><b>↗</b></article>
-                        <article class="technology-point"><div><h3>품질 검증</h3><p>제품의 안전성과 품질을 위한 검증</p></div><b>↗</b></article>
-                    </div>
+                    <ul class="ir-list">
+                        <li><a href="#ir">IR 문의 담당 부서 안내 <span>↗</span></a></li>
+                        <li><a href="#ir">2026년 2분기 한국콜마 경영실적 <span>↗</span></a></li>
+                        <li><a href="#ir">2026년 1분기 한국콜마 경영실적 <span>↗</span></a></li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
         <!-- FOOTER -->
-        <footer class="footer" id="footer">
+        <footer class="footer">
             <div class="section-inner footer-inner">
                 <a href="#home" class="footer-logo">HK Kolmar</a>
                 <div class="footer-info">
@@ -859,20 +292,21 @@
         const megaMenuImage = document.getElementById('megaMenuImage');
 
         const menuContents = [
-            { title: '사업 서비스', links: [['사업소개', '#omd'], ['ODM', '#omd'], ['사업장', '#locations'], ['사업문의', '#contact'], ['견적문의', '#quote']], image: 'img/company1.jpg', alt: '한국콜마 사업 소개' },
-            { title: 'R&D', links: [['연구소 소개', '#lab'], ['연구 분야', '#fields'], ['기술 경쟁력', '#technology']], image: 'img/rnd.gif', alt: '한국콜마 연구개발' },
-            { title: '회사소개', links: [['회사개요', '#overview'], ['CEO 인사말', '#greeting'], ['연혁', '#history'], ['경영철학', '#philosophy']], image: 'img/company2.jpg', alt: '한국콜마 회사 소개' },
-            { title: 'ESG', links: [['ESG 경영', '#esg-management'], ['환경경영', '#environment'], ['사회공헌', '#social'], ['윤리경영', '#ethics']], image: 'img/esg1.png', alt: '한국콜마 ESG' },
-            { title: '소식', links: [['콜마소식', '#kolmar-news'], ['보도자료', '#press'], ['공지사항', '#notice']], image: 'img/company3.jpg', alt: '한국콜마 소식' },
-            { title: 'IR', links: [['IR 자료', '#ir-data'], ['재무정보', '#financial'], ['공시정보', '#disclosure']], image: 'img/company4.jpg', alt: '한국콜마 IR' }
+            { title: '사업 서비스', links: ['사업소개', 'ODM', '사업장', '사업문의', '견적문의'], href: 'business.html', image: 'img/company1.jpg', alt: '한국콜마 사업 소개' },
+            { title: 'R&D', links: ['연구소 소개', '연구 분야', '기술 경쟁력'], href: 'rnd.html', image: 'img/rnd.gif', alt: '한국콜마 연구개발' },
+            { title: '회사소개', links: ['회사개요', 'CEO 인사말', '연혁', '경영철학'], href: '#company', image: 'img/company2.jpg', alt: '한국콜마 회사 소개' },
+            { title: 'ESG', links: ['ESG 경영', '환경경영', '사회공헌', '윤리경영'], href: '#esg', image: 'img/esg1.png', alt: '한국콜마 ESG' },
+            { title: '소식', links: ['콜마소식', '보도자료', '공지사항'], href: 'news.html', image: 'img/company3.jpg', alt: '한국콜마 소식' },
+            { title: 'IR', links: ['IR 자료', '재무정보', '공시정보'], href: 'ir.html', image: 'img/company4.jpg', alt: '한국콜마 IR' }
         ];
 
         function renderMegaMenu(index) {
             const item = menuContents[index];
             megaMenuTitle.textContent = item.title;
-            megaMenuLinks.innerHTML = item.links.map(([label, href]) =>
-                '<a href="' + href + '">' + label + '</a>'
-            ).join('');
+            megaMenuLinks.innerHTML = item.links.map((label, linkIndex) => {
+                const href = index === 1 ? ['rnd.html#lab', 'rnd.html#fields', 'rnd.html#technology'][linkIndex] : (index === 5 ? ['ir.html#ir-data', 'ir.html#financial', 'ir.html#disclosure'][linkIndex] : item.href);
+                return '<a href="' + href + '">' + label + '</a>';
+            }).join('');
             megaMenuLinks.setAttribute('aria-label', item.title + ' 하위 메뉴');
             megaMenuImage.src = item.image;
             megaMenuImage.alt = item.alt;
@@ -908,35 +342,6 @@
             if (siteHeader.classList.contains('is-menu-open')) closeMegaMenu();
             else openMegaMenu(0);
         });
-        // 통합 페이지의 OMD 과정 슬라이더
-        if (document.querySelector('.omd-process')) {
-            new Swiper('.omd-process', {
-                slidesPerView: 1.15, spaceBetween: 12, watchOverflow: true,
-                pagination: { el: '.process-pagination', type: 'fraction' },
-                navigation: { prevEl: '.process-prev', nextEl: '.process-next' },
-                breakpoints: { 600: { slidesPerView: 2, spaceBetween: 16 }, 900: { slidesPerView: 4, spaceBetween: 18 } }
-            });
-        }
-
-        // 소식 및 IR 카테고리 메뉴의 현재 위치 표시
-        function bindCategoryNavigation(linkSelector, sectionIds) {
-            const links = [...document.querySelectorAll(linkSelector)];
-            const sections = sectionIds.map(id => document.getElementById(id));
-            if (!links.length || !sections.some(Boolean)) return;
-            const update = () => {
-                let active = 0;
-                sections.forEach((section, i) => {
-                    if (section && section.getBoundingClientRect().top <= 180) active = i;
-                });
-                links.forEach((link, i) => link.classList.toggle('is-current', i === active));
-            };
-            window.addEventListener('scroll', update, { passive: true });
-            window.addEventListener('resize', update);
-            update();
-        }
-        bindCategoryNavigation('.news-category-inner a', ['kolmar-news', 'press', 'notice']);
-        bindCategoryNavigation('.ir-category-inner a', ['ir-data', 'financial', 'disclosure']);
-
     </script>
 </body>
 </html>
