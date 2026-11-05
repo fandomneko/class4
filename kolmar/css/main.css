@@ -522,10 +522,29 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     border-radius: 30px;
 }
 .esg-section.is-expanded .esg-image {
+    flex: 0 0 36%;
+    width: 36%;
+    min-width: 36%;
     height: 300px;
+    min-height: 300px;
+    flex-shrink: 0;
+}
+.esg-section.is-expanded .esg-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 @media (max-width: 900px) {
     .esg-section.is-expanded .esg-item { padding: 24px; }
+    .esg-section.is-expanded .esg-image {
+        flex-basis: 34%;
+        width: 34%;
+        min-width: 34%;
+        height: 300px;
+        min-height: 300px;
+        margin-left: 20px;
+    }
 }
 @media (max-width: 600px) {
     .esg-swiper, .esg-swiper .swiper-wrapper { height: 350px; }
@@ -543,8 +562,16 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
         border-radius: 30px;
     }
     .esg-section.is-expanded .esg-image {
+        flex: none;
         width: 100%;
+        min-width: 0;
         height: 220px;
+        min-height: 220px;
         margin: 0;
+    }
+    .esg-section.is-expanded .esg-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
