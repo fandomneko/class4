@@ -488,6 +488,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 .esg-swiper .swiper-slide {
     position: absolute;
+    transform: none !important;
     top: 0;
     left: 0;
     width: 100%;
