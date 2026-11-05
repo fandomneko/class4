@@ -281,7 +281,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .esg-swiper .swiper-wrapper { align-items: flex-start; }
 .esg-swiper .swiper-slide {
     width: 100%;
-    height: 200px;
+    height: 350px;
     transform-origin: center top;
     will-change: transform;
 }
@@ -289,7 +289,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .esg-swiper .swiper-slide-active { z-index: 3; }
 .esg-swiper .swiper-slide-next { z-index: 2; }
 .esg-swiper .swiper-slide-prev { z-index: 1; }
-.esg-item { display: flex; align-items: center; justify-content: space-between; min-height: 200px; height: 100%; padding: 24px 40px; border-radius: 30px; color: var(--navy-esg-text); box-sizing: border-box; }
+.esg-item { display: flex; align-items: center; justify-content: space-between; min-height: 350px; height: 100%; padding: 24px 40px; border-radius: 30px; color: var(--navy-esg-text); box-sizing: border-box; }
 .esg-human { background: var(--esg-human); }
 .esg-social { background: var(--esg-social); color: var(--color-white); }
 .esg-green { background: var(--esg-green); color: var(--color-white); }
@@ -309,8 +309,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .esg-pagination .swiper-pagination-bullet-active { width: 20px; border-radius: 8px; background: var(--brand-blue); }
 @media (max-width: 900px) {
     .esg-swiper { width: min(100%, 1300px); height: 280px; }
-    .esg-swiper .swiper-slide { height: 200px; }
-    .esg-item { min-height: 200px; padding: 20px 24px; }
+    .esg-swiper .swiper-slide { height: 350px; }
+    .esg-item { min-height: 350px; padding: 20px 24px; }
     .esg-image { flex-basis: 34%; width: 34%; height: 300px; margin-left: 20px; }
 }
 @media (max-width: 600px) {
