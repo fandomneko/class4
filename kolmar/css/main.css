@@ -310,42 +310,139 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .news-card-solid .card-subtitle { font-size: 16px; font-weight: 600; color: var(--news-sub-solid); margin-bottom: 8px; line-height: 1.5; word-break: keep-all; }
 .news-card-solid .card-body-text { font-size: 16px; line-height: 1.6; opacity: 0.8; word-break: keep-all; }
 
-/* IR & FOOTER */
-.ir-section { padding: 80px 0 70px; background: var(--color-white); }
-.ir-heading h2 { margin-bottom: 12px; font-size: 48px; line-height: 1; }
-.ir-heading p { color: var(--gray-text); font-size: 16px; line-height: 1.55; }
-.ir-list { margin-top: 32px; border-top: 1px solid var(--blue-line); }
-.ir-list li { list-style: none; border-bottom: 1px solid var(--blue-line); }
-.ir-list a {
+/* IR MAIN */
+.ir-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 72px 0 76px;
+    background:
+        radial-gradient(ellipse at 78% 48%, rgba(38, 110, 241, .24), transparent 42%),
+        linear-gradient(110deg, #050b16 0%, #101c30 54%, #07101e 100%);
+    color: var(--color-white);
+}
+.ir-section::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    opacity: .34;
+    background:
+        repeating-linear-gradient(166deg, transparent 0 34px, rgba(87, 166, 255, .16) 35px, transparent 37px 66px),
+        linear-gradient(90deg, transparent 0%, rgba(3, 8, 18, .35) 50%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent, #000 35%, #000);
+}
+.ir-main-inner { position: relative; z-index: 1; }
+.ir-main-heading { margin-bottom: 28px; }
+.ir-main-eyebrow {
+    margin-bottom: 8px;
+    color: #9fc8f5;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .16em;
+}
+.ir-main-heading h2 {
+    color: #fff;
+    font-size: clamp(34px, 3vw, 42px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.03em;
+}
+.ir-main-dashboard {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1.3fr);
+    gap: 28px;
+    align-items: stretch;
+}
+.ir-stock-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 174px;
+    padding: 28px 30px;
+    border: 1px solid rgba(255,255,255,.78);
+    border-radius: 13px;
+    background: #fff;
+    color: #202938;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.ir-stock-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 62px;
-    padding: 0 18px;
-    font-size: 16px;
-    font-weight: 600;
-    box-sizing: border-box;
-    transition: min-height .3s ease, padding .3s ease, background-color .3s ease;
+    gap: 20px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #dce1e8;
 }
-.ir-list a span {
-    color: var(--blue-arrow-ir);
-    transition: transform .3s ease;
+.ir-stock-top strong { font-size: 18px; font-weight: 700; }
+.ir-stock-value {
+    color: #111827;
+    font-size: clamp(23px, 2.6vw, 34px);
+    font-weight: 800;
+    letter-spacing: -.04em;
 }
-/* IR 바로가기 항목에 마우스를 올리면 항목 높이가 커집니다. */
-@media (hover: hover) and (pointer: fine) {
-    .ir-list a:hover,
-    .ir-list a:focus-visible {
-        min-height: 88px;
-        padding-left: 28px;
-        padding-right: 28px;
-        background: rgba(42, 102, 204, .07);
-    }
-    .ir-list a:hover span,
-    .ir-list a:focus-visible span {
-        transform: translate(3px, -3px);
-    }
+.ir-stock-value b { color: #348de9; font-size: 18px; }
+.ir-stock-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 18px;
+    color: #78818e;
+    font-size: 14px;
 }
-
+.ir-main-shortcuts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+.ir-shortcut-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 174px;
+    padding: 26px 22px;
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 13px;
+    background: rgba(255,255,255,.035);
+    color: #fff;
+    transition: background .25s ease, transform .25s ease, border-color .25s ease;
+}
+.ir-shortcut-card strong { font-size: 17px; font-weight: 700; }
+.ir-shortcut-card span {
+    align-self: flex-end;
+    font-size: 22px;
+    line-height: 1;
+    transition: transform .25s ease;
+}
+.ir-stock-card:hover,
+.ir-stock-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0,0,0,.2);
+}
+.ir-shortcut-card:hover,
+.ir-shortcut-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: #8fc7ff;
+    background: rgba(55, 135, 225, .2);
+}
+.ir-shortcut-card:hover span,
+.ir-shortcut-card:focus-visible span { transform: translate(3px, -3px); }
+@media (max-width: 900px) {
+    .ir-main-dashboard { grid-template-columns: 1fr; }
+    .ir-stock-card { min-height: 160px; }
+    .ir-shortcut-card { min-height: 145px; }
+}
+@media (max-width: 600px) {
+    .ir-section { padding: 58px 0; }
+    .ir-main-heading { margin-bottom: 22px; }
+    .ir-main-dashboard { gap: 16px; }
+    .ir-stock-card { min-height: 150px; padding: 22px 18px; }
+    .ir-stock-top { padding-bottom: 16px; }
+    .ir-stock-bottom { flex-direction: column; gap: 6px; padding-top: 14px; }
+    .ir-main-shortcuts { gap: 9px; }
+    .ir-shortcut-card { min-height: 118px; padding: 18px 13px; }
+    .ir-shortcut-card strong { font-size: 15px; }
+}
 .footer { border-top: 1px solid var(--gray-line); background: var(--color-white); }
 .footer-inner { display: flex; align-items: flex-start; gap: 40px; padding-top: 28px; padding-bottom: 32px; }
 .footer-logo { white-space: nowrap; color: var(--blue-logo); font-size: 20px; font-weight: 800; }
