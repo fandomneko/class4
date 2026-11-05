@@ -318,3 +318,13 @@
     .quote-action { grid-column: auto; }
     .hero-scroll { right: 30px; bottom: 28px; }
 }
+
+
+/* BUSINESS HERO IMAGE */
+.business-hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
