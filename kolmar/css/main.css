@@ -316,8 +316,35 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .ir-heading p { color: var(--gray-text); font-size: 16px; line-height: 1.55; }
 .ir-list { margin-top: 32px; border-top: 1px solid var(--blue-line); }
 .ir-list li { list-style: none; border-bottom: 1px solid var(--blue-line); }
-.ir-list a { display: flex; align-items: center; justify-content: space-between; min-height: 62px; font-size: 16px; font-weight: 600; }
-.ir-list a span { color: var(--blue-arrow-ir); }
+.ir-list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 62px;
+    padding: 0 18px;
+    font-size: 16px;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: min-height .3s ease, padding .3s ease, background-color .3s ease;
+}
+.ir-list a span {
+    color: var(--blue-arrow-ir);
+    transition: transform .3s ease;
+}
+/* IR 바로가기 항목에 마우스를 올리면 항목 높이가 커집니다. */
+@media (hover: hover) and (pointer: fine) {
+    .ir-list a:hover,
+    .ir-list a:focus-visible {
+        min-height: 88px;
+        padding-left: 28px;
+        padding-right: 28px;
+        background: rgba(42, 102, 204, .07);
+    }
+    .ir-list a:hover span,
+    .ir-list a:focus-visible span {
+        transform: translate(3px, -3px);
+    }
+}
 
 .footer { border-top: 1px solid var(--gray-line); background: var(--color-white); }
 .footer-inner { display: flex; align-items: flex-start; gap: 40px; padding-top: 28px; padding-bottom: 32px; }
