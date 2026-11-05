@@ -297,9 +297,12 @@
             speed: 650,
             mousewheel: {
                 enabled: true,
-                forceToAxis: true,
+                eventsTarget: '.esg-section',
+                forceToAxis: false,
                 releaseOnEdges: true,
-                sensitivity: 1
+                sensitivity: 1,
+                thresholdDelta: 30,
+                thresholdTime: 300
             },
             creativeEffect: {
                 limitProgress: 3,
