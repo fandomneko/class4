@@ -394,9 +394,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     justify-content: space-between;
     min-height: 174px;
     padding: 26px 22px;
-    border: 1px solid var(--blue-mid);
+    border: 1px solid var(--blue-light);
     border-radius: 13px;
-    background: var(--blue-mid);
+    background: var(--blue-light);
     color: var(--navy-esg-text);
     box-shadow: 0 8px 20px rgba(39, 110, 241, .14);
     transition: background .25s ease, transform .25s ease, border-color .25s ease, box-shadow .25s ease;
