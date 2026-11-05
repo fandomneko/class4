@@ -292,40 +292,40 @@
         const swiperEsg = new Swiper('.esg-swiper', {
             direction: 'vertical',
             effect: 'creative',
-            grabCursor: true,
+            grabCursor: false,
             slidesPerView: 1,
             speed: 650,
-            mousewheel: {
-                enabled: true,
-                eventsTarget: '.esg-section',
-                forceToAxis: false,
-                releaseOnEdges: true,
-                sensitivity: 1,
-                thresholdDelta: 30,
-                thresholdTime: 300
-            },
+            allowTouchMove: false,
             creativeEffect: {
                 limitProgress: 3,
-                prev: {
-                    shadow: false,
-                    translate: [0, '-8%', -1],
-                    scale: 0.94
-                },
-                next: {
-                    shadow: false,
-                    translate: [0, '8%', -1],
-                    scale: 0.94
-                }
-            },
-            navigation: {
-                prevEl: '.esg-prev',
-                nextEl: '.esg-next'
-            },
-            pagination: {
-                el: '.esg-pagination',
-                clickable: true
+                prev: { shadow: false, translate: [0, '-8%', -1], scale: 0.94 },
+                next: { shadow: false, translate: [0, '8%', -1], scale: 0.94 }
             }
         });
+
+        // ESG: 휠을 내리면 겹친 카드가 펼쳐지고, 올리면 다시 겹쳐집니다.
+        const esgSection = document.querySelector('.esg-section');
+        let esgWheelLock = false;
+        esgSection.addEventListener('wheel', event => {
+            const rect = esgSection.getBoundingClientRect();
+            const isInView = rect.top < window.innerHeight * 0.75 && rect.bottom > window.innerHeight * 0.25;
+            if (!isInView || Math.abs(event.deltaY) < 8 || esgWheelLock) return;
+
+            const isExpanded = esgSection.classList.contains('is-expanded');
+            if (event.deltaY > 0 && !isExpanded) {
+                event.preventDefault();
+                esgSection.classList.add('is-expanded');
+                swiperEsg.slideTo(0, 0);
+                esgWheelLock = true;
+                window.setTimeout(() => { esgWheelLock = false; }, 450);
+            } else if (event.deltaY < 0 && isExpanded) {
+                event.preventDefault();
+                esgSection.classList.remove('is-expanded');
+                swiperEsg.slideTo(0, 0);
+                esgWheelLock = true;
+                window.setTimeout(() => { esgWheelLock = false; }, 450);
+            }
+        }, { passive: false });
 
         const siteHeader = document.getElementById('siteHeader');
         const menuButton = document.getElementById('menuBtn');
