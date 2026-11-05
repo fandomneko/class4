@@ -356,3 +356,12 @@
 .omd-visual {
     border: 0 !important;
 }
+
+
+/* 사업 페이지 전체의 남아 있는 테두리선 제거 */
+#wrap,
+#wrap *,
+#wrap *::before,
+#wrap *::after {
+    border: 0 !important;
+}
