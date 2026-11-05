@@ -210,11 +210,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .company-card p { font-size: 18px; font-weight: 500; opacity: .9; line-height: 1.5; word-break: keep-all; }
 
 /* ESG */
-.esg-section { padding: 78px 0 90px; background: var(--color-white); }
+.esg-section { padding: 0 0 12px; background: var(--color-white); }
 .section-heading { margin-bottom: 28px; }
 .section-heading h2 { color: var(--blue-esg-title); font-size: clamp(38px, 4vw, 52px); line-height: 1; }
 .esg-slider-wrap { position: relative; padding: 18px 0 58px; }
-.esg-swiper { width: min(100%, 1120px); height: 580px; overflow: visible; }
+.esg-swiper { width: min(100%, 1000px); height: 580px; overflow: visible; }
 .esg-swiper .swiper-wrapper { align-items: flex-start; }
 .esg-swiper .swiper-slide {
     width: 100%;
