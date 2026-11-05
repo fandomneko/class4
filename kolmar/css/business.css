@@ -328,3 +328,10 @@
     object-fit: cover;
     object-position: center;
 }
+
+
+/* OMD 영역에서 요청한 보조 라벨과 설명 문구 숨김 */
+.omd-section .omd-number,
+.omd-section .business-section-heading .heading-description {
+    display: none !important;
+}
