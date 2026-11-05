@@ -167,7 +167,7 @@
 .process-card {
     min-height: 170px;
     padding: 24px 22px;
-    border: 1px solid rgba(255,255,255,.55);
+    border: 0;
     border-radius: 13px;
     background: rgba(255,255,255,.55);
     color: var(--navy-esg-text);
