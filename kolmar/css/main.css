@@ -477,8 +477,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     overflow: hidden;
 }
 .rnd-section .rnd-visual {
-    height: 110px;
-    flex: 0 0 110px;
+    height: 180px;
+    flex: 0 0 180px;
     margin: 0 0 12px;
     border-radius: 8px;
     overflow: hidden;
