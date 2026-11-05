@@ -465,28 +465,42 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     gap: 20px;
 }
 .rnd-section .rnd-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: auto;
     min-width: 0;
     padding: 20px;
+    border: 1px solid rgba(255, 255, 255, .22);
     border-radius: 13px;
-    background: rgba(255, 255, 255, .24);
-    overflow: visible;
+    background: rgba(105, 112, 120, .58);
+    color: #fff;
+    overflow: hidden;
 }
 .rnd-section .rnd-visual {
-    height: 250px;
-    margin-bottom: 12px;
-    flex: initial;
+    height: 110px;
+    flex: 0 0 110px;
+    margin: 0 0 12px;
     border-radius: 8px;
+    overflow: hidden;
+}
+.rnd-section .rnd-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .rnd-section .rnd-card h3 {
-    margin-bottom: 7px;
+    margin: 0 0 7px;
     font-size: 18px;
 }
 .rnd-section .rnd-card p {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.55;
+    word-break: keep-all;
+}
+.rnd-section .rnd-card02 .rnd-visual {
+    margin: 12px 0 0;
 }
 @media (max-width: 900px) {
     .rnd-inner { gap: 28px; }
