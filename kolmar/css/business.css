@@ -335,3 +335,18 @@
 .omd-section .business-section-heading .heading-description {
     display: none !important;
 }
+
+
+/* OMD 이미지: 원본의 주요 피사체가 오른쪽에 있어 해당 위치를 중심으로 표시 */
+.omd-visual {
+    position: relative;
+}
+.omd-visual img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 78% center;
+}
