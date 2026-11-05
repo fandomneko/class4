@@ -214,8 +214,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .section-heading { margin-bottom: 28px; }
 .section-heading h2 { color: var(--blue-esg-title); font-size: clamp(38px, 4vw, 52px); line-height: 1; }
 .esg-slider-wrap { position: relative; padding: 18px 0 58px; }
-.esg-swiper { width: min(100%, 1120px); height: 330px; overflow: visible; }
-.esg-swiper .swiper-slide { width: 100%; }
+.esg-swiper { width: min(100%, 1120px); height: 380px; overflow: visible; }
+.esg-swiper .swiper-wrapper { align-items: flex-start; }
+.esg-swiper .swiper-slide { width: 100%; height: 330px; }
+.esg-swiper .swiper-slide:not(.swiper-slide-active) { pointer-events: none; }
 .esg-item { display: flex; align-items: center; justify-content: space-between; min-height: 260px; height: 100%; padding: 34px 60px; border-radius: 30px; color: var(--navy-esg-text); box-sizing: border-box; }
 .esg-human { background: var(--esg-human); }
 .esg-social { background: var(--esg-social); color: var(--color-white); }
@@ -229,17 +231,21 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .esg-controls { position: absolute; right: 0; bottom: 0; display: flex; align-items: center; gap: 12px; }
 .esg-controls button { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--brand-blue); color: #fff; }
 .esg-controls .material-symbols-outlined { font-size: 22px; }
+.esg-prev .material-symbols-outlined { transform: rotate(90deg); }
+.esg-next .material-symbols-outlined { transform: rotate(90deg); }
 .esg-pagination { display: flex; align-items: center; gap: 7px; }
 .esg-pagination .swiper-pagination-bullet { width: 7px; height: 7px; margin: 0 !important; background: #9aa8b8; opacity: 1; }
 .esg-pagination .swiper-pagination-bullet-active { width: 20px; border-radius: 8px; background: var(--brand-blue); }
 @media (max-width: 900px) {
-    .esg-swiper { height: 360px; }
+    .esg-swiper { height: 410px; }
+    .esg-swiper .swiper-slide { height: 360px; }
     .esg-item { padding: 28px 32px; }
     .esg-image { flex-basis: 34%; width: 34%; margin-left: 24px; }
 }
 @media (max-width: 600px) {
     .esg-slider-wrap { padding-top: 10px; }
-    .esg-swiper { height: 430px; }
+    .esg-swiper { height: 480px; }
+    .esg-swiper .swiper-slide { height: 430px; }
     .esg-item { flex-direction: column-reverse; align-items: stretch; justify-content: center; gap: 22px; padding: 26px 22px; border-radius: 22px; }
     .esg-image { flex: none; width: 100%; height: 190px; margin: 0; }
     .esg-copy h3 { font-size: 23px; }
