@@ -293,13 +293,23 @@
         });
 
         const swiperEsg = new Swiper('.esg-swiper', {
-            effect: 'cards',
+            direction: 'vertical',
+            effect: 'creative',
             grabCursor: true,
-            cardsEffect: {
-                perSlideOffset: 18,
-                perSlideRotate: 3,
-                rotate: true,
-                slideShadows: false
+            slidesPerView: 1,
+            speed: 650,
+            creativeEffect: {
+                limitProgress: 3,
+                prev: {
+                    shadow: false,
+                    translate: [0, '-12%', -1],
+                    scale: 0.92
+                },
+                next: {
+                    shadow: false,
+                    translate: [0, '100%', 0],
+                    scale: 1
+                }
             },
             navigation: {
                 prevEl: '.esg-prev',
