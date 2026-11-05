@@ -324,13 +324,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .ir-main-heading { margin-bottom: 28px; }
 .ir-main-eyebrow {
     margin-bottom: 8px;
-    color: #477db5;
+    color: var(--blue-eyebrow);
     font-size: 13px;
     font-weight: 600;
     letter-spacing: .16em;
 }
 .ir-main-heading h2 {
-    color: #202938;
+    color: var(--color-black);
     font-size: clamp(34px, 3vw, 42px);
     font-weight: 800;
     line-height: 1;
@@ -348,10 +348,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     justify-content: space-between;
     min-height: 174px;
     padding: 28px 30px;
-    border: 1px solid rgba(255,255,255,.78);
+    border: 1px solid var(--blue-light);
     border-radius: 13px;
-    background: #fff;
-    color: #202938;
+    background: #f5faff;
+    color: var(--color-black);
     transition: transform .25s ease, box-shadow .25s ease;
 }
 .ir-stock-top {
@@ -364,12 +364,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 .ir-stock-top strong { font-size: 18px; font-weight: 700; }
 .ir-stock-value {
-    color: #111827;
+    color: var(--color-black);
     font-size: clamp(23px, 2.6vw, 34px);
     font-weight: 800;
     letter-spacing: -.04em;
 }
-.ir-stock-value b { color: #348de9; font-size: 18px; }
+.ir-stock-value b { color: var(--blue-arrow-ir); font-size: 18px; }
 .ir-stock-bottom {
     display: flex;
     justify-content: space-between;
@@ -389,10 +389,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     justify-content: space-between;
     min-height: 174px;
     padding: 26px 22px;
-    border: 1px solid rgba(255,255,255,.9);
+    border: 1px solid var(--blue-light);
     border-radius: 13px;
-    background: rgba(255,255,255,.035);
-    color: #fff;
+    background: #edf7ff;
+    color: var(--navy-tab-text);
     transition: background .25s ease, transform .25s ease, border-color .25s ease;
 }
 .ir-shortcut-card strong { font-size: 17px; font-weight: 700; }
@@ -405,13 +405,13 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .ir-stock-card:hover,
 .ir-stock-card:focus-visible {
     transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(0,0,0,.2);
+    box-shadow: 0 10px 24px rgba(39, 110, 241, .10);
 }
 .ir-shortcut-card:hover,
 .ir-shortcut-card:focus-visible {
     transform: translateY(-4px);
-    border-color: #8fc7ff;
-    background: rgba(55, 135, 225, .2);
+    border-color: var(--blue-strong);
+    background: var(--blue-light);
 }
 .ir-shortcut-card:hover span,
 .ir-shortcut-card:focus-visible span { transform: translate(3px, -3px); }
