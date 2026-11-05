@@ -350,3 +350,9 @@
     object-fit: cover;
     object-position: 78% center;
 }
+
+
+/* OMD 이미지 박스 테두리 제거 */
+.omd-visual {
+    border: 0 !important;
+}
