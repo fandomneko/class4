@@ -425,7 +425,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     font-size: 20px;
     line-height: 1.65;
 }
-.rnd-tabs-wrap { margin-bottom: 48px; }
+.rnd-content .rnd-tabs-wrap { margin-bottom: 48px; }
 .rnd-tabs { gap: 8px; }
 .rnd-tabs button {
     padding: 8px 28px;
