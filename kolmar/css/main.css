@@ -499,30 +499,28 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .esg-swiper .swiper-slide:nth-child(1) { top: -70px; z-index: 1; }
 .esg-swiper .swiper-slide:nth-child(2) { top: -35px; z-index: 2; }
 .esg-swiper .swiper-slide:nth-child(3) { top: 0; z-index: 3; }
+/* 펼쳐져도 ESG 섹션과 흰색 배경의 높이는 고정하고 카드만 바깥으로 펼침 */
 .esg-section.is-expanded .esg-swiper,
 .esg-section.is-expanded .esg-swiper .swiper-wrapper {
-    height: 684px;
+    height: 350px;
 }
 .esg-section.is-expanded .esg-swiper .swiper-slide {
-    position: relative;
-    top: auto;
-    left: auto;
-    height: 228px;
+    position: absolute;
+    left: 0;
+    height: 180px;
     transform: none !important;
 }
-.esg-section.is-expanded .esg-swiper .swiper-slide:nth-child(1),
-.esg-section.is-expanded .esg-swiper .swiper-slide:nth-child(2),
-.esg-section.is-expanded .esg-swiper .swiper-slide:nth-child(3) {
-    top: auto;
-}
+.esg-section.is-expanded .esg-swiper .swiper-slide:nth-child(1) { top: 0; z-index: 3; }
+.esg-section.is-expanded .esg-swiper .swiper-slide:nth-child(2) { top: 180px; z-index: 2; }
+.esg-section.is-expanded .esg-swiper .swiper-slide:nth-child(3) { top: 360px; z-index: 1; }
 .esg-section.is-expanded .esg-item {
-    min-height: 228px;
-    height: 228px;
-    padding: 18px 40px;
+    min-height: 180px;
+    height: 180px;
+    padding: 14px 40px;
     border-radius: 0;
 }
 .esg-section.is-expanded .esg-image {
-    height: 190px;
+    height: 150px;
 }
 .esg-section.is-expanded .esg-copy h3 { margin: 0 0 8px; }
 .esg-section.is-expanded .esg-copy a { margin-top: 16px; }
@@ -533,16 +531,16 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     .esg-swiper, .esg-swiper .swiper-wrapper { height: 350px; }
     .esg-swiper .swiper-slide { height: 350px; }
     .esg-section.is-expanded .esg-swiper,
-    .esg-section.is-expanded .esg-swiper .swiper-wrapper { height: 900px; }
-    .esg-section.is-expanded .esg-swiper .swiper-slide { height: 300px; }
+    .esg-section.is-expanded .esg-swiper .swiper-wrapper { height: 350px; }
+    .esg-section.is-expanded .esg-swiper .swiper-slide { height: 180px; }
     .esg-section.is-expanded .esg-item {
-        min-height: 300px;
-        height: 300px;
+        min-height: 180px;
+        height: 180px;
         flex-direction: column-reverse;
         align-items: stretch;
         gap: 12px;
         padding: 18px 16px;
         border-radius: 0;
     }
-    .esg-section.is-expanded .esg-image { width: 100%; height: 170px; margin: 0; }
+    .esg-section.is-expanded .esg-image { width: 100%; height: 100px; margin: 0; }
 }
