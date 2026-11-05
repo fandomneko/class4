@@ -389,11 +389,12 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     justify-content: space-between;
     min-height: 174px;
     padding: 26px 22px;
-    border: 1px solid var(--blue-light);
+    border: 1px solid var(--brand-blue);
     border-radius: 13px;
-    background: #edf7ff;
-    color: var(--navy-tab-text);
-    transition: background .25s ease, transform .25s ease, border-color .25s ease;
+    background: var(--brand-blue);
+    color: var(--color-white);
+    box-shadow: 0 8px 20px rgba(39, 110, 241, .14);
+    transition: background .25s ease, transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
 .ir-shortcut-card strong { font-size: 17px; font-weight: 700; }
 .ir-shortcut-card span {
@@ -411,7 +412,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .ir-shortcut-card:focus-visible {
     transform: translateY(-4px);
     border-color: var(--blue-strong);
-    background: var(--blue-light);
+    background: var(--blue-strong);
+    box-shadow: 0 12px 26px rgba(39, 110, 241, .22);
 }
 .ir-shortcut-card:hover span,
 .ir-shortcut-card:focus-visible span { transform: translate(3px, -3px); }
