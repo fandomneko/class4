@@ -527,7 +527,7 @@
 #business-intro .intro-layout {
     display: flex !important;
     flex-direction: column !important;
-    gap: 54px !important;
+    gap: 89px !important;
     width: 100%;
 }
 #business-intro .intro-layout > .intro-row {
