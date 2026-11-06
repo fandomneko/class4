@@ -39,11 +39,11 @@
 .fields-section{padding:90px 0;background:var(--color-white)}
 /* R&D research cards: spacing and image sizing */
 .field-grid{display:grid;width:80%;max-width:100%;margin:0 auto;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:106px;row-gap:20px}
-.field-card{display:flex;flex-direction:column;height:600px;min-height:600px;overflow:hidden;border:1px solid #dce8f5;border-radius:13px;background:var(--color-white);transition:box-shadow .35s ease,transform .35s ease;box-sizing:border-box}
+.field-card{display:flex;flex-direction:column;height:600px;min-height:600px;overflow:hidden;border:1px solid #dce8f5;border-radius:13px;background:#eaf4fc;transition:box-shadow .35s ease,transform .35s ease;box-sizing:border-box}
 .field-card:hover,.field-card:focus-within{box-shadow:0 16px 34px rgba(24,66,112,.13);transform:translateY(-4px)}
 .field-visual{flex:0 0 480px;height:480px;min-height:480px;flex-shrink:0;border:0;border-radius:0;overflow:hidden}
 .field-visual img{display:block;width:100%;height:100%;object-fit:cover}
-.field-content{display:flex;flex:0 0 120px;height:120px;min-height:120px;flex-shrink:0;align-items:center;padding:0 24px;box-sizing:border-box;background:#fff}
+.field-content{display:flex;flex:0 0 120px;height:120px;min-height:120px;flex-shrink:0;align-items:center;padding:0 24px;box-sizing:border-box;background:rgba(255,255,255,.4)}
 .field-content>span{color:var(--brand-blue);font-size:16px;font-weight:700;letter-spacing:.1em}
 .field-content h3{margin:0;color:var(--brand-navy);font-size:22px;line-height:26px;font-weight:700}
 
