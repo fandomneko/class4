@@ -414,3 +414,42 @@
     object-fit: cover;
     object-position: center;
 }
+
+
+/* 사업소개 및 사업장 이미지가 공통 스타일에 가려지지 않도록 표시 상태를 명시 */
+#business-intro .intro-grid > .intro-image,
+#locations .location-grid .location-image {
+    position: relative !important;
+    display: block !important;
+    overflow: hidden !important;
+}
+#business-intro .intro-grid > .intro-image {
+    min-height: 430px;
+}
+#locations .location-grid .location-image {
+    height: 230px;
+    min-height: 230px;
+}
+#business-intro .intro-grid > .intro-image > img,
+#locations .location-grid .location-image > img {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+@media (max-width: 900px) {
+    #business-intro .intro-grid > .intro-image {
+        min-height: 260px;
+    }
+    #locations .location-grid .location-image {
+        height: 210px;
+        min-height: 210px;
+    }
+}
