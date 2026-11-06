@@ -1,7 +1,8 @@
 /* R&D SUB PAGE
    사업 페이지의 컬러·여백·카드·버튼 스타일을 공유해 브랜드 일관성을 유지합니다. */
 .rnd-hero{position:relative;display:flex;align-items:center;min-height:620px;height:min(760px,66vw);overflow:hidden;background:var(--navy-hero);color:var(--color-white)}
-.rnd-hero-image{position:absolute;inset:0;border:0!important}
+.rnd-hero-image{position:absolute;inset:0;border:0!important;overflow:hidden;background:none}
+.rnd-hero-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 .rnd-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,12,30,.58),rgba(5,12,30,.12) 75%)}
 .rnd-hero-copy{position:relative;z-index:1;padding-top:76px}
 .rnd-kicker{margin-bottom:18px;color:var(--blue-light);font-size: 16px;font-weight:700;letter-spacing:.12em}
