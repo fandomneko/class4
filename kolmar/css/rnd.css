@@ -21,10 +21,9 @@
 .rnd-section-heading h2{margin-top:10px;color:var(--brand-navy);font-size:clamp(38px,4vw,56px);line-height:1;font-weight:700;letter-spacing:-.04em}
 .rnd-section-heading>p{color:var(--navy-esg-text);font-size:16px;line-height:1.65;word-break:keep-all}
 
-.lab-section{padding:90px 0 86px;background:linear-gradient(115deg,var(--sky-start) 0%,var(--sky-mid) 48%,var(--sky-end) 100%)}
-.lab-feature{display:grid;grid-template-columns:1.15fr .85fr;align-items:stretch;gap:42px}
-.lab-visual{min-height:390px;border:0;border-radius:18px}
-.lab-visual img{display:block;width:100%;height:100%;min-height:390px;object-fit:cover;border-radius:inherit}
+.lab-section{position:relative;isolation:isolate;padding:90px 0 86px;background:linear-gradient(90deg,rgba(9,24,43,.12) 0%,rgba(9,24,43,.28) 48%,rgba(9,24,43,.72) 100%),url("../img/svc_lineupzero_img01_active.png") center/cover no-repeat}
+.lab-feature{display:flex;justify-content:flex-end;align-items:stretch;min-height:390px}
+.lab-copy{width:44%;min-width:360px}
 .lab-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:28px 0;color:var(--navy-esg-text)}
 .rnd-number{color:var(--brand-blue);font-size: 16px;font-weight:700;letter-spacing:.1em}
 .lab-copy h3{margin:18px 0;font-size:clamp(28px,3vw,42px);line-height:1.25;font-weight:700;letter-spacing:-.04em}
@@ -69,7 +68,7 @@
 
 @media(max-width:900px){
     .rnd-hero{min-height:560px}
-    .lab-feature{grid-template-columns:1fr 1fr;gap:28px}
+    .lab-feature{min-height:340px}
     .technology-inner{grid-template-columns:1fr;gap:28px}
     .technology-points{grid-column:auto}
 }
@@ -79,9 +78,8 @@
     .rnd-section-heading{display:block;margin-bottom:28px}
     .rnd-section-heading>p{margin-top:18px}
     .lab-section,.fields-section{padding:68px 0}
-    .lab-feature{grid-template-columns:1fr;gap:24px}
-    .lab-visual{min-height:260px}
-    .lab-copy{padding:8px 0}
+    .lab-feature{min-height:300px}
+    .lab-copy{width:100%;min-width:0;max-width:520px;margin-left:auto;padding:8px 0;text-align:right;align-items:flex-end}
     .field-grid{grid-template-columns:1fr}
     .field-visual{height:220px}
     .technology-section{padding:68px 0}
