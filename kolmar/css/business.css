@@ -593,19 +593,36 @@
 }
 
 
-/* 국내 사업장·사업장 안내 이미지는 원본 비율로 표시해 단색 여백을 없앱니다. */
+/* 국내 사업장과 사업장 안내 이미지는 단색 플레이스홀더 없이 사진으로 영역을 꽉 채웁니다. */
 #locations .location-card:nth-child(1) .location-image,
 #locations .location-card:nth-child(3) .location-image {
-    height: auto !important;
-    min-height: 0 !important;
-    background: transparent !important;
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 230px !important;
+    min-height: 230px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: none !important;
+    overflow: hidden !important;
 }
 #locations .location-card:nth-child(1) .location-image > img,
 #locations .location-card:nth-child(3) .location-image > img {
-    position: static !important;
-    inset: auto !important;
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
     width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
     object-position: center !important;
+    background: none !important;
+}
+@media (max-width: 900px) {
+    #locations .location-card:nth-child(1) .location-image,
+    #locations .location-card:nth-child(3) .location-image {
+        height: 210px !important;
+        min-height: 210px !important;
+    }
 }
