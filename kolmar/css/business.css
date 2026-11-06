@@ -453,3 +453,71 @@
         min-height: 210px;
     }
 }
+
+
+/* 사업소개: 이미지와 설명을 두 줄로 교차 배치 */
+#business-intro .intro-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+}
+#business-intro .intro-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 64px;
+}
+#business-intro .intro-row-top .intro-image {
+    grid-column: 2;
+    grid-row: 1;
+}
+#business-intro .intro-row-top .intro-content {
+    grid-column: 1;
+    grid-row: 1;
+}
+#business-intro .intro-row-bottom .intro-image {
+    grid-column: 1;
+    grid-row: 1;
+}
+#business-intro .intro-row-bottom .intro-content {
+    grid-column: 2;
+    grid-row: 1;
+}
+#business-intro .intro-row .intro-image {
+    width: 100%;
+    min-height: 360px;
+    border-radius: 18px;
+}
+#business-intro .intro-row .intro-content {
+    padding: 24px 0;
+}
+@media (max-width: 900px) {
+    #business-intro .intro-row {
+        gap: 32px;
+    }
+    #business-intro .intro-row .intro-image {
+        min-height: 300px;
+    }
+}
+@media (max-width: 600px) {
+    #business-intro .intro-layout {
+        gap: 36px;
+    }
+    #business-intro .intro-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    #business-intro .intro-row-top .intro-image,
+    #business-intro .intro-row-bottom .intro-image {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #business-intro .intro-row-top .intro-content,
+    #business-intro .intro-row-bottom .intro-content {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #business-intro .intro-row .intro-image {
+        min-height: 260px;
+    }
+}
