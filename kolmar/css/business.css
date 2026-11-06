@@ -584,3 +584,8 @@
     }
     #business-intro .intro-row > .intro-image { height: 260px !important; min-height: 260px !important; }
 }
+
+/* 첫 번째 사업소개 이미지: 인물이 화면 중심에 오도록 크롭 위치 조정 */
+#business-intro .intro-row-top > .intro-image > img {
+    object-position: 85% center !important;
+}
