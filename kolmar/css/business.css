@@ -591,3 +591,21 @@
 #business-intro .intro-row-top > .intro-image > img {
     object-position: 85% center !important;
 }
+
+
+/* 국내 사업장·사업장 안내 이미지는 원본 비율로 표시해 단색 여백을 없앱니다. */
+#locations .location-card:nth-child(1) .location-image,
+#locations .location-card:nth-child(3) .location-image {
+    height: auto !important;
+    min-height: 0 !important;
+    background: transparent !important;
+}
+#locations .location-card:nth-child(1) .location-image > img,
+#locations .location-card:nth-child(3) .location-image > img {
+    position: static !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+}
