@@ -225,7 +225,14 @@
 .location-info p { color: var(--gray-text); font-size: 16px; line-height: 1.6; word-break: keep-all; }
 .location-info .text-link { margin-top: 18px; }
 
-.contact-section { padding: 84px 0; background: var(--navy-news); color: var(--color-white); }
+.contact-section {
+    padding: 84px 0;
+    background:
+        linear-gradient(rgba(10, 30, 55, .68), rgba(10, 30, 55, .68)),
+        url("../img/sub0.jpg") center / cover no-repeat,
+        var(--navy-news);
+    color: var(--color-white);
+}
 .contact-inner { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 54px; }
 .contact-copy .section-eyebrow, .quote-heading .section-eyebrow { color: var(--blue-light); }
 .contact-copy h2, .quote-heading h2 {
@@ -242,10 +249,8 @@
     gap: 24px;
     padding: 34px;
     border: 0;
-    border-radius: 20px;
-    background:
-        linear-gradient(rgba(10, 30, 55, .58), rgba(10, 30, 55, .58)),
-        url("../img/sub0.jpg") center / cover no-repeat;
+    border-radius: 0;
+    background: transparent;
     backdrop-filter: none;
 }
 .contact-panel > div > span { color: var(--news-tag-glass); font-size: 16px; font-weight: 700; letter-spacing: .1em; }
