@@ -227,10 +227,13 @@
 
 .contact-section {
     padding: 84px 0;
-    background:
+    background-color: var(--navy-news);
+    background-image:
         linear-gradient(rgba(10, 30, 55, .32), rgba(10, 30, 55, .32)),
-        url("../img/sub0.jpg") center / cover no-repeat,
-        var(--navy-news);
+        url("../img/sub0.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: var(--color-white);
 }
 .contact-inner { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 54px; }
@@ -648,4 +651,29 @@
         height: 210px !important;
         min-height: 210px !important;
     }
+}
+
+
+/* 사업문의 영역 최종 표시 보정: 이미지 배경과 검정 문의 카드 */
+#wrap .contact-section {
+    background-color: var(--navy-news) !important;
+    background-image:
+        linear-gradient(rgba(10, 30, 55, .32), rgba(10, 30, 55, .32)),
+        url("../img/sub0.jpg") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+#wrap .contact-section .contact-panel {
+    background: #111111 !important;
+    border-radius: 12px !important;
+    padding: 34px !important;
+}
+#wrap .contact-section .contact-panel h3,
+#wrap .contact-section .contact-panel p {
+    color: #ffffff !important;
+}
+#wrap .contact-section .contact-panel .contact-arrow {
+    background: var(--blue-arrow-active) !important;
+    color: #ffffff !important;
 }
