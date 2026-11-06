@@ -38,13 +38,15 @@
 
 .fields-section{padding:90px 0;background:var(--color-white)}
 .field-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.field-card{overflow:hidden;border:1px solid #dce8f5;border-radius:13px;background:var(--color-white)}
+.field-card{overflow:hidden;border:1px solid #dce8f5;border-radius:13px;background:var(--color-white);transition:box-shadow .35s ease,transform .35s ease}
+.field-card:hover,.field-card:focus-within{box-shadow:0 16px 34px rgba(24,66,112,.13);transform:translateY(-4px)}
 .field-visual{height:250px;border:0;border-radius:0}
 .field-visual img{display:block;width:100%;height:100%;object-fit:cover}
 .field-content{padding:24px}
 .field-content>span{color:var(--brand-blue);font-size: 16px;font-weight:700;letter-spacing:.1em}
-.field-content h3{margin:12px 0 8px;color:var(--brand-navy);font-size:22px;font-weight:700}
-.field-content p{color:var(--gray-text);font-size: 16px;line-height:1.6;word-break:keep-all}
+.field-content h3{margin:12px 0 0;color:var(--brand-navy);font-size:22px;font-weight:700}
+.field-content p{max-height:0;margin:0;overflow:hidden;opacity:0;color:var(--gray-text);font-size:16px;line-height:1.6;word-break:keep-all;transition:max-height .4s ease,margin .4s ease,opacity .3s ease}
+.field-card:hover .field-content p,.field-card:focus-within .field-content p{max-height:110px;margin-top:12px;opacity:1}
 
 .technology-section{padding:84px 0;background:var(--navy-news);color:var(--color-white)}
 .technology-inner{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:36px 54px}
@@ -85,6 +87,8 @@
     .lab-copy{width:100%;min-width:0;max-width:520px;margin-left:auto;padding:8px 0;text-align:right;align-items:flex-end}
     .field-grid{grid-template-columns:1fr}
     .field-visual{height:220px}
+    .field-content h3{margin-bottom:8px}
+    .field-content p{max-height:none;margin:0;opacity:1}
     .technology-section{padding:68px 0}
     .technology-panel{grid-template-columns:1fr;padding:20px}
     .technology-visual{min-height:200px}
@@ -92,4 +96,4 @@
     .technology-point{min-height:96px;padding:16px}
     .hero-scroll{right:30px;bottom:28px}
 }
-@media(prefers-reduced-motion:reduce){.rnd-text-link{transition:none}}
+@media(prefers-reduced-motion:reduce){.rnd-text-link,.field-card,.field-content p{transition:none}}
