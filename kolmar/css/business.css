@@ -228,7 +228,7 @@
 .contact-section {
     padding: 84px 0;
     background:
-        linear-gradient(rgba(10, 30, 55, .68), rgba(10, 30, 55, .68)),
+        linear-gradient(rgba(10, 30, 55, .32), rgba(10, 30, 55, .32)),
         url("../img/sub0.jpg") center / cover no-repeat,
         var(--navy-news);
     color: var(--color-white);
@@ -249,9 +249,17 @@
     gap: 24px;
     padding: 34px;
     border: 0;
-    border-radius: 0;
-    background: transparent;
+    border-radius: 12px;
+    background: #111111;
+    color: #ffffff;
     backdrop-filter: none;
+}
+.contact-panel h3,
+.contact-panel p {
+    color: #ffffff;
+}
+.contact-panel .contact-arrow {
+    flex-shrink: 0;
 }
 .contact-panel > div > span { color: var(--news-tag-glass); font-size: 16px; font-weight: 700; letter-spacing: .1em; }
 .contact-panel h3 { margin: 12px 0 8px; font-size: 24px; font-weight: 700; }
