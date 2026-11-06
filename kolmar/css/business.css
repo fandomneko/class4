@@ -665,9 +665,9 @@
     background-repeat: no-repeat !important;
 }
 #wrap .contact-section .contact-panel {
-    background: #111111 !important;
+    background: rgba(17, 17, 17, .3) !important;
     border-radius: 12px !important;
-    padding: 34px !important;
+    padding: 54px 34px !important;
 }
 #wrap .contact-section .contact-panel h3,
 #wrap .contact-section .contact-panel p {
