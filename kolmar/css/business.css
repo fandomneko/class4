@@ -521,3 +521,66 @@
         min-height: 260px;
     }
 }
+
+
+/* 사업소개 레이아웃 최종 적용: 이미지 박스와 텍스트를 두 줄로 교차 배치 */
+#business-intro .intro-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 54px !important;
+    width: 100%;
+}
+#business-intro .intro-layout > .intro-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 64px !important;
+    width: 100%;
+}
+#business-intro .intro-row-top > .intro-content { grid-column: 1 !important; grid-row: 1 !important; }
+#business-intro .intro-row-top > .intro-image { grid-column: 2 !important; grid-row: 1 !important; }
+#business-intro .intro-row-bottom > .intro-image { grid-column: 1 !important; grid-row: 1 !important; }
+#business-intro .intro-row-bottom > .intro-content { grid-column: 2 !important; grid-row: 1 !important; }
+#business-intro .intro-row > .intro-image {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    height: 360px !important;
+    min-height: 360px !important;
+    overflow: hidden !important;
+}
+#business-intro .intro-row > .intro-image > img {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+#business-intro .intro-row > .intro-content {
+    display: block !important;
+    min-width: 0;
+    padding: 24px 0 !important;
+}
+@media (max-width: 900px) {
+    #business-intro .intro-layout { gap: 38px !important; }
+    #business-intro .intro-layout > .intro-row { gap: 30px !important; }
+    #business-intro .intro-row > .intro-image { height: 300px !important; min-height: 300px !important; }
+}
+@media (max-width: 600px) {
+    #business-intro .intro-layout > .intro-row {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 20px !important;
+    }
+    #business-intro .intro-row-top > .intro-image,
+    #business-intro .intro-row-bottom > .intro-image {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+    }
+    #business-intro .intro-row-top > .intro-content,
+    #business-intro .intro-row-bottom > .intro-content {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+    }
+    #business-intro .intro-row > .intro-image { height: 260px !important; min-height: 260px !important; }
+}
