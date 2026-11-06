@@ -365,3 +365,20 @@
 #wrap *::after {
     border: 0 !important;
 }
+
+
+/* OMD 영역의 화살표는 모바일에서만 표시 */
+@media (min-width: 901px) {
+    .omd-section .process-controls button,
+    .omd-section .text-link span {
+        display: none !important;
+    }
+}
+@media (max-width: 900px) {
+    .omd-section .process-controls button {
+        display: grid !important;
+    }
+    .omd-section .text-link span {
+        display: inline !important;
+    }
+}
