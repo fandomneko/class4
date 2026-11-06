@@ -28,7 +28,7 @@
 .lab-copy{width:44%;min-width:360px}
 .lab-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:28px 0;color:var(--navy-esg-text)}
 .rnd-number{color:var(--brand-blue);font-size: 16px;font-weight:700;letter-spacing:.1em}
-.lab-copy h3{margin:18px 0;font-size:clamp(28px,3vw,42px);line-height:1.25;font-weight:700;letter-spacing:-.04em}
+.lab-copy h3{margin:18px 0;color:#fff;font-size:clamp(28px,3vw,42px);line-height:1.25;font-weight:700;letter-spacing:-.04em}
 .lab-copy h3 em{color:var(--brand-blue);font-style:normal}
 .lab-copy>p{max-width:520px;color:#fff;font-size:16px;line-height:1.7;word-break:keep-all}
 .rnd-text-link{display:inline-flex;align-items:center;gap:24px;margin-top:26px;padding:10px 14px;border-radius:5px;background:rgba(9,24,43,.28);color:#fff;font-size: 16px;font-weight:600;transition:background .2s ease,color .2s ease}
