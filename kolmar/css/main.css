@@ -1014,3 +1014,50 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     .esg-swiper .swiper-wrapper,
     .esg-swiper .swiper-slide { transition: none !important; }
 }
+
+
+/* IR stock quote */
+.ir-stock-name,
+.ir-stock-quote {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.ir-stock-name > span {
+    color: #78818e;
+    font-size: 13px;
+    font-weight: 500;
+}
+.ir-stock-quote {
+    align-items: flex-end;
+    gap: 4px;
+}
+.ir-stock-value {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    white-space: nowrap;
+}
+.ir-stock-value > span {
+    font-size: .48em;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+.ir-stock-change {
+    color: #2878cf;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.ir-stock-bottom b {
+    color: var(--blue-arrow-ir);
+    font-size: 16px;
+}
+@media (max-width: 600px) {
+    .ir-stock-card { gap: 18px; padding: 22px 18px; }
+    .ir-stock-top { align-items: flex-start; gap: 12px; }
+    .ir-stock-name > span { font-size: 11px; }
+    .ir-stock-value { font-size: clamp(25px, 7vw, 32px); }
+    .ir-stock-change { font-size: 12px; }
+    .ir-stock-bottom { font-size: 11px; }
+}
