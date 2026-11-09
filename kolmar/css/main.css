@@ -171,7 +171,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 924px;
+    height: 100%;
     overflow: hidden;
     color: var(--color-white);
     text-align: center;
@@ -448,8 +448,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 /* 반응형 */
 @media (max-width: 900px) {
-    .company-section { min-height: 693px; grid-template-columns: repeat(2, 1fr); }
-    .company-card { min-height: 693px; }
+    .company-section { height: 100dvh; grid-template-columns: repeat(2, 1fr); }
+    .company-card { height: 50dvh; }
     .news-inner { grid-template-columns: 1fr; }
     .news-content-layout { grid-template-columns: 1fr; }
 }
@@ -491,11 +491,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 
 .company-section {
-    min-height: 974px;
+    height: 100dvh;
 }
 
 .company-card {
-    min-height: 974px;
+    height: 100%;
 }
 
 .esg-section {
@@ -515,11 +515,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 @media (max-width: 900px) {
     .company-section {
-        min-height: 743px;
+        height: 100dvh;
     }
 
     .company-card {
-        min-height: 743px;
+        height: 50dvh;
     }
 }
 
@@ -759,9 +759,11 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .rnd-section .rnd-card p {
     font-size: clamp(14px, 1.05vw, 16px);
 }
-.company-section,
+.company-section {
+    height: 100dvh;
+}
 .company-card {
-    min-height: clamp(480px, 63vw, 974px);
+    height: 100%;
 }
 .company-card {
     padding-inline: clamp(12px, 1.5vw, 24px);
@@ -850,9 +852,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     .rnd-section .section-intro p br { display: none; }
     .rnd-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .company-section { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .company-section,
-    .company-card { min-height: 0; }
-    .company-card { min-height: clamp(300px, 48vw, 440px); }
+    .company-section { height: 100dvh; }
+    .company-card { height: 50dvh; }
+    .company-card { height: 50dvh; }
     .news-inner { grid-template-columns: 1fr; }
     .news-intro { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
     .news-intro h2 { margin-bottom: 0; }
@@ -935,7 +937,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     .rnd-section .rnd-card h3 { font-size: 17px; }
     .rnd-section .rnd-card p { font-size: 14px; line-height: 1.6; }
     .company-section { grid-template-columns: 1fr; }
-    .company-card { min-height: 310px; }
+    .company-section { height: 200dvh; }
+    .company-card { height: 50dvh; }
     .company-card h2 { font-size: 25px; }
     .company-card p { max-width: 280px; font-size: 14px; }
     .esg-section,
