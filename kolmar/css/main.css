@@ -1287,3 +1287,29 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
         animation: none !important;
     }
 }
+
+
+/* HERO scroll cue: horizontal motion on every screen size */
+.hero-sec .hero-scroll {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.hero-sec .hero-scroll-line {
+    width: 42px;
+    height: 1px;
+}
+.hero-sec .hero-scroll-line > span {
+    top: 0;
+    left: -45%;
+    width: 45%;
+    height: 1px;
+    animation: heroScrollHorizontal 1.6s ease-in-out infinite;
+}
+@keyframes heroScrollHorizontal {
+    0% { left: -45%; }
+    100% { left: 100%; }
+}
+@media (max-width: 600px) {
+    .hero-sec .hero-scroll-line { width: 30px; }
+}
