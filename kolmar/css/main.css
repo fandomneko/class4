@@ -144,7 +144,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .hero-sec .swiper-pagination-bullet-active { background: var(--color-white); }
 
 /* R&D */
-.rnd-section { position: relative; padding: 76px 0; overflow: hidden; background: linear-gradient(115deg, var(--sky-start) 0%, var(--sky-mid) 48%, var(--sky-end) 100%); }
+.rnd-section { position: relative; padding: 76px 0; overflow: hidden; background: url('../img/blue.jpg') center center / cover no-repeat; }
 .rnd-inner { position: relative; z-index: 1; display: grid; grid-template-columns: .75fr 2fr; align-items: center; gap: 54px; }
 .section-intro h2 { margin-bottom: 8px; font-size: clamp(34px, 4vw, 56px); line-height: 1; }
 .section-intro p { font-size: 20px; line-height: 1.65; }
@@ -528,7 +528,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .rnd-section {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(115deg, var(--sky-start) 0%, var(--sky-mid) 48%, var(--sky-end) 100%);
+    background: url('../img/blue.jpg') center center / cover no-repeat;
 }
 .rnd-inner {
     display: grid;
