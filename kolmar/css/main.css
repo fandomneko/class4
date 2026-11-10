@@ -1086,3 +1086,143 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     .ir-stock-change { font-size: 12px; }
     .ir-stock-bottom { font-size: 11px; }
 }
+
+
+/* HERO navigation + scroll cue */
+.hero-sec { position: relative; }
+.hero-sec .hero-navigation {
+    position: absolute;
+    z-index: 5;
+    right: clamp(24px, 5vw, 76px);
+    bottom: 42px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.hero-sec .hero-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid rgba(255,255,255,.62);
+    border-radius: 50%;
+    background: rgba(8, 20, 42, .16);
+    color: #fff;
+    cursor: pointer;
+    transition: background .25s ease, border-color .25s ease, transform .25s ease;
+    backdrop-filter: blur(5px);
+}
+.hero-sec .hero-arrow .material-symbols-outlined {
+    font-size: 22px;
+    line-height: 1;
+}
+.hero-sec .hero-arrow:hover,
+.hero-sec .hero-arrow:focus-visible {
+    background: rgba(255,255,255,.95);
+    border-color: #fff;
+    color: #142b4c;
+    transform: translateY(-2px);
+    outline: none;
+}
+.hero-sec .hero-scroll {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    color: rgba(255,255,255,.9);
+    text-decoration: none;
+    transform: translateX(-50%);
+}
+.hero-sec .hero-scroll-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .22em;
+}
+.hero-sec .hero-scroll-line {
+    position: relative;
+    display: block;
+    width: 1px;
+    height: 38px;
+    overflow: hidden;
+    background: rgba(255,255,255,.42);
+}
+.hero-sec .hero-scroll-line > span {
+    position: absolute;
+    top: -45%;
+    left: 0;
+    width: 1px;
+    height: 45%;
+    background: #fff;
+    animation: heroScrollMotion 1.6s ease-in-out infinite;
+}
+@keyframes heroScrollMotion {
+    0% { top: -45%; }
+    100% { top: 100%; }
+}
+.hero-sec .swiper-pagination {
+    right: auto !important;
+    bottom: 62px !important;
+    left: clamp(24px, 5vw, 76px) !important;
+    width: auto !important;
+    justify-content: flex-start;
+}
+@media (max-width: 900px) {
+    .hero-sec .hero-navigation {
+        right: 28px;
+        bottom: 34px;
+    }
+    .hero-sec .hero-scroll { bottom: 28px; }
+    .hero-sec .swiper-pagination {
+        bottom: 54px !important;
+        left: 28px !important;
+    }
+}
+@media (max-width: 600px) {
+    .hero-sec .hero-navigation {
+        right: 20px;
+        bottom: 22px;
+        gap: 7px;
+    }
+    .hero-sec .hero-arrow {
+        width: 38px;
+        height: 38px;
+    }
+    .hero-sec .hero-arrow .material-symbols-outlined { font-size: 19px; }
+    .hero-sec .hero-scroll {
+        left: 20px;
+        bottom: 22px;
+        flex-direction: row;
+        gap: 8px;
+        transform: none;
+    }
+    .hero-sec .hero-scroll-label { font-size: 9px; }
+    .hero-sec .hero-scroll-line {
+        width: 30px;
+        height: 1px;
+    }
+    .hero-sec .hero-scroll-line > span {
+        top: 0;
+        left: -45%;
+        width: 45%;
+        height: 1px;
+        animation: heroScrollMotionMobile 1.6s ease-in-out infinite;
+    }
+    @keyframes heroScrollMotionMobile {
+        0% { left: -45%; }
+        100% { left: 100%; }
+    }
+    .hero-sec .swiper-pagination {
+        bottom: 34px !important;
+        left: 20px !important;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-sec .hero-scroll-line > span { animation: none; }
+    .hero-sec .hero-arrow { transition: none; }
+}
