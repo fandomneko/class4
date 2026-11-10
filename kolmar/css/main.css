@@ -1218,8 +1218,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
         100% { left: 100%; }
     }
     .hero-sec .swiper-pagination {
-        bottom: 34px !important;
-        left: 20px !important;
+        bottom: 18px !important;
+        left: 50% !important;
+        justify-content: center;
+        transform: translateX(-50%);
     }
 }
 @media (prefers-reduced-motion: reduce) {
