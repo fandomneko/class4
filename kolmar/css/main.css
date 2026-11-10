@@ -170,7 +170,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 /* R&D */
 .rnd-section {
-    background: linear-gradient(115deg, #eaf3fb 0%, #dceaf7 48%, #c9def0 100%);
+    background: #fff;
 }
 .rnd-inner { position: relative; z-index: 1; display: grid; grid-template-columns: .75fr 2fr; align-items: center; gap: 54px; }
 .section-intro h2 { margin-bottom: 8px; font-size: clamp(34px, 4vw, 56px); line-height: 1; }
@@ -553,7 +553,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 /* R&D ORIGINAL STYLE RE-APPLY */
 .rnd-section {
-    background: linear-gradient(115deg, #eaf3fb 0%, #dceaf7 48%, #c9def0 100%);
+    background: #fff;
 }
 .rnd-inner {
     display: grid;
@@ -1230,15 +1230,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 
 
-/* R&D background image with a 30% black overlay */
-.rnd-section {
-    background-image:
-        linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
-        url("../img/m5_3.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 
 /* HERO headline reveal — staggered word motion */
