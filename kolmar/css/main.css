@@ -1386,7 +1386,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 
 
-/* R&D: replace translucent white and gray surfaces with sky blue */
+/* R&D: translucent white and gray surfaces -> sky blue (deployment retry) */
 .rnd-section .rnd-controls button {
     background: rgba(129, 202, 255, .5) !important;
 }
