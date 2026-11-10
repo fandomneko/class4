@@ -1343,7 +1343,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 }
 
 
-/* FINAL: keep the horizontal SCROLL indicator animated */
+/* FINAL: animated horizontal light sweep for the scroll cue */
 .hero-sec a.hero-scroll {
     display: flex !important;
     flex-direction: row !important;
@@ -1364,16 +1364,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .hero-sec a.hero-scroll .hero-scroll-line > span {
     position: absolute !important;
     top: 0 !important;
-    left: -45% !important;
+    left: 0 !important;
     display: block !important;
-    width: 45% !important;
+    width: 35% !important;
     height: 1px !important;
     background: #fff !important;
-    animation: heroScrollHorizontalActive 1.6s ease-in-out infinite !important;
+    transform: translateX(-120%) !important;
+    animation: heroScrollSweep 1.35s cubic-bezier(.45,0,.55,1) infinite !important;
+    will-change: transform;
 }
-@keyframes heroScrollHorizontalActive {
-    0% { left: -45%; }
-    100% { left: 100%; }
+@keyframes heroScrollSweep {
+    0% { transform: translateX(-120%); }
+    100% { transform: translateX(320%); }
 }
 @media (max-width: 600px) {
     .hero-sec a.hero-scroll .hero-scroll-line {
