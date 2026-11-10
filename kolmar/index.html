@@ -315,6 +315,28 @@
     </div>
 
     <script>
+        // HERO 문구를 단어 단위로 분리해 슬라이드마다 순차적으로 등장시킵니다.
+        document.querySelectorAll('.hero-copy p').forEach(paragraph => {
+            const label = paragraph.textContent.trim();
+            paragraph.setAttribute('aria-label', label);
+            paragraph.innerHTML = label.split(/\\s+/).map(word =>
+                '<span class="hero-word-mask" aria-hidden="true"><span class="hero-word">' + word + '</span></span>'
+            ).join(' ');
+        });
+
+        function playHeroTextMotion(swiper) {
+            swiper.slides.forEach(slide => {
+                const copy = slide.querySelector('.hero-copy');
+                if (copy) copy.classList.remove('is-animated');
+            });
+
+            const activeCopy = swiper.slides[swiper.activeIndex]?.querySelector('.hero-copy');
+            if (activeCopy) {
+                void activeCopy.offsetWidth;
+                activeCopy.classList.add('is-animated');
+            }
+        }
+
         const swiperHero = new Swiper('.hero-sec .visual', {
             direction: 'horizontal',
             loop: true,
@@ -324,7 +346,11 @@
                 nextEl: '.hero-sec .hero-next',
                 prevEl: '.hero-sec .hero-prev'
             },
-            pagination: { el: '.visual .swiper-pagination', clickable: true }
+            pagination: { el: '.visual .swiper-pagination', clickable: true },
+            on: {
+                init: playHeroTextMotion,
+                slideChangeTransitionStart: playHeroTextMotion
+            }
         });
 
         const swiperEsg = new Swiper('.esg-swiper', {
