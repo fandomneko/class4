@@ -1228,3 +1228,14 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     .hero-sec .hero-scroll-line > span { animation: none; }
     .hero-sec .hero-arrow { transition: none; }
 }
+
+
+/* R&D background image with a 30% black overlay */
+.rnd-section {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
+        url("../img/m5_3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
