@@ -1239,3 +1239,51 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+
+/* HERO headline reveal — staggered word motion */
+.hero-sec .hero-copy p {
+    white-space: normal;
+}
+.hero-sec .hero-word-mask {
+    display: inline-block;
+    overflow: hidden;
+    margin-right: .16em;
+    padding-bottom: .12em;
+    vertical-align: bottom;
+}
+.hero-sec .hero-word {
+    display: block;
+    opacity: 0;
+    transform: translate3d(0, 115%, 0);
+}
+.hero-sec .hero-copy.is-animated .hero-word {
+    animation: heroWordReveal .82s cubic-bezier(.2, .72, .24, 1) forwards;
+}
+.hero-sec .hero-copy.is-animated .hero-word-mask:nth-child(1) .hero-word {
+    animation-delay: .12s;
+}
+.hero-sec .hero-copy.is-animated .hero-word-mask:nth-child(2) .hero-word {
+    animation-delay: .27s;
+}
+.hero-sec .hero-copy.is-animated .hero-word-mask:nth-child(3) .hero-word {
+    animation-delay: .42s;
+}
+@keyframes heroWordReveal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 115%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-sec .hero-word,
+    .hero-sec .hero-copy.is-animated .hero-word {
+        opacity: 1;
+        transform: none;
+        animation: none !important;
+    }
+}
