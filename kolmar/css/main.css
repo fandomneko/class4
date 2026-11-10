@@ -1341,3 +1341,44 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
         flex-basis: 30px !important;
     }
 }
+
+
+/* FINAL: keep the horizontal SCROLL indicator animated */
+.hero-sec a.hero-scroll {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+.hero-sec a.hero-scroll .hero-scroll-line {
+    position: relative !important;
+    display: block !important;
+    width: 42px !important;
+    min-width: 42px !important;
+    height: 1px !important;
+    min-height: 1px !important;
+    flex: 0 0 42px !important;
+    overflow: hidden !important;
+    background: rgba(255,255,255,.42) !important;
+}
+.hero-sec a.hero-scroll .hero-scroll-line > span {
+    position: absolute !important;
+    top: 0 !important;
+    left: -45% !important;
+    display: block !important;
+    width: 45% !important;
+    height: 1px !important;
+    background: #fff !important;
+    animation: heroScrollHorizontalActive 1.6s ease-in-out infinite !important;
+}
+@keyframes heroScrollHorizontalActive {
+    0% { left: -45%; }
+    100% { left: 100%; }
+}
+@media (max-width: 600px) {
+    .hero-sec a.hero-scroll .hero-scroll-line {
+        width: 30px !important;
+        min-width: 30px !important;
+        flex-basis: 30px !important;
+    }
+}
