@@ -1384,3 +1384,15 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
         flex-basis: 30px !important;
     }
 }
+
+
+/* R&D: replace translucent white and gray surfaces with sky blue */
+.rnd-section .rnd-controls button {
+    background: rgba(129, 202, 255, .5) !important;
+}
+.rnd-section .rnd-tabs button {
+    background: rgba(129, 202, 255, .65) !important;
+}
+.rnd-section .rnd-card {
+    background: rgba(129, 202, 255, .58) !important;
+}
