@@ -68,6 +68,18 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
+                <div class="hero-navigation" aria-label="메인 비주얼 슬라이드 탐색">
+                    <button type="button" class="hero-arrow hero-prev" aria-label="이전 슬라이드">
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+                    </button>
+                    <button type="button" class="hero-arrow hero-next" aria-label="다음 슬라이드">
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                    </button>
+                </div>
+                <a class="hero-scroll" href="#rnd" aria-label="다음 콘텐츠 R&D로 이동">
+                    <span class="hero-scroll-label">SCROLL</span>
+                    <span class="hero-scroll-line" aria-hidden="true"><span></span></span>
+                </a>
             </section>
 
             <!-- R&D -->
@@ -306,7 +318,12 @@
         const swiperHero = new Swiper('.hero-sec .visual', {
             direction: 'horizontal',
             loop: true,
+            speed: 900,
             autoplay: { delay: 2600, disableOnInteraction: false },
+            navigation: {
+                nextEl: '.hero-sec .hero-next',
+                prevEl: '.hero-sec .hero-prev'
+            },
             pagination: { el: '.visual .swiper-pagination', clickable: true }
         });
 
