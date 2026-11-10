@@ -1304,3 +1304,40 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 @media (max-width: 600px) {
     .hero-sec .hero-scroll-line { width: 30px; }
 }
+
+
+/* FORCE HERO SCROLL LINE TO BE HORIZONTAL */
+.hero-sec a.hero-scroll {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+}
+.hero-sec a.hero-scroll .hero-scroll-line {
+    display: block !important;
+    width: 42px !important;
+    min-width: 42px !important;
+    height: 1px !important;
+    min-height: 1px !important;
+    flex: 0 0 42px !important;
+    overflow: hidden !important;
+}
+.hero-sec a.hero-scroll .hero-scroll-line > span {
+    top: 0 !important;
+    left: -45% !important;
+    width: 45% !important;
+    height: 1px !important;
+    animation: heroScrollHorizontal 1.6s ease-in-out infinite !important;
+}
+@keyframes heroScrollHorizontal {
+    0% { left: -45%; }
+    100% { left: 100%; }
+}
+@media (max-width: 600px) {
+    .hero-sec a.hero-scroll .hero-scroll-line {
+        width: 30px !important;
+        min-width: 30px !important;
+        flex-basis: 30px !important;
+    }
+}
