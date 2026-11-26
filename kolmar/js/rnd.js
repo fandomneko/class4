@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 연구분야 카드: 제목 아래 화살표를 누르면 카드가 가로로 한 장씩 넘어갑니다.
     const fieldTrack = document.querySelector('.field-grid');
-    const fieldNext = document.querySelector('.rnd-text-link');
+    const fieldNext = document.querySelector('.rnd-hero .hero-scroll');
     if (fieldTrack && fieldNext) {
         fieldNext.addEventListener('click', () => {
             const card = fieldTrack.querySelector('.field-card');
