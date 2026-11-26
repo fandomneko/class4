@@ -730,18 +730,7 @@
     align-items: flex-end !important;
     margin-bottom: 48px !important;
 }
-.business-section-heading > div::before {
-    display: block;
-    margin-bottom: 14px;
-    color: var(--biz-blue);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: .2em;
-}
-#omd .business-section-heading > div::before { content: "END-TO-END SOLUTION"; }
-#business-intro .business-section-heading > div::before { content: "WHAT WE DO"; }
-#locations .business-section-heading > div::before { content: "GLOBAL NETWORK"; }
-.business-section-heading h2 {
+#omd #business-intro #locations .business-section-heading h2 {
     margin-top: 0 !important;
     font-size: clamp(42px, 5vw, 64px) !important;
     letter-spacing: -.055em !important;
@@ -772,14 +761,6 @@
 .omd-visual:hover img { transform: scale(1.045); }
 .omd-copy {
     padding: 34px 0 !important;
-}
-.omd-copy::before {
-    content: "01 / PRODUCT PARTNERSHIP";
-    margin-bottom: 14px;
-    color: var(--biz-blue);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: .16em;
 }
 .omd-copy h3 {
     margin: 0 0 22px !important;
@@ -824,18 +805,6 @@
     transform: translateY(-7px);
     box-shadow: 0 18px 36px rgba(28,66,112,.12);
 }
-.process-card::before {
-    display: block;
-    margin-bottom: 24px;
-    color: #8ba8ce;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: .14em;
-}
-.process-card:nth-child(1)::before { content: "STEP 01"; }
-.process-card:nth-child(2)::before { content: "STEP 02"; }
-.process-card:nth-child(3)::before { content: "STEP 03"; }
-.process-card:nth-child(4)::before { content: "STEP 04"; }
 .process-card h3 {
     margin: 0 0 10px !important;
     color: var(--biz-ink);
@@ -876,16 +845,6 @@
     position: relative;
     padding: 24px 0 !important;
 }
-#business-intro .intro-row > .intro-content::before {
-    display: block;
-    margin-bottom: 16px;
-    color: var(--biz-blue);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: .16em;
-}
-#business-intro .intro-row-top > .intro-content::before { content: "02 / BRAND DEVELOPMENT"; }
-#business-intro .intro-row-bottom > .intro-content::before { content: "03 / PRODUCT VALUE"; }
 #business-intro .intro-content h3 {
     margin: 0 0 22px !important;
     color: var(--biz-ink) !important;
