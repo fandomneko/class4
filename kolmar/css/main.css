@@ -1591,3 +1591,29 @@ body { color: var(--main-ink); }
 .rnd-section .rnd-card02 .rnd-visual {
     margin-top: auto;
 }
+
+
+/* 메인 R&D 분야 카드 좌우 전환 */
+.rnd-section .rnd-cards {
+    transition: opacity .18s ease, transform .18s ease;
+    will-change: opacity, transform;
+}
+.rnd-section .rnd-cards.is-sliding-next {
+    opacity: 0;
+    transform: translateX(34px);
+}
+.rnd-section .rnd-cards.is-sliding-prev {
+    opacity: 0;
+    transform: translateX(-34px);
+}
+.rnd-section .rnd-cards.is-slide-entering {
+    animation: rndCardsEnter .32s ease both;
+}
+@keyframes rndCardsEnter {
+    from { opacity: 0; transform: translateX(24px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .rnd-section .rnd-cards { transition: none; }
+    .rnd-section .rnd-cards.is-slide-entering { animation: none; }
+}
