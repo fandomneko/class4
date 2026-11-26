@@ -1,6 +1,5 @@
 /* R&D SUB PAGE
    사업 페이지의 컬러·여백·카드·버튼 스타일을 공유해 브랜드 일관성을 유지합니다. */
-body,#wrap{background:#000}
 .rnd-hero{position:relative;display:flex;align-items:center;min-height:620px;height:min(760px,66vw);overflow:hidden;background:var(--navy-hero);color:var(--color-white)}
 .rnd-hero-image{position:absolute;inset:0;border:0!important;overflow:hidden;background:none}
 .rnd-hero-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
@@ -38,7 +37,7 @@ body,#wrap{background:#000}
 .rnd-text-link span{color:var(--blue-arrow-ir)}
 .rnd-text-link:hover span{color:var(--color-white)}
 
-.fields-section{padding:90px 0;background:#000}
+.fields-section{padding:90px 0;background:#fff}
 /* R&D research cards: spacing and image sizing */
 .field-grid{display:grid;width:90%;max-width:100%;margin:0 auto;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:90px;row-gap:20px}
 .field-card{display:flex;flex-direction:column;height:600px;min-height:600px;overflow:hidden;border:1px solid #dce8f5;border-radius:13px;background:transparent;transition:box-shadow .35s ease,transform .35s ease;box-sizing:border-box}
@@ -47,7 +46,7 @@ body,#wrap{background:#000}
 .field-visual img{display:block;width:100%;height:100%;object-fit:cover}
 .field-content{display:flex;flex:0 0 120px;height:120px;min-height:120px;flex-shrink:0;align-items:center;padding:0 24px;box-sizing:border-box;background:rgba(255,255,255,.4)}
 .field-content>span{color:var(--brand-blue);font-size:16px;font-weight:700;letter-spacing:.1em}
-.field-content h3{margin:0;color:#fff;font-size:22px;line-height:26px;font-weight:700}
+.field-content h3{margin:0;color:var(--brand-navy);font-size:22px;line-height:26px;font-weight:700}
 
 .technology-section{padding:84px 0;background:var(--navy-news);color:var(--color-white)}
 .technology-inner{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:36px 54px}
