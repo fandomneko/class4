@@ -1,23 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // HERO 화살표: 같은 페이지의 연구분야 카드 영역으로 이동한 뒤 카드 트랙을 한 장 넘깁니다.
+    // HERO 화살표: 연구분야 카드 6장을 가로로 한 장씩 넘깁니다.
     const fieldTrack = document.querySelector('.fields-section .field-grid');
     const fieldNext = document.querySelector('.rnd-hero-copy .hero-scroll');
     if (fieldTrack && fieldNext) {
-        fieldNext.addEventListener('click', () => {
-            const cards = fieldTrack.querySelectorAll('.field-card');
-            if (!cards.length) return;
-
+        let currentCard = 0;
+        const cards = fieldTrack.querySelectorAll('.field-card');
+        const getStep = () => {
+            if (!cards.length) return 0;
             const gap = parseFloat(getComputedStyle(fieldTrack).columnGap) || 0;
-            const step = cards[0].getBoundingClientRect().width + gap;
-            const maxScroll = fieldTrack.scrollWidth - fieldTrack.clientWidth;
-            const nextLeft = fieldTrack.scrollLeft >= maxScroll - 8 ? 0 : fieldTrack.scrollLeft + step;
+            return cards[0].getBoundingClientRect().width + gap;
+        };
 
-            // 카드가 화면에 보이도록 해당 섹션으로 이동합니다. 연구소 소개 영역으로는 이동하지 않습니다.
-            document.querySelector('.fields-section').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        fieldNext.addEventListener('click', () => {
+            if (!cards.length) return;
+            currentCard = (currentCard + 1) % cards.length;
+
+            // 카드 트랙이 보이는 위치로 이동한 뒤 다음 카드 위치로 넘깁니다.
+            document.querySelector('.fields-section').scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
             window.setTimeout(() => {
-                fieldTrack.scrollTo({ left: nextLeft, behavior: 'smooth' });
-            }, 450);
+                fieldTrack.scrollTo({
+                    left: currentCard * getStep(),
+                    behavior: 'smooth'
+                });
+            }, 500);
         });
     }
 
