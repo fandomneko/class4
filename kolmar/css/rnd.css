@@ -96,3 +96,32 @@
     .hero-scroll{right:30px;bottom:28px}
 }
 @media(prefers-reduced-motion:reduce){.rnd-text-link,.field-card{transition:none}}
+
+
+/* 연구분야 카드 가로 슬라이드 */
+.fields-section .field-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 32px) / 2);
+    grid-template-columns: none;
+    gap: 32px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 4px 2px 18px;
+}
+.fields-section .field-grid::-webkit-scrollbar { display: none; }
+.fields-section .field-card { width: 100%; scroll-snap-align: start; }
+.lab-copy .rnd-text-link {
+    cursor: pointer;
+    font: inherit;
+}
+@media (max-width: 700px) {
+    .fields-section .field-grid {
+        grid-auto-columns: 88%;
+        gap: 18px;
+    }
+}
