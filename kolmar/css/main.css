@@ -1617,3 +1617,10 @@ body { color: var(--main-ink); }
     .rnd-section .rnd-cards { transition: none; }
     .rnd-section .rnd-cards.is-slide-entering { animation: none; }
 }
+
+
+/* 메인 R&D 좌우 화살표 색상 통일 */
+.rnd-section .rnd-controls button,
+.rnd-section .rnd-controls button:last-child {
+    color: var(--brand-navy) !important;
+}
