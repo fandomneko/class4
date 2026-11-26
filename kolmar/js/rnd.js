@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 첫 화면의 스크롤 화살표를 누르면 연구소 영역으로 부드럽게 이동합니다.
-    const heroScroll = document.querySelector('.rnd-hero .hero-scroll');
-    const labSection = document.getElementById('lab');
-    if (heroScroll && labSection) {
-        heroScroll.addEventListener('click', event => {
-            event.preventDefault();
-            labSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    // 연구분야 카드: 제목 아래 화살표를 누르면 카드가 가로로 한 장씩 넘어갑니다.
+    const fieldTrack = document.querySelector('.field-grid');
+    const fieldNext = document.querySelector('.rnd-text-link');
+    if (fieldTrack && fieldNext) {
+        fieldNext.addEventListener('click', () => {
+            const card = fieldTrack.querySelector('.field-card');
+            if (!card) return;
+            const gap = parseFloat(getComputedStyle(fieldTrack).columnGap) || 0;
+            fieldTrack.scrollBy({ left: card.getBoundingClientRect().width + gap, behavior: 'smooth' });
         });
     }
 
