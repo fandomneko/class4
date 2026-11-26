@@ -677,3 +677,420 @@
     background: var(--blue-arrow-active) !important;
     color: #ffffff !important;
 }
+
+
+/* =========================================================
+   BUSINESS PAGE REDESIGN
+   Clean corporate blue / white editorial layout
+   ========================================================= */
+:root {
+    --biz-ink: #10294b;
+    --biz-blue: #276eeF;
+    --biz-pale: #edf5ff;
+    --biz-line: #dce8f6;
+    --biz-muted: #63748b;
+}
+
+/* HERO */
+.business-hero {
+    min-height: 650px !important;
+    height: min(790px, 70vw) !important;
+    background: #10294b !important;
+}
+.business-hero-image img {
+    object-position: center 46% !important;
+    transform: scale(1.015);
+}
+.business-hero-shade {
+    background: linear-gradient(90deg, rgba(5,17,38,.72) 0%, rgba(5,17,38,.42) 48%, rgba(5,17,38,.08) 100%) !important;
+}
+.business-hero-copy {
+    width: min(1540px, calc(100% - (var(--page-gutter, 4.2vw) * 2)));
+    margin-inline: auto;
+    padding-top: 52px !important;
+}
+.business-hero h2 {
+    margin-bottom: 26px !important;
+    font-size: clamp(64px, 8vw, 112px) !important;
+    letter-spacing: -.065em !important;
+}
+.business-hero-copy > p:last-child {
+    font-size: clamp(19px, 2vw, 25px) !important;
+    line-height: 1.7 !important;
+    color: rgba(255,255,255,.9);
+}
+.business-hero .hero-scroll {
+    right: clamp(24px, 5vw, 76px);
+    bottom: 42px;
+    opacity: .9;
+}
+
+/* SHARED SECTION TITLES */
+.business-section-heading {
+    align-items: flex-end !important;
+    margin-bottom: 48px !important;
+}
+.business-section-heading > div::before {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--biz-blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+#omd .business-section-heading > div::before { content: "END-TO-END SOLUTION"; }
+#business-intro .business-section-heading > div::before { content: "WHAT WE DO"; }
+#locations .business-section-heading > div::before { content: "GLOBAL NETWORK"; }
+.business-section-heading h2 {
+    margin-top: 0 !important;
+    font-size: clamp(42px, 5vw, 64px) !important;
+    letter-spacing: -.055em !important;
+}
+
+/* OMD FEATURE */
+.omd-section {
+    position: relative;
+    padding: clamp(76px, 8vw, 112px) 0 100px !important;
+    background: linear-gradient(135deg, #f3f8ff 0%, #e7f1ff 52%, #f8fbff 100%) !important;
+}
+.omd-section .section-inner { position: relative; }
+.omd-feature {
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr) !important;
+    align-items: center !important;
+    gap: clamp(34px, 5vw, 76px) !important;
+}
+.omd-visual {
+    min-height: 480px !important;
+    border-radius: 26px !important;
+    background: #dceafa !important;
+    box-shadow: 0 24px 60px rgba(25,65,115,.13);
+}
+.omd-visual img {
+    object-position: center 48% !important;
+    transition: transform .8s cubic-bezier(.2,.7,.2,1);
+}
+.omd-visual:hover img { transform: scale(1.045); }
+.omd-copy {
+    padding: 34px 0 !important;
+}
+.omd-copy::before {
+    content: "01 / PRODUCT PARTNERSHIP";
+    margin-bottom: 14px;
+    color: var(--biz-blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+.omd-copy h3 {
+    margin: 0 0 22px !important;
+    color: var(--biz-ink);
+    font-size: clamp(32px, 3.4vw, 48px) !important;
+    line-height: 1.24 !important;
+    letter-spacing: -.055em !important;
+}
+.omd-copy p {
+    color: #52647c !important;
+    font-size: 16px !important;
+    line-height: 1.9 !important;
+}
+.omd-copy .text-link {
+    margin-top: 30px !important;
+    padding: 13px 19px !important;
+    border-radius: 30px !important;
+    background: var(--biz-blue) !important;
+    color: #fff !important;
+    box-shadow: 0 8px 20px rgba(39,110,239,.2);
+}
+.omd-copy .text-link:hover { background: var(--biz-ink) !important; }
+.omd-copy .text-link span { color: #fff !important; }
+
+/* OMD PROCESS CARDS */
+.omd-process {
+    margin-top: 66px !important;
+    overflow: visible !important;
+}
+.omd-process .swiper-wrapper { align-items: stretch; }
+.process-card {
+    position: relative;
+    min-height: 184px !important;
+    padding: 30px 26px !important;
+    border: 1px solid rgba(39,110,239,.12) !important;
+    border-radius: 18px !important;
+    background: rgba(255,255,255,.82) !important;
+    box-shadow: 0 10px 28px rgba(28,66,112,.055);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.process-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 36px rgba(28,66,112,.12);
+}
+.process-card::before {
+    display: block;
+    margin-bottom: 24px;
+    color: #8ba8ce;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .14em;
+}
+.process-card:nth-child(1)::before { content: "STEP 01"; }
+.process-card:nth-child(2)::before { content: "STEP 02"; }
+.process-card:nth-child(3)::before { content: "STEP 03"; }
+.process-card:nth-child(4)::before { content: "STEP 04"; }
+.process-card h3 {
+    margin: 0 0 10px !important;
+    color: var(--biz-ink);
+    font-size: 21px !important;
+    letter-spacing: -.035em;
+}
+.process-card p {
+    color: var(--biz-muted) !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+}
+.process-controls { margin-top: 26px !important; }
+
+/* BUSINESS INTRO — EDITORIAL ALTERNATING ROWS */
+.business-intro-section {
+    padding: clamp(82px, 9vw, 124px) 0 !important;
+    background: #fff !important;
+}
+#business-intro .business-section-heading { margin-bottom: 70px !important; }
+#business-intro .intro-layout {
+    gap: clamp(70px, 9vw, 132px) !important;
+}
+#business-intro .intro-layout > .intro-row {
+    gap: clamp(36px, 6vw, 92px) !important;
+}
+#business-intro .intro-row > .intro-image {
+    height: clamp(330px, 34vw, 490px) !important;
+    min-height: 0 !important;
+    border-radius: 24px !important;
+    background: #e9f2fc !important;
+    box-shadow: 0 20px 50px rgba(25,65,115,.1);
+}
+#business-intro .intro-row > .intro-image img {
+    transition: transform .8s cubic-bezier(.2,.7,.2,1);
+}
+#business-intro .intro-row > .intro-image:hover img { transform: scale(1.04); }
+#business-intro .intro-row > .intro-content {
+    position: relative;
+    padding: 24px 0 !important;
+}
+#business-intro .intro-row > .intro-content::before {
+    display: block;
+    margin-bottom: 16px;
+    color: var(--biz-blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+#business-intro .intro-row-top > .intro-content::before { content: "02 / BRAND DEVELOPMENT"; }
+#business-intro .intro-row-bottom > .intro-content::before { content: "03 / PRODUCT VALUE"; }
+#business-intro .intro-content h3 {
+    margin: 0 0 22px !important;
+    color: var(--biz-ink) !important;
+    font-size: clamp(30px, 3.3vw, 46px) !important;
+    line-height: 1.28 !important;
+    letter-spacing: -.055em !important;
+}
+#business-intro .intro-content > p {
+    max-width: 460px;
+    color: #66758a !important;
+    font-size: 16px !important;
+    line-height: 1.9 !important;
+}
+
+/* LOCATIONS */
+.locations-section {
+    padding: clamp(78px, 8vw, 112px) 0 !important;
+    background: #f3f7fc !important;
+}
+#locations .business-section-heading { margin-bottom: 46px !important; }
+#locations .heading-description {
+    color: #687b93 !important;
+    font-size: 15px !important;
+}
+.location-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+}
+.location-card {
+    border: 1px solid #e2eaf4 !important;
+    border-radius: 20px !important;
+    background: #fff !important;
+    box-shadow: 0 10px 30px rgba(25,65,115,.045);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+.location-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 44px rgba(25,65,115,.12);
+}
+#locations .location-image {
+    height: clamp(210px, 19vw, 270px) !important;
+    min-height: 0 !important;
+    background: #dceafa !important;
+}
+#locations .location-image img {
+    transition: transform .65s ease;
+}
+.location-card:hover .location-image img { transform: scale(1.05); }
+.location-info { padding: 27px 28px 30px !important; }
+.location-info h3 {
+    margin: 0 0 12px !important;
+    color: var(--biz-ink) !important;
+    font-size: 23px !important;
+    letter-spacing: -.04em;
+}
+.location-info p {
+    min-height: 52px;
+    color: #738197 !important;
+    font-size: 14px !important;
+    line-height: 1.75 !important;
+}
+.location-info .text-link {
+    margin-top: 20px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    color: var(--biz-blue) !important;
+}
+.location-info .text-link:hover { color: var(--biz-ink) !important; }
+
+/* CONTACT */
+.contact-section {
+    position: relative;
+    padding: clamp(76px, 8vw, 110px) 0 !important;
+    background-color: #10294b !important;
+    background-image: linear-gradient(90deg, rgba(8,26,52,.88), rgba(8,26,52,.72)), url("../img/sub0.jpg") !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.contact-inner {
+    grid-template-columns: minmax(260px, .8fr) minmax(0, 1.2fr) !important;
+    gap: clamp(34px, 5vw, 76px) !important;
+}
+.contact-copy h2 {
+    margin: 0 0 20px !important;
+    font-size: clamp(42px, 5vw, 62px) !important;
+    letter-spacing: -.055em;
+}
+.contact-copy > p:last-child {
+    color: rgba(255,255,255,.72) !important;
+    line-height: 1.85 !important;
+}
+.contact-panel {
+    min-height: 190px;
+    padding: 38px 42px !important;
+    border: 1px solid rgba(255,255,255,.18) !important;
+    border-radius: 20px !important;
+    background: rgba(255,255,255,.12) !important;
+    backdrop-filter: blur(14px) !important;
+}
+.contact-panel h3 {
+    margin: 0 0 12px !important;
+    font-size: 26px !important;
+    letter-spacing: -.035em;
+}
+.contact-panel p {
+    color: rgba(255,255,255,.72) !important;
+    line-height: 1.75 !important;
+}
+.contact-arrow {
+    width: 54px !important;
+    height: 54px !important;
+    flex-basis: 54px !important;
+    background: #fff !important;
+    color: var(--biz-blue) !important;
+    font-size: 24px !important;
+}
+.contact-arrow:hover { transform: translate(4px,-4px) !important; }
+
+/* QUOTE */
+.quote-section {
+    padding: clamp(76px, 8vw, 112px) 0 !important;
+    background: #fff !important;
+}
+.quote-inner {
+    grid-template-columns: .9fr 1.1fr .9fr !important;
+    gap: clamp(24px, 3vw, 44px) !important;
+}
+.quote-heading h2 {
+    margin: 0 0 18px !important;
+    color: var(--biz-ink) !important;
+    font-size: clamp(40px, 4vw, 54px) !important;
+    letter-spacing: -.055em;
+}
+.quote-heading > p:last-child {
+    color: #718096 !important;
+    line-height: 1.8 !important;
+}
+.quote-guide { border-top: 1px solid var(--biz-line) !important; }
+.quote-guide > div {
+    min-height: 72px !important;
+    border-bottom: 1px solid var(--biz-line) !important;
+}
+.quote-guide p { color: #42536b !important; font-size: 14px !important; }
+.quote-action {
+    padding: 30px !important;
+    border-radius: 20px !important;
+    background: linear-gradient(145deg, #edf5ff, #dceaff) !important;
+}
+.quote-action p {
+    color: #42536b !important;
+    line-height: 1.8 !important;
+}
+.quote-button {
+    margin-top: 24px !important;
+    padding: 13px 18px !important;
+    border-radius: 30px !important;
+    background: var(--biz-blue) !important;
+    box-shadow: 0 8px 20px rgba(39,110,239,.18);
+}
+.quote-button:hover { background: var(--biz-ink) !important; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .business-hero { min-height: 560px !important; }
+    .omd-feature { grid-template-columns: 1fr 1fr !important; }
+    .omd-visual { min-height: 360px !important; }
+    .location-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .contact-inner { grid-template-columns: 1fr !important; }
+    .quote-inner { grid-template-columns: 1fr 1fr !important; }
+    .quote-action { grid-column: 1 / -1 !important; }
+}
+@media (max-width: 600px) {
+    .business-hero { min-height: 500px !important; height: 78vh !important; }
+    .business-hero h2 { font-size: clamp(54px, 15vw, 76px) !important; }
+    .omd-section { padding: 66px 0 72px !important; }
+    .business-section-heading { margin-bottom: 30px !important; }
+    .business-section-heading h2 { font-size: 42px !important; }
+    .omd-feature { grid-template-columns: 1fr !important; gap: 22px !important; }
+    .omd-visual { min-height: 270px !important; border-radius: 18px !important; }
+    .omd-copy { padding: 8px 0 !important; }
+    .omd-copy h3 { font-size: 32px !important; }
+    .omd-process { margin-top: 38px !important; }
+    .process-card { min-height: 160px !important; padding: 24px 20px !important; }
+    .business-intro-section { padding: 68px 0 !important; }
+    #business-intro .business-section-heading { margin-bottom: 42px !important; }
+    #business-intro .intro-layout { gap: 52px !important; }
+    #business-intro .intro-layout > .intro-row { gap: 18px !important; }
+    #business-intro .intro-row > .intro-image { height: 250px !important; min-height: 250px !important; border-radius: 16px !important; }
+    #business-intro .intro-row > .intro-content { padding: 4px 0 !important; }
+    #business-intro .intro-content h3 { font-size: 30px !important; }
+    #business-intro .intro-content > p { font-size: 14px !important; }
+    .locations-section { padding: 68px 0 !important; }
+    .location-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+    #locations .location-image { height: 230px !important; }
+    .location-info { padding: 22px !important; }
+    .location-info p { min-height: 0; }
+    .contact-section { padding: 68px 0 !important; }
+    .contact-panel { min-height: 150px; padding: 26px 22px !important; }
+    .contact-panel h3 { font-size: 22px !important; }
+    .quote-section { padding: 68px 0 !important; }
+    .quote-inner { grid-template-columns: 1fr !important; gap: 28px !important; }
+    .quote-action { grid-column: auto !important; padding: 24px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .process-card, .location-card, .omd-visual img, #business-intro .intro-row > .intro-image img {
+        transition: none !important;
+    }
+}
