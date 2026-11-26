@@ -194,13 +194,3 @@
 }
 
 
-/* 작은 영문 장식 라벨 제거 */
-.business-section-heading > div::before,
-.omd-copy::before,
-.process-card::before,
-#business-intro .intro-row > .intro-content::before,
-.section-eyebrow,
-.business-kicker {
-    display: none !important;
-    content: none !important;
-}
