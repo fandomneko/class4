@@ -22,15 +22,16 @@
 .rnd-section-heading h2{margin-top:10px;color:var(--brand-navy);font-size:clamp(38px,4vw,56px);line-height:1;font-weight:700;letter-spacing:-.04em}
 .rnd-section-heading>p{color:var(--navy-esg-text);font-size:16px;line-height:1.65;word-break:keep-all}
 
-.lab-section{position:relative;isolation:isolate;overflow:hidden;margin-top:100px;padding:90px 0 86px;background:#eaf2f9}
-.lab-section::before{content:"";position:absolute;inset:0;z-index:0;background-image:linear-gradient(90deg,rgba(9,24,43,.08) 0%,rgba(9,24,43,.22) 48%,rgba(9,24,43,.68) 100%),url("../img/svc_lineupzero_img01_active.png");background-position:center;background-size:cover;background-repeat:no-repeat}
-.lab-section>.section-inner{position:relative;z-index:1}
-.lab-feature{display:flex;justify-content:flex-end;align-items:stretch;min-height:490px}
-.lab-copy{width:44%;min-width:360px;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:42px 46px;border:1px solid rgba(255,255,255,.3);border-radius:24px;background:rgba(9,24,43,.62);box-shadow:0 18px 48px rgba(5,12,30,.18);backdrop-filter:blur(12px);color:var(--navy-esg-text)}
-.rnd-number{color:var(--brand-blue);font-size: 16px;font-weight:700;letter-spacing:.1em}
-.lab-copy h3{margin:18px 0;color:#fff;font-size:clamp(28px,3vw,42px);line-height:1.25;font-weight:700;letter-spacing:-.04em}
-.lab-copy h3 em{color:#9ed8ff;font-style:normal}
-.lab-copy>p{max-width:520px;color:#fff;font-size:16px;line-height:1.7;word-break:keep-all}
+.lab-section{margin-top:100px;padding:90px 0 86px;background:#f2f6fa}
+.lab-feature{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr);align-items:center;gap:64px;min-height:460px}
+.lab-visual{position:relative;width:100%;height:440px;overflow:hidden;border:1px solid #dce7f1;border-radius:28px;background:#dce8f2;box-shadow:0 22px 48px rgba(20,55,90,.16)}
+.lab-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .7s ease}
+.lab-visual:hover img{transform:scale(1.045)}
+.lab-copy{width:100%;min-width:0;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;color:var(--navy-esg-text)}
+.rnd-number{color:var(--brand-blue);font-size:16px;font-weight:700;letter-spacing:.1em}
+.lab-copy h3{margin:0 0 22px;color:var(--brand-navy);font-size:clamp(30px,3vw,44px);line-height:1.25;font-weight:700;letter-spacing:-.04em}
+.lab-copy h3 em{color:#438bd0;font-style:normal}
+.lab-copy>p{max-width:520px;color:#536779;font-size:17px;line-height:1.8;word-break:keep-all}
 .rnd-text-link{display:inline-flex;align-items:center;gap:24px;margin-top:26px;padding:10px 14px;border-radius:5px;background:rgba(9,24,43,.28);color:#fff;font-size: 16px;font-weight:600;transition:background .2s ease,color .2s ease}
 .rnd-text-link:hover{background:var(--brand-blue);color:var(--color-white)}
 .rnd-text-link span{color:var(--blue-arrow-ir)}
@@ -81,7 +82,7 @@
 
 @media(max-width:900px){
     .rnd-hero{min-height:560px}
-    .lab-feature{min-height:440px}
+    .lab-feature{min-height:420px;gap:36px}.lab-visual{height:360px}
     .technology-inner{grid-template-columns:1fr;gap:28px}
     .technology-points{grid-column:auto}
 }
@@ -91,8 +92,8 @@
     .rnd-section-heading{display:block;margin-bottom:28px}
     .rnd-section-heading>p{margin-top:18px}
     .lab-section,.fields-section{padding:68px 0}
-    .lab-feature{min-height:400px}
-    .lab-copy{width:100%;min-width:0;max-width:520px;margin-left:auto;padding:30px 26px;border-radius:20px;text-align:right;align-items:flex-end}
+    .lab-feature{grid-template-columns:1fr;min-height:0;gap:30px}.lab-visual{height:280px;border-radius:22px}
+    .lab-copy{width:100%;min-width:0;max-width:none;padding:0;text-align:left;align-items:flex-start}
     .field-grid{grid-template-columns:1fr}
     .field-card{height:552px;min-height:552px}
     .field-visual{flex:0 0 432px;height:432px;min-height:432px}
