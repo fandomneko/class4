@@ -26,8 +26,7 @@
 .lab-section::before{content:"";position:absolute;inset:0;z-index:0;background-image:linear-gradient(90deg,rgba(9,24,43,.08) 0%,rgba(9,24,43,.22) 48%,rgba(9,24,43,.68) 100%),url("../img/svc_lineupzero_img01_active.png");background-position:center;background-size:cover;background-repeat:no-repeat}
 .lab-section>.section-inner{position:relative;z-index:1}
 .lab-feature{display:flex;justify-content:flex-end;align-items:stretch;min-height:490px}
-.lab-copy{width:44%;min-width:360px}
-.lab-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:28px 0;color:var(--navy-esg-text)}
+.lab-copy{width:44%;min-width:360px;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:42px 46px;border:1px solid rgba(255,255,255,.3);border-radius:24px;background:rgba(9,24,43,.62);box-shadow:0 18px 48px rgba(5,12,30,.18);backdrop-filter:blur(12px);color:var(--navy-esg-text)}
 .rnd-number{color:var(--brand-blue);font-size: 16px;font-weight:700;letter-spacing:.1em}
 .lab-copy h3{margin:18px 0;color:#fff;font-size:clamp(28px,3vw,42px);line-height:1.25;font-weight:700;letter-spacing:-.04em}
 .lab-copy h3 em{color:#9ed8ff;font-style:normal}
@@ -84,7 +83,7 @@
     .rnd-section-heading>p{margin-top:18px}
     .lab-section,.fields-section{padding:68px 0}
     .lab-feature{min-height:400px}
-    .lab-copy{width:100%;min-width:0;max-width:520px;margin-left:auto;padding:8px 0;text-align:right;align-items:flex-end}
+    .lab-copy{width:100%;min-width:0;max-width:520px;margin-left:auto;padding:30px 26px;border-radius:20px;text-align:right;align-items:flex-end}
     .field-grid{grid-template-columns:1fr}
     .field-card{height:552px;min-height:552px}
     .field-visual{flex:0 0 432px;height:432px;min-height:432px}
