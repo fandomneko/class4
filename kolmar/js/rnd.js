@@ -1,14 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 연구분야 카드: 제목 아래 화살표를 누르면 카드가 가로로 한 장씩 넘어갑니다.
-    const fieldTrack = document.querySelector('.field-grid');
-    const fieldNext = document.querySelector('.rnd-hero .hero-scroll');
+    // HERO 화살표: 같은 페이지의 연구분야 카드 영역으로 이동한 뒤 카드 트랙을 한 장 넘깁니다.
+    const fieldTrack = document.querySelector('.fields-section .field-grid');
+    const fieldNext = document.querySelector('.rnd-hero-copy .hero-scroll');
     if (fieldTrack && fieldNext) {
         fieldNext.addEventListener('click', () => {
-            const card = fieldTrack.querySelector('.field-card');
-            if (!card) return;
+            const cards = fieldTrack.querySelectorAll('.field-card');
+            if (!cards.length) return;
+
             const gap = parseFloat(getComputedStyle(fieldTrack).columnGap) || 0;
-            fieldTrack.scrollBy({ left: card.getBoundingClientRect().width + gap, behavior: 'smooth' });
+            const step = cards[0].getBoundingClientRect().width + gap;
+            const maxScroll = fieldTrack.scrollWidth - fieldTrack.clientWidth;
+            const nextLeft = fieldTrack.scrollLeft >= maxScroll - 8 ? 0 : fieldTrack.scrollLeft + step;
+
+            // 카드가 화면에 보이도록 해당 섹션으로 이동합니다. 연구소 소개 영역으로는 이동하지 않습니다.
+            document.querySelector('.fields-section').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            window.setTimeout(() => {
+                fieldTrack.scrollTo({ left: nextLeft, behavior: 'smooth' });
+            }, 450);
         });
     }
 
