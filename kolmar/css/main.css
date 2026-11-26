@@ -1583,3 +1583,55 @@ body { color: var(--main-ink); }
         height: 210px;
     }
 }
+
+
+/* R&D cards: keep the original cosmetics image/text proportion in every tab */
+.rnd-section .rnd-cards {
+    align-items: stretch;
+}
+.rnd-section .rnd-card {
+    display: flex;
+    flex-direction: column;
+    height: 480px !important;
+    min-height: 480px !important;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.rnd-section .rnd-card .rnd-visual {
+    order: 0;
+    flex: 0 0 250px !important;
+    width: 100%;
+    height: 250px !important;
+    margin: 0 0 14px;
+}
+.rnd-section .rnd-card h3 {
+    order: 1;
+    flex: 0 0 auto;
+    margin: 0 0 8px;
+}
+.rnd-section .rnd-card p {
+    order: 2;
+    flex: 1 1 auto;
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+}
+@media (max-width: 900px) {
+    .rnd-section .rnd-card {
+        height: 480px !important;
+        min-height: 480px !important;
+    }
+}
+@media (max-width: 600px) {
+    .rnd-section .rnd-card {
+        height: auto !important;
+        min-height: 0 !important;
+    }
+    .rnd-section .rnd-card .rnd-visual {
+        flex-basis: 210px !important;
+        height: 210px !important;
+    }
+    .rnd-section .rnd-card p {
+        overflow: visible;
+    }
+}
