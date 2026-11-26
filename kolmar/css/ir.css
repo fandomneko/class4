@@ -205,3 +205,9 @@
 @media (prefers-reduced-motion: reduce) {
     .ir-dashboard-card { transition: none; }
 }
+
+/* Repository image assignments for IR image areas */
+.ir-image-placeholder{min-height:220px;background-image:linear-gradient(0deg,rgba(5,18,34,.28),rgba(5,18,34,.08)),url("../img/company2.jpg");background-position:center;background-size:cover;background-repeat:no-repeat}
+.ir-image-placeholder>span,.ir-image-placeholder>small{display:none!important}
+.ir-card-financial.ir-card-image{background-image:linear-gradient(0deg,rgba(8,17,32,.62),rgba(8,17,32,.05) 72%),url("../img/service_visual_img04.png")}
+.ir-card-disclosure.ir-card-image{background-image:linear-gradient(0deg,rgba(8,17,32,.62),rgba(8,17,32,.08) 72%),url("../img/m5_3.jpg")}
