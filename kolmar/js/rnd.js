@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 첫 화면의 스크롤 화살표를 누르면 연구소 영역으로 부드럽게 이동합니다.
+    const heroScroll = document.querySelector('.rnd-hero .hero-scroll');
+    const labSection = document.getElementById('lab');
+    if (heroScroll && labSection) {
+        heroScroll.addEventListener('click', event => {
+            event.preventDefault();
+            labSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
+
     const siteHeader = document.getElementById('siteHeader');
     const menuButton = document.getElementById('menuBtn');
     const gnb = document.getElementById('gnb');
