@@ -1,35 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // HERO 화살표: 연구분야 카드 6장을 가로로 한 장씩 넘깁니다.
-    const fieldTrack = document.querySelector('.fields-section .field-grid');
-    const fieldNext = document.querySelector('.rnd-hero-copy .hero-scroll');
-    if (fieldTrack && fieldNext) {
-        let currentCard = 0;
-        const cards = fieldTrack.querySelectorAll('.field-card');
-        const getStep = () => {
-            if (!cards.length) return 0;
-            const gap = parseFloat(getComputedStyle(fieldTrack).columnGap) || 0;
-            return cards[0].getBoundingClientRect().width + gap;
-        };
-
-        fieldNext.addEventListener('click', () => {
-            if (!cards.length) return;
-            currentCard = (currentCard + 1) % cards.length;
-
-            // 카드 트랙이 보이는 위치로 이동한 뒤 다음 카드 위치로 넘깁니다.
-            document.querySelector('.fields-section').scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
-            window.setTimeout(() => {
-                fieldTrack.scrollTo({
-                    left: currentCard * getStep(),
-                    behavior: 'smooth'
-                });
-            }, 500);
-        });
-    }
-
     const siteHeader = document.getElementById('siteHeader');
     const menuButton = document.getElementById('menuBtn');
     const gnb = document.getElementById('gnb');
