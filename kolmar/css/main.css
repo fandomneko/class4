@@ -1558,13 +1558,28 @@ body { color: var(--main-ink); }
 }
 
 
-/* R&D tabs: keep every category card the same size as the cosmetics cards */
+
+
+/* R&D category cards: identical dimensions across all three tabs */
+.rnd-section .rnd-cards {
+    align-items: stretch;
+}
 .rnd-section .rnd-card {
-    height: 410px;
+    height: 410px !important;
+    min-height: 410px !important;
     box-sizing: border-box;
+}
+.rnd-section .rnd-card .rnd-visual {
+    flex: 0 0 180px;
+    height: 180px;
 }
 @media (max-width: 600px) {
     .rnd-section .rnd-card {
-        height: auto;
+        height: 410px !important;
+        min-height: 410px !important;
+    }
+    .rnd-section .rnd-card .rnd-visual {
+        flex-basis: 210px;
+        height: 210px;
     }
 }
