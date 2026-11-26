@@ -352,3 +352,12 @@
     .company-category-inner a span { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .company-category-inner a { transition: none; } }
+
+/* Repository image assignments for previously empty company image areas */
+.company-image-placeholder{background-position:center;background-size:cover;background-repeat:no-repeat;overflow:hidden}
+.company-image-placeholder>span,.company-image-placeholder>small{display:none!important}
+.company-hero-image{background-image:linear-gradient(90deg,rgba(5,12,30,.58),rgba(5,12,30,.12) 76%),url("../img/company4.jpg")}
+.company-image-placeholder.menu-placeholder{background-image:linear-gradient(0deg,rgba(5,18,34,.28),rgba(5,18,34,.08)),url("../img/company4.jpg")}
+.overview-image{background-image:url("../img/company_04_overview.jpg")}
+.ceo-image{background-image:url("../img/company1.jpg")}
+.philosophy-visual{background-image:linear-gradient(0deg,rgba(5,18,34,.2),rgba(5,18,34,.02)),url("../img/company_02_philosophy.jpg")}
