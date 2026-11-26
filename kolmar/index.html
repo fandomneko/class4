@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../npm/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="../font/css/pretendardvariable.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-    <link rel="stylesheet" href="css/main.css?v=20261126-rnd-text-top-image-bottom-2">
+    <link rel="stylesheet" href="css/main.css?v=20261126-rnd-carousel">
 
     <script src="../npm/swiper/swiper-bundle.min.js"></script>
 </head>
@@ -413,33 +413,58 @@
             ]
         ];
 
-        function renderRndTab(index) {
-            const cards = rndTabContents[index];
-            rndCards.innerHTML = cards.map((card, cardIndex) => {
-                const visual = '<div class="rnd-visual"><img src="' + card.image + '" alt="' + card.alt + '"></div>';
-                const copy = '<h3>' + card.title + '</h3><p>' + card.text + '</p>';
-                return '<article class="rnd-card rnd-card0' + (cardIndex + 1) + '">' +
-                    (cardIndex === 1 ? copy + visual : visual + copy) +
-                    '</article>';
-            }).join('');
+        let activeRndIndex = 0;
 
-            rndTabButtons.forEach((button, buttonIndex) => {
-                const selected = buttonIndex === index;
-                button.classList.toggle('active', selected);
-                button.setAttribute('aria-selected', String(selected));
-                button.setAttribute('tabindex', selected ? '0' : '-1');
-            });
+        function renderRndTab(index, direction = 1) {
+            const cards = rndTabContents[index];
+            rndCards.classList.remove('is-sliding-next', 'is-sliding-prev', 'is-slide-entering');
+            rndCards.classList.add(direction > 0 ? 'is-sliding-next' : 'is-sliding-prev');
+
+            window.setTimeout(() => {
+                rndCards.innerHTML = cards.map((card, cardIndex) => {
+                    const visual = '<div class="rnd-visual"><img src="' + card.image + '" alt="' + card.alt + '"></div>';
+                    const copy = '<h3>' + card.title + '</h3><p>' + card.text + '</p>';
+                    return '<article class="rnd-card rnd-card0' + (cardIndex + 1) + '">' +
+                        (cardIndex === 1 ? copy + visual : visual + copy) +
+                        '</article>';
+                }).join('');
+
+                rndTabButtons.forEach((button, buttonIndex) => {
+                    const selected = buttonIndex === index;
+                    button.classList.toggle('active', selected);
+                    button.setAttribute('aria-selected', String(selected));
+                    button.setAttribute('tabindex', selected ? '0' : '-1');
+                });
+
+                activeRndIndex = index;
+                rndCards.classList.remove('is-sliding-next', 'is-sliding-prev');
+                rndCards.classList.add('is-slide-entering');
+                window.setTimeout(() => rndCards.classList.remove('is-slide-entering'), 340);
+            }, 180);
         }
 
         rndTabButtons.forEach((button, index) => {
-            button.addEventListener('click', () => renderRndTab(index));
+            button.addEventListener('click', () => renderRndTab(index, index >= activeRndIndex ? 1 : -1));
             button.addEventListener('keydown', event => {
                 if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
                 event.preventDefault();
                 const nextIndex = (index + (event.key === 'ArrowRight' ? 1 : 2)) % 3;
                 rndTabButtons[nextIndex].focus();
-                renderRndTab(nextIndex);
+                renderRndTab(nextIndex, event.key === 'ArrowRight' ? 1 : -1);
             });
+        });
+
+        // 메인페이지 R&D 좌우 화살표로 연구분야 탭과 카드 3장을 넘깁니다.
+        const rndPrev = document.querySelector('.rnd-controls .rnd-prev');
+        const rndNext = document.querySelector('.rnd-controls .rnd-next');
+
+        rndPrev?.addEventListener('click', () => {
+            const nextIndex = (activeRndIndex + rndTabContents.length - 1) % rndTabContents.length;
+            renderRndTab(nextIndex, -1);
+        });
+        rndNext?.addEventListener('click', () => {
+            const nextIndex = (activeRndIndex + 1) % rndTabContents.length;
+            renderRndTab(nextIndex, 1);
         });
 
         const siteHeader = document.getElementById('siteHeader');
