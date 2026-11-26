@@ -95,10 +95,10 @@
                     </div>
                     <div class="rnd-content">
                         <div class="rnd-tabs-wrap">
-                            <div class="rnd-tabs">
-                                <button type="button" class="active">화장품</button>
-                                <button type="button">제약·바이오</button>
-                                <button type="button">건강기능식품</button>
+                            <div class="rnd-tabs" role="tablist" aria-label="연구 분야 선택">
+                                <button type="button" class="active" role="tab" aria-selected="true" aria-controls="rnd-cards" data-rnd-tab="0">화장품</button>
+                                <button type="button" role="tab" aria-selected="false" aria-controls="rnd-cards" data-rnd-tab="1">제약·바이오</button>
+                                <button type="button" role="tab" aria-selected="false" aria-controls="rnd-cards" data-rnd-tab="2">건강기능식품</button>
                             </div>
                         </div>
                         <div class="rnd-cards">
@@ -390,6 +390,57 @@
                 window.setTimeout(() => { esgWheelLock = false; }, 450);
             }
         }, { passive: false });
+
+        // R&D 분야 탭: 선택한 분야에 맞춰 연구소 카드 내용을 전환합니다.
+        const rndTabButtons = document.querySelectorAll('[data-rnd-tab]');
+        const rndCards = document.querySelector('.rnd-cards');
+
+        const rndTabContents = [
+            [
+                { title: '스킨케어 연구소', text: '국내외 수많은 화장품 브랜드의 근간이 되는 한국콜마의 기술력은 스킨케어 연구소에서 출발합니다. 최고의 연구진이 아름다움의 기본을 연구하며, 피부 건강의 탄탄한 베이스를 구축하고 있습니다.', image: 'img/rnd.gif', alt: '스킨케어 연구소' },
+                { title: '향료 연구센터', text: '매력적인 향으로 제품에 생명과 감성을 더하는 연구센터입니다. 섬세한 감각과 전문성을 바탕으로 다양한 제품에 어울리는 향기를 개발하고 연구합니다.', image: 'img/rnd1.gif', alt: '향료 연구센터' },
+                { title: 'Ur Lab', text: '다양한 고객과 소통하기 위한 고객 지원 연구소(User Resource Laboratory)입니다. 고객 맞춤형 연구를 통해 제품 카테고리를 제안하고 성공적인 제품 출시를 지원합니다.', image: 'img/rnd2.jpg', alt: 'Ur Lab' }
+            ],
+            [
+                { title: '제약 연구', text: '의약품 개발을 위한 제형과 원료 연구를 진행하며, 제품의 특성과 사용 목적에 맞는 연구 방향을 탐색합니다.', image: 'img/i1_2.gif', alt: '제약 연구' },
+                { title: '바이오 연구', text: '바이오 기술과 연구 역량을 바탕으로 새로운 소재와 기술의 가능성을 살펴보고 관련 제품 개발을 지원합니다.', image: 'img/frame_bg_img05.png', alt: '바이오 연구' },
+                { title: '품질·안전 연구', text: '제품의 품질과 안전성을 고려한 연구 및 검증을 통해 신뢰할 수 있는 제품 개발 기반을 마련합니다.', image: 'img/rnd1.gif', alt: '품질·안전 연구' }
+            ],
+            [
+                { title: '건강기능식품 연구', text: '건강한 생활에 도움을 주는 기능성 소재와 제품의 가능성을 탐색하고, 고객의 제품 개발 방향에 맞춘 연구를 진행합니다.', image: 'img/frame_bg_img05.png', alt: '건강기능식품 연구' },
+                { title: '기능성 소재 연구', text: '다양한 소재의 특성과 활용 가능성을 살펴 제품 콘셉트에 적합한 연구 방향을 제안합니다.', image: 'img/kor1_3.gif', alt: '기능성 소재 연구' },
+                { title: '제품 개발 지원', text: '연구 결과를 제품 개발 과정과 연결해 고객의 아이디어가 완성도 있는 제품으로 이어지도록 지원합니다.', image: 'img/rnd2.jpg', alt: '제품 개발 지원' }
+            ]
+        ];
+
+        function renderRndTab(index) {
+            const cards = rndTabContents[index];
+            rndCards.innerHTML = cards.map((card, cardIndex) => {
+                const visual = '<div class="rnd-visual"><img src="' + card.image + '" alt="' + card.alt + '"></div>';
+                const copy = '<h3>' + card.title + '</h3><p>' + card.text + '</p>';
+                return '<article class="rnd-card rnd-card0' + (cardIndex + 1) + '">' +
+                    (cardIndex === 1 ? copy + visual : visual + copy) +
+                    '</article>';
+            }).join('');
+
+            rndTabButtons.forEach((button, buttonIndex) => {
+                const selected = buttonIndex === index;
+                button.classList.toggle('active', selected);
+                button.setAttribute('aria-selected', String(selected));
+                button.setAttribute('tabindex', selected ? '0' : '-1');
+            });
+        }
+
+        rndTabButtons.forEach((button, index) => {
+            button.addEventListener('click', () => renderRndTab(index));
+            button.addEventListener('keydown', event => {
+                if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+                event.preventDefault();
+                const nextIndex = (index + (event.key === 'ArrowRight' ? 1 : 2)) % 3;
+                rndTabButtons[nextIndex].focus();
+                renderRndTab(nextIndex);
+            });
+        });
 
         const siteHeader = document.getElementById('siteHeader');
         const menuButton = document.getElementById('menuBtn');
