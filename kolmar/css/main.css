@@ -1584,3 +1584,7 @@ body { color: var(--main-ink); }
     }
 }
 
+/* R&D center card: keep text and image together at the bottom */
+.rnd-section .rnd-card02 h3 {
+    margin-top: auto;
+}
