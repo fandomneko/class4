@@ -1556,3 +1556,15 @@ body { color: var(--main-ink); }
     .news-card-glass,
     .news-card-solid { transition: none !important; }
 }
+
+
+/* R&D tabs: keep every category card the same size as the cosmetics cards */
+.rnd-section .rnd-card {
+    height: 410px;
+    box-sizing: border-box;
+}
+@media (max-width: 600px) {
+    .rnd-section .rnd-card {
+        height: auto;
+    }
+}
