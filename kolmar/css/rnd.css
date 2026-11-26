@@ -37,15 +37,21 @@
 .rnd-text-link:hover span{color:var(--color-white)}
 
 .fields-section{padding:90px 0;background:#fff}
-/* R&D research cards: spacing and image sizing */
-.field-grid{display:grid;width:90%;max-width:100%;margin:0 auto;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:90px;row-gap:20px}
-.field-card{display:flex;flex-direction:column;height:600px;min-height:600px;overflow:hidden;border:1px solid #dce8f5;border-radius:13px;background:transparent;transition:box-shadow .35s ease,transform .35s ease;box-sizing:border-box}
-.field-card:hover,.field-card:focus-within{box-shadow:0 16px 34px rgba(24,66,112,.13);transform:translateY(-4px)}
-.field-visual{flex:0 0 480px;height:480px;min-height:480px;flex-shrink:0;border:0;border-radius:0;overflow:hidden}
-.field-visual img{display:block;width:100%;height:100%;object-fit:cover}
-.field-content{display:flex;flex:0 0 120px;height:120px;min-height:120px;flex-shrink:0;align-items:center;padding:0 24px;box-sizing:border-box;background:rgba(255,255,255,.4)}
-.field-content>span{color:var(--brand-blue);font-size:16px;font-weight:700;letter-spacing:.1em}
-.field-content h3{margin:0;color:var(--brand-navy);font-size:22px;line-height:26px;font-weight:700}
+/* R&D research cards */
+.field-grid{display:grid;width:90%;max-width:100%;margin:0 auto;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:54px;row-gap:24px}
+.field-card{position:relative;display:flex;flex-direction:column;height:560px;min-height:560px;overflow:hidden;border:1px solid #e0eaf4;border-radius:24px;background:#fff;box-shadow:0 12px 30px rgba(20,55,90,.08);transition:box-shadow .35s ease,transform .35s ease;box-sizing:border-box}
+.field-card:hover,.field-card:focus-within{box-shadow:0 22px 44px rgba(24,66,112,.18);transform:translateY(-8px)}
+.field-visual{position:relative;flex:0 0 430px;height:430px;min-height:430px;flex-shrink:0;overflow:hidden;border:0;border-radius:0;background:#eaf1f7}
+.field-visual::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(180deg,transparent,rgba(8,30,54,.48));pointer-events:none}
+.field-visual img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.field-card:hover .field-visual img{transform:scale(1.06)}
+.field-content{position:relative;display:flex;flex:1;min-height:130px;align-items:center;justify-content:space-between;gap:12px;padding:0 26px;box-sizing:border-box;background:#fff}
+.field-content::before{content:"";position:absolute;top:0;left:26px;width:38px;height:3px;border-radius:0 0 3px 3px;background:#4c9be8}
+.field-content h3{margin:0;color:var(--brand-navy);font-size:22px;line-height:1.35;font-weight:700}
+.field-content::after{content:"↗";display:flex;align-items:center;justify-content:center;width:38px;height:38px;flex:0 0 38px;border:1px solid #d8e7f5;border-radius:50%;color:#276eeF;font-size:19px;transition:background .25s ease,color .25s ease,border-color .25s ease}
+.field-card:hover .field-content::after{border-color:#276eeF;background:#276eeF;color:#fff}
+.field-card:nth-child(2) .field-content::before{background:#6bb8a5}
+.field-card:nth-child(3) .field-content::before{background:#83a4d8}
 
 .technology-section{padding:84px 0;background:var(--navy-news);color:var(--color-white)}
 .technology-inner{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:36px 54px}
@@ -53,6 +59,9 @@
 .technology-heading h2{margin:12px 0 18px;font-size:clamp(38px,4vw,52px);line-height:1;font-weight:700}
 .technology-heading>p{color:var(--news-desc);font-size:16px;line-height:1.7;word-break:keep-all}
 .technology-panel{display:grid;grid-template-columns:1fr .9fr;align-items:stretch;gap:28px;padding:0;border:0;border-radius:0;background:transparent;backdrop-filter:none}
+.technology-panel-copy{padding:10px 0}
+.technology-visual{min-height:280px;border:1px solid rgba(255,255,255,.42);border-radius:26px;box-shadow:0 20px 48px rgba(0,0,0,.28);isolation:isolate}
+.technology-visual img{border-radius:25px;object-fit:cover}
 .technology-panel-copy{display:flex;flex-direction:column;justify-content:center}
 .technology-panel-copy>span{color:var(--news-tag-glass);font-size: 16px;font-weight:700;letter-spacing:.1em}
 .technology-panel-copy h3{margin:12px 0;font-size:24px;line-height:1.35;font-weight:700}
