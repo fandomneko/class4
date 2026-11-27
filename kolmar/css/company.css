@@ -440,3 +440,15 @@
     .philosophy-values{gap:10px !important}
     .philosophy-card{padding:18px !important}
 }
+
+/* HERO SIZE — 사업 상세페이지와 동일한 반응형 높이 */
+.company-hero {
+    min-height: 650px !important;
+    height: min(790px, 70vw) !important;
+}
+@media (max-width: 900px) {
+    .company-hero { min-height: 560px !important; }
+}
+@media (max-width: 600px) {
+    .company-hero { min-height: 500px !important; height: 78vh !important; }
+}
