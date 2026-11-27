@@ -254,7 +254,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
     transform-origin: center top;
     will-change: transform;
 }
-.esg-swiper .swiper-slide:not(.swiper-slide-active) { pointer-events: none; }
+/* 카드가 겹쳐 있어도 각 카드의 바로가기 링크를 클릭할 수 있도록 허용 */
+.esg-swiper .swiper-slide { pointer-events: auto; }
 .esg-swiper .swiper-slide-active { z-index: 3; }
 .esg-swiper .swiper-slide-next { z-index: 2; }
 .esg-swiper .swiper-slide-prev { z-index: 1; }
