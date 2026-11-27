@@ -218,97 +218,128 @@
 }
 
 
-/* FIELD CARDS — full-image editorial cards */
+/* FIELD CARDS — aligned with Kolmar's blue/navy corporate design system */
 .fields-section{
-    padding:clamp(76px,8vw,108px) 0;
-    background:#f3f7fb;
+    padding:90px 0 96px;
+    background:#f7faff;
 }
 .field-grid{
+    display:grid;
     width:100%;
     max-width:1240px;
+    margin:0 auto;
     grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:28px;
+    gap:20px;
 }
 .field-card{
-    display:block;
-    height:460px;
-    min-height:460px;
-    border:1px solid rgba(210,224,238,.9);
-    border-radius:24px;
-    background:#102b48;
-    box-shadow:0 14px 34px rgba(20,49,78,.10);
-    transition:transform .35s ease,box-shadow .35s ease;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    height:auto;
+    min-height:0;
+    overflow:hidden;
+    border:1px solid #dce8f5;
+    border-radius:13px;
+    background:#fff;
+    box-shadow:0 8px 24px rgba(16,36,58,.055);
+    transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;
 }
 .field-card:hover,
 .field-card:focus-within{
-    transform:translateY(-9px);
-    box-shadow:0 24px 48px rgba(20,49,78,.19);
+    transform:translateY(-5px);
+    border-color:rgba(39,110,241,.38);
+    box-shadow:0 16px 34px rgba(16,36,58,.11);
 }
 .field-visual{
-    position:absolute;
-    inset:0;
+    position:relative;
+    flex:0 0 250px;
     width:100%;
-    height:100%;
-    min-height:0;
+    height:250px;
+    min-height:250px;
+    overflow:hidden;
+    border:0;
     border-radius:0;
-    background:#dce8f2;
+    background:#eaf2fa;
 }
-.field-visual::after{
-    inset:28% 0 0;
-    background:linear-gradient(180deg,rgba(7,25,45,0) 0%,rgba(7,25,45,.22) 38%,rgba(7,25,45,.88) 100%);
-}
+.field-visual::after{display:none}
 .field-visual img{
+    display:block;
     width:100%;
     height:100%;
     object-fit:cover;
+    transition:transform .5s ease;
 }
+.field-card:hover .field-visual img{transform:scale(1.035)}
 .field-content{
-    position:absolute;
-    z-index:1;
-    right:0;
-    bottom:0;
-    left:0;
-    min-height:0;
-    padding:30px 30px 28px;
-    align-items:flex-end;
-    gap:18px;
-    background:transparent;
+    position:relative;
+    display:flex;
+    flex:1;
+    min-height:94px;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:22px 24px;
+    background:#fff;
 }
-.field-content::before{display:none}
+.field-content::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:24px;
+    display:block;
+    width:34px;
+    height:3px;
+    border-radius:0 0 3px 3px;
+    background:var(--brand-blue);
+}
 .field-content h3{
-    color:#fff;
-    font-size:clamp(21px,2vw,26px);
-    letter-spacing:-.04em;
-    text-shadow:0 2px 12px rgba(0,0,0,.22);
+    margin:0;
+    color:var(--brand-navy);
+    font-size:22px;
+    line-height:1.4;
+    font-weight:700;
+    letter-spacing:-.035em;
 }
 .field-content::after{
-    width:44px;
-    height:44px;
-    flex-basis:44px;
-    border:1px solid rgba(255,255,255,.72);
-    color:#fff;
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(8px);
+    content:"arrow_forward";
+    display:grid;
+    flex:0 0 36px;
+    place-items:center;
+    width:36px;
+    height:36px;
+    border:1px solid #dce8f5;
+    border-radius:50%;
+    color:var(--blue-arrow-ir);
+    font-family:"Material Symbols Outlined";
+    font-size:19px;
+    transition:background .25s ease,color .25s ease,border-color .25s ease;
 }
 .field-card:hover .field-content::after{
-    border-color:#fff;
-    background:#fff;
-    color:#1b5f9e;
+    border-color:var(--brand-blue);
+    background:var(--brand-blue);
+    color:#fff;
 }
-.field-card:nth-child(2) .field-content::before,
-.field-card:nth-child(3) .field-content::before{display:none}
+.field-card:nth-child(2) .field-content::before{background:#3d9cf1}
+.field-card:nth-child(3) .field-content::before{background:#81b9e8}
 
 @media(max-width:900px){
-    .field-grid{gap:18px}
-    .field-card{height:390px;min-height:390px}
-    .field-content{padding:24px 20px}
-    .field-content h3{font-size:20px}
-    .field-content::after{width:38px;height:38px;flex-basis:38px}
+    .fields-section{padding:76px 0 82px}
+    .field-grid{gap:16px}
+    .field-visual{flex-basis:210px;height:210px;min-height:210px}
+    .field-content{min-height:88px;padding:20px 18px}
+    .field-content::before{left:18px}
+    .field-content h3{font-size:19px}
+    .field-content::after{flex-basis:32px;width:32px;height:32px}
 }
 @media(max-width:600px){
-    .fields-section{padding:60px 0}
-    .field-grid{grid-template-columns:1fr;gap:18px}
-    .field-card{height:390px;min-height:390px}
-    .field-content{padding:24px}
-    .field-content h3{font-size:23px}
+    .fields-section{padding:64px 0}
+    .field-grid{grid-template-columns:1fr;gap:16px}
+    .field-card{display:grid;grid-template-columns:112px minmax(0,1fr);min-height:126px}
+    .field-visual{grid-row:1;width:112px;height:100%;min-height:126px;flex:none}
+    .field-content{grid-column:2;grid-row:1;min-height:126px;padding:20px 16px}
+    .field-content::before{left:16px}
+    .field-content h3{font-size:18px}
+}
+@media(prefers-reduced-motion:reduce){
+    .field-card,.field-visual img,.field-content::after{transition:none}
 }
