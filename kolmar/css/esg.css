@@ -293,3 +293,6 @@
 @media (prefers-reduced-motion: reduce) {
     .esg-category-inner a { transition: none; }
 }
+
+/* Existing image areas: position media inside the original boxes without changing layout. */
+.esg-image-placeholder:not(.esg-hero-image){position:relative;}
