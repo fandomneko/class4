@@ -38,11 +38,11 @@
                 <div class="mega-menu-inner">
                     <h2 class="mega-menu-title" id="megaMenuTitle">사업 서비스</h2>
                     <nav class="mega-menu-links" id="megaMenuLinks" aria-label="사업 하위 메뉴">
-                        <a href="#rnd">사업소개</a>
-                        <a href="#rnd">ODM</a>
-                        <a href="#rnd">사업장</a>
-                        <a href="#rnd">사업문의</a>
-                        <a href="#rnd">견적문의</a>
+                        <a href="business.html#business-intro">사업소개</a>
+                        <a href="business.html#omd">ODM</a>
+                        <a href="business.html#locations">사업장</a>
+                        <a href="business.html#contact">사업문의</a>
+                        <a href="business.html#quote">견적문의</a>
                     </nav>
                     <div class="mega-menu-visual">
                         <img id="megaMenuImage" src="img/company1.jpg" alt="한국콜마 사업 소개">
@@ -298,7 +298,7 @@
         </main>
 
         <!-- FOOTER -->
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="section-inner footer-inner">
                 <a href="#home" class="footer-logo" aria-label="HK Kolmar 홈"><img src="img/logo_active.png" alt="HK Kolmar"></a>
                 <div class="footer-info">
@@ -485,9 +485,17 @@
 
         function renderMegaMenu(index) {
             const item = menuContents[index];
+            const menuLinks = [
+                ['business.html#business-intro', 'business.html#omd', 'business.html#locations', 'business.html#contact', 'business.html#quote'],
+                ['rnd.html#lab', 'rnd.html#fields', 'rnd.html#technology'],
+                ['company.html#overview', 'company.html#greeting', 'company.html#history', 'company.html#philosophy'],
+                ['esg.html#esg-management', 'esg.html#environment', 'esg.html#social', 'esg.html#ethics'],
+                ['news.html#kolmar-news', 'news.html#press', 'news.html#notice'],
+                ['ir.html#ir-data', 'ir.html#financial', 'ir.html#disclosure']
+            ];
             megaMenuTitle.textContent = item.title;
             megaMenuLinks.innerHTML = item.links.map((label, linkIndex) => {
-                const href = index === 1 ? ['rnd.html#lab', 'rnd.html#fields', 'rnd.html#technology'][linkIndex] : (index === 3 ? ['esg.html#esg-management', 'esg.html#environment', 'esg.html#social', 'esg.html#ethics'][linkIndex] : (index === 5 ? ['ir.html#ir-data', 'ir.html#financial', 'ir.html#disclosure'][linkIndex] : item.href));
+                const href = menuLinks[index][linkIndex];
                 return '<a href="' + href + '">' + label + '</a>';
             }).join('');
             megaMenuLinks.setAttribute('aria-label', item.title + ' 하위 메뉴');
