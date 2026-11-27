@@ -1147,3 +1147,40 @@
     #business-intro .intro-row > .intro-image{height:260px !important}
     #business-intro .intro-row > .intro-content{padding:6px 0 !important}
 }
+
+
+/* BUSINESS INTRO — 행 사이 간격은 줄이고 이미지 세로 길이는 확장 */
+#business-intro.business-intro-section{
+    padding:82px 0 !important;
+}
+#business-intro .intro-layout{
+    gap:38px !important;
+}
+#business-intro .intro-layout > .intro-row{
+    gap:48px !important;
+}
+#business-intro .intro-row > .intro-image{
+    height:clamp(420px,38vw,520px) !important;
+    min-height:420px !important;
+}
+#business-intro .intro-row > .intro-content{
+    padding:20px 0 !important;
+}
+@media(max-width:900px){
+    #business-intro.business-intro-section{padding:68px 0 !important}
+    #business-intro .intro-layout{gap:32px !important}
+    #business-intro .intro-layout > .intro-row{gap:30px !important}
+    #business-intro .intro-row > .intro-image{
+        height:360px !important;
+        min-height:360px !important;
+    }
+}
+@media(max-width:600px){
+    #business-intro.business-intro-section{padding:56px 0 !important}
+    #business-intro .intro-layout{gap:28px !important}
+    #business-intro .intro-layout > .intro-row{gap:18px !important}
+    #business-intro .intro-row > .intro-image{
+        height:280px !important;
+        min-height:280px !important;
+    }
+}
