@@ -13,11 +13,6 @@
     color: var(--color-white);
 }
 .company-hero-image { position: absolute; inset: 0; border: 0 !important; }
-.company-hero-shade {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(5,12,30,.62), rgba(5,12,30,.16) 76%);
-}
 .company-hero-copy { position: relative; z-index: 1; padding-top: 76px; }
 .company-kicker {
     margin-bottom: 18px;
