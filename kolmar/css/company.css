@@ -171,7 +171,7 @@
     display: grid;
     grid-template-columns: .8fr 1.2fr;
     align-items: center;
-    gap: 64px;
+    gap: 94px;
 }
 .ceo-image {
     min-height: 500px;
@@ -306,7 +306,7 @@
 @media (max-width: 900px) {
     .company-hero { min-height: 560px; }
     .overview-feature { grid-template-columns: 1fr 1fr; gap: 32px; }
-    .greeting-layout { grid-template-columns: .85fr 1.15fr; gap: 36px; }
+    .greeting-layout { grid-template-columns: .85fr 1.15fr; gap: 66px; }
     .history-timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
     .history-timeline::before { display: none; }
     .history-item { padding: 0 0 0 24px; }
@@ -319,7 +319,7 @@
     .company-section-heading { display: block; margin-bottom: 28px; }
     .company-section-heading > p { margin-top: 18px; }
     .overview-section, .greeting-section, .history-section, .philosophy-section { padding: 68px 0; }
-    .overview-feature, .greeting-layout { grid-template-columns: 1fr; gap: 24px; }
+    .overview-feature, .greeting-layout { grid-template-columns: 1fr; gap: 54px; }
     .overview-image { min-height: 280px; }
     .overview-copy { padding: 4px 0; }
     .ceo-image { min-height: 340px; }
