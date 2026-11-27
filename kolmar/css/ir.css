@@ -96,6 +96,8 @@
 .disclosure-graphic i { display: block; width: 76%; height: 5px; background: rgba(36,91,145,.22); }
 .disclosure-graphic i:nth-of-type(2) { width: 58%; }
 .disclosure-graphic i:nth-of-type(3) { width: 68%; }
+.disclosure-graphic { min-height: 190px; padding: 0; background: none; }
+.disclosure-graphic img { display: block; width: 100%; height: 100%; min-height: 190px; object-fit: cover; }
 .governance-section { background: #f6f9fd; }
 .governance-layout { display: grid; grid-template-columns: .7fr 1.3fr; align-items: center; gap: 60px; }
 .governance-layout > p { color: var(--gray-text); font-size: 19px; line-height: 1.7; }
