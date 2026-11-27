@@ -312,3 +312,19 @@
 @media (max-width: 600px) {
     .esg-hero { min-height: 500px !important; height: 78vh !important; }
 }
+
+/* HERO TYPOGRAPHY — match R&D detail page */
+.esg-hero h2 {
+ font-family: inherit !important;
+ margin-bottom: 22px !important;
+ font-size: clamp(48px, 6vw, 82px) !important;
+ font-weight: 700 !important;
+ line-height: 1 !important;
+ letter-spacing: -.04em !important;
+}
+.esg-hero-copy > p:last-child {
+ font-family: inherit !important;
+ font-size: clamp(18px, 2vw, 24px) !important;
+ font-weight: 400 !important;
+ line-height: 1.65 !important;
+}
