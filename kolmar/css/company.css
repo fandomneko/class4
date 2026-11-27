@@ -377,3 +377,13 @@
     background-size:cover !important;
     background-repeat:no-repeat !important;
 }
+
+
+/* COMPANY HERO — 검정색 텍스트 */
+.company-hero{
+    color:#000 !important;
+}
+.company-hero h2,
+.company-hero-copy > p:last-child{
+    color:#000 !important;
+}
