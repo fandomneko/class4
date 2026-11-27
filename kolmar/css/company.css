@@ -366,3 +366,14 @@
 
 /* Existing image areas: position media inside the original boxes without changing layout. */
 .company-image-placeholder:not(.company-hero-image){position:relative;}
+
+
+/* 회사 개요 배경 이미지 재적용 — 업로드된 sec01_big.jpg 사용 */
+.overview-section{
+    background-image:
+        linear-gradient(180deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.48) 100%),
+        url("../img/sec01_big.jpg") !important;
+    background-position:center center !important;
+    background-size:cover !important;
+    background-repeat:no-repeat !important;
+}
