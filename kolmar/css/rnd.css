@@ -312,3 +312,6 @@
     .field-content{padding:24px}
     .field-content h3{font-size:23px}
 }
+
+/* Existing image areas: position media inside the original menu box. */
+.rnd-image-placeholder.menu-placeholder{position:relative;}
