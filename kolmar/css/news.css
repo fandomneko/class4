@@ -173,7 +173,9 @@
 .feature-card-shade {
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg, rgba(13,39,66,.82), rgba(13,39,66,.04) 78%);
+    background:
+        linear-gradient(90deg, rgba(5,19,43,.58) 0%, rgba(5,19,43,.30) 56%, rgba(5,19,43,.12) 100%),
+        linear-gradient(0deg, rgba(5,19,43,.72) 0%, rgba(5,19,43,.08) 78%);
 }
 .feature-card-copy {
     position: relative;
