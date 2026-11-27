@@ -1184,3 +1184,49 @@
         min-height:280px !important;
     }
 }
+
+
+/* BUSINESS INTRO — 여백을 확실히 확보해 두 콘텐츠 행의 호흡을 넓힘 */
+#business-intro.business-intro-section{
+    padding:132px 0 !important;
+}
+#business-intro .intro-layout{
+    gap:124px !important;
+}
+#business-intro .intro-layout > .intro-row{
+    gap:76px !important;
+}
+#business-intro .intro-row > .intro-image{
+    height:clamp(380px,34vw,480px) !important;
+    min-height:380px !important;
+}
+#business-intro .intro-row > .intro-content{
+    padding:28px 0 !important;
+}
+#business-intro .intro-content h3{
+    margin-bottom:26px !important;
+    font-size:clamp(25px,2.1vw,32px) !important;
+}
+#business-intro .intro-content > p{
+    max-width:420px !important;
+    line-height:1.9 !important;
+}
+@media(max-width:900px){
+    #business-intro.business-intro-section{padding:96px 0 !important}
+    #business-intro .intro-layout{gap:88px !important}
+    #business-intro .intro-layout > .intro-row{gap:42px !important}
+    #business-intro .intro-row > .intro-image{
+        height:340px !important;
+        min-height:340px !important;
+    }
+}
+@media(max-width:600px){
+    #business-intro.business-intro-section{padding:68px 0 !important}
+    #business-intro .intro-layout{gap:64px !important}
+    #business-intro .intro-layout > .intro-row{gap:22px !important}
+    #business-intro .intro-row > .intro-image{
+        height:270px !important;
+        min-height:270px !important;
+    }
+    #business-intro .intro-row > .intro-content{padding:8px 0 !important}
+}
