@@ -387,3 +387,57 @@
 .company-hero-copy > p:last-child{
     color:#000 !important;
 }
+
+
+/* PHILOSOPHY SECTION — 간격은 정돈하고 이미지 영역은 세로로 확장 */
+.philosophy-section{
+    padding:72px 0 88px !important;
+}
+.philosophy-heading{
+    margin-bottom:22px !important;
+}
+.philosophy-heading > p:last-child{
+    margin-top:12px !important;
+    font-size:15px !important;
+}
+.philosophy-visual{
+    min-height:440px !important;
+    margin-bottom:14px !important;
+    overflow:hidden;
+}
+.philosophy-visual img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.philosophy-values{
+    gap:12px !important;
+}
+.philosophy-card{
+    min-height:166px !important;
+    padding:20px 20px !important;
+}
+.philosophy-card > span{
+    font-size:14px !important;
+}
+.philosophy-card h3{
+    margin:14px 0 8px !important;
+    font-size:20px !important;
+}
+.philosophy-card p{
+    font-size:15px !important;
+    line-height:1.6 !important;
+}
+@media(max-width:900px){
+    .philosophy-section{padding:64px 0 76px !important}
+    .philosophy-visual{min-height:360px !important}
+    .philosophy-values{gap:10px !important}
+    .philosophy-card{padding:18px !important}
+}
+@media(max-width:600px){
+    .philosophy-section{padding:52px 0 64px !important}
+    .philosophy-heading{margin-bottom:18px !important}
+    .philosophy-visual{min-height:280px !important;margin-bottom:12px !important}
+    .philosophy-values{gap:10px !important}
+    .philosophy-card{padding:18px !important}
+}
