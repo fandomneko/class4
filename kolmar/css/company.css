@@ -101,7 +101,7 @@
 
 .overview-section {
     padding: 90px 0 96px;
-    background: linear-gradient(rgba(255,255,255,.78), rgba(255,255,255,.78)), url('../img/sec01_big.jpg') center center / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.48) 100%), url('../img/sec01_big.jpg') center center / cover no-repeat;
 }
 .overview-section .company-section-heading > p,
 .overview-section .overview-copy h3,
@@ -370,7 +370,7 @@
 
 /* 회사 개요 배경 이미지 — 직전 상태 복원 */
 .overview-section{
-    background-image: linear-gradient(rgba(255,255,255,.78), rgba(255,255,255,.78)), url("../img/sec01_big.jpg") !important;
+    background-image: linear-gradient(180deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.48) 100%), url("../img/sec01_big.jpg") !important;
     background-position:center center !important;
     background-size:cover !important;
     background-repeat:no-repeat !important;
