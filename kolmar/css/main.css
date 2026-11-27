@@ -1667,7 +1667,7 @@ body { color: var(--main-ink); }
     inset: 0;
     z-index: 2;
     border-radius: inherit;
-    background: rgba(8, 24, 52, .58);
+    background: rgba(8, 24, 52, .32);
     content: "";
     pointer-events: none;
 }
