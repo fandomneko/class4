@@ -1629,3 +1629,73 @@ body { color: var(--main-ink); }
 /* ESG shortcut links: keep the links above decorative card layers and clickable. */
 .esg-copy a { position: relative; z-index: 20; pointer-events: auto; }
 .esg-copy { position: relative; z-index: 5; }
+
+/* HEADER: 스크롤 방향에 따라 나타나는 고정 헤더 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translateY(0);
+    transition: transform .3s ease, background-color .25s ease, box-shadow .25s ease;
+}
+.header.is-hidden {
+    transform: translateY(-110%);
+}
+.header.is-menu-open {
+    transform: translateY(0);
+}
+
+/* MEGA MENU: 모든 페이지에서 대표 이미지 박스 유지 */
+.mega-menu-inner {
+    grid-template-columns: minmax(180px, .9fr) minmax(180px, .9fr) minmax(260px, 1.2fr) !important;
+}
+.mega-menu-visual {
+    display: block !important;
+    width: 100%;
+    height: 220px;
+    min-height: 220px;
+    align-self: stretch;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.mega-menu-visual > * {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    overflow: hidden;
+    border-radius: inherit;
+}
+.mega-menu-visual img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 900px) {
+    .mega-menu-inner {
+        grid-template-columns: minmax(130px, .75fr) minmax(160px, 1fr) !important;
+        row-gap: 20px;
+    }
+    .mega-menu-visual {
+        grid-column: 1 / -1;
+        height: 180px;
+        min-height: 180px;
+    }
+}
+@media (max-width: 600px) {
+    .mega-menu-inner {
+        grid-template-columns: minmax(0, .75fr) minmax(0, 1fr) !important;
+    }
+    .mega-menu-visual {
+        display: block !important;
+        grid-column: 1 / -1;
+        height: 150px;
+        min-height: 150px;
+    }
+}
+
