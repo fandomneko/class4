@@ -98,9 +98,10 @@
 .esg-pillars a {
     display: flex;
     flex-direction: column;
-    gap: 9px;
-    min-height: 105px;
-    padding: 14px;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 132px;
+    padding: 22px;
     border: 1px solid var(--blue-line);
     border-radius: 10px;
     background: #f7faff;
@@ -109,8 +110,8 @@
 }
 .esg-pillars a:hover { background: var(--brand-blue); color: var(--color-white); }
 .esg-pillars a > span { font-size: 16px; font-weight: 700; letter-spacing: .08em; opacity: .72; }
-.esg-pillars a strong { font-size: 16px; }
-.esg-pillars a b { align-self: flex-end; color: var(--blue-arrow-ir); font-size: 16px; font-weight: 400; }
+.esg-pillars a strong { font-size: 22px; line-height: 1.35; }
+.esg-pillars a b { align-self: flex-end; color: var(--blue-arrow-ir); font-size: 20px; font-weight: 400; }
 .esg-pillars a:hover b { color: var(--color-white); }
 
 .environment-section { padding: 90px 0 96px; background: var(--esg-human); }
