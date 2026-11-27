@@ -101,7 +101,7 @@
 
 .overview-section {
     padding: 90px 0 96px;
-    background: url('../img/sec01_big.jpg') center center / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .72), rgba(0, 0, 0, .48)), url('../img/sec01_big.jpg') center center / cover no-repeat;
 }
 .overview-section .company-section-heading > p,
 .overview-section .overview-copy h3,
