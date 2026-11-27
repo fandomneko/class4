@@ -452,3 +452,22 @@
 @media (max-width: 600px) {
     .company-hero { min-height: 500px !important; height: 78vh !important; }
 }
+
+
+/* PHILOSOPHY CARDS — 가로·세로 모두 정중앙 정렬 */
+.philosophy-values .philosophy-card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+.philosophy-values .philosophy-card > span,
+.philosophy-values .philosophy-card h3,
+.philosophy-values .philosophy-card p {
+    width: 100% !important;
+    text-align: center !important;
+}
+.philosophy-values .philosophy-card h3 {
+    margin: 10px 0 8px !important;
+}
