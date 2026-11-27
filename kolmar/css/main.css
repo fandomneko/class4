@@ -1624,3 +1624,7 @@ body { color: var(--main-ink); }
 .rnd-section .rnd-controls button:last-child {
     color: var(--brand-navy) !important;
 }
+
+/* ESG shortcut links: keep the links above decorative card layers and clickable. */
+.esg-copy a { position: relative; z-index: 20; pointer-events: auto; }
+.esg-copy { position: relative; z-index: 5; }
