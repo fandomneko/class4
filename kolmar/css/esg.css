@@ -112,8 +112,8 @@
 }
 .esg-pillars a:hover { background: var(--brand-blue); color: var(--color-white); }
 .esg-pillars a > span { font-size: 16px; font-weight: 700; letter-spacing: .08em; opacity: .72; }
-.esg-pillars a strong { font-size: 22px; line-height: 1.35; }
-.esg-pillars a b { align-self: center; color: var(--blue-arrow-ir); font-size: 20px; font-weight: 400; }
+.esg-pillars a strong { font-size: 28px; line-height: 1.3; }
+.esg-pillars a b { align-self: flex-end; color: var(--blue-arrow-ir); font-size: 16px; font-weight: 400; }
 .esg-pillars a:hover b { color: var(--color-white); }
 
 .environment-section { padding: 90px 0 96px; background: var(--esg-human); }
