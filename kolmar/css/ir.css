@@ -177,10 +177,10 @@
 .ir-card-governance { grid-column: 2; grid-row: 2; background: #eef3f7; }
 
 /* 이미지 카드: 아래 경로에 이미지를 넣거나 background-image 경로를 변경하면 됩니다.
-   예: background-image: linear-gradient(rgba(8,17,32,.12), rgba(8,17,32,.55)), url("../images/ir-financial.jpg"); */
+   예: background-image: linear-gradient(rgba(8,17,32,.12), rgba(8,17,32,.55)), url("../img/blue.jpg"); */
 .ir-card-image { isolation: isolate; background-color: var(--brand-navy); background-position: center; background-size: cover; color: var(--color-white); }
 .ir-card-financial.ir-card-image { background-image: linear-gradient(0deg, rgba(8,17,32,.62), rgba(8,17,32,.05) 72%), url("../images/ir-financial.jpg"); }
-.ir-card-disclosure.ir-card-image { background-image: linear-gradient(0deg, rgba(8,17,32,.62), rgba(8,17,32,.08) 72%), url("../images/ir-disclosure.jpg"); }
+.ir-card-disclosure.ir-card-image { background-image: linear-gradient(0deg, rgba(8,17,32,.62), rgba(8,17,32,.08) 72%), url("../img/company_04_overview.jpg"); }
 
 @media (max-width: 900px) {
     .ir-dashboard { padding-top: 66px; padding-bottom: 68px; }
@@ -205,3 +205,6 @@
 @media (prefers-reduced-motion: reduce) {
     .ir-dashboard-card { transition: none; }
 }
+
+/* Existing IR menu image area. */
+.ir-image-placeholder{position:relative;overflow:hidden;}
