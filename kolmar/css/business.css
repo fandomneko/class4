@@ -1065,3 +1065,44 @@
     background-size: cover !important;
     background-repeat: no-repeat !important;
 }
+
+
+/* BUSINESS INTRO — 균형 잡힌 간격과 이미지 크기 */
+#business-intro.business-intro-section{
+    padding:76px 0 !important;
+}
+#business-intro .business-section-heading{
+    margin-bottom:40px !important;
+}
+#business-intro .intro-layout{
+    gap:52px !important;
+}
+#business-intro .intro-layout > .intro-row{
+    gap:48px !important;
+}
+#business-intro .intro-row > .intro-image{
+    height:clamp(260px,27vw,380px) !important;
+    min-height:0 !important;
+}
+#business-intro .intro-row > .intro-content{
+    padding:8px 0 !important;
+}
+#business-intro .intro-content h3{
+    margin-bottom:16px !important;
+}
+#business-intro .intro-content > p{
+    line-height:1.75 !important;
+}
+@media(max-width:900px){
+    #business-intro.business-intro-section{padding:64px 0 !important}
+    #business-intro .business-section-heading{margin-bottom:32px !important}
+    #business-intro .intro-layout{gap:40px !important}
+    #business-intro .intro-layout > .intro-row{gap:28px !important}
+    #business-intro .intro-row > .intro-image{height:280px !important}
+}
+@media(max-width:600px){
+    #business-intro.business-intro-section{padding:52px 0 !important}
+    #business-intro .intro-layout{gap:34px !important}
+    #business-intro .intro-layout > .intro-row{gap:18px !important}
+    #business-intro .intro-row > .intro-image{height:240px !important}
+}
