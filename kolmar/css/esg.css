@@ -296,3 +296,6 @@
 
 /* Existing image areas: position media inside the original boxes without changing layout. */
 .esg-image-placeholder:not(.esg-hero-image){position:relative;}
+
+/* ESG 경영 이미지 박스의 점선 테두리 제거 */
+.esg-management-image { border: 0 !important; }
