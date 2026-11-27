@@ -352,3 +352,6 @@
     .company-category-inner a span { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .company-category-inner a { transition: none; } }
+
+/* Existing image areas: position media inside the original boxes without changing layout. */
+.company-image-placeholder:not(.company-hero-image){position:relative;}
