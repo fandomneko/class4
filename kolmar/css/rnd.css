@@ -315,3 +315,30 @@
 
 /* Existing image areas: position media inside the original menu box. */
 .rnd-image-placeholder.menu-placeholder{position:relative;}
+
+
+/* RESEARCH CARDS — balance section spacing and card caption padding */
+.fields-section{
+    padding:96px 0;
+}
+.field-grid{
+    margin-top:0;
+    margin-bottom:0;
+    gap:28px;
+}
+.field-card{
+    box-sizing:border-box;
+}
+.field-content{
+    padding:28px 30px;
+}
+@media(max-width:900px){
+    .fields-section{padding:76px 0}
+    .field-grid{gap:20px}
+    .field-content{padding:24px 22px}
+}
+@media(max-width:600px){
+    .fields-section{padding:60px 0}
+    .field-grid{gap:18px}
+    .field-content{padding:24px}
+}
