@@ -1659,6 +1659,18 @@ body { color: var(--main-ink); }
     overflow: hidden;
     border-radius: 12px;
 }
+.mega-menu-visual {
+    position: relative;
+}
+.mega-menu-visual::after {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: inherit;
+    background: rgba(8, 24, 52, .58);
+    content: "";
+    pointer-events: none;
+}
 .mega-menu-visual > * {
     position: relative;
     display: block;
