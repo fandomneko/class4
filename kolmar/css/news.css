@@ -18,8 +18,8 @@
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at 78% 48%, rgba(61, 173, 255, .28), transparent 43%),
-        linear-gradient(110deg, #081120 0%, #101c3a 62%, #17395d 100%);
+        linear-gradient(90deg, rgba(5, 15, 31, .78) 0%, rgba(5, 15, 31, .48) 48%, rgba(5, 15, 31, .18) 100%),
+        url("../img/rp1.jpg") center center / cover no-repeat;
 }
 .news-hero-inner {
     position: relative;
