@@ -1649,7 +1649,7 @@ body { color: var(--main-ink); }
     justify-self: end;
     gap: clamp(16px, 1.8vw, 26px);
 }
-.header .logo img { height: 32px; }
+.header .logo img { height: 38px; }
 
 @media (max-width: 900px) and (min-width: 601px) {
     .header {
@@ -1659,7 +1659,7 @@ body { color: var(--main-ink); }
     }
     .header .gnb { gap: clamp(12px, 1.7vw, 20px); }
     .header .gnb a { font-size: 14px; }
-    .header .logo img { height: 29px; }
+    .header .logo img { height: 33px; }
     .header .header_util { gap: 12px; }
 }
 
@@ -1669,6 +1669,7 @@ body { color: var(--main-ink); }
         justify-content: space-between;
         padding-inline: 20px;
     }
+    .header .logo img { height: 29px; }
     .header .header_util { margin-left: auto; }
 }
 
