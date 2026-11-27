@@ -299,3 +299,16 @@
 
 /* ESG 경영 이미지 박스의 점선 테두리 제거 */
 .esg-management-image { border: 0 !important; }
+
+
+/* HERO DIMENSIONS — 사업 상세페이지와 동일한 크기 */
+.esg-hero {
+    min-height: 650px !important;
+    height: min(790px, 70vw) !important;
+}
+@media (max-width: 900px) {
+    .esg-hero { min-height: 560px !important; }
+}
+@media (max-width: 600px) {
+    .esg-hero { min-height: 500px !important; height: 78vh !important; }
+}
