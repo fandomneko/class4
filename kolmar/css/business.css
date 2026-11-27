@@ -1106,3 +1106,44 @@
     #business-intro .intro-layout > .intro-row{gap:18px !important}
     #business-intro .intro-row > .intro-image{height:240px !important}
 }
+
+
+/* BUSINESS INTRO — 제목 제거 후 콘텐츠 영역을 여유 있게 확장 */
+#business-intro.business-intro-section{
+    padding:108px 0 !important;
+}
+#business-intro .business-section-heading{
+    display:none !important;
+}
+#business-intro .intro-layout{
+    gap:76px !important;
+}
+#business-intro .intro-layout > .intro-row{
+    gap:72px !important;
+}
+#business-intro .intro-row > .intro-image{
+    height:clamp(300px,31vw,420px) !important;
+}
+#business-intro .intro-row > .intro-content{
+    padding:18px 0 !important;
+}
+#business-intro .intro-content h3{
+    margin-bottom:22px !important;
+}
+#business-intro .intro-content > p{
+    max-width:440px;
+    line-height:1.9 !important;
+}
+@media(max-width:900px){
+    #business-intro.business-intro-section{padding:84px 0 !important}
+    #business-intro .intro-layout{gap:58px !important}
+    #business-intro .intro-layout > .intro-row{gap:36px !important}
+    #business-intro .intro-row > .intro-image{height:310px !important}
+}
+@media(max-width:600px){
+    #business-intro.business-intro-section{padding:64px 0 !important}
+    #business-intro .intro-layout{gap:42px !important}
+    #business-intro .intro-layout > .intro-row{gap:20px !important}
+    #business-intro .intro-row > .intro-image{height:260px !important}
+    #business-intro .intro-row > .intro-content{padding:6px 0 !important}
+}
