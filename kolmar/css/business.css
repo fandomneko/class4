@@ -1056,3 +1056,12 @@
 
 /* Existing image areas: keep their original dimensions and fill them with the selected asset. */
 .business-image-placeholder.menu-placeholder{position:relative;}
+
+
+/* 사업소개 영역 배경 이미지만 교체 — 기존 레이아웃과 내부 디자인 유지 */
+.business-intro-section {
+    background-image: url("../img/blue.jpg") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
