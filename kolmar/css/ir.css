@@ -185,7 +185,7 @@
    예: background-image: linear-gradient(rgba(8,17,32,.12), rgba(8,17,32,.55)), url("../img/blue.jpg"); */
 .ir-card-image { isolation: isolate; background-color: var(--brand-navy); background-position: center; background-size: cover; color: var(--color-white); }
 .ir-card-financial.ir-card-image { background-image: linear-gradient(0deg, rgba(8,17,32,.62), rgba(8,17,32,.05) 72%), url("../img/blue.jpg"); }
-.ir-card-disclosure.ir-card-image { background-image: linear-gradient(0deg, rgba(8,17,32,.62), rgba(8,17,32,.08) 72%), url("../img/company_04_overview.jpg"); }
+.ir-card-disclosure.ir-card-image { background-image: linear-gradient(0deg, rgba(8,17,32,.48), rgba(8,17,32,.04) 72%), url("../img/i1_2.gif"); }
 
 @media (max-width: 900px) {
     .ir-dashboard { padding-top: 66px; padding-bottom: 68px; }
