@@ -129,7 +129,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 @media (max-width: 600px) {
     .mega-menu-inner { grid-template-columns: 1fr; }
     .mega-menu-links { border-right: 0; }
-    .mega-menu-visual { display: none; }
+    .mega-menu-visual { display: block; height: 150px; }
 }
 
 /* HERO slider motion */
