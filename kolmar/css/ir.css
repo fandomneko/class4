@@ -211,3 +211,13 @@
 
 /* Existing IR menu image area. */
 .ir-image-placeholder{position:relative;overflow:hidden;}
+
+/* IR HERO — 사업 상세페이지와 동일한 타이포그래피 및 비율 */
+.ir-hero { min-height: 650px !important; height: min(790px, 70vw) !important; padding: 0 !important; }
+.ir-hero-inner { width: min(1540px, calc(100% - (var(--page-gutter, 4.2vw) * 2))) !important; margin-inline: auto !important; align-items: center !important; }
+.ir-hero-copy { width: 100% !important; padding-top: 52px !important; }
+.ir-hero h2 { margin: 0 0 26px !important; font-size: clamp(64px, 8vw, 112px) !important; font-weight: 700 !important; line-height: 1 !important; letter-spacing: -.065em !important; }
+.ir-hero-copy > p:last-child { color: rgba(255,255,255,.9) !important; font-size: clamp(19px, 2vw, 25px) !important; line-height: 1.7 !important; font-weight: 400 !important; }
+.ir-scroll-link { right: clamp(24px, 5vw, 76px) !important; bottom: 42px !important; font-size: 16px !important; letter-spacing: 0 !important; }
+@media (max-width: 900px) { .ir-hero { min-height: 560px !important; } }
+@media (max-width: 600px) { .ir-hero { min-height: 500px !important; height: 78vh !important; } .ir-hero h2 { font-size: clamp(54px, 15vw, 76px) !important; } .ir-hero-copy > p:last-child { font-size: 17px !important; } }
