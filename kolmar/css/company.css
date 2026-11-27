@@ -104,7 +104,7 @@
     word-break: keep-all;
 }
 
-.overview-section { padding: 90px 0 96px; background: var(--color-white); }
+.overview-section { padding: 90px 0 96px; background: linear-gradient(rgba(255,255,255,.78), rgba(255,255,255,.78)), url('../img/sec01_big.jpg') center center / cover no-repeat; }
 .overview-feature {
     display: grid;
     grid-template-columns: 1.1fr .9fr;
