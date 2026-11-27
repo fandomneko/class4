@@ -1630,6 +1630,16 @@ body { color: var(--main-ink); }
 .esg-copy a { position: relative; z-index: 20; pointer-events: auto; }
 .esg-copy { position: relative; z-index: 5; }
 
+/* MEGA MENU TITLE: 메뉴 대표 문구 가독성 강화 */
+.mega-menu-title { font-size: 34px; }
+
+@media (max-width: 900px) {
+    .mega-menu-title { font-size: 26px; }
+}
+@media (max-width: 600px) {
+    .mega-menu-title { font-size: 22px; }
+}
+
 /* HEADER ALIGNMENT: 로고·주 메뉴·유틸리티의 균형 정렬 */
 .header {
     display: grid;
