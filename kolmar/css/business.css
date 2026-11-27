@@ -1053,3 +1053,6 @@
         transition: none !important;
     }
 }
+
+/* Existing image areas: keep their original dimensions and fill them with the selected asset. */
+.business-image-placeholder.menu-placeholder{position:relative;}
