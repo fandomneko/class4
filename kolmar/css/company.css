@@ -104,7 +104,23 @@
     word-break: keep-all;
 }
 
-.overview-section { padding: 90px 0 96px; background: linear-gradient(rgba(255,255,255,.78), rgba(255,255,255,.78)), url('../img/sec01_big.jpg') center center / cover no-repeat; }
+.overview-section {
+    padding: 90px 0 96px;
+    background: linear-gradient(rgba(5, 16, 38, .82), rgba(5, 16, 38, .82)), url('../img/sec01_big.jpg') center center / cover no-repeat;
+}
+.overview-section .company-section-heading > p,
+.overview-section .overview-copy h3,
+.overview-section .overview-copy > p:not(.overview-label),
+.overview-section .overview-data span,
+.overview-section .overview-data strong {
+    color: #f4f8ff;
+}
+.overview-section .overview-copy h3 em { color: #a9d4ff; }
+.overview-section .overview-data { border-top-color: rgba(255,255,255,.32); }
+.overview-section .overview-data > div { border-bottom-color: rgba(255,255,255,.32); }
+.overview-feature { grid-template-columns: minmax(0, 1fr); }
+.overview-copy { max-width: 900px; padding: 20px 0; }
+
 .overview-feature {
     display: grid;
     grid-template-columns: 1.1fr .9fr;
